@@ -1,0 +1,15 @@
+---------- Date: 2017-05-31 16:32:38 ~ IP : 82.117.239.162 ----------
+REQUEST URI : /admin/index.php?route=user/user&token=EzCEb5I5Ax7AFyjnwJXb2XP4T7ZnlaIy
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+

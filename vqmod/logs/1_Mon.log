@@ -1,0 +1,14 @@
+---------- Date: 2018-01-22 12:59:50 ~ IP : 85.90.214.30 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&token=eVb7H2CI5oMVnnU9TK5DZtgMlCz6YFlv
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_generator.xml
+   id        : SEO Mega KIT - Products - Titles Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/product.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+----------------------------------------------------------------------
+
+

@@ -1,0 +1,92 @@
+<modification>
+    <name>Gallery Opencart 2</name>
+	<code>gallery-oc2</code>
+    <version>2.3</version>
+    <author>opencart2x.ru</author>
+    <author>https://opencart2x.ru</author>
+	<file path="catalog/controller/startup/seo_url.php">
+        <operation>
+			<search><![CDATA[$url = explode('=', $query->row['query']);]]></search>
+            <add position="after">
+                <![CDATA[/*Opencart Gallery*/
+					if ($url[0] == 'album_id') {
+						$this->request->get['album_id'] = $url[1];
+					}
+					if ($url[0] == 'video_id') {
+                        $this->request->get['video_id'] = $url[1];
+                    }
+					/*Opencart Gallery*/]]>
+            </add>
+        </operation>
+		<operation>
+            <search><![CDATA[elseif (isset($this->request->get['information_id']))]]>
+			</search>
+            <add position="before">
+                <![CDATA[} elseif (isset($this->request->get['album_id'])) {
+				$this->request->get['route'] = 'gallery/album';
+			} elseif (isset($this->request->get['video_id'])) {
+				$this->request->get['route'] = 'gallery/video';
+			]]>
+            </add>
+        </operation>
+		
+		<operation>
+            <search><![CDATA[($data['route'] == 'product/product' && $key == 'product_id') ||]]>
+			</search>
+            <add  position="replace">
+                <![CDATA[($data['route'] == 'product/product' && $key == 'product_id') || ($data['route'] == 'gallery/album' && $key == 'album_id') || ($data['route'] == 'gallery/video' && $key == 'video_id') ||]]>
+            </add>
+        </operation>
+						
+		<operation>				
+			<search><![CDATA[elseif ($key == 'path')]]></search>
+            <add  position="replace">
+                <![CDATA[elseif ($key == 'path' || $key == 'npath')]]>
+            </add>
+        </operation>
+		
+    </file>
+	<file path="catalog/controller/startup/seo_pro.php">
+        <operation>
+			<search><![CDATA[$url = explode('=', $query->row['query']);]]></search>
+            <add position="after">
+                <![CDATA[/*Opencart Gallery*/
+					if ($url[0] == 'album_id') {
+						$this->request->get['album_id'] = $url[1];
+					}
+					if ($url[0] == 'video_id') {
+                        $this->request->get['video_id'] = $url[1];
+                    }
+					/*Opencart Gallery*/]]>
+            </add>
+        </operation>
+		<operation>
+            <search><![CDATA[elseif (isset($this->request->get['information_id']))]]>
+			</search>
+            <add position="before">
+                <![CDATA[} elseif (isset($this->request->get['album_id'])) {
+				$this->request->get['route'] = 'gallery/album';
+			} elseif (isset($this->request->get['video_id'])) {
+				$this->request->get['route'] = 'gallery/video';
+			]]>
+            </add>
+        </operation>
+		
+		<operation>
+            <search><![CDATA[($data['route'] == 'product/product' && $key == 'product_id') ||]]>
+			</search>
+            <add  position="replace">
+                <![CDATA[($data['route'] == 'product/product' && $key == 'product_id') || ($data['route'] == 'gallery/album' && $key == 'album_id') || ($data['route'] == 'gallery/video' && $key == 'video_id') ||]]>
+            </add>
+        </operation>
+						
+		<operation>				
+			<search><![CDATA[elseif ($key == 'path')]]></search>
+            <add  position="replace">
+                <![CDATA[elseif ($key == 'path' || $key == 'npath')]]>
+            </add>
+        </operation>
+		
+    </file>
+		
+</modification>

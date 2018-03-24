@@ -1,0 +1,297 @@
+---------- Date: 2017-08-31 20:31:06 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=octeam/toolset&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:31:37 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_generator.xml
+   id        : SEO Mega KIT - Products - Titles Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/product.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:31:42 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/edit&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE&product_id=1659
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/manufacturer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'manufacturer_id=" . (int)$manufacturer_id . "') AS keyword
+
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_can_cat.xml
+   id        : SEO Mega KIT - Canonical Category
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/view/template/catalog/product_form.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:34:55 ~ IP : 89.145.95.68 ----------
+REQUEST URI : /tsvetyi_i_rasteniya/orhidei/belyie-orhidei
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_cmi.xml
+   id        : SEO Mega KIT - SEO Title, SEO Heading Title (category, information, manufacturer)
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : catalog/model/catalog/manufacturer.php(2)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $sql .= " ORDER BY name";
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:41:36 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=setting/setting&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/information.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'information_id=" . (int)$information_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:49:17 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_generator.xml
+   id        : SEO Mega KIT - Products - Titles Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/product.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:49:23 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/edit&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE&product_id=1659
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_can_cat.xml
+   id        : SEO Mega KIT - Canonical Category
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/view/template/catalog/product_form.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
+
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/view/template/catalog/product_form.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="text" name="keyword" value="<?php echo $keyword; ?>" placeholder="<?php echo $entry_keyword; ?>" id="input-keyword" class="form-control" />
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 20:50:05 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /art-deco/3d/?page=4
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_cmi.xml
+   id        : SEO Mega KIT - SEO Title, SEO Heading Title (category, information, manufacturer)
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : catalog/view/theme/*/template/product/category.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <?php echo $content_bottom; ?>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:30:34 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/category&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_cmi.xml
+   id        : SEO Mega KIT - SEO Title, SEO Heading Title (category, information, manufacturer)
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/category.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:33:23 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=extension/modification&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:33:43 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_generator.xml
+   id        : SEO Mega KIT - Products - Titles Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/product.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:34:07 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/edit&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE&product_id=5697
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/manufacturer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'manufacturer_id=" . (int)$manufacturer_id . "') AS keyword
+
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_can_cat.xml
+   id        : SEO Mega KIT - Canonical Category
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/view/template/catalog/product_form.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:35:33 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/edit&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE&product_id=5697
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:36:24 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=extension/modification/refresh&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:37:47 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=extension/modification/refresh&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:38:21 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=extension/modification/refresh&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/product.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'product_id=" . (int)$product_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:40:02 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=catalog/category&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_titles_cmi.xml
+   id        : SEO Mega KIT - SEO Title, SEO Heading Title (category, information, manufacturer)
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/controller/catalog/category.php(1)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): $this->error['meta_title'][$language_id] = $this->language->get('error_meta_title');
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2017-08-31 21:44:09 ~ IP : 213.111.219.114 ----------
+REQUEST URI : /admin/index.php?route=setting/setting&token=vhgyNz2rXfcRqF5aeQdRmnnepHUd78VE
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/information.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'information_id=" . (int)$information_id . "') AS keyword
+
+----------------------------------------------------------------------
+
+

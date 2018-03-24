@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="340.2 0 170.1 170.1" enable-background="new 340.2 0 170.1 170.1" xml:space="preserve">
+<g id="Ceiling_x5F_ico">
+	<g id="Ceiling_x5F_active" display="none">
+		<g display="inline">
+			<circle fill="#3693AC" cx="424.7" cy="85.1" r="70"/>
+			<path opacity="0.5" enable-background="new    " d="M433.5,154.6c28.9-3.6,52.2-24.9,59.1-52.6l-26-29.3l-10.3,5.2l-1.7,22.3
+				l-67.9,1.2L433.5,154.6z"/>
+			<g>
+				<rect x="383" y="72.7" fill="#FFFFFF" width="83.3" height="6.5"/>
+				<g>
+					<rect x="386.6" y="99" fill="#FFFFFF" width="76.3" height="2.3"/>
+					<g>
+						<rect x="455.3" y="80.5" fill="#FFFFFF" width="2.2" height="16.7"/>
+						<rect x="391.9" y="80.5" fill="#FFFFFF" width="2.2" height="16.7"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<rect x="339.6" y="0.1" display="inline" fill="none" width="170.1" height="170.1"/>
+	</g>
+	<g id="Ceiling_x5F_passive">
+		<g>
+			<circle fill="#454444" cx="424.7" cy="85.1" r="70"/>
+			<path opacity="0.5" enable-background="new    " d="M433.5,154.6c28.9-3.6,52.2-24.9,59.1-52.6l-26-29.3l-10.3,5.2l-1.7,22.3
+				l-67.9,1.2L433.5,154.6z"/>
+			<g>
+				<rect x="383" y="72.7" fill="#818181" width="83.3" height="6.5"/>
+				<g>
+					<rect x="386.6" y="99" fill="#818181" width="76.3" height="2.3"/>
+					<g>
+						<rect x="455.3" y="80.5" fill="#818181" width="2.2" height="16.7"/>
+						<rect x="391.9" y="80.5" fill="#818181" width="2.2" height="16.7"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<rect x="339.6" y="0.1" fill="none" width="170.1" height="170.1"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,25 @@
+---------- Date: 2018-03-16 17:10:05 ~ IP : 82.117.239.148 ----------
+REQUEST URI : /admin/index.php?route=catalog/product/add&token=9GpGrTZiKLcdsnv886lQQJLKpm0HJ0qJ
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_urls_generator.xml
+   id        : SEO Mega KIT - URLs Generator
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/model/catalog/manufacturer.php(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): (SELECT keyword FROM " . DB_PREFIX . "url_alias WHERE query = 'manufacturer_id=" . (int)$manufacturer_id . "') AS keyword
+
+MOD DETAILS:
+   modFile   : /home/printcol/skinali-printcolor.com/www/vqmod/xml/_seo_mega_pack_can_cat.xml
+   id        : SEO Mega KIT - Canonical Category
+   version   : 1.5.x
+   vqmver    : 2.X
+   author    : marsilea15@gmail.com
+
+File Name    : admin/view/template/catalog/product_form.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (ABORTING MOD): <input type="hidden" name="product_category[]" value="<?php echo $product_category['category_id']; ?>" />
+
+----------------------------------------------------------------------
+
+
