@@ -18,7 +18,7 @@ define('DIR_CACHE', '/var/www/skinali/system/storage/cache/');
 define('DIR_DOWNLOAD', '/var/www/skinali/system/storage/download/');
 define('DIR_LOGS', '/var/www/skinali/system/storage/logs/');
 define('DIR_MODIFICATION', '/var/www/skinali/system/storage/modification/');
-define('DIR_UPLOAD', '/var/www/skinali/system/storage/upload/');
+define('DIR_UPLOAD', '/var/www/skinali/storage/upload/');
 define('DIR_CATALOG', '/var/www/skinali/catalog/');
 
 // DB
