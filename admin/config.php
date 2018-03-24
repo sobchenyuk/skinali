@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'https://192.168.0.101/admin/');
-define('HTTP_CATALOG', 'https://192.168.0.101/');
+define('HTTP_SERVER', 'http://192.168.0.101/admin/');
+define('HTTP_CATALOG', 'http://192.168.0.101/');
 
 // HTTPS
-//define('HTTPS_SERVER', 'https://192.168.0.101/admin/');
-//define('HTTPS_CATALOG', 'https://192.168.0.101/');
+define('HTTPS_SERVER', 'https://192.168.0.101/admin/');
+define('HTTPS_CATALOG', 'https://192.168.0.101/');
 
 // DIR
 define('DIR_APPLICATION', '/var/www/skinali/admin/');
