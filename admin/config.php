@@ -4,8 +4,8 @@ define('HTTP_SERVER', 'http://192.168.0.101/admin/');
 define('HTTP_CATALOG', 'http://192.168.0.101/');
 
 // HTTPS
-//define('HTTPS_SERVER', 'https://skinali-printcolor.com/admin/');
-//define('HTTPS_CATALOG', 'https://skinali-printcolor.com/');
+define('HTTPS_SERVER', 'https://192.168.0.101/admin/');
+define('HTTPS_CATALOG', 'https://192.168.0.101/');
 
 // DIR
 define('DIR_APPLICATION', '/var/www/skinali/admin/');
