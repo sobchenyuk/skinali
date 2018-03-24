@@ -82,12 +82,13 @@ function Sepia(){
 
 function preloader(){
 	var wraper = document.getElementById('sk_galery');
-	console.log(wraper)
-	our_images = wraper.getElementsByTagName('img');
-	for(var i=0; i<our_images.length; i++){
-		var hiddenImg = new Image;
-		hiddenImg.src = our_images.item(i).src;
-		our_images.item(i).src = hiddenImg.src;
+	if(wraper !== null){
+        our_images = wraper.getElementsByTagName('img');
+        for(var i=0; i<our_images.length; i++){
+            var hiddenImg = new Image;
+            hiddenImg.src = our_images.item(i).src;
+            our_images.item(i).src = hiddenImg.src;
+        }
 	}
 }
 
