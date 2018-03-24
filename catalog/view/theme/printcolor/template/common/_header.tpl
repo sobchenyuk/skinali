@@ -26,10 +26,16 @@
 <meta property="og:image" content="<?php echo $logo; ?>" />
 <?php } ?>
 <meta property="og:site_name" content="<?php echo $name; ?>" />
-<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!--<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />-->
+
+	<!--<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!--<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />-->
+
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+	<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <!--<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">-->
 <link href="catalog/view/theme/printcolor/stylesheet/style.css" rel="stylesheet">
@@ -207,7 +213,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<div class="sk_category_menu_ico">
 					<div>
 						<div class="sk_svg__ico_active" style="background-image: url(<?=$icons_path?>_active.png)"></div>
-						<div class="sk_svg__ico_passive" style="background-image: url(<?=$icons_path?>_passive.png)"></div>
+						<div class="sk_svg__ico_passive" style="background-image: url("<?php echo $icons_path?>_passive.png)"></div>
 					</div>
 				</div>
 				<div class="sk_category_menu_name">
@@ -225,10 +231,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4716 <?php echo ($curr_url == '/skinali_kuhonnyij_fartuk' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>skinali_kuhonnyij_fartuk">
+			<a href="<?php echo $home_url?>skinali_kuhonnyij_fartuk">
 				<div class="sk_category_menu_ico">
 					<div>
-						<div class="sk_svg_skinali_ico_active" style="background-image: url(<?=$icons_path?>skinali_active.png)"></div>
+						<div class="sk_svg_skinali_ico_active" style="background-image: url("<?php echo $icons_path?>skinali_active.png)"></div>
 						<div class="sk_svg_skinali_ico_passive" style="background-image: url(<?=$icons_path?>skinali_passive.png)"></div>
 					</div>
 				</div>
@@ -247,11 +253,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4832 <?php echo ($curr_url == '/ultrafioletovaya-pechat' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>ultrafioletovaya-pechat">
+			<a href="<?php echo $home_url?>ultrafioletovaya-pechat">
 				<div class="sk_category_menu_ico">
 					<div>
 						<div class="sk_svg_table_ico_active" style="background-image: url(<?=$icons_path?>table_active.png)"></div>
-						<div class="sk_svg_table_ico_passive" style="background-image: url(<?=$icons_path?>table_passive.png)"></div>
+						<div class="sk_svg_table_ico_passive" style="background-image: url("<?php echo $icons_path?>table_passive.png)"></div>
 					</div>
 				</div>
 				<div class="sk_category_menu_name">
@@ -269,10 +275,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_61 <?php echo ($curr_url == '/dveri' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>dveri">
+			<a href="<?php echo $home_url?>dveri">
 				<div class="sk_category_menu_ico">
 					<div>
-						<div class="sk_svg_door_ico_active" style="background-image: url(<?=$icons_path?>door_active.png)"></div>
+						<div class="sk_svg_door_ico_active" style="background-image: url("<?php echo $icons_path?>door_active.png)"></div>
 						<div class="sk_svg_door_ico_passive" style="background-image: url(<?=$icons_path?>door_passive.png)"></div>
 					</div>
 				</div>
@@ -291,10 +297,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_62 <?php echo ($curr_url == '/plitka' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>plitka">
+			<a href="<?php echo $home_url?>plitka">
 				<div class="sk_category_menu_ico">
 					<div>
-						<div class="sk_svg_tiles_ico_active" style="background-image: url(<?=$icons_path?>tiles_active.png)"></div>
+						<div class="sk_svg_tiles_ico_active" style="background-image: url("<?php echo $icons_path?>tiles_active.png)"></div>
 						<div class="sk_svg_tiles_ico_passive" style="background-image: url(<?=$icons_path?>tiles_passive.png)"></div>
 					</div>
 				</div>
@@ -313,11 +319,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_63 <?php echo ($curr_url == '/potolki' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>potolki">
+			<a href="<?php echo $home_url ?>potolki">
 				<div class="sk_category_menu_ico">
 					<div>
 						<div class="sk_svg_ceiling_ico_active" style="background-image: url(<?=$icons_path?>ceiling_active.png)"></div>
-						<div class="sk_svg_ceiling_ico_passive" style="background-image: url(<?=$icons_path?>ceiling_passive.png)"></div>
+						<div class="sk_svg_ceiling_ico_passive" style="background-image: url("<?php echo $icons_path?>ceiling_passive.png)"></div>
 					</div>
 				</div>
 				<div class="sk_category_menu_name">
@@ -335,11 +341,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			</a>
 		</li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_66 <?php echo ($curr_url == '/fasadyi' ? 'current-menu-item current_page_item' : '');?>">
-			<a href="<?=$home_url?>fasadyi">
+			<a href="<?php echo $home_url ?>fasadyi">
 				<div class="sk_category_menu_ico">
 					<div>
-						<div class="sk_svg_fasades_ico_active" style="background-image: url(<?=$icons_path?>fasades_active.png)"></div>
-						<div class="sk_svg_fasades_ico_passive" style="background-image: url(<?=$icons_path?>fasades_passive.png)"></div>
+						<div class="sk_svg_fasades_ico_active" style="background-image: url("<?php echo $icons_path?>fasades_active.png)"></div>
+						<div class="sk_svg_fasades_ico_passive" style="background-image: url("<?php echo $icons_path?>fasades_passive.png)"></div>
 					</div>
 				</div>
 				<div class="sk_category_menu_name">
