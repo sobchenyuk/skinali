@@ -82,6 +82,7 @@ function Sepia(){
 
 function preloader(){
 	var wraper = document.getElementById('sk_galery');
+	console.log(wraper)
 	our_images = wraper.getElementsByTagName('img');
 	for(var i=0; i<our_images.length; i++){
 		var hiddenImg = new Image;
