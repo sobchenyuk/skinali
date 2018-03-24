@@ -23,7 +23,7 @@ define('DIR_CATALOG', '/var/www/skinali/catalog/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'printcol.mysql.ukraine.com.ua');
+define('DB_HOSTNAME', '127.0.0.1');
 define('DB_USERNAME', 'printcol_skinali');
 define('DB_PASSWORD', '868g6ffx');
 define('DB_DATABASE', 'printcol_skinali');
