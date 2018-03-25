@@ -60,6 +60,15 @@
 	<span class="sk_footer_triangle2">◢</span>
 </footer>
 <div class="sk_post_footer">2016 © Рекламно-производственная компания PrintColor</div>
+
+
+
+
+		<!--<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />-->
+		<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+
 		<script src="catalog/view/javascript/js/script.js" type="text/javascript"></script>
 		
 		<script src="catalog/view/javascript/js/jquery.cookie.js" type="text/javascript"></script>
