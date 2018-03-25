@@ -139,7 +139,10 @@
 		<div id="menu_left_trigger"></div>-->
 	</nav>
 </header>
+
+<!-- Слайдер -->
 <?php if ($is_home): ?>
+
 	<div class="sk_slider_holder">
 		<div class="sk_slider_slide_holder" id="slider">
 			<div class="sk_slider_slides_1" id="slide1" style="opacity: 1; z-index: 100;"></div>
@@ -165,7 +168,10 @@
 	</div>
 	<script type="text/javascript" src="catalog/view/javascript/js/slider.js"></script>
 <?php endif; ?>
+
+
 <?php $icons_path = 'catalog/view/theme/printcolor/image/category/'; ?>
+
 <div class="sk_category_menu">
 	<ul id="menu-menyu-kategoriy" class="sk_category_menu_holder">
 		<li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_5702 <?php echo ($curr_url == '/konstruktor-skinali' ? 'current-menu-item current_page_item' : '');?>">
