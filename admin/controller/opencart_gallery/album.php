@@ -388,6 +388,7 @@ class ControllerOpencartGalleryAlbum extends Controller {
 
 			$data['album_images'][] = array(
 				'name' 		 => $album_image['name'],
+				'title' 	 => $album_image['title'],
 				'image'      => $image,
 				'thumb'      => $this->model_tool_image->resize($thumb, 100, 100),
 				'sort_order' => $album_image['sort_order']

@@ -139,6 +139,7 @@
                   <input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" />
                 </div>
               </div>
+
               <div class="table-responsive">
                 <table id="images" class="table table-striped table-bordered table-hover">
                   <thead>
@@ -152,12 +153,42 @@
                   <tbody>
                     <?php $image_row = 0; ?>
                     <?php foreach ($album_images as $album_image) { ?>
+
                     <tr id="image-row<?php echo $image_row; ?>">
                       <td class="text-left"><a href="" id="thumb-image<?php echo $image_row; ?>" data-toggle="image" class="img-thumbnail"><img src="<?php echo $album_image['thumb']; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a><input type="hidden" name="album_image[<?php echo $image_row; ?>][image]" value="<?php echo $album_image['image']; ?>" id="input-image<?php echo $image_row; ?>" /></td>
-                      <td class="left"><textarea class="form-control" name="album_image[<?php echo $image_row; ?>][name]" cols="40" rows="3" /><?php echo $album_image['name']; ?></textarea></td>
+
+                      <td class="left">
+
+                        <div class="form-group" style="margin:0">
+                          <label class="col-sm-2 control-label">Заголовок</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" name="album_image[<?php echo $image_row; ?>][title]"
+                            value="<?php echo $album_image['title']; ?>"/>
+                          </div>
+                        </div>
+
+                        <div class="form-group" style="margin:0">
+                          <label class="col-sm-2 control-label">Описание</label>
+                          <div class="col-sm-10">
+                            <textarea class="form-control"
+                                      name="album_image[<?php echo $image_row; ?>][name]" cols="40" rows="3" /><?php echo $album_image['name']; ?></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group" style="margin:0">
+                          <label class="col-sm-2 control-label">Ссылка</label>
+                          <div class="col-sm-10">
+                            <input class="form-control" name="" />
+                          </div>
+                        </div>
+
+
+                      </td>
+
                       <td class="text-right"><input type="text" name="album_image[<?php echo $image_row; ?>][sort_order]" value="<?php echo $album_image['sort_order']; ?>" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>
                       <td class="text-left"><button type="button" onclick="$('#image-row<?php echo $image_row; ?>').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>
                     </tr>
+
                     <?php $image_row++; ?>
                     <?php } ?>
                   </tbody>
@@ -169,6 +200,7 @@
                   </tfoot>
                 </table>
               </div>
+
             </div>
           </div>
         </form>
