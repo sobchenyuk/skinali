@@ -51,15 +51,53 @@
 			E-mail: <a href="mailto:printcolor45@gmail.com">printcolor45@gmail.com</a><br>
 			Тел.: <span itemprop="telephone">(095)714-03-05, (050)908-86-00</span>
 		</address>
+
 		<div class="sk_footer_social_holder">
 			<a href="https://ru-ru.facebook.com/printcolor.fotooboi" rel="nofollow" itemprop="sameAs"></a>
 			<a href="skype:printcolor45?chat"></a>
 		</div>
 	</div>
+
+	<div class="col-right">
+		<ul class="list">
+
+			<?php if ($location1) { ?>
+			<li><?php echo $location1; ?></li>
+			<?php } ?>
+
+			<?php if ($email1) { ?>
+			<li>E-mail: <a href="mailto:<?php echo $email1; ?>"> <?php echo $email1; ?></a></li>
+			<?php } ?>
+
+			<li>Тел.:
+				<?php if ($telephone3) { ?>
+				<a href="tel:<?php echo $telephone3; ?>"><?php echo $telephone3; ?></a>,
+				<?php } ?>
+				<?php if ($telephone4) { ?>
+				<a href="tel:<?php echo $telephone4; ?>"><?php echo $telephone4; ?></a>
+				<?php } ?>
+			</li>
+
+		</ul>
+
+		<?php if ($iconlink) { ?>
+		<div class="socialRow">
+			<?php echo html_entity_decode($iconlink); ?>
+		</div>
+		<?php } ?>
+
+	</div>
+
+
+
 	<span class="sk_footer_triangle1">◢</span>
 	<span class="sk_footer_triangle2">◢</span>
 </footer>
-<div class="sk_post_footer">2016 © Рекламно-производственная компания PrintColor</div>
+
+<?php if ($copyright1) { ?>
+<div class="sk_post_footer"><?php echo $copyright1; ?></div>
+<?php } ?>
+
 
 
 

@@ -20,7 +20,7 @@ $_['column_action']          = 'Действие';
 
 // Entry
 $_['entry_name']             = 'Название альбома:';
-$_['entry_title']             = 'Заголовок';
+$_['entry_title']            = 'Информация';
 $_['entry_description']      = 'Описание:';
 $_['entry_meta_description'] = 'Meta Description:';
 $_['entry_meta_keyword']     = 'Meta Keyword:';

@@ -559,7 +559,52 @@ class ControllerSettingSetting extends Controller {
 			$data['config_telephone'] = $this->config->get('config_telephone');
 		}
 
-		if (isset($this->request->post['config_fax'])) {
+        if (isset($this->request->post['config_email1'])) {
+            $data['config_email1'] = $this->request->post['config_email1'];
+        } else {
+            $data['config_email1'] = $this->config->get('config_email1');
+        }
+
+        if (isset($this->request->post['config_telephone1'])) {
+            $data['config_telephone1'] = $this->request->post['config_telephone1'];
+        } else {
+            $data['config_telephone1'] = $this->config->get('config_telephone1');
+        }
+
+        if (isset($this->request->post['config_telephone2'])) {
+            $data['config_telephone2'] = $this->request->post['config_telephone2'];
+        } else {
+            $data['config_telephone2'] = $this->config->get('config_telephone2');
+        }
+
+        if (isset($this->request->post['config_telephone3'])) {
+            $data['config_telephone3'] = $this->request->post['config_telephone3'];
+        } else {
+            $data['config_telephone3'] = $this->config->get('config_telephone3');
+        }
+
+        if (isset($this->request->post['config_telephone4'])) {
+            $data['config_telephone4'] = $this->request->post['config_telephone4'];
+        } else {
+            $data['config_telephone4'] = $this->config->get('config_telephone4');
+        }
+
+
+        if (isset($this->request->post['config_copyright'])) {
+            $data['config_copyright'] = $this->request->post['config_copyright'];
+        } else {
+            $data['config_copyright'] = $this->config->get('config_copyright');
+        }
+
+
+        if (isset($this->request->post['config_location1'])) {
+            $data['config_location1'] = $this->request->post['config_location1'];
+        } else {
+            $data['config_location1'] = $this->config->get('config_location1');
+        }
+
+
+        if (isset($this->request->post['config_fax'])) {
 			$data['config_fax'] = $this->request->post['config_fax'];
 		} else {
 			$data['config_fax'] = $this->config->get('config_fax');

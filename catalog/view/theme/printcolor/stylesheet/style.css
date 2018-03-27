@@ -1260,3 +1260,171 @@ li.sk_category_menu_5702:hover  .sk_category_menu_name span:first-child {
 		font-size: 11px;
 	}
 }
+
+.headerCarousel .card {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    height: 570px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+}
+
+.container-f {
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.headerCarousel .card .textNode {
+    background: -webkit-gradient(linear, left top, left bottom, from(left), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.1)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+    background: linear-gradient(left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px 10px 40px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.headerCarousel .card .textNode .link {
+    font-size: 24px;
+    color: #fff;
+    background-color: #3693ac;
+    text-shadow: 0 0 2px #000;
+    text-decoration: none;
+    font-family: Arial , sans-serif;
+    font-weight: 300;
+    line-height: 44px;
+    width: 170px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+.headerCarousel .owl-nav {
+    width: 1170px;
+    position: absolute;
+    left: 50%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -585px;
+    top: 50%;
+    margin-top: -22px;
+    max-width: 100%;
+}
+
+.headerCarousel .card .textNode .title {
+    font-size: 36px;
+    color: #00c7fd;
+}
+
+.headerCarousel .card .textNode .text {
+    font-size: 22px;
+    color: #fff;
+    padding-top: 15px;
+    line-height: 26px;
+}
+
+.headerCarousel .owl-nav .owl-prev {
+    font-size: 36px;
+    width: 45px;
+    height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #00c7fd;
+    -webkit-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s;
+}
+.headerCarousel .owl-nav .owl-next {
+    font-size: 36px;
+    width: 45px;
+    height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #00c7fd;
+    -webkit-transition-duration: .25s;
+    -o-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+.headerCarousel .owl-nav .owl-next:hover {
+    background-color: #000;
+}
+.headerCarousel .owl-nav .owl-prev:hover {
+    background-color: #000;
+}
+.headerCarousel .card .textNode .link:hover {
+    -webkit-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    -webkit-box-shadow: inset 0 0 5px #fff;
+    box-shadow: inset 0 0 5px #fff;
+}
+
+@media (max-width: 1615px) {
+    .headerCarousel .card {
+        height: 420px;
+    }
+    .container-f {
+        width: 980px;
+        padding: 0 15px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+}
