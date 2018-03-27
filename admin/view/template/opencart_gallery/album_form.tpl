@@ -178,7 +178,8 @@
                         <div class="form-group" style="margin:0">
                           <label class="col-sm-2 control-label">Ссылка</label>
                           <div class="col-sm-10">
-                            <input class="form-control" name="" />
+                            <input class="form-control" name="album_image[<?php echo $image_row; ?>][link]"
+                                   value="<?php echo $album_image['link']; ?>"/>
                           </div>
                         </div>
 

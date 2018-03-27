@@ -15,9 +15,6 @@ function getViewportHeight() {
   return ((document.compatMode || isIE) && !isOpera) ? (document.compatMode == 'CSS1Compat') ? document.documentElement.clientHeight : document.body.clientHeight : (document.parentWindow || document.defaultView).innerHeight;
 }
 
-
-
-
 function Mirror(){
 	if (Mirror_var == 0){
 		document.getElementById('sk_mirror').style.backgroundPosition = 'center -95px';

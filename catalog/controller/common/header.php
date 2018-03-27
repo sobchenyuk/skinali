@@ -1,5 +1,14 @@
 <?php
 class ControllerCommonHeader extends Controller {
+
+
+    public function getImg(){
+
+        return $query = $this->db->query("SELECT * FROM `po_opencart_gallery_image` WHERE 1 ORDER BY `po_opencart_gallery_image`.`sort_order` ASC");
+
+    }
+
+
 	public function index() {
 		// Analytics
 		$this->load->model('extension/extension');
@@ -23,6 +32,8 @@ class ControllerCommonHeader extends Controller {
 		if (is_file(DIR_IMAGE . $this->config->get('config_icon'))) {
 			$this->document->addLink($server . 'image/' . $this->config->get('config_icon'), 'icon');
 		}
+
+        $data['picture_gallery'] = $this->getImg();
 
 		$data['title'] = $this->document->getTitle();
 
@@ -87,6 +98,10 @@ class ControllerCommonHeader extends Controller {
 		$data['checkout'] = $this->url->link('checkout/checkout', '', true);
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
+
+        $data['telephone1'] = $this->config->get('config_telephone1');
+        $data['telephone2'] = $this->config->get('config_telephone2');
+
 
 		// Menu
 		$this->load->model('catalog/category');

@@ -104,7 +104,89 @@
                   </select>
                 </div>
               </div>
+
+
+              <div class="form-group">
+
+                <div class="col-sm-12">
+                  <h3 class="text-center">Контакты в шапке</h3>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div class="col-sm-12">
+                  <label for="phone1" class="col-sm-2 control-label">Телефон 1</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone1" class="form-control" value="<?php echo $config_telephone1; ?>" id="phone1" placeholder="Телефон 1">
+                  </div>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div class="col-sm-12">
+                  <label for="phone2" class="col-sm-2 control-label">Телефон 2</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone2" class="form-control" value="<?php echo $config_telephone2; ?>" id="phone1" placeholder="Телефон 2">
+                  </div>
+                </div>
+
+              </div>
+
+
+
+              <div class="form-group">
+
+                <div class="col-sm-12">
+                  <h3 class="text-center">Контакты в подвале</h3>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div class="col-sm-12">
+                  <label for="email1" class="col-sm-2 control-label">Емайл</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="config_email1" id="email1" value="<?php echo $config_email1; ?>" placeholder="Емайл">
+                  </div>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div class="col-sm-12">
+                  <label for="phone3" class="col-sm-2 control-label">Телефон 1</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone3" class="form-control" value="<?php echo $config_telephone3; ?>" id="phone3" placeholder="Телефон 1">
+                  </div>
+                </div>
+
+                <p>&nbsp;</p>
+
+                <div class="col-sm-12">
+                  <label for="phone4" class="col-sm-2 control-label">Телефон 2</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="config_telephone4" class="form-control" value="<?php echo $config_telephone4; ?>" id="phone3" placeholder="Телефон 2">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-group">
+                <label for="Location1" class="col-sm-2 control-label">Местоположение</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" name="config_location1" id="Location" rows="3" placeholder="Адрес в подвале"><?php echo $config_location1; ?></textarea>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="copyright" class="col-sm-2 control-label">Копирайт</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" name="config_copyright" id="copyright" rows="3" placeholder="Копирайт"><?php echo $config_copyright; ?></textarea>
+                </div>
+              </div>
+
             </div>
+
+
+
             <div class="tab-pane" id="tab-store">
               <ul class="nav nav-tabs" id="store-language">
                 <?php foreach ($languages as $language) { ?>

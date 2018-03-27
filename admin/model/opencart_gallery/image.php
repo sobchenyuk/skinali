@@ -194,11 +194,11 @@ class ModelOpencartGalleryImage extends Model {
 			}
 		}
 
-		if (isset($data['album_image'])) {
-			foreach ($data['album_image'] as $album_image) {
-				$this->db->query("INSERT INTO po_opencart_gallery_image SET name = '" . $this->db->escape($album_image['name']) . "' , album_id = '" . (int)$album_id . "', image = '" . $this->db->escape($album_image['image']) . "', sort_order = '" . (int)$album_image['sort_order'] . "'");
-			}
-		}
+        if (isset($data['album_image'])) {
+            foreach ($data['album_image'] as $album_image) {
+                $this->db->query("INSERT INTO po_opencart_gallery_image SET name = '" . $this->db->escape($album_image['name']) . "' , title = '" . $this->db->escape($album_image['title']) . "' , link = '" . $this->db->escape($album_image['link']) . "' , album_id = '" . (int)$album_id . "', image = '" . $this->db->escape($album_image['image']) . "', sort_order = '" . (int)$album_image['sort_order'] . "'");
+            }
+        }
 
 		if ($data['keyword']) {
 			$this->db->query("INSERT INTO " . DB_PREFIX . "url_alias SET query = 'album_id=" . (int)$album_id . "', keyword = '" . $this->db->escape($data['keyword']) . "'");
@@ -233,7 +233,7 @@ class ModelOpencartGalleryImage extends Model {
 
 		if (isset($data['album_image'])) {
 			foreach ($data['album_image'] as $album_image) {
-				$this->db->query("INSERT INTO po_opencart_gallery_image SET name = '" . $this->db->escape($album_image['name']) . "' , title = '" . $this->db->escape($album_image['title']) . "' , album_id = '" . (int)$album_id . "', image = '" . $this->db->escape($album_image['image']) . "', sort_order = '" . (int)$album_image['sort_order'] . "'");
+				$this->db->query("INSERT INTO po_opencart_gallery_image SET name = '" . $this->db->escape($album_image['name']) . "' , title = '" . $this->db->escape($album_image['title']) . "' , link = '" . $this->db->escape($album_image['link']) . "' , album_id = '" . (int)$album_id . "', image = '" . $this->db->escape($album_image['image']) . "', sort_order = '" . (int)$album_image['sort_order'] . "'");
 			}
 		}
 
