@@ -523,6 +523,14 @@
 
 
 
+        #sk_html_block body.information-information-89 .container.container_center {
+            width: 1600px;
+        }
+        #sk_html_block body.information-information-89 .container.container_center .sk_breadcrumbs {
+            width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
 
         #wrapper {
             max-width: 100%;
