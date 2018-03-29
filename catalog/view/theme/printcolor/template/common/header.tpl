@@ -11,6 +11,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?php echo $title; if (isset($_GET['page'])) { echo " - ". ((int) $_GET['page'])." ".$text_page;} ?></title>
 <base href="<?php echo $base; ?>" />
+
 <?php if ($description) { ?>
 <meta name="description" content="<?php echo $description; if (isset($_GET['page'])) { echo " - ". ((int) $_GET['page'])." ".$text_page;} ?>" />
 <?php } ?>
@@ -30,8 +31,9 @@
 
 <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 
+<!-- font-awesome v4.7.0 -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <!--<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">-->
 
@@ -49,6 +51,495 @@
 <script src="catalog/view/javascript/js/script.js" type="text/javascript"></script>
 
     <style>
+
+        * {
+            padding: 0;
+            outline: 0;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        header .sk_first_line.container {
+            background: none;
+        }
+
+        header .sk_first_line.container nav.sk_main_menu.gradient {
+            display: flex;
+            padding: 6px 0;
+            margin-left: 10px;
+            position: relative;
+        }
+
+        header .sk_first_line.container .sk_main_menu ul {
+            width: auto;
+            float: none;
+        }
+        .container_bg {
+            background-color: #191919;
+            padding: 1px 0;
+            -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+        }
+
+        @media (max-width: 1615px) {
+            header .sk_first_line.container nav.sk_main_menu.gradient {
+                width: 50%;
+            }
+            header .sk_first_line.container .sk_main_menu ul {
+                width: 650px;
+            }
+
+        }
+        @media (min-width: 1615px) {
+
+            header .sk_first_line.container .sk_main_menu ul {
+                width: 1100px;
+            }
+        }
+
+        header .sk_first_line.container .sk_main_menu li {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+        }
+        header .sk_first_line.container .sk_first_line_container li:before {
+            content: "";
+            display: none;
+        }
+
+
+        header .sk_first_line.container .sk_first_line_container {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        header .sk_first_line.container .sk_first_line_container .contacts {
+            padding-left: 0;
+            margin-left: 0;
+            position: absolute;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            top: -40px;
+        }
+        header .sk_first_line.container .sk_first_line_container .contacts .phoneList {
+            display: flex;
+        }
+
+        header .sk_first_line.container .sk_first_line_container .contacts .phoneList a {
+            font-size: 16px;
+            color: #acacac;
+            text-decoration: none;
+            -webkit-transition-duration: .5s;
+            -o-transition-duration: .5s;
+            transition-duration: .5s;
+            margin: 0 13px;
+            -moz-transform: skewX(25deg);
+            -ms-transform: skewX(25deg);
+            -webkit-transform: skewX(25deg);
+            -o-transform: skewX(25deg);
+            transform: skewX(25deg);
+            transition: color .2s ease-out 0s;
+        }
+        header .sk_first_line.container .sk_first_line_container .contacts .phoneList a i {
+            font-size: 18px;
+            margin-right: 5px;
+        }
+
+        header .sk_first_line.container .sk_first_line_container .contacts .phoneList a:hover {
+            color: #00c7fd;
+        }
+        header>.sk_main_menu ul {
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+            padding-left: 11px;
+            padding-right: 11px;
+        }
+
+        header>.sk_main_menu {
+            width: auto;
+            display: table;
+            margin: 0 auto;
+            z-index: 1;
+        }
+
+        .sk_breadcrumbs {
+            background: -webkit-gradient(linear, left top, left bottom, from(#232222), to(#191919));
+            background: -webkit-linear-gradient(top, #232222, #191919);
+            background: -o-linear-gradient(top, #232222, #191919);
+            background: linear-gradient(top, #232222, #191919);
+            height: 50px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-shadow: 0 0 2px #000;
+            box-shadow: 0 0 2px #000;
+            border-top: 1px solid #3f3f3f;
+        }
+
+        .sk_main_header_holder {
+            border-top: 0;
+            padding-top: 0;
+        }
+        .sk_breadcrumbs_holder>a, .sk_breadcrumbs_holder span a {
+            padding-top: 0;
+        }
+        .call_back form {
+            margin-top: 20px;
+        }
+        .call_back .manager span {
+            font-size: 14px;
+            width: 78px;
+            display: block;
+            margin: 0 auto;
+        }
+        .menu-glavnoe-menyu-container ul.naver {
+            display: flex;
+        }
+
+        .menu-glavnoe-menyu-container .naver li ul {
+            margin-top: 25px;
+            position: absolute;
+            background-color: #191919;
+            width: 325px !important;
+            padding: 0;
+            top: 100%;
+            z-index: 10000;
+            -webkit-transition-duration: 2.5s;
+            -o-transition-duration: 2.5s;
+            transition-duration: 2.5s;
+            -webkit-transition-property: max-height;
+            -o-transition-property: max-height;
+            transition-property: max-height;
+            max-height: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 10px #191919;
+            box-shadow: 0 0 10px #191919;
+        }
+
+        .menu-glavnoe-menyu-container .naver li ul li:first-child {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .menu-glavnoe-menyu-container .naver li ul li {
+            float: none;
+        }
+        .menu-glavnoe-menyu-container .naver li {
+            display: block;
+            position: relative;
+            float: left;
+        }
+
+        .menu-glavnoe-menyu-container .naver li ul li a {
+            padding-bottom: 0;
+            line-height: 36px;
+            margin: 0 7px;
+            width: 100%;
+            border-bottom: 1px solid transparent;
+        }
+
+        .menu-glavnoe-menyu-container .naver li ul li:hover>a {
+            color: #00c7fd;
+            border-bottom: 1px solid #00c7fd;
+            cursor: pointer;
+        }
+        @media (max-width: 1615px) {
+            .menu-glavnoe-menyu-container .naver li a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+            .sk_galery_main_category, #right_sidebar {
+                width: 19%;
+            }
+            .sk_galery_not_main_category,
+            .sk_page_galery_container,
+            .sk_galery_container,
+            .sk_archive_holder, .sk_order_holder>.sk_order_form_holder {
+                width: 60%;
+            }
+            #sk_galery_container_holder {
+                width: 90%;
+            }
+            .accordeon h3, .acc_list a {
+                font-size: 16px;
+            }
+            div[class^="money_text_holder_"] ul {
+                padding-left: 0;
+            }
+            div[class^="icon_for_diler_"] {
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 94px;
+            }
+            .diler_text_7 form {
+                width: 90%;
+            }
+            #price {
+                font-size: 30px;
+            }
+            .sk_order_form>.sk_submit_holder {
+                width: 100%;
+            }
+            .sk_order_change_holder {
+                width: 100%;
+            }
+            .sk_mirror_text, .sk_black_white_text, .sk_sepia_text {
+                font-size: 16px;
+            }
+            .rb-gallery-0.rb-gallery {
+                width: 60% !important;
+            }
+            .address_main_holder .map_holder {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+            }
+            .address_main_holder .map_holder iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .address_holder table {
+                font-size: 16px;
+            }
+            .address_main_holder .address_holder {
+                width: 36%;
+            }
+            .address_main_holder .map_holder {
+                width: 55%;
+            }
+            .sk_galery_not_main_category_wraper>ul>li>a {
+                font-size: 16px;
+            }
+            #sk_galery_container_holder img {
+                width: 62% !important;
+            }
+            .sk_post_date_in #image-box img {
+                width: 100% !important;
+            }
+        }
+        .menu-glavnoe-menyu-container .naver li a {
+                text-decoration: none;
+                color: #7c7f82;
+                display: block;
+                padding: 0;
+                padding-bottom: 25px;
+                margin-bottom: -25px;
+                text-transform: uppercase;
+                -webkit-transition-duration: .25s;
+                -o-transition-duration: .25s;
+                transition-duration: .25s;
+                border-bottom: 2px solid transparent;
+        }
+
+        .menu-glavnoe-menyu-container .naver li:hover > a {
+            color: #00c7fd;
+            border-bottom: 2px solid #00c7fd;
+            cursor: pointer;
+        }
+        .menu-glavnoe-menyu-container .naver li:hover > ul {
+            max-height: 1000px;
+        }
+        #menu-glavnoe-menyu li:nth-last-child(1), #menu-glavnoe-menyu li:nth-last-child(2), #menu-glavnoe-menyu li:nth-last-child(3), #menu-glavnoe-menyu li:nth-last-child(4) {
+            display: inline-block;
+        }
+        #sk_html_block .sk_first_line.container {
+            background: none;
+            margin-bottom: 19px;
+            margin-top: 19px;
+        }
+        .right-col {
+            display: flex;
+            align-items: flex-start;
+            height: 100%;
+            margin: auto;
+            margin-top: 0;
+        }
+
+        .right-col .orderCallBack {
+            color: #7c7f82;
+            font-size: 18px;
+            line-height: 50px;
+            padding: 0 40px;
+            cursor: pointer;
+            border: 1px solid #000;
+            border-top: 1px solid #454545;
+            white-space: nowrap;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+        .right-col .orderCallBack:hover {
+            border: 1px solid #00c7fd;
+            color: #00c7fd;
+        }
+
+
+        .popuper#callBack {
+            background-color: rgba(0, 0, 0, 0.4);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: none;
+            z-index: 10000;
+        }
+
+        .popuper#callBack[data-status="visab"] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .popuper#callBack .popuperContent {
+            background-color: #191919;
+            width: 840px;
+            -webkit-box-shadow: 0 0 4px #000;
+            box-shadow: 0 0 4px #000;
+        }
+
+        .popuper#callBack .popuperContent .headerPop {
+            font-size: 18px;
+            color: #00c7fd;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 26px 0 20px;
+            position: relative;
+        }
+
+        .popuper#callBack .popuperContent .headerPop .close {
+            border: 1px solid #000;
+            border-top: 1px solid #383838;
+            width: 38px;
+            height: 38px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: absolute;
+            top: 18px;
+            cursor: pointer;
+            right: 18px;
+            z-index: 1;
+            background-image: url("/catalog/view/theme/printcolor/img/closeGrey.png");
+            -webkit-background-size: 60% auto;
+            background-size: 60% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+
+
+        .popuper#callBack .popuperContent .headerPop .close:hover {
+            border-color: #00c7fd;
+            background-image: url("/catalog/view/theme/printcolor/img/close.png");
+        }
+
+        .popuper#callBack .popuperContent .bodyPop {
+            width: 680px;
+            margin: 0 auto;
+            border: 1px solid #232323;
+            text-align: center;
+            padding: 15px 0 25px;
+        }
+
+        .popuper#callBack .popuperContent .bodyPop .titleField {
+            font-size: 22px;
+            color: #d2d2d2;
+            margin-bottom: 22px;
+        }
+
+        .popuper#callBack .popuperContent .bodyPop .placeWrite {
+            font-size: 22px;
+            color: #d2d2d2;
+            border: 0;
+            background-color: transparent;
+        }
+
+        .popuper#callBack .popuperContent .row {
+            width: 100%;
+        }
+
+        .popuper#callBack .popuperContent .rowButton {
+            width: 100%;
+            text-align: center;
+        }
+
+        .popuper#callBack .popuperContent .rowButton .btn {
+            font-size: 24px;
+            color: #00c7fd;
+            border: 1px solid #00c7fd;
+            background-color: transparent;
+            font-family: Arial;
+            font-weight: 400;
+            line-height: 42px;
+            width: 250px;
+            margin: 15px 0 40px;
+            cursor: pointer;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+
+        .popuper#callBack .popuperContent .rowButton .btn:hover {
+            background-color: #00c7fd;
+            color: #191919;
+        }
+        .lego_bottom-left button {
+            font-size: 12px;
+        }
+
+
+        #sk_html_block body.information-information-89 .container.container_center {
+            width: 1600px;
+        }
+        #sk_html_block body.information-information-89 .container.container_center .sk_breadcrumbs {
+            width: 1200px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
         #wrapper {
             max-width: 100%;
             padding: 0;
@@ -58,6 +549,21 @@
             max-width: 100%;
             margin: 0 auto;
         }
+
+        .topPanel[data-fixed] {
+            padding-top: 3px;
+        }
+
+        .topPanel[data-fixed] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+            z-index: 20;
+            width: 100%;
+        }
+
         @media (max-width: 1615px) {
             #sk_html_block .container {
                 width: 1200px;
@@ -65,6 +571,25 @@
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
             }
+        }
+
+        footer {
+            box-shadow: 0 0 0;
+        }
+
+        footer .col-right .list li {
+            list-style: none;
+            padding: 6px 0;
+            font-size: 16px;
+            color: #959595;
+        }
+        footer address {
+            padding-left: 0;
+        }
+        footer .col-right .list li a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #959595;
         }
         footer .socialRow {
             display: -webkit-box;
@@ -120,6 +645,23 @@
             -ms-transform: scale(1.35, 1.35);
             transform: scale(1.35, 1.35);
         }
+        #wrapper footer li.current-menu-item {
+            background-color: #1f1f1f00 !important;
+            box-shadow: 2px 2px 2px #1f1f1f00 inset , 0 1px 1px -1px #1f1f1f00!important;
+            text-shadow: 0 0 0 #1f1f1f00 !important;
+        }
+        .message-error {
+            color: red;
+        }
+        .message-success {
+            color: #52da16;
+        }
+        .popuper#callBack .message-Content-red .bodyPop{
+            border-color: red;
+        }
+        .popuper#callBack .message-Content-success .bodyPop {
+            border-color: #52da16;
+        }
     </style>
 
 
@@ -148,7 +690,7 @@
   }
 
 	$home_url = '';
-	
+
 ?>
 <body class="<?php echo $class; ?>" onload = "preloader()">
 <!-- google -->
@@ -164,18 +706,64 @@
 </script>
 <!-- end google -->
 
+
         <wrapper id="wrapper">
+
+            <div class="popuper callBack" id="callBack" data-status="hidden">
+                <div class="popuperContent formContent">
+                    <form id="callBackForm" action="">
+                        <div class="headerPop">
+                            <div class="titlePopuer">
+                                Хотите мы вам перезвоним?
+                            </div>
+                            <div class="close">
+                            </div>
+                        </div>
+                        <div class="bodyPop">
+                            <div class="titleField">Оставьте свой номер телефона и мы перезвоним Вам</div>
+                            <input type="text" name="phone" placeholder="+38 (0__)___-__-__" class="phone placeWrite">
+
+                            <div class="message-failure titleField hidden"
+                                 style="color: red; margin-top: 20px; margin-bottom: 10px;">
+                                Пожалуйста, введите ваш номер телефона.
+                            </div>
+                        </div>
+                        <div class="row rowButton">
+                            <input type="submit" class="btn" value="Заказать звонок">
+                        </div>
+                    </form>
+
+                </div>
+                <div class="popuperContent messageContent hidden">
+                    <div class="headerPop">
+                        <div class="titlePopuer">
+                            Результат
+                        </div>
+                        <div class="close">
+                        </div>
+                    </div>
+                    <div class="bodyPop" >
+                        <!-- сообщения об отправке -->
+                        <div class="message-success titleField hidden">Ваш запрос успешно отправлен. Мы перезвоним Вам.</div>
+                        <div class="message-error titleField hidden">Сбой на сервере. <br /> Ваше сообщение не отправлено. Попробуйте отправить позже.</div>
+                    </div>
+                    <div class="row rowButton">
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+            
+
 <header>
 	<?php $curr_url = $_SERVER['REQUEST_URI'];?>
 	<?php //echo $curr_url; ?>
 	<?php //echo $_SERVER['HTTP_USER_AGENT']; ?>
 
-
-
-
-    <div class="section topPanel">
-        <div class="container  onlySm onlyMd onlyLg">
-            <div class="flexRow">
+<div class="container_bg topPanel">
+    <div class = "sk_first_line container">
+        <div class = "sk_first_line_container">
+            <div class = "sk_logo_holder">
                 <div id="logo">
                     <?php if ($logo) { ?>
                     <?php if ($home == $og_url) { ?>
@@ -187,171 +775,52 @@
                     <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
                     <?php } ?>
                 </div>
-                <div class="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="middle-col">
-                    <ul class="phoneList">
+            </div>
+            <nav class = "sk_main_menu gradient">
+
+                <div class="contacts">
+                    <div class="phoneList">
 
                         <?php if ($telephone1) { ?>
-                        <li><a href="tel:<?php echo $telephone1; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone1; ?></a></li>
+                        <div><a href="tel:<?php echo $telephone1; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone1; ?></a></div>
                         <?php } ?>
 
                         <?php if ($telephone2) { ?>
-                        <li><a href="tel:<?php echo $telephone2; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone2; ?></a></li>
+                        <div><a href="tel:<?php echo $telephone2; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone2; ?></a></div>
                         <?php } ?>
 
-                    </ul>
-                    <ul class="naver">
-                        <li><a>Скинали</a>
-                            <ul>
-                                <li><a href="">Конструктор</a></li>
-                                <li><a href="">Каталог изображений</a></li>
-                                <li><a href="">Наши работы</a></li>
-                            </ul></li>
-                        <li><a href="">Раздвижные системы</a></li>
-                        <li><a href="">Мебельные фасады</a></li>
-                        <li><a href="">УФ печать</a></li>
-                        <li><a href="">Наши работы</a></li>
-                        <li><a href="">Контакты</a></li>
-                        <li class="cartKey hidden-md hidden-lg modal-key" data-href="#cart">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            <span class="index">11</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right-col">
-                    <div>
-                        <div class="orderCallBack modal-key" data-href="#callBack">Заказать звонок</div>
-                        <div class="cart">
-                            <div class="cartKey modal-key" data-href="#cart">
-                                <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                <div class="index">11</div>
-                            </div>
-                            <div class="resultPrice">
-                                999999 грн.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nt2">
-                        <a href="" class="exit">
-                            <div>Личный кабинет</div>
-                            <span class="icon"></span>
-                            <span>Выход</span>
-                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container onlyXs">
-            <div class="flexRow">
-                <div class="middle-col lsd1">
-                    <ul class="phoneList">
-                        <li><a href="tel:0957140305"><i class="fa fa-phone-square" aria-hidden="true"></i> 095 714 03 05</a></li>
-                        <li><a href="tel:0984259984"><i class="fa fa-phone-square" aria-hidden="true"></i> 098 425 99 84</a></li>
-                        <li>
-							<span class="nt2">
-								<a href="" class="exit">
-									<span class="icon"></span>
-								</a>
-							</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right-col">
-                    <a href="" class="logo">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                    <div class="orderCallBack modal-key" data-href="#callBack">Заказать звонок</div>
-                    <div class="cart">
-                        <div class="cartKey modal-key" data-href="#cart">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            <div class="index">11</div>
-                        </div>
-                        <div class="resultPrice">
-                            999999 грн.
-                        </div>
-                    </div>
-                </div>
-                <div class="middle-col">
-                    <ul class="naver">
-                        <li><a>Скинали</a>
-                            <ul>
-                                <li><a href="">Конструктор</a></li>
-                                <li><a href="">Каталог изображений</a></li>
-                                <li><a href="">Наши работы</a></li>
-                            </ul></li>
-                        <li><a href="">Раздвижные системы</a></li>
-                        <li><a href="">Мебельные фасады</a></li>
-                        <li><a href="">УФ печать</a></li>
-                        <li><a href="">Наши работы</a></li>
-                        <li><a href="">Контакты</a></li>
-                        <li class="cartKey hidden-md hidden-lg modal-key" data-href="#cart">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                            <span class="index">11</span>
-                        </li>
-                    </ul>
-                    <div class="naverOpen">
 
-                    </div>
+                <div class="menu-glavnoe-menyu-container">
+
+                    <?php if ($smenu_header) { ?>
+                    <ul class="naver">
+                        <?php echo html_entity_decode($smenu_header); ?>
+                    </ul>
+                    <?php } ?>
+
+                </div>
+
+            </nav>
+
+
+            <div class="right-col">
+                <div>
+                    <div class="orderCallBack modal-key" data-href="#callBack">Заказать звонок</div>
                 </div>
             </div>
+
+
         </div>
     </div>
+</div>
+    <?php if ($is_home): ?>
 
+    <?php else: ?>
+    <p>&nbsp;</p>
+    <?php endif; ?>
 
-
-
-
-	<div class = "sk_first_line container">
-		<div class = "sk_first_line_container">
-			<div class = "sk_logo_holder">
-				<div id="logo">
-				  <?php if ($logo) { ?>
-					<?php if ($home == $og_url) { ?>
-					  <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
-					<?php } else { ?>
-					  <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-					<?php } ?>
-				  <?php } else { ?>
-					<h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-				  <?php } ?>
-				</div>
-			</div>
-			<ul>
-				<li class="hours"><h3>ГАРАНТИЯ<br><span>на скинали</span></h3></li>
-				<li class="free_delivery"><h3>ДОСТАВКА<br><span>по всей Украине</span></h3></li>
-				<li class="our_phones"><h3>(095)714-03-05<br>(098)425-99-84</h3></li>
-				<li class = "pw_right_holder">
-					<div class = "pw_header_social">
-						<a target="_blank" href = "https://ru-ru.facebook.com/printcolor.fotooboi" rel="nofollow" ></a>
-						<a href = "skype:printcolor45?chat"></a>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<nav class = "sk_main_menu gradient">
-		<div class="menu-glavnoe-menyu-container">
-			<ul id="menu-glavnoe-menyu" class="menu">
-				<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60 <?php echo ($curr_url == '/o-kompanii' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>o-kompanii">О компании</a></li>
-				<li id="menu-item-183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-183 <?php echo ($curr_url == '/news/' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>news">Новости</a></li>
-				<li id="menu-item-4756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4756 <?php echo ($curr_url == '/chasto-zadavaemyie-voprosyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>chasto-zadavaemyie-voprosyi">Часто задаваемые вопросы</a></li>
-				<li id="menu-item-4753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4753 <?php echo ($curr_url == '/nashi-rabotyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>nashi-rabotyi">Наши работы</a></li>
-				<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58 <?php echo ($curr_url == '/dostavka-i-oplata' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>dostavka-i-oplata">Доставка и оплата</a></li>
-				<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59 <?php echo ($curr_url == '/kontaktyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>kontaktyi">Контакты</a></li>
-				<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57 <?php echo ($curr_url == '/dileram' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>dileram">Дилерам</a></li>
-				<li id="menu-item-4823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4823 <?php echo ($curr_url == '/trebovaniya-k-faylam' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>trebovaniya-k-faylam">Требования к файлам</a></li>
-				<li id="menu-item-4824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4824 <?php echo ($curr_url == '/nashe-oborudovanie' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>nashe-oborudovanie">Наше оборудование</a></li>
-				<li id="menu-item-4825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4825 <?php echo ($curr_url == '/ustanovka-skinali' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>ustanovka-skinali">Установка скинали</a></li>
-				<li id="menu-item-4846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4846 <?php echo ($curr_url == '/pravila-zamera' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>pravila-zamera">Правила замера</a></li>
-			</ul>
-		</div>
-		<!--<div id="menu_right_trigger"></div>
-		<div id="menu_left_trigger"></div>-->
-	</nav>
 </header>
 
 <!-- Слайдер -->
@@ -400,195 +869,28 @@
 
 
 
-            <!--
-                <div class="sk_slider_holder">
-                    <div class="sk_slider_slide_holder" id="slider">
-                        <div class="sk_slider_slides_1" id="slide1" style="opacity: 1; z-index: 100;"></div>
-                        <div class="sk_slider_slides_2" id="slide2" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_3" id="slide3" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_4" id="slide4" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_5" id="slide5" style="opacity: 0; z-index: 0;"></div>
-                    </div>
-                    <span class="sk_slider_triangle_3"></span>
-            <!-- 		<span class = "sk_slider_triangle_4">&#9698;</span> -->
-            <!--	<div class="sk_slider_text_holder">
-                <h1>Скинали</h1>
-                <h2>Стеклянные фартуки</h2>
-                <p id="slider_text_holder">Минимальная стоимость<br>при максимальных возможностях</p>
-                <div class="sk_slider_button_holder">
-                    <a href="#" id="sk_slider_option_1" onclick="SlideChange(5)" style="background-position: 0px 0px;"></a>
-                    <a href="#" id="sk_slider_option_2" onclick="SlideChange(1)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_3" onclick="SlideChange(2)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_4" onclick="SlideChange(3)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_5" onclick="SlideChange(4)" onmouseover="SlideChange(1)" style="background-position: 0px -16px;"></a>
-                </div>
-                </div>
-            </div>
-            <script type="text/javascript" src="catalog/view/javascript/js/slider.js"></script>
-         -->
-
         <?php endif; ?>
+
+
+            <header class="container">
+                <nav class = "sk_main_menu gradient">
+                    <div class="menu-glavnoe-menyu-container">
+
+                        <?php if ($smenu_slider) { ?>
+                        <ul id="menu-glavnoe-menyu" class="menu">
+                            <?php echo html_entity_decode($smenu_slider); ?>
+                        </ul>
+                        <?php } ?>
+
+                </nav>
+            </header>
+            <p>&nbsp;</p>
 
 
         <?php $icons_path = 'catalog/view/theme/printcolor/image/category/'; ?>
 
-        <div class="sk_category_menu">
-            <ul id="menu-menyu-kategoriy" class="sk_category_menu_holder">
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_5702 <?php echo ($curr_url == '/konstruktor-skinali' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>konstruktor-skinali">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg__ico_active" style="background-image: url(<?=$icons_path?>_active.png)"></div>
-                                <div class="sk_svg__ico_passive" style="background-image: url(<?=$icons_path?>_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Конструктор</span>
-                                <span>Конструктор</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Конструктор<br>скинали</span>
-                                <span>Конструктор<br>скинали</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4716 <?php echo ($curr_url == '/skinali_kuhonnyij_fartuk' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>skinali_kuhonnyij_fartuk">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_skinali_ico_active" style="background-image: url(<?=$icons_path?>skinali_active.png)"></div>
-                                <div class="sk_svg_skinali_ico_passive" style="background-image: url(<?=$icons_path?>skinali_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Скинали</span>
-                                <span>Скинали</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Кухонные<br>фартуки</span>
-                                <span>Кухонные<br>фартуки</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4832 <?php echo ($curr_url == '/ultrafioletovaya-pechat' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>ultrafioletovaya-pechat">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_table_ico_active" style="background-image: url(<?=$icons_path?>table_active.png)"></div>
-                                <div class="sk_svg_table_ico_passive" style="background-image: url(<?=$icons_path?>table_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>У-ф</span>
-                                <span>У-ф</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Ультрафиолетовая<br>печать</span>
-                                <span>Ультрафиолетовая<br>печать</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_61 <?php echo ($curr_url == '/dveri' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>dveri">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_door_ico_active" style="background-image: url(<?=$icons_path?>door_active.png)"></div>
-                                <div class="sk_svg_door_ico_passive" style="background-image: url(<?=$icons_path?>door_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Двери</span>
-                                <span>Двери</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Дверные полотна<br>для шкафов купе</span>
-                                <span>Дверные полотна<br>для шкафов купе</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_62 <?php echo ($curr_url == '/plitka' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>plitka">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_tiles_ico_active" style="background-image: url(<?=$icons_path?>tiles_active.png)"></div>
-                                <div class="sk_svg_tiles_ico_passive" style="background-image: url(<?=$icons_path?>tiles_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Плитка</span>
-                                <span>Плитка</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Печать<br>на плитке</span>
-                                <span>Печать<br>на плитке</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_63 <?php echo ($curr_url == '/stolyi' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>stolyi">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_ceiling_ico_active" style="background-image: url(<?=$icons_path?>ceiling_active.png)"></div>
-                                <div class="sk_svg_ceiling_ico_passive" style="background-image: url(<?=$icons_path?>ceiling_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Столы</span>
-                                <span>Столы</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Столы<br>с фотопечатью</span>
-                                <span>Столы<br>с фотопечатью</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_66 <?php echo ($curr_url == '/fasadyi' ? 'current-menu-item current_page_item' : '');?>">
-                    <a href="<?=$home_url?>fasadyi">
-                        <div class="sk_category_menu_ico">
-                            <div>
-                                <div class="sk_svg_fasades_ico_active" style="background-image: url(<?=$icons_path?>fasades_active.png)"></div>
-                                <div class="sk_svg_fasades_ico_passive" style="background-image: url(<?=$icons_path?>fasades_passive.png)"></div>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_name">
-                            <div>
-                                <span>Фасады</span>
-                                <span>Фасады</span>
-                            </div>
-                        </div>
-                        <div class="sk_category_menu_desc">
-                            <div>
-                                <span>Мебельные<br>фасады</span>
-                                <span>Мебельные<br>фасады</span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
 
+
+
+<div class="container container_center" >
 

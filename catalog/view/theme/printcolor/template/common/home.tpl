@@ -1,15 +1,19 @@
 <?php echo $header; ?>
 
-	<div class="sk_breadcrumbs">
-		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
-		<div id="sk_order" class="sk_breadcrumbs_holder">
-			<a href="<?php echo $breadcrumb['href']; ?>" rel="v:url" property="v:title">
-				<?php echo $breadcrumb['text']; ?>
-			</a>
+<?php if ($_SERVER['REQUEST_URI'] !== '/'): ?>
+
+<div class="sk_breadcrumbs">
+	<?php foreach ($breadcrumbs as $breadcrumb) { ?>
+	<div id="sk_order" class="sk_breadcrumbs_holder">
+		<a href="<?php echo $breadcrumb['href']; ?>" rel="v:url" property="v:title">
+			<?php echo $breadcrumb['text']; ?>
+		</a>
 		<?php } ?>
-		</div>
 	</div>
-	
+</div>
+
+<?php endif; ?>
+
 	<div class="sk_gallery_holder">
 
 	<?php
