@@ -745,7 +745,7 @@
 	<?php //echo $curr_url; ?>
 	<?php //echo $_SERVER['HTTP_USER_AGENT']; ?>
 
-<div class="container_bg">
+<div class="container_bg topPanel">
     <div class = "sk_first_line container">
         <div class = "sk_first_line_container">
             <div class = "sk_logo_holder">
