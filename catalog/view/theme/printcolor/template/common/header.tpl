@@ -861,5 +861,5 @@
 
 
 
-<div class="container" >
+<div class="container container_center" >
 
