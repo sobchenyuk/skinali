@@ -298,6 +298,9 @@
             .sk_mirror_text, .sk_black_white_text, .sk_sepia_text {
                 font-size: 16px;
             }
+            .rb-gallery-0.rb-gallery {
+                width: 60%;
+            }
 
         }
         .menu-glavnoe-menyu-container .naver li a {
