@@ -263,7 +263,10 @@
             .sk_galery_main_category, #right_sidebar {
                 width: 20%;
             }
-            .sk_galery_not_main_category, .sk_page_galery_container, .sk_galery_container, .sk_archive_holder {
+            .sk_galery_not_main_category,
+            .sk_page_galery_container,
+            .sk_galery_container,
+            .sk_archive_holder, .sk_order_holder>.sk_order_form_holder {
                 width: 60%;
             }
             #sk_galery_container_holder {
