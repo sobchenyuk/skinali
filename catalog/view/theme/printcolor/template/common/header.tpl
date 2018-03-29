@@ -157,7 +157,29 @@
             color: #00c7fd;
         }
 
+        .sk_breadcrumbs {
+            background: -webkit-gradient(linear, left top, left bottom, from(#232222), to(#191919));
+            background: -webkit-linear-gradient(top, #232222, #191919);
+            background: -o-linear-gradient(top, #232222, #191919);
+            background: linear-gradient(top, #232222, #191919);
+            height: 50px;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-shadow: 0 0 2px #000;
+            box-shadow: 0 0 2px #000;
+            border-top: 1px solid #3f3f3f;
+        }
 
+        .sk_main_header_holder {
+            border-top: 0;
+            padding-top: 0;
+        }
         .menu-glavnoe-menyu-container ul.naver {
             display: flex;
         }
