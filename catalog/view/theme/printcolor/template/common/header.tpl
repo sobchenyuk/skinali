@@ -267,6 +267,9 @@
             .sk_galery_not_main_category, .sk_page_galery_container, .sk_galery_container {
                 width: 60%;
             }
+            #sk_galery_container_holder {
+                width: 90%;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
