@@ -252,6 +252,9 @@
                 margin: 0 7px;
                 font-size: 14px;
             }
+            .sk_galery_main_category, #right_sidebar {
+                width: 20%;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
