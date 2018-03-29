@@ -560,7 +560,7 @@
             left: 0;
             -webkit-box-shadow: 0 0 10px #000;
             box-shadow: 0 0 10px #000;
-            z-index: 20;
+            z-index: 100;
             width: 100%;
         }
 
