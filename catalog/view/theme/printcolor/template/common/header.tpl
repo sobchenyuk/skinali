@@ -549,6 +549,26 @@
             max-width: 100%;
             margin: 0 auto;
         }
+
+        .topPanel[data-fixed] {
+            padding-top: 3px;
+        }
+
+        .topPanel[data-fixed] {
+            position: fixed;
+            top: 0;
+            left: 0;
+            -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+            z-index: 20;
+        }
+        .topPanel {
+            background-color: #191919;
+            padding-top: 14px;
+            -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+        }
+
         @media (max-width: 1615px) {
             #sk_html_block .container {
                 width: 1200px;
