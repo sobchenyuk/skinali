@@ -667,7 +667,11 @@
         </div>
     </div>
 </div>
+    <?php if ($is_home): ?>
 
+    <?php else: ?>
+    <p>&nbsp;</p>
+    <?php endif; ?>
 
 </header>
 
