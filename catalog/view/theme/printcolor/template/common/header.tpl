@@ -161,6 +161,7 @@
             height: 100%;
             margin: 0 auto;
             padding-left: 11px;
+            padding-right: 11px;
         }
 
         header>.sk_main_menu {
