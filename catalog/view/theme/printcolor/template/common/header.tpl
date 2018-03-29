@@ -330,6 +330,9 @@
             #sk_galery_container_holder img {
                 width: 62% !important;
             }
+            .sk_post_date_in #image-box img {
+                width: 100% !important;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
