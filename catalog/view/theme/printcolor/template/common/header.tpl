@@ -520,7 +520,9 @@
             background-color: #00c7fd;
             color: #191919;
         }
-
+        .lego_bottom-left button {
+            font-size: 12px;
+        }
 
 
         #sk_html_block body.information-information-89 .container.container_center {
