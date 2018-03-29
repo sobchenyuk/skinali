@@ -30,6 +30,10 @@ class ControllerCommonFooter extends Controller {
         $data['copyright1'] = $this->config->get('config_copyright');
 
 
+
+        $data['smenu_footer'] = $this->load->controller('extension/module/smenu');
+
+
         $data['iconlink'] = $this->load->controller('extension/module/iconlink');
 
 		$this->load->model('catalog/information');
