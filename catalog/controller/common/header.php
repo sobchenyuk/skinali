@@ -56,12 +56,14 @@ class ControllerCommonHeader extends Controller {
                 foreach ($childs as $child) {
 
 
-                    if ($child['type'] == 5) {
-                        $url = $child['type_name'];
-
+                    if ($child['type']==5) {
+                        $url=$items['type_name'];
                     }
                     if ($child['type']==6) {
-                       $url=$this->url->link($routs[(int)$child['type']],"", true);
+                        $url=$this->url->link($routs[(int)$child['type']],"", true);
+                    }
+                    else {
+                        $url=$this->url->link($path[(int)$child['type']], "&".$path_url[(int)$child['type']]."=".$child['type_id'], true);
                     }
 
                     $children_data[] = array(
