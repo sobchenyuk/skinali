@@ -327,6 +327,9 @@
             .sk_galery_not_main_category_wraper>ul>li>a {
                 font-size: 16px;
             }
+            #sk_galery_container_holder img {
+                width: 62% !important;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
