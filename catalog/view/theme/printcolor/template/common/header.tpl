@@ -262,7 +262,7 @@
                 font-size: 14px;
             }
             .sk_galery_main_category, #right_sidebar {
-                width: 20%;
+                width: 19%;
             }
             .sk_galery_not_main_category,
             .sk_page_galery_container,
