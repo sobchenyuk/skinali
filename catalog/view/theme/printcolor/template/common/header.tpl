@@ -538,6 +538,11 @@
             -ms-transform: scale(1.35, 1.35);
             transform: scale(1.35, 1.35);
         }
+        #wrapper footer li.current-menu-item {
+            background: none;
+            box-shadow: 2px 2px 2px #1f1f1f00 inset , 0 1px 1px -1px #1f1f1f00!important;
+            text-shadow: 0 0 0 #1f1f1f00 !important;
+        }
         .message-error {
             color: red;
         }
