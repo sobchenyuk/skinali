@@ -168,7 +168,7 @@
             width: auto;
             display: table;
             margin: 0 auto;
-            z-index: 100;
+            z-index: 1;
         }
 
         .sk_breadcrumbs {
@@ -561,12 +561,7 @@
             -webkit-box-shadow: 0 0 10px #000;
             box-shadow: 0 0 10px #000;
             z-index: 20;
-        }
-        .topPanel {
-            background-color: #191919;
-            padding-top: 14px;
-            -webkit-box-shadow: 0 0 10px #000;
-            box-shadow: 0 0 10px #000;
+            width: 100%;
         }
 
         @media (max-width: 1615px) {
