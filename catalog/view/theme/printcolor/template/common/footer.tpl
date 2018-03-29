@@ -182,6 +182,8 @@
 
                 $('.phone').mask('+38 (099)999-99-99');
 
+                $('#call_back').mask('+38 (099)999-99-99');
+
 
                 $('#callBackForm').submit(function(e){
                     e.preventDefault();
