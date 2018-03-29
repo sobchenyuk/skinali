@@ -180,6 +180,9 @@
             border-top: 0;
             padding-top: 0;
         }
+        .sk_breadcrumbs_holder>a, .sk_breadcrumbs_holder span a {
+            padding-top: 0;
+        }
         .menu-glavnoe-menyu-container ul.naver {
             display: flex;
         }
