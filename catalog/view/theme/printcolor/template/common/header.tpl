@@ -299,7 +299,7 @@
                 font-size: 16px;
             }
             .rb-gallery-0.rb-gallery {
-                width: 60%;
+                width: 60% !important;
             }
 
         }
