@@ -944,5 +944,5 @@
             </div>-->
 
 
-<div class="width" style="max-width: 1600px;padding: 0 15px;margin: 0 auto;">
+<div class="container" >
 
