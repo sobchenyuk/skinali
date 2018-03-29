@@ -156,6 +156,18 @@
         header .sk_first_line.container .sk_first_line_container .contacts .phoneList a:hover {
             color: #00c7fd;
         }
+        header>.sk_main_menu ul {
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+            padding-left: 11px;
+        }
+
+        header>.sk_main_menu {
+            width: auto;
+            display: table;
+            margin: 0 auto;
+        }
 
         .sk_breadcrumbs {
             background: -webkit-gradient(linear, left top, left bottom, from(#232222), to(#191919));
