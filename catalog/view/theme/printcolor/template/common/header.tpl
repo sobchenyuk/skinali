@@ -255,7 +255,6 @@
             border-bottom: 1px solid #00c7fd;
             cursor: pointer;
         }
-
         @media (max-width: 1615px) {
             .menu-glavnoe-menyu-container .naver li a {
                 margin: 0 7px;
@@ -269,6 +268,12 @@
             }
             #sk_galery_container_holder {
                 width: 90%;
+            }
+            .accordeon h3, .acc_list a {
+                font-size: 16px;
+            }
+            div[class^="money_text_holder_"] ul {
+                padding-left: 0;
             }
         }
         .menu-glavnoe-menyu-container .naver li a {
