@@ -280,6 +280,9 @@
                 background-repeat: no-repeat;
                 width: 94px;
             }
+            .diler_text_7 form {
+                width: 90%;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
