@@ -302,6 +302,19 @@
             .rb-gallery-0.rb-gallery {
                 width: 60% !important;
             }
+            .address_main_holder .map_holder {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+            }
+            .address_main_holder .map_holder iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
 
         }
         .menu-glavnoe-menyu-container .naver li a {
