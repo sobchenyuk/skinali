@@ -275,6 +275,11 @@
             div[class^="money_text_holder_"] ul {
                 padding-left: 0;
             }
+            div[class^="icon_for_diler_"] {
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 94px;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
