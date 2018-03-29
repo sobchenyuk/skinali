@@ -815,6 +815,7 @@
         </div>
     </div>
 </div>
+    <div class="offTop"></div>
     <?php if ($is_home): ?>
 
     <?php else: ?>
