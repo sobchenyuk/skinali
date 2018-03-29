@@ -286,6 +286,19 @@
             .diler_text_7 form {
                 width: 90%;
             }
+            #price {
+                font-size: 30px;
+            }
+            .sk_order_form>.sk_submit_holder {
+                width: 100%;
+            }
+            .sk_order_change_holder {
+                width: 100%;
+            }
+            .sk_mirror_text, .sk_black_white_text, .sk_sepia_text {
+                font-size: 16px;
+            }
+
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
