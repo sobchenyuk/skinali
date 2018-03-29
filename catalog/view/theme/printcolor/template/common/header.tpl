@@ -264,7 +264,7 @@
             .sk_galery_main_category, #right_sidebar {
                 width: 20%;
             }
-            .sk_galery_not_main_category {
+            .sk_galery_not_main_category, .sk_page_galery_container {
                 width: 60%;
             }
         }
