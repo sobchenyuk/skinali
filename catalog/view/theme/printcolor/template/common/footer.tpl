@@ -188,6 +188,20 @@
 					.attr('placeholder', '+38')
 					.mask('+38 (099)999-99-99');
 
+				// fixedMenu if scroll
+                function fixedMenu(){
+                    window.onscroll = function(e){
+                        if(window.pageYOffset > 500){
+                            document.querySelector('.topPanel').setAttribute('data-fixed','true');
+                            document.querySelector('.offTop').style.marginTop = ($('.topPanel').outerHeight())+40+"px";
+                        }
+                        else{
+                            document.querySelector('.topPanel').removeAttribute('data-fixed');
+                            document.querySelector('.offTop').style.marginTop = 0+"px";
+                        }
+                    }
+                }
+                fixedMenu();
 
                 $('#callBackForm').submit(function(e){
                     e.preventDefault();
