@@ -199,6 +199,12 @@
         .call_back form {
             margin-top: 20px;
         }
+        .call_back .manager span {
+            font-size: 14px;
+            width: 78px;
+            display: block;
+            margin: 0 auto;
+        }
         .menu-glavnoe-menyu-container ul.naver {
             display: flex;
         }
