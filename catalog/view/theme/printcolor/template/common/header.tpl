@@ -605,59 +605,62 @@
 	<?php //echo $_SERVER['HTTP_USER_AGENT']; ?>
 
 
-	<div class = "sk_first_line container">
-		<div class = "sk_first_line_container">
-			<div class = "sk_logo_holder">
-				<div id="logo">
-				  <?php if ($logo) { ?>
-					<?php if ($home == $og_url) { ?>
-					  <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
-					<?php } else { ?>
-					  <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-					<?php } ?>
-				  <?php } else { ?>
-					<h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-				  <?php } ?>
-				</div>
-			</div>
-            <nav class = "sk_main_menu gradient">
-
-                <div class="contacts">
-                    <div class="phoneList">
-
-                        <?php if ($telephone1) { ?>
-                        <div><a href="tel:<?php echo $telephone1; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone1; ?></a></div>
+	<div class = "sk_first_line ">
+        <div class="container">
+            <div class = "sk_first_line_container">
+                <div class = "sk_logo_holder">
+                    <div id="logo">
+                        <?php if ($logo) { ?>
+                        <?php if ($home == $og_url) { ?>
+                        <img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" />
+                        <?php } else { ?>
+                        <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
                         <?php } ?>
+                        <?php } else { ?>
+                        <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+                        <?php } ?>
+                    </div>
+                </div>
+                <nav class = "sk_main_menu gradient">
 
-                        <?php if ($telephone2) { ?>
-                        <div><a href="tel:<?php echo $telephone2; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone2; ?></a></div>
+                    <div class="contacts">
+                        <div class="phoneList">
+
+                            <?php if ($telephone1) { ?>
+                            <div><a href="tel:<?php echo $telephone1; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone1; ?></a></div>
+                            <?php } ?>
+
+                            <?php if ($telephone2) { ?>
+                            <div><a href="tel:<?php echo $telephone2; ?>"><i class="fa fa-phone-square" aria-hidden="true"></i><?php echo $telephone2; ?></a></div>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+
+                    <div class="menu-glavnoe-menyu-container">
+
+                        <?php if ($smenu_header) { ?>
+                        <ul class="naver">
+                            <?php echo html_entity_decode($smenu_header); ?>
+                        </ul>
                         <?php } ?>
 
                     </div>
+                    <!--<div id="menu_right_trigger"></div>
+                    <div id="menu_left_trigger"></div>-->
+                </nav>
+
+
+                <div class="right-col">
+                    <div>
+                        <div class="orderCallBack modal-key" data-href="#callBack">Заказать звонок</div>
+                    </div>
                 </div>
 
-                <div class="menu-glavnoe-menyu-container">
 
-                    <?php if ($smenu_header) { ?>
-                    <ul class="naver">
-                        <?php echo html_entity_decode($smenu_header); ?>
-                    </ul>
-                    <?php } ?>
-
-                </div>
-                <!--<div id="menu_right_trigger"></div>
-                <div id="menu_left_trigger"></div>-->
-            </nav>
-
-
-            <div class="right-col">
-                <div>
-                    <div class="orderCallBack modal-key" data-href="#callBack">Заказать звонок</div>
-                </div>
             </div>
+        </div>
 
-
-		</div>
 	</div>
 
 </header>
