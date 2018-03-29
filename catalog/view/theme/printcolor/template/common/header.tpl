@@ -78,6 +78,12 @@
             width: auto;
             float: none;
         }
+        .container_bg {
+            background-color: #191919;
+            padding: 1px 0;
+            -webkit-box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px #000;
+        }
 
         @media (max-width: 1615px) {
             header .sk_first_line.container nav.sk_main_menu.gradient {
@@ -244,6 +250,7 @@
             align-items: flex-start;
             height: 100%;
             margin: auto;
+            margin-top: 0;
         }
 
         .right-col .orderCallBack {
