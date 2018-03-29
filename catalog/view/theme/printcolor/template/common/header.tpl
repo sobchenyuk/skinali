@@ -168,6 +168,7 @@
             width: auto;
             display: table;
             margin: 0 auto;
+            z-index: 100;
         }
 
         .sk_breadcrumbs {
