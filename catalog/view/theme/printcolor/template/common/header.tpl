@@ -324,6 +324,9 @@
             .address_main_holder .map_holder {
                 width: 55%;
             }
+            .sk_galery_not_main_category_wraper>ul>li>a {
+                font-size: 16px;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
