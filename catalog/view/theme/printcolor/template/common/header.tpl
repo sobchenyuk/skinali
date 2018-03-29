@@ -652,8 +652,7 @@
                     <?php } ?>
 
                 </div>
-                <!--<div id="menu_right_trigger"></div>
-                <div id="menu_left_trigger"></div>-->
+
             </nav>
 
 
@@ -721,33 +720,6 @@
 
 
 
-            <!--
-                <div class="sk_slider_holder">
-                    <div class="sk_slider_slide_holder" id="slider">
-                        <div class="sk_slider_slides_1" id="slide1" style="opacity: 1; z-index: 100;"></div>
-                        <div class="sk_slider_slides_2" id="slide2" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_3" id="slide3" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_4" id="slide4" style="opacity: 0; z-index: 0;"></div>
-                        <div class="sk_slider_slides_5" id="slide5" style="opacity: 0; z-index: 0;"></div>
-                    </div>
-                    <span class="sk_slider_triangle_3"></span>
-            <!-- 		<span class = "sk_slider_triangle_4">&#9698;</span> -->
-            <!--	<div class="sk_slider_text_holder">
-                <h1>Скинали</h1>
-                <h2>Стеклянные фартуки</h2>
-                <p id="slider_text_holder">Минимальная стоимость<br>при максимальных возможностях</p>
-                <div class="sk_slider_button_holder">
-                    <a href="#" id="sk_slider_option_1" onclick="SlideChange(5)" style="background-position: 0px 0px;"></a>
-                    <a href="#" id="sk_slider_option_2" onclick="SlideChange(1)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_3" onclick="SlideChange(2)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_4" onclick="SlideChange(3)" style="background-position: 0px -16px;"></a>
-                    <a href="#" id="sk_slider_option_5" onclick="SlideChange(4)" onmouseover="SlideChange(1)" style="background-position: 0px -16px;"></a>
-                </div>
-                </div>
-            </div>
-            <script type="text/javascript" src="catalog/view/javascript/js/slider.js"></script>
-         -->
-
         <?php endif; ?>
 
 
@@ -761,22 +733,6 @@
                         </ul>
                         <?php } ?>
 
-                        <!--   <ul id="menu-glavnoe-menyu" class="menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page <?php echo ($curr_url == '/o-kompanii' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>o-kompanii">О компании</a></li>
-                                <li id="menu-item-183" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-183 <?php echo ($curr_url == '/news/' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>news">Новости</a></li>
-                                <li id="menu-item-4756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4756 <?php echo ($curr_url == '/chasto-zadavaemyie-voprosyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>chasto-zadavaemyie-voprosyi">Часто задаваемые вопросы</a></li>
-                                <li id="menu-item-4753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4753 <?php echo ($curr_url == '/nashi-rabotyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>nashi-rabotyi">Наши работы</a></li>
-                                <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58 <?php echo ($curr_url == '/dostavka-i-oplata' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>dostavka-i-oplata">Доставка и оплата</a></li>
-                                <li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59 <?php echo ($curr_url == '/kontaktyi' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>kontaktyi">Контакты</a></li>
-                                <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-57 <?php echo ($curr_url == '/dileram' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>dileram">Дилерам</a></li>
-                                <li id="menu-item-4823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4823 <?php echo ($curr_url == '/trebovaniya-k-faylam' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>trebovaniya-k-faylam">Требования к файлам</a></li>
-                                <li id="menu-item-4824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4824 <?php echo ($curr_url == '/nashe-oborudovanie' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>nashe-oborudovanie">Наше оборудование</a></li>
-                                <li id="menu-item-4825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4825 <?php echo ($curr_url == '/ustanovka-skinali' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>ustanovka-skinali">Установка скинали</a></li>
-                                <li id="menu-item-4846" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4846 <?php echo ($curr_url == '/pravila-zamera' ? 'current-menu-item current_page_item' : '');?>"><a href="<?=$home_url?>pravila-zamera">Правила замера</a></li>
-                            </ul>-->
-                        </div>
-                        <!--<div id="menu_right_trigger"></div>
-                        <div id="menu_left_trigger"></div>-->
                 </nav>
             </header>
             <p>&nbsp;</p>
@@ -784,164 +740,7 @@
 
         <?php $icons_path = 'catalog/view/theme/printcolor/image/category/'; ?>
 
-       <!-- <div class="sk_category_menu">
-                <ul id="menu-menyu-kategoriy" class="sk_category_menu_holder">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_5702 <?php echo ($curr_url == '/konstruktor-skinali' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>konstruktor-skinali">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg__ico_active" style="background-image: url(<?=$icons_path?>_active.png)"></div>
-                                    <div class="sk_svg__ico_passive" style="background-image: url(<?=$icons_path?>_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Конструктор</span>
-                                    <span>Конструктор</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Конструктор<br>скинали</span>
-                                    <span>Конструктор<br>скинали</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4716 <?php echo ($curr_url == '/skinali_kuhonnyij_fartuk' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>skinali_kuhonnyij_fartuk">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_skinali_ico_active" style="background-image: url(<?=$icons_path?>skinali_active.png)"></div>
-                                    <div class="sk_svg_skinali_ico_passive" style="background-image: url(<?=$icons_path?>skinali_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Скинали</span>
-                                    <span>Скинали</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Кухонные<br>фартуки</span>
-                                    <span>Кухонные<br>фартуки</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_4832 <?php echo ($curr_url == '/ultrafioletovaya-pechat' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>ultrafioletovaya-pechat">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_table_ico_active" style="background-image: url(<?=$icons_path?>table_active.png)"></div>
-                                    <div class="sk_svg_table_ico_passive" style="background-image: url(<?=$icons_path?>table_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>У-ф</span>
-                                    <span>У-ф</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Ультрафиолетовая<br>печать</span>
-                                    <span>Ультрафиолетовая<br>печать</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_61 <?php echo ($curr_url == '/dveri' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>dveri">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_door_ico_active" style="background-image: url(<?=$icons_path?>door_active.png)"></div>
-                                    <div class="sk_svg_door_ico_passive" style="background-image: url(<?=$icons_path?>door_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Двери</span>
-                                    <span>Двери</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Дверные полотна<br>для шкафов купе</span>
-                                    <span>Дверные полотна<br>для шкафов купе</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_62 <?php echo ($curr_url == '/plitka' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>plitka">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_tiles_ico_active" style="background-image: url(<?=$icons_path?>tiles_active.png)"></div>
-                                    <div class="sk_svg_tiles_ico_passive" style="background-image: url(<?=$icons_path?>tiles_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Плитка</span>
-                                    <span>Плитка</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Печать<br>на плитке</span>
-                                    <span>Печать<br>на плитке</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_63 <?php echo ($curr_url == '/stolyi' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>stolyi">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_ceiling_ico_active" style="background-image: url(<?=$icons_path?>ceiling_active.png)"></div>
-                                    <div class="sk_svg_ceiling_ico_passive" style="background-image: url(<?=$icons_path?>ceiling_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Столы</span>
-                                    <span>Столы</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Столы<br>с фотопечатью</span>
-                                    <span>Столы<br>с фотопечатью</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page sk_category_menu_66 <?php echo ($curr_url == '/fasadyi' ? 'current-menu-item current_page_item' : '');?>">
-                        <a href="<?=$home_url?>fasadyi">
-                            <div class="sk_category_menu_ico">
-                                <div>
-                                    <div class="sk_svg_fasades_ico_active" style="background-image: url(<?=$icons_path?>fasades_active.png)"></div>
-                                    <div class="sk_svg_fasades_ico_passive" style="background-image: url(<?=$icons_path?>fasades_passive.png)"></div>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_name">
-                                <div>
-                                    <span>Фасады</span>
-                                    <span>Фасады</span>
-                                </div>
-                            </div>
-                            <div class="sk_category_menu_desc">
-                                <div>
-                                    <span>Мебельные<br>фасады</span>
-                                    <span>Мебельные<br>фасады</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>-->
+
 
 
 <div class="container" >
