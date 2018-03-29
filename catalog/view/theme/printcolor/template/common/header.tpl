@@ -315,7 +315,15 @@
                 width: 100%;
                 height: 100%;
             }
-
+            .address_holder table {
+                font-size: 16px;
+            }
+            .address_main_holder .address_holder {
+                width: 36%;
+            }
+            .address_main_holder .map_holder {
+                width: 55%;
+            }
         }
         .menu-glavnoe-menyu-container .naver li a {
                 text-decoration: none;
