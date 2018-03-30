@@ -360,7 +360,7 @@
                 <table id="module-column-right" class="table table-striped table-bordered table-hover">
                   <thead>
                   <tr>
-                    <td class="text-center"><?php echo $text_content_newpos; ?></td>
+                    <td class="text-center">Новая позиция</td>
                   </tr>
                   </thead>
                   <tbody>
