@@ -1,9 +1,6 @@
 <?php echo $header; ?>
 
 
-
-чсмчсмчсм
-
 	<div class="sk_breadcrumbs">
 		<div id="sk_order" class="sk_breadcrumbs_holder">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -461,20 +458,7 @@
 		
 
 					<h3 class="comments-caption"><a name="comments"> Всего отзывов: <?=count($total_reviews)?> </a></h3>
-					<ul class="commentlist">
-						<?php foreach ($showed_reviews as $one_review): ?>
-						<li class="comment even thread-even depth-1" id="li-comment-<?=$one_review['review_id']?>">
-							<div id="comment-<?=$one_review['review_id']?>">
-								<div class="comment-author vcard">
-									<div class="comment-meta commentmetadata">
-										<span class="fn"><?=$one_review['author']?></span><span><?=getPointDateFormat(substr($one_review['date_added'], 0, 10))?> в <?=substr($one_review['date_added'], 11, 5)?></span>
-									</div>
-								</div>
-								<p><?=$one_review['text']?></p>
-							</div>
-						</li>
-						<?php endforeach; ?>
-					</ul>
+
 					<div class="sk_galery_pagination_holder">
 						<?php echo $pagination; ?>
 					</div>    
