@@ -662,6 +662,97 @@
         .popuper#callBack .message-Content-success .bodyPop {
             border-color: #52da16;
         }
+
+        @media (max-width: 1615px) {
+            .container-f {
+                width: 980px;
+                padding: 0 15px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+        }
+            .container-f {
+                width: 1170px;
+                padding: 0 15px;
+                margin: 0 auto;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                max-width: 100%;
+            }
+        .whatWeMake .titleSector {
+            font-size: 30px;
+            color: #00c7fd;
+            padding-bottom: 23px;
+            text-align: center;
+        }
+        .whatWeMake .rowCards {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .whatWeMake .rowCards .card {
+            width: 33.3%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 13px;
+            float: left;
+            -webkit-transition-duration: .5s;
+            -o-transition-duration: .5s;
+            transition-duration: .5s;
+        }
+        .whatWeMake .rowCards .card .wrapImg {
+            background-color: #191919;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+            box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .wrapImg .icon {
+                height: 270px;
+            }
+        }
+            .whatWeMake .rowCards .card .wrapImg .icon {
+                height: 324px;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: center;
+                border: 2px solid #151515;
+                -webkit-transition-duration: .25s;
+                -o-transition-duration: .25s;
+                transition-duration: .25s;
+            }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .name {
+                font-size: 20px;
+            }
+        }
+            .whatWeMake .rowCards .card .name {
+                font-size: 22px;
+                color: #00c7fd;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 45px 0 10px;
+            }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .info {
+                font-size: 16px;
+            }
+        }
+            .whatWeMake .rowCards .card .info {
+                font-size: 20px;
+                color: #7c7f82;
+                text-align: center;
+            }
     </style>
 
 
