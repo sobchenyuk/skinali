@@ -80,6 +80,10 @@ class ModelCatalogReview extends Model {
 	
 	public function getSomeReviews($start, $limit) {
 		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "review WHERE `status`='1' ORDER BY `review_id` ASC LIMIT $start, $limit");
+
+		var_dump($query);
+
+
 		return $query->rows;
 	}
 	
