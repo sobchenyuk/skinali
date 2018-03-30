@@ -1006,11 +1006,15 @@
                         <?php if ($item['album_id'] == 17): ?>
 
                         <div class="card">
-                            <div class="wrapImg">
-                                <div class="icon" style="background-image: url('<?php echo '/image/' . $item['image'] ?>');"></div>
-                            </div>
-                            <h3 class="name"><?php echo $item['title'] ?></h3>
-                            <p class="info"><?php echo $item['name'] ?></p>
+
+                            <a href="">
+                                <div class="wrapImg">
+                                    <div class="icon" style="background-image: url('<?php echo '/image/' . $item['image'] ?>');"></div>
+                                </div>
+                                <h3 class="name"><?php echo $item['title'] ?></h3>
+                                <p class="info"><?php echo $item['name'] ?></p>
+                            </a>
+
                         </div>
 
                         <?php endif; ?>
