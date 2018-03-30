@@ -1029,8 +1029,17 @@
             </div>
 
 
+            <div class="section textSection">
+                <div class="container-f">
 
-            <?php echo $content_top; ?>
+                    <hr/>
+
+                    <?php echo $content_top; ?>
+
+                </div>
+
+            </div>
+
 
             <?php endif; ?>
 
