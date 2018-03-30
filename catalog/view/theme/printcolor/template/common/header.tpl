@@ -1030,7 +1030,7 @@
 
 
 
-
+            <?php echo $content_top; ?>
 
             <?php endif; ?>
 
