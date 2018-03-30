@@ -241,6 +241,8 @@ class ControllerCommonHeader extends Controller {
 
         $data['content_top'] = $this->load->controller('common/content_top');
 
+        var_dump($data['content_top']);
+
 		// For page specific css
 		if (isset($this->request->get['route'])) {
 			if (isset($this->request->get['product_id'])) {
