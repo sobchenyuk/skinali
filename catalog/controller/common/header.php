@@ -16,6 +16,17 @@ class ControllerCommonHeader extends Controller {
         $this->load->model('catalog/smenu');
 
 
+
+
+        $this->load->model('design/layout');
+
+        $data['layouts'] = $this->model_design_layout->getLayouts();
+
+        $data['header'] = $this->load->controller('common/header');
+
+
+
+
         $data['smenus'] = array();
 
         $root_items = $this->model_catalog_smenu->getSmenu($setting);

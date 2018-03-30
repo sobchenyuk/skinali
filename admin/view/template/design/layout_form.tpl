@@ -144,6 +144,9 @@
                   </tfoot>
                 </table>
               </div>
+
+
+
               <div class="col-lg-6 col-md-4 col-sm-12">
                 <table id="module-content-top" class="table table-striped table-bordered table-hover">
                   <thead>
@@ -278,6 +281,10 @@
                   </tfoot>
                 </table>
               </div>
+
+
+
+
               <div class="col-lg-3 col-md-4 col-sm-12">
                 <table id="module-column-right" class="table table-striped table-bordered table-hover">
                   <thead>
