@@ -785,7 +785,9 @@
             padding-bottom: 23px;
             text-align: center;
         }
-
+        .section.textSection {
+            margin-bottom: 65px;
+        }
         .textSection span {
             font-size: 22px !important;
             color: #7c7f82 !important;
