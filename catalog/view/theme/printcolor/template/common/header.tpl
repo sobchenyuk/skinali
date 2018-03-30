@@ -1024,6 +1024,7 @@
 
             </script>
 
+            <p>&nbsp;</p>
 
 
         <?php endif; ?>
