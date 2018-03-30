@@ -764,6 +764,9 @@
             -webkit-box-shadow: 0 2px 3px #000;
             box-shadow: 0 2px 3px #000;
         }
+        .whatWeMake .rowCards .card a {
+            text-decoration: none;
+        }
     </style>
 
 
@@ -1007,7 +1010,7 @@
 
                         <div class="card">
 
-                            <a href="">
+                            <a href="<?php echo $item['link'] ?>">
                                 <div class="wrapImg">
                                     <div class="icon" style="background-image: url('<?php echo '/image/' . $item['image'] ?>');"></div>
                                 </div>
