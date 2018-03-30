@@ -663,6 +663,14 @@
             border-color: #52da16;
         }
 
+        .container-f {
+            width: 1170px;
+            padding: 0 15px;
+            margin: 0 auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
         @media (max-width: 1615px) {
             .container-f {
                 width: 980px;
@@ -671,14 +679,6 @@
                 box-sizing: border-box;
             }
         }
-            .container-f {
-                width: 1170px;
-                padding: 0 15px;
-                margin: 0 auto;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                max-width: 100%;
-            }
         .whatWeMake .titleSector {
             font-size: 30px;
             color: #00c7fd;
@@ -716,11 +716,7 @@
             -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
             box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
         }
-        @media (max-width: 1615px) {
-            .whatWeMake .rowCards .card .wrapImg .icon {
-                height: 270px;
-            }
-        }
+
             .whatWeMake .rowCards .card .wrapImg .icon {
                 height: 324px;
                 -webkit-background-size: cover;
@@ -731,11 +727,7 @@
                 -o-transition-duration: .25s;
                 transition-duration: .25s;
             }
-        @media (max-width: 1615px) {
-            .whatWeMake .rowCards .card .name {
-                font-size: 20px;
-            }
-        }
+
             .whatWeMake .rowCards .card .name {
                 font-size: 22px;
                 color: #00c7fd;
@@ -743,11 +735,7 @@
                 text-align: center;
                 padding: 45px 0 10px;
             }
-        @media (max-width: 1615px) {
-            .whatWeMake .rowCards .card .info {
-                font-size: 16px;
-            }
-        }
+
             .whatWeMake .rowCards .card .info {
                 font-size: 20px;
                 color: #7c7f82;
@@ -766,6 +754,21 @@
         }
         .whatWeMake .rowCards .card a {
             text-decoration: none;
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .wrapImg .icon {
+                height: 270px;
+            }
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .name {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .info {
+                font-size: 16px;
+            }
         }
     </style>
 
