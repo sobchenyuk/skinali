@@ -787,16 +787,17 @@
         }
 
         .textSection span {
-            font-size: 22px;
-            color: #7c7f82;
-            text-indent: 30px;
-            line-height: 36px;
+            font-size: 22px !important;
+            color: #7c7f82 !important;
+            text-indent: 30px !important;
+            line-height: 36px !important;
+            font-family: "AGLettericaCondensed-Roman",sans-serif !important;
         }
         @media (max-width: 1615px) {
 
             .textSection span {
-                font-size: 18px;
-                line-height: 24px;
+                font-size: 18px !important;
+                line-height: 24px !important;
             }
         }
     </style>
