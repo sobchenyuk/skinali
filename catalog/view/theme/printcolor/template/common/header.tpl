@@ -753,6 +753,17 @@
                 color: #7c7f82;
                 text-align: center;
             }
+        .whatWeMake .rowCards .card:hover .wrapImg .icon {
+            border: 2px solid #00c7fd;
+        }
+        .whatWeMake hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
     </style>
 
 
