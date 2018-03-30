@@ -1000,34 +1000,23 @@
                     </div>
                     <hr>
                     <div class="rowCards">
+
+                        <?php foreach ($picture_gallery->rows as $item){ ?>
+
+                        <?php if ($item['album_id'] == 17): ?>
+
                         <div class="card">
                             <div class="wrapImg">
-                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
+                                <div class="icon" style="background-image: url('<?php echo '/image/' . $item['image'] ?>');"></div>
                             </div>
-                            <h3 class="name">Скинали</h3>
-                            <p class="info">Раздвижные системы для шкафов-купе</p>
+                            <h3 class="name"><?php echo $item['title'] ?></h3>
+                            <p class="info"><?php echo $item['name'] ?></p>
                         </div>
-                        <div class="card">
-                            <div class="wrapImg">
-                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
-                            </div>
-                            <h3 class="name">Раздвижные системы</h3>
-                            <p class="info">Стеклянный фартук на кухню</p>
-                        </div>
-                        <div class="card">
-                            <div class="wrapImg">
-                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
-                            </div>
-                            <h3 class="name">Мебельные фасады</h3>
-                            <p class="info">Раздвижные системы для шкафов-купе</p>
-                        </div>
-                        <div class="card">
-                            <div class="wrapImg">
-                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
-                            </div>
-                            <h3 class="name">Раздвижные системы</h3>
-                            <p class="info">Стеклянный фартук на кухню</p>
-                        </div>
+
+                        <?php endif; ?>
+
+                        <?php }; ?>
+
                     </div>
                 </div>
             </div>
