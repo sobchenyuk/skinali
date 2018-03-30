@@ -566,7 +566,10 @@
         .topPanel[data-fixed] .contacts, .topPanel[data-fixed] .orderCallBack {
             display: none !important;
         }
-
+        #sk_html_block .topPanel[data-fixed] .sk_first_line.container {
+            margin-bottom: 1px;
+            margin-top: 0px;
+        }
 
         @media (max-width: 1615px) {
             #sk_html_block .container {
