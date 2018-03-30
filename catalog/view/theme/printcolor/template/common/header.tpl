@@ -563,7 +563,7 @@
             z-index: 100;
             width: 100%;
         }
-        .topPanel[data-fixed] .contacts, .topPanel[data-fixed] .orderCallBack
+        .topPanel[data-fixed] .contacts, .topPanel[data-fixed] .orderCallBack {
             display: none !important;
         }
 
