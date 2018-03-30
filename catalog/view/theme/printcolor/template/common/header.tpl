@@ -1030,6 +1030,7 @@
 
 
 
+            <?php echo $content_newpos; ?>
 
 
             <?php endif; ?>

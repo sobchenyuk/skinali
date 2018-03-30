@@ -18,7 +18,6 @@ class ControllerCommonHeader extends Controller {
 
 
 
-
         $data['smenus'] = array();
 
         $root_items = $this->model_catalog_smenu->getSmenu($setting);
@@ -238,6 +237,7 @@ class ControllerCommonHeader extends Controller {
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
+        $data['content_newpos'] =  $this->load->controller('common/content_newpos');
 
 		// For page specific css
 		if (isset($this->request->get['route'])) {
