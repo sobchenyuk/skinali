@@ -29,7 +29,6 @@ class ControllerInformationInformation extends Controller {
 
 		$data['information_id'] = $information_id;
 
-		var_dump($data['information_id']);
 		
 		if ($information_id == 9) {
 			if (isset($_POST['dealer_submit'])) {
