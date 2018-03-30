@@ -571,7 +571,8 @@
             margin-top: 0;
         }
         .topPanel[data-fixed] .naver{
-            margin-top: -40px;
+            position: relative;
+            top: -19px;
         }
 
 
