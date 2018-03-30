@@ -563,6 +563,10 @@
             z-index: 100;
             width: 100%;
         }
+        .topPanel[data-fixed] .contacts, .topPanel[data-fixed] .orderCallBack
+            display: none !important;
+        }
+
 
         @media (max-width: 1615px) {
             #sk_html_block .container {
