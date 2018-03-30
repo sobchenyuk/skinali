@@ -795,12 +795,16 @@
             line-height: 36px !important;
             font-family: "AGLettericaCondensed-Roman",sans-serif !important;
         }
+        .textSection p {
+            text-indent: 20px;
+        }
         @media (max-width: 1615px) {
 
             .textSection span {
                 font-size: 18px !important;
                 line-height: 24px !important;
             }
+
         }
     </style>
 
