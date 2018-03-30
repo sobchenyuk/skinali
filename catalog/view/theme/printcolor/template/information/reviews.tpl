@@ -1,5 +1,8 @@
 <?php echo $header; ?>
 
+
+олтыаываыва
+
 	<div class="sk_breadcrumbs">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 		<div id="sk_order" class="sk_breadcrumbs_holder">
