@@ -888,6 +888,50 @@
             <p>&nbsp;</p>
 
 
+
+            <!-- Тайлы -->
+            <?php if ($is_home): ?>
+            <div class="section whatWeMake">
+                <div class="container-f">
+                    <div class="titleSector">
+                        Что мы делаем?
+                    </div>
+                    <hr>
+                    <div class="rowCards">
+                        <div class="card">
+                            <div class="wrapImg">
+                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
+                            </div>
+                            <h3 class="name">Скинали</h3>
+                            <p class="info">Раздвижные системы для шкафов-купе</p>
+                        </div>
+                        <div class="card">
+                            <div class="wrapImg">
+                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
+                            </div>
+                            <h3 class="name">Раздвижные системы</h3>
+                            <p class="info">Стеклянный фартук на кухню</p>
+                        </div>
+                        <div class="card">
+                            <div class="wrapImg">
+                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
+                            </div>
+                            <h3 class="name">Мебельные фасады</h3>
+                            <p class="info">Раздвижные системы для шкафов-купе</p>
+                        </div>
+                        <div class="card">
+                            <div class="wrapImg">
+                                <div class="icon" style="background-image: url('img/whatWeMake.png')"></div>
+                            </div>
+                            <h3 class="name">Раздвижные системы</h3>
+                            <p class="info">Стеклянный фартук на кухню</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+
         <?php $icons_path = 'catalog/view/theme/printcolor/image/category/'; ?>
 
 
