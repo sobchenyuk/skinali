@@ -18,14 +18,6 @@ class ControllerCommonHeader extends Controller {
 
 
 
-        $this->load->model('design/layout');
-
-        $data['layouts'] = $this->model_design_layout->getLayouts();
-
-        $data['header'] = $this->load->controller('common/header');
-
-
-
 
         $data['smenus'] = array();
 
