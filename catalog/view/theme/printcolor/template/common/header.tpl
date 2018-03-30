@@ -770,6 +770,35 @@
                 font-size: 16px;
             }
         }
+        .textSection hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+            margin: 10px 0 40px;
+        }
+        .textSection h2 {
+            font-size: 30px;
+            color: #00c7fd;
+            padding-bottom: 23px;
+            text-align: center;
+        }
+
+        .textSection span {
+            font-size: 22px;
+            color: #7c7f82;
+            text-indent: 30px;
+            line-height: 36px;
+        }
+        @media (max-width: 1615px) {
+
+            .textSection span {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
     </style>
 
 
