@@ -1,4 +1,10 @@
-<?php echo $header; ?><?php echo $column_left; ?>
+<?php echo $header;
+
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+
+?><?php echo $column_left; ?>
 
 <?php $groupTrue = false; ?>
 
