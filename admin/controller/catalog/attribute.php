@@ -342,6 +342,17 @@ class ControllerCatalogAttribute extends Controller {
 			$data['attribute_description'] = array();
 		}
 
+
+//        if (isset($this->request->post['attribute_description'])) {
+//            $data['attribute_description'] = $this->request->post['attribute_description'];
+//        } elseif (isset($this->request->get['attribute_id'])) {
+//            $data['attribute_description'] = $this->model_catalog_attribute->getAttributeDescriptions($this->request->get['attribute_id']);
+//        } else {
+//            $data['attribute_description'] = array();
+//        }
+//
+
+
 		if (isset($this->request->post['attribute_group_id'])) {
 			$data['attribute_group_id'] = $this->request->post['attribute_group_id'];
 		} elseif (!empty($attribute_info)) {

@@ -51,11 +51,14 @@
                 <?php if ($attribute_group['attribute_group_id'] == $attribute_group_id) { ?>
 
                 <?php
-                if($attribute_group['attribute_group_id'] == '8' || $attribute_group['attribute_group_id'] == '9') {
-                 $groupTrue = true;
-                 };
-?>
-
+                switch ($attribute_group['attribute_group_id']) {
+                    case 8:
+                        $groupTrue = 8;
+                        break;
+                    case 9:
+                        $groupTrue = 9;
+                        break;
+                }?>
 
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>" selected="selected"><?php echo $attribute_group['name']; ?></option>
                 <?php } else { ?>
@@ -73,7 +76,15 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за м2</label>
             <div class="col-sm-10">
-              <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+                <?php if($groupTrue == 8): ?>
+
+                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+
+                <?php else if($groupTrue == 9): ?>
+
+                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+
+                <?php endif; ?>
             </div>
           </div>
           <?php }; ?>
