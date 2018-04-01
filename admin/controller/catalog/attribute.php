@@ -174,7 +174,9 @@ class ControllerCatalogAttribute extends Controller {
 		foreach ($results as $result) {
 			$data['attributes'][] = array(
 				'attribute_id'    => $result['attribute_id'],
-				'name'            => $result['name'],
+                'name'            => $result['name'],
+                'price_type_of_printing' => $result['price_type_of_printing'],
+                'price_print_materials' => $result['price_print_materials'],
 				'attribute_group' => $result['attribute_group'],
 				'sort_order'      => $result['sort_order'],
 				'edit'            => $this->url->link('catalog/attribute/edit', 'token=' . $this->session->data['token'] . '&attribute_id=' . $result['attribute_id'] . $url, true)
@@ -364,23 +366,6 @@ class ControllerCatalogAttribute extends Controller {
 		} else {
 			$data['sort_order'] = '';
 		}
-
-
-//        if (isset($this->request->post['price_type_of_printing'])) {
-//            $data['price_type_of_printing'] = $this->request->post['price_type_of_printing'];
-//        } elseif (!empty($attribute_info)) {
-//            $data['price_type_of_printing'] = $attribute_info['price_type_of_printing'];
-//        } else {
-//            $data['price_type_of_printing'] = '';
-//        }
-//
-//        if (isset($this->request->post['price_print_materials'])) {
-//            $data['price_print_materials'] = $this->request->post['price_print_materials'];
-//        } elseif (!empty($attribute_info)) {
-//            $data['price_print_materials'] = $attribute_info['price_print_materials'];
-//        } else {
-//            $data['price_print_materials'] = '';
-//        }
 
 
 
