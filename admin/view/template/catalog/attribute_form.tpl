@@ -51,7 +51,7 @@
                 <?php if ($attribute_group['attribute_group_id'] == $attribute_group_id) { ?>
 
                 <?php
-                if($attribute_group['attribute_group_id'] == '8') {
+                if($attribute_group['attribute_group_id'] == '8' || $attribute_group['attribute_group_id'] == '9') {
                  $groupTrue = true;
                  };
 ?>
@@ -108,7 +108,7 @@
             "</div>";
 
         select.addEventListener("change", function (evt) {
-            if(parseInt(this.value) === 8){
+            if(parseInt(this.value) === 8 || parseInt(this.value) === 9){
                 if(!printing){
                     group.parentNode.insertBefore(typeOfPrinting, group.nextSibling);
                 }
