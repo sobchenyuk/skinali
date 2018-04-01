@@ -560,9 +560,21 @@
             left: 0;
             -webkit-box-shadow: 0 0 10px #000;
             box-shadow: 0 0 10px #000;
-            z-index: 20;
+            z-index: 100;
             width: 100%;
         }
+        .topPanel[data-fixed] .contacts, .topPanel[data-fixed] .orderCallBack {
+            display: none !important;
+        }
+        #sk_html_block .topPanel[data-fixed] .sk_first_line.container {
+            margin-bottom: 1px;
+            margin-top: 0;
+        }
+        .topPanel[data-fixed] .naver{
+            position: relative;
+            top: -19px;
+        }
+
 
         @media (max-width: 1615px) {
             #sk_html_block .container {
@@ -661,6 +673,150 @@
         }
         .popuper#callBack .message-Content-success .bodyPop {
             border-color: #52da16;
+        }
+
+        .container-f {
+            width: 1170px;
+            padding: 0 15px;
+            margin: 0 auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+        @media (max-width: 1615px) {
+            .container-f {
+                width: 980px;
+                padding: 0 15px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+        }
+        .whatWeMake .titleSector {
+            font-size: 30px;
+            color: #00c7fd;
+            padding-bottom: 23px;
+            text-align: center;
+        }
+        .whatWeMake .rowCards {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .whatWeMake .rowCards .card {
+            width: 33.3%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 13px;
+            float: left;
+            -webkit-transition-duration: .5s;
+            -o-transition-duration: .5s;
+            transition-duration: .5s;
+        }
+        .whatWeMake .rowCards .card .wrapImg {
+            background-color: #191919;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+            box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.4);
+        }
+
+            .whatWeMake .rowCards .card .wrapImg .icon {
+                height: 324px;
+                -webkit-background-size: cover;
+                background-size: cover;
+                background-position: center;
+                border: 2px solid #151515;
+                -webkit-transition-duration: .25s;
+                -o-transition-duration: .25s;
+                transition-duration: .25s;
+            }
+
+            .whatWeMake .rowCards .card .name {
+                font-size: 22px;
+                color: #00c7fd;
+                text-transform: uppercase;
+                text-align: center;
+                padding: 45px 0 10px;
+            }
+
+            .whatWeMake .rowCards .card .info {
+                font-size: 20px;
+                color: #7c7f82;
+                text-align: center;
+            }
+        .whatWeMake .rowCards .card:hover .wrapImg .icon {
+            border: 2px solid #00c7fd;
+        }
+        .whatWeMake hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
+        .whatWeMake .rowCards .card a {
+            text-decoration: none;
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .wrapImg .icon {
+                height: 270px;
+            }
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .name {
+                font-size: 20px;
+            }
+        }
+        @media (max-width: 1615px) {
+            .whatWeMake .rowCards .card .info {
+                font-size: 16px;
+            }
+        }
+        .textSection hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+            margin: 10px 0 40px;
+        }
+        .textSection h2 {
+            font-size: 30px;
+            color: #00c7fd;
+            padding-bottom: 23px;
+            text-align: center;
+        }
+        .section.textSection {
+            margin-bottom: 65px;
+        }
+        .textSection span {
+            font-size: 22px !important;
+            color: #7c7f82 !important;
+            text-indent: 30px !important;
+            line-height: 36px !important;
+            font-family: "AGLettericaCondensed-Roman",sans-serif !important;
+        }
+        .textSection p {
+            text-indent: 20px;
+        }
+        @media (max-width: 1615px) {
+
+            .textSection span {
+                font-size: 18px !important;
+                line-height: 24px !important;
+            }
+
         }
     </style>
 
@@ -815,6 +971,7 @@
         </div>
     </div>
 </div>
+    <div class="offTop"></div>
     <?php if ($is_home): ?>
 
     <?php else: ?>
@@ -867,6 +1024,7 @@
 
             </script>
 
+            <p>&nbsp;</p>
 
 
         <?php endif; ?>
@@ -885,6 +1043,57 @@
                 </nav>
             </header>
             <p>&nbsp;</p>
+
+
+
+            <!-- Тайлы -->
+            <?php if ($is_home): ?>
+            <div class="section whatWeMake">
+                <div class="container-f">
+                    <div class="titleSector">
+                        Что мы делаем?
+                    </div>
+                    <hr>
+                    <div class="rowCards">
+
+                        <?php foreach ($picture_gallery->rows as $item){ ?>
+
+                        <?php if ($item['album_id'] == 17): ?>
+
+                        <div class="card">
+
+                            <a href="<?php echo $item['link'] ?>">
+                                <div class="wrapImg">
+                                    <div class="icon" style="background-image: url('<?php echo '/image/' . $item['image'] ?>');"></div>
+                                </div>
+                                <h3 class="name"><?php echo $item['title'] ?></h3>
+                                <p class="info"><?php echo $item['name'] ?></p>
+                            </a>
+
+                        </div>
+
+                        <?php endif; ?>
+
+                        <?php }; ?>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section textSection">
+                <div class="container-f">
+
+                    <hr/>
+
+                    <?php echo $content_top; ?>
+
+                </div>
+
+            </div>
+
+
+            <?php endif; ?>
 
 
         <?php $icons_path = 'catalog/view/theme/printcolor/image/category/'; ?>

@@ -28,6 +28,7 @@ class ControllerInformationInformation extends Controller {
 		$information_info = $this->model_catalog_information->getInformation($information_id);
 
 		$data['information_id'] = $information_id;
+
 		
 		if ($information_id == 9) {
 			if (isset($_POST['dealer_submit'])) {

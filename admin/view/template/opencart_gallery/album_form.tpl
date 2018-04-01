@@ -227,8 +227,27 @@ var image_row = <?php echo $image_row; ?>;
 function addImage() {
   html  = '<tr id="image-row' + image_row + '">';
   html += '  <td class="text-left"><a href="" id="thumb-image' + image_row + '"data-toggle="image" class="img-thumbnail"><img src="<?php echo $placeholder; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /><input type="hidden" name="album_image[' + image_row + '][image]" value="" id="input-image' + image_row + '" /></td>';
-   html += '  <td class="left"><textarea class="form-control" name="album_image[' + image_row + '][name]" cols="40" rows="3" /></textarea></td>';
-  html += '  <td class="text-right"><input type="text" name="album_image[' + image_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
+   html += ' <td class="left">' +
+       '<div class="form-group" style="margin:0">' +
+       '<label class="col-sm-2 control-label">Заголовок</label>\n' +
+       '<div class="col-sm-10">' +
+       '<input class="form-control" name="album_image[' + image_row + '][title]" >' +
+       '</div>' +
+       '</div>' +
+       '<div class="form-group" style="margin:0">' +
+       '<label class="col-sm-2 control-label">Описание</label>' +
+       '<div class="col-sm-10">' +
+       '<textarea class="form-control" name="album_image[' + image_row + '][name]" cols="40" rows="3"></textarea>' +
+       '</div>' +
+       '</div>' +
+       '<div class="form-group" style="margin:0">' +
+       '<label class="col-sm-2 control-label">Ссылка</label>\n' +
+       '<div class="col-sm-10">' +
+       '<input class="form-control" name="album_image[' + image_row + '][link]">' +
+       '</div>' +
+       '</div>' +
+       '</td> ';
+   html += '  <td class="text-right"><input type="text" name="album_image[' + image_row + '][sort_order]" value="" placeholder="<?php echo $entry_sort_order; ?>" class="form-control" /></td>';
   html += '  <td class="text-left"><button type="button" onclick="$(\'#image-row' + image_row  + '\').remove();" data-toggle="tooltip" title="<?php echo $button_remove; ?>" class="btn btn-danger"><i class="fa fa-minus-circle"></i></button></td>';
   html += '</tr>';
   
