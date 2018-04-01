@@ -29,6 +29,7 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li><a href="#tab-paraphernalia" data-toggle="tab">Атрибуты</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -241,6 +242,38 @@
                 </table>
               </div>
             </div>
+
+
+
+            <div class="tab-pane" id="tab-paraphernalia">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <td class="text-left">Группа атрибута</td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="text-left"><?php echo $text_default; ?></td>
+                    <td class="text-left"><select name="category_layout[0]" class="form-control">
+                        <option value=""></option>
+                        <?php foreach ($layouts as $layout) { ?>
+                        <?php if (isset($category_layout[0]) && $category_layout[0] == $layout['layout_id']) { ?>
+                        <option value="<?php echo $layout['layout_id']; ?>" selected="selected"><?php echo $layout['name']; ?></option>
+                        <?php } else { ?>
+                        <option value="<?php echo $layout['layout_id']; ?>"><?php echo $layout['name']; ?></option>
+                        <?php } ?>
+                        <?php } ?>
+                      </select></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+
+
           </div>
         </form>
       </div>
