@@ -42,7 +42,7 @@
               <?php } ?>
             </div>
           </div>
-          <div class="form-group">
+          <div id="group" class="form-group">
             <label class="col-sm-2 control-label" for="input-attribute-group"><?php echo $entry_attribute_group; ?></label>
             <div class="col-sm-10">
               <select name="attribute_group_id" id="input-attribute-group" class="form-control">
@@ -71,7 +71,7 @@
 
           <?php if($groupTrue){ ?>
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за М2</label>
+            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за м2</label>
             <div class="col-sm-10">
               <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
             </div>
@@ -94,11 +94,28 @@
 
 <script>
     (function () {
+        var group = document.querySelector('#group');
+
         var select = document.querySelector('#input-attribute-group');
+        var printing = document.querySelector('#input-type-of-printing');
+
+        var typeOfPrinting = document.createElement('div');
+        typeOfPrinting.className = "form-group";
+        typeOfPrinting.innerHTML = "<label class=\"col-sm-2 control-label\" for=\"input-type-of-printing\">Стоимость Грн. за м2</label>" +
+            "<div class=\"col-sm-10\">" +
+            "<input type=\"text\" name=\"price_type_of_printing\" value=\"\" placeholder=\"\" id=\"input-type-of-printing\" class=\"form-control\" />" +
+            "</div>" +
+            "</div>";
 
         select.addEventListener("change", function (evt) {
-            console.log(this.value);
+            if(parseInt(this.value) === 8){
+                if(!printing){
+                    group.parentNode.insertBefore(typeOfPrinting, group);
+                }
+            }
         });
+
+
     })();
 </script>
 
