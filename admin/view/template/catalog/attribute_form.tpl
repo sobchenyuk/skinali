@@ -52,6 +52,7 @@
 
                 <?php echo $attribute_group['attribute_group_id']; ($attribute_group['attribute_group_id'] == '8') ? $groupTrue == true : ''; ?>
 
+
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>" selected="selected"><?php echo $attribute_group['name']; ?></option>
                 <?php } else { ?>
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>"><?php echo $attribute_group['name']; ?></option>
