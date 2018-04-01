@@ -72,7 +72,22 @@
             </div>
           </div>
 
+          <?php if($groupTrue){ ?>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за м2</label>
+            <div class="col-sm-10">
+                <?php if($groupTrue == 8): ?>
 
+                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+
+                <?php elseif($groupTrue == 9): ?>
+
+                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+
+                <?php endif; ?>
+            </div>
+          </div>
+          <?php }; ?>
 
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
