@@ -122,45 +122,5 @@
   </div>
 </div>
 
-<script>
-    (function () {
-        var group = document.querySelector('#group');
-
-        var select = document.querySelector('#input-attribute-group');
-        var printing = document.querySelector('#input-type-of-printing');
-
-        var typeOfPrinting = document.createElement('div');
-        typeOfPrinting.className = "form-group";
-
-        console.log(language);
-
-        select.addEventListener("change", function (evt) {
-            if( parseInt(this.value) === 8 ) {
-                if(!printing){
-
-                    typeOfPrinting.innerHTML = "<label class=\"col-sm-2 control-label\" for=\"input-type-of-printing\">Стоимость Грн. за м2</label>" +
-                        "<div class=\"col-sm-10\">" +
-                        "<input type=\"text\" name=\"attribute_description[" + language + "][price_type_of_printing]\" placeholder=\"Введите цену печати\" id=\"input-type-of-printing\" class=\"form-control\" />" +
-                        "</div>" +
-                        "</div>";
-
-                    group.parentNode.insertBefore(typeOfPrinting, group.nextSibling);
-                }
-            } else if ( parseInt(this.value) === 9 ) {
-                if(!printing){
-
-                    typeOfPrinting.innerHTML = "<label class=\"col-sm-2 control-label\" for=\"input-type-of-printing\">Стоимость Грн. за м2</label>" +
-                        "<div class=\"col-sm-10\">" +
-                        "<input type=\"text\" name=\"attribute_description[" + language + "][price_type_of_printing]\" value=\"\" placeholder=\"Введите цену материала\" id=\"input-type-of-printing\" class=\"form-control\" />" +
-                        "</div>" +
-                        "</div>";
-                    group.parentNode.insertBefore(typeOfPrinting, group.nextSibling);
-                }
-            }
-        });
-
-
-    })();
-</script>
 
 <?php echo $footer; ?>
