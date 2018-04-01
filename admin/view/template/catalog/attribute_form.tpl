@@ -29,6 +29,7 @@
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-attribute" class="form-horizontal">
+
           <div class="form-group required">
             <label class="col-sm-2 control-label"><?php echo $entry_name; ?></label>
             <div class="col-sm-10">
@@ -42,6 +43,7 @@
               <?php } ?>
             </div>
           </div>
+
           <div id="group" class="form-group">
             <label class="col-sm-2 control-label" for="input-attribute-group"><?php echo $entry_attribute_group; ?></label>
             <div class="col-sm-10">
@@ -78,11 +80,19 @@
             <div class="col-sm-10">
                 <?php if($groupTrue == 8): ?>
 
-                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+                <input type="text"
+                       name="price_type_of_printing[<?php echo $language['language_id']; ?>][name]"
+                       value="<?php echo isset($price_type_of_printing[$language['language_id']]) ? $price_type_of_printing[$language['language_id']]['name'] : ''; ?>"
+                       placeholder="Введите цену"
+                       id="input-type-of-printing" class="form-control" />
 
                 <?php elseif($groupTrue == 9): ?>
 
-                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+                <input type="text"
+                       name="price_print_materials[<?php echo $language['language_id']; ?>][name]"
+                       value="<?php echo isset($price_print_materials[$language['language_id']]) ? $price_print_materials[$language['language_id']]['name'] : ''; ?>"
+                       placeholder="Введите цену"
+                       id="input-type-of-printing" class="form-control" />
 
                 <?php endif; ?>
             </div>
