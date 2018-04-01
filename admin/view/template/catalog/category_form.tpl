@@ -255,17 +255,23 @@
                   </thead>
                   <tbody>
                   <tr>
-                    <td class="text-left"><?php echo $text_default; ?></td>
-                    <td class="text-left"><select name="category_layout[0]" class="form-control">
-                        <option value=""></option>
-                        <?php foreach ($layouts as $layout) { ?>
-                        <?php if (isset($category_layout[0]) && $category_layout[0] == $layout['layout_id']) { ?>
-                        <option value="<?php echo $layout['layout_id']; ?>" selected="selected"><?php echo $layout['name']; ?></option>
-                        <?php } else { ?>
-                        <option value="<?php echo $layout['layout_id']; ?>"><?php echo $layout['name']; ?></option>
-                        <?php } ?>
-                        <?php } ?>
-                      </select></td>
+                    <td class="text-left">
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-top">
+                          Главное меню:
+                        </label>
+                        <div class="col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox" name="top" value="1" checked="checked" id="input-top">
+                              &nbsp; </label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </td>
+
                   </tr>
                   </tbody>
                 </table>
