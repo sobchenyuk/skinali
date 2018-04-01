@@ -81,17 +81,17 @@
                 <?php if($groupTrue == 8): ?>
 
                 <input type="text"
-                       name="price_type_of_printing[<?php echo $language['language_id']; ?>][name]"
-                       value="<?php echo isset($price_type_of_printing[$language['language_id']]) ? $price_type_of_printing[$language['language_id']]['name'] : ''; ?>"
-                       placeholder="Введите цену"
+                       name="price_type_of_printing"
+                       value="<?php echo price_type_of_printing; ?>"
+                       placeholder="Введите цену печати"
                        id="input-type-of-printing" class="form-control" />
 
                 <?php elseif($groupTrue == 9): ?>
 
                 <input type="text"
-                       name="price_print_materials[<?php echo $language['language_id']; ?>][name]"
-                       value="<?php echo isset($price_print_materials[$language['language_id']]) ? $price_print_materials[$language['language_id']]['name'] : ''; ?>"
-                       placeholder="Введите цену"
+                       name="price_print_materials"
+                       value="<?php echo price_print_materials; ?>"
+                       placeholder="Введите цену материала"
                        id="input-type-of-printing" class="form-control" />
 
                 <?php endif; ?>
