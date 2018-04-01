@@ -97,7 +97,7 @@
         var select = document.querySelector('#input-attribute-group');
 
         select.addEventListener("change", function (evt) {
-            console.log(evt);
+            console.log(evt.target);
         });
     })();
 </script>
