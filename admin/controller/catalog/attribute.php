@@ -366,21 +366,21 @@ class ControllerCatalogAttribute extends Controller {
 		}
 
 
-        if (isset($this->request->post['price_type_of_printing'])) {
-            $data['price_type_of_printing'] = $this->request->post['price_type_of_printing'];
-        } elseif (!empty($attribute_info)) {
-            $data['price_type_of_printing'] = $attribute_info['price_type_of_printing'];
-        } else {
-            $data['price_type_of_printing'] = '';
-        }
-
-        if (isset($this->request->post['price_print_materials'])) {
-            $data['price_print_materials'] = $this->request->post['price_print_materials'];
-        } elseif (!empty($attribute_info)) {
-            $data['price_print_materials'] = $attribute_info['price_print_materials'];
-        } else {
-            $data['price_print_materials'] = '';
-        }
+//        if (isset($this->request->post['price_type_of_printing'])) {
+//            $data['price_type_of_printing'] = $this->request->post['price_type_of_printing'];
+//        } elseif (!empty($attribute_info)) {
+//            $data['price_type_of_printing'] = $attribute_info['price_type_of_printing'];
+//        } else {
+//            $data['price_type_of_printing'] = '';
+//        }
+//
+//        if (isset($this->request->post['price_print_materials'])) {
+//            $data['price_print_materials'] = $this->request->post['price_print_materials'];
+//        } elseif (!empty($attribute_info)) {
+//            $data['price_print_materials'] = $attribute_info['price_print_materials'];
+//        } else {
+//            $data['price_print_materials'] = '';
+//        }
 
 
 

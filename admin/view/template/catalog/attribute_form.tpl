@@ -80,19 +80,23 @@
             <div class="col-sm-10">
                 <?php if($groupTrue == 8): ?>
 
+              <?php foreach ($languages as $language) { ?>
                 <input type="text"
-                       name="price_type_of_printing"
-                       value="<?php echo price_type_of_printing; ?>"
+                       name="attribute_description[<?php echo $language['language_id']; ?>][price_type_of_printing]"
+                       value="<?php echo $attribute_description[$language['language_id']][price_type_of_printing]; ?>"
                        placeholder="Введите цену печати"
                        id="input-type-of-printing" class="form-control" />
+              <?php } ?>
 
                 <?php elseif($groupTrue == 9): ?>
 
+              <?php foreach ($languages as $language) { ?>
                 <input type="text"
-                       name="price_print_materials"
-                       value="<?php echo price_print_materials; ?>"
+                       name="attribute_description[<?php echo $language['language_id']; ?>][price_print_materials]"
+                       value="<?php echo $attribute_description[$language['language_id']][price_print_materials]; ?>"
                        placeholder="Введите цену материала"
                        id="input-type-of-printing" class="form-control" />
+              <?php } ?>
 
                 <?php endif; ?>
             </div>
