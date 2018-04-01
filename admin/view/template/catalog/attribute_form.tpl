@@ -1,10 +1,4 @@
-<?php echo $header;
-
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-
-?><?php echo $column_left; ?>
+<?php echo $header; ?><?php echo $column_left; ?>
 
 <?php $groupTrue = false; ?>
 
@@ -78,22 +72,7 @@ ini_set('display_startup_errors', 1);
             </div>
           </div>
 
-          <?php if($groupTrue){ ?>
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за м2</label>
-            <div class="col-sm-10">
-                <?php if($groupTrue == 8): ?>
 
-                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
-
-                <?php else if($groupTrue == 9): ?>
-
-                <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
-
-                <?php endif; ?>
-            </div>
-          </div>
-          <?php }; ?>
 
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
