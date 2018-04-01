@@ -110,7 +110,7 @@
         select.addEventListener("change", function (evt) {
             if(parseInt(this.value) === 8){
                 if(!printing){
-                    group.parentNode.insertBefore(typeOfPrinting, group);
+                    group.parentNode.insertBefore(typeOfPrinting, group.nextSibling);
                 }
             }
         });
