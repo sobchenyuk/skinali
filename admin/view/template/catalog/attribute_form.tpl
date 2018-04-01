@@ -83,7 +83,7 @@
               <?php foreach ($languages as $language) { ?>
                 <input type="text"
                        name="attribute_description[<?php echo $language['language_id']; ?>][price_type_of_printing]"
-                       value="<?php echo $attribute_description[$language['language_id']][price_type_of_printing]; ?>"
+                       value="<?php echo isset($attribute_description[$language['language_id']]) ? $attribute_description[$language['language_id']]['price_type_of_printing'] : ''; ?>"
                        placeholder="Введите цену печати"
                        id="input-type-of-printing" class="form-control" />
               <?php } ?>
@@ -93,7 +93,7 @@
               <?php foreach ($languages as $language) { ?>
                 <input type="text"
                        name="attribute_description[<?php echo $language['language_id']; ?>][price_print_materials]"
-                       value="<?php echo $attribute_description[$language['language_id']][price_print_materials]; ?>"
+                       value="<?php echo isset($attribute_description[$language['language_id']]) ? $attribute_description[$language['language_id']]['price_print_materials'] : ''; ?>"
                        placeholder="Введите цену материала"
                        id="input-type-of-printing" class="form-control" />
               <?php } ?>
