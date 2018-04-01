@@ -40,7 +40,7 @@
               </div>
 
               <script>
-                var language = "[<?php echo $language['language_id']; ?>"
+                var language = "<?php echo $language['language_id']; ?>"
               </script>
               <?php if (isset($error_name[$language['language_id']])) { ?>
               <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
@@ -140,7 +140,7 @@
 
                     typeOfPrinting.innerHTML = "<label class=\"col-sm-2 control-label\" for=\"input-type-of-printing\">Стоимость Грн. за м2</label>" +
                         "<div class=\"col-sm-10\">" +
-                        "<input type=\"text\" name=\"price_type_of_printing\" value=\"\" placeholder=\"\" id=\"input-type-of-printing\" class=\"form-control\" />" +
+                        "<input type=\"text\" name=\"attribute_description[" + language + "][price_type_of_printing]\" placeholder=\"Введите цену печати\" id=\"input-type-of-printing\" class=\"form-control\" />" +
                         "</div>" +
                         "</div>";
 
@@ -151,7 +151,7 @@
 
                     typeOfPrinting.innerHTML = "<label class=\"col-sm-2 control-label\" for=\"input-type-of-printing\">Стоимость Грн. за м2</label>" +
                         "<div class=\"col-sm-10\">" +
-                        "<input type=\"text\" name=\"price_type_of_printing\" value=\"\" placeholder=\"\" id=\"input-type-of-printing\" class=\"form-control\" />" +
+                        "<input type=\"text\" name=\"attribute_description[" + language + "][price_type_of_printing]\" value=\"\" placeholder=\"Введите цену материала\" id=\"input-type-of-printing\" class=\"form-control\" />" +
                         "</div>" +
                         "</div>";
                     group.parentNode.insertBefore(typeOfPrinting, group.nextSibling);
