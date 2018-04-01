@@ -1,4 +1,8 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
+<?php $groupTrue = false; ?>
+
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -45,6 +49,9 @@
                 <option value="0"></option>
                 <?php foreach ($attribute_groups as $attribute_group) { ?>
                 <?php if ($attribute_group['attribute_group_id'] == $attribute_group_id) { ?>
+
+                <?php ($attribute_group['attribute_group_id'] == 8) ? $groupTrue == true : ''; ?>
+
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>" selected="selected"><?php echo $attribute_group['name']; ?></option>
                 <?php } else { ?>
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>"><?php echo $attribute_group['name']; ?></option>
@@ -56,12 +63,24 @@
               <?php } ?>
             </div>
           </div>
+
+          <?php if($groupTrue): ?>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за М2</label>
+            <div class="col-sm-10">
+              <input type="text" name="price_type_of_printing" value="" placeholder="" id="input-type-of-printing" class="form-control" />
+            </div>
+          </div>
+          <?php endif; ?>
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
             <div class="col-sm-10">
               <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
             </div>
           </div>
+
+
         </form>
       </div>
     </div>
