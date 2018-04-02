@@ -42,6 +42,11 @@
                                 <form class="sk_order_form" name="order" action="" method="post"
                                       onsubmit="ga('send', 'event', 'zakaz', 'submit')">
 
+                                    <input type="hidden" value="<?=$product_info['sku']?>" id="img_id" name="img_id"/>
+                                    <input type="hidden" value="<?=$product_info['name']?>" id="img_title"
+                                           name="img_title"/>
+                                    <input type="hidden" value="<?=$product_url?>" id="sk_link" name="sk_link"/>
+
                                     <div class="col">
 
                                         <div class="fieldGroup">
@@ -174,7 +179,7 @@
 
 
 
-                    <div class="sk_order_info">
+                    <!--<div class="sk_order_info">
                         <div class="sk_order_info_left">
                             <form class="sk_order_form" name="order" action="" method="post"
                                   onsubmit="ga('send', 'event', 'zakaz', 'submit')">
@@ -238,7 +243,7 @@
                         </div>
                         <div class="sk_order_info_right">
 
-                           <!-- <div class="sk_order_change_holder">
+                            <div class="sk_order_change_holder">
                                 <div onclick="Mirror()">
                                     <div class="sk_mirror" id="sk_mirror"></div>
                                     <div class="sk_mirror_text" id="sk_mirror_text">Отзеркалить</div>
@@ -251,7 +256,7 @@
                                     <div class="sk_sepia" id="sk_sepia"></div>
                                     <div class="sk_sepia_text" id="sk_sepia_text">Сепия</div>
                                 </div>
-                            </div> -->
+                            </div>
 
 
                             <div class="sk_order_pict_number_text"><h1
@@ -283,7 +288,8 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
+
                 </div>
             </div>
         </div>
