@@ -1,4 +1,13 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
+<style>
+  #tab-paraphernalia {
+  .form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  }
+</style>
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
