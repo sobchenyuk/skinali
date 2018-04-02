@@ -30,6 +30,138 @@
                     <img id="nodeImg" src="<?=" image/".$images?>" title="<?=$product_info['name']?>"
                     alt="Скинали <?=$product_info['name']?>">
 
+                    <p class="text">
+                        Цвета печати могут отличаться от цветов на мониторе. Для подбора определенного оттенка заказывается цветопроба. Претензии по поводу не попадения в тот или иной оттенок не принимаются при отсутствии цветопробы.
+                    </p>
+
+
+
+                    <div class="rowIntoProduct">
+                        <div class="col-left">
+                            <div class="formGroupSkinali">
+                                <div class="col">
+                                    <div class="fieldGroup">
+                                        <label for="">Коментарий</label>
+                                        <textarea name="" id="" class="placeWrite bigPlaceWrite"></textarea>
+                                    </div>
+                                    <div class="fieldGroup">
+                                        <label for="">Имя: <b>*</b></label>
+                                        <input type="text" class="placeWrite">
+                                    </div>
+                                    <div class="fieldGroup">
+                                        <label for="">Город: <b>*</b></label>
+                                        <input type="text" class="placeWrite">
+                                    </div>
+                                    <div class="fieldGroup">
+                                        <label for="">Телефон: <b>*</b></label>
+                                        <input type="text" class="placeWrite phone">
+                                    </div>
+                                    <div class="fieldGroup">
+                                        <label for="">E-mail: <b>*</b></label>
+                                        <input type="text" class="placeWrite">
+                                    </div>
+                                </div>
+                                <div class="rowButtons">
+                                    <button type="submit" class="btn">Отправить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-right">
+                            <div class="selectGroup">
+                                <div class="titleGrouop">
+                                    Выберите вид печати
+                                </div>
+                                <div class="group">
+                                    <div class="selectorCustom" style="background-image: url(&quot;null&quot;);">
+                                        <select name="" id="" class="selector">
+                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
+                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
+                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
+                                        </select>
+                                        <div class="active">Ультрафиолетовая печать - 888 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div></div></div>
+                                </div>
+                            </div>
+                            <div class="selectGroup">
+                                <div class="titleGrouop">
+                                    Выберите материал для печати
+                                </div>
+                                <div class="group">
+                                    <div class="selectorCustom" style="background-image: url(&quot;null&quot;);">
+                                        <select name="" id="" class="selector">
+                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
+                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
+                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
+                                        </select>
+                                        <div class="active">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div></div></div>
+                                </div>
+                            </div>
+                            <div class="rowEffects">
+                                <hr>
+                                <div class="keyEffect mirror">
+									<span class="wrapIcon">
+
+									</span>
+                                    <span class="textor">
+										Отзеркалить
+									</span>
+                                </div>
+                                <div class="keyEffect whiteBlack">
+									<span class="wrapIcon">
+
+									</span>
+                                    <span class="textor">
+										Черно-белое
+									</span>
+                                </div>
+                                <div class="keyEffect sepia">
+									<span class="wrapIcon">
+
+									</span>
+                                    <span class="textor">
+										Сепия
+									</span>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="rowSocialProducts">
+                                <div class="resultsPrice">
+                                    <?=round($product_info['price'], 0);?> грн. м/пог.
+                                </div>
+                                <div class="socialsZ">
+                                    <div class="sk_tags_holder">
+                                        <script type="text/javascript">(function (){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var d=document,s=d.createElement('script'),g='getElementsByTagName';s.type='text/javascript';s.charset='UTF-8';s.async=true;s.src=('https:'==window.location.protocol?'https':'http')+'://share.pluso.ru/pluso-like.js';var h=d[g]('body')[0];h.appendChild(s);}})();</script>
+                                        <div class="pluso" data-background="transparent"
+                                             data-options="medium,round,line,horizontal,counter,theme=06"
+                                             data-services="facebook,twitter,google">
+                                            <div class="pluso-010010011010-06">
+												<span class="pluso-wrap" style="background:transparent">
+													<a href="https://skinali-printcolor.com/arhitektura/mostyi/staraya-praga"
+                                                       title="Facebook" class="pluso-facebook"></a>
+													<a href="https://skinali-printcolor.com/arhitektura/mostyi/staraya-praga"
+                                                       title="Twitter" class="pluso-twitter"></a>
+													<a href="https://skinali-printcolor.com/arhitektura/mostyi/staraya-praga"
+                                                       title="Google+" class="pluso-google"></a>
+													<a href="https://pluso.ru/" class="pluso-more"></a>
+												</span>
+                                                <span class="pluso-counter">
+													<b title="0">0</b>
+												</span>
+                                            </div>
+                                        </div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rowBtnSector">
+                                <button class="btn">
+                                    Рассчитать заказ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                     <div class="sk_order_info">
                         <div class="sk_order_info_left">

@@ -865,6 +865,14 @@
             width: 100%;
         }
 
+        .content .middle-sector .rowInfoNode .text {
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 26px;
+            font-weight: 400;
+            margin: 15px 0 15px;
+        }
+
     </style>
 
 
