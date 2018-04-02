@@ -27,8 +27,9 @@
             <div class="middle-sector calculatorSector">
                 <div class="rowInfoNode">
 
-                    <img id="nodeImg" src="<?=" image/".$images?>" title="<?=$product_info['name']?>"
+                    <img id="sk_main_order_picture" src="<?=" image/".$images?>" title="<?=$product_info['name']?>"
                     alt="Скинали <?=$product_info['name']?>">
+                    <div class="sk_order_shadow"></div>
 
                     <p class="text">
                         Цвета печати могут отличаться от цветов на мониторе. Для подбора определенного оттенка заказывается цветопроба. Претензии по поводу не попадения в тот или иной оттенок не принимаются при отсутствии цветопробы.
