@@ -30,6 +30,7 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li><a href="#tab-paraphernalia" data-toggle="tab">Атрибуты</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -166,11 +167,6 @@
                   <input type="hidden" name="image" value="<?php echo $image; ?>" id="input-image" />
                 </div>
               </div>
-
-
-
-
-
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-top"><span data-toggle="tooltip" title="<?php echo $help_top; ?>"><?php echo $entry_top; ?></span></label>
                 <div class="col-sm-10">
@@ -185,15 +181,6 @@
                   </div>
                 </div>
               </div>
-
-
-
-
-
-
-
-
-
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-column"><span data-toggle="tooltip" title="<?php echo $help_column; ?>"><?php echo $entry_column; ?></span></label>
                 <div class="col-sm-10">
@@ -266,7 +253,58 @@
 
 
 
+            <div class="tab-pane" id="tab-paraphernalia">
 
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <td style="width: 1px;" class="text-center"></td>
+                    <td class="text-left">
+                      Добавить в категорию
+                    </td>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  <tr>
+                    <td class="text-center">
+                      <?php if ($printing) { ?>
+                      <label>
+                        <input type="checkbox" name="printing" value="true" checked="checked" />
+                      </label>
+                      <?php } else { ?>
+                      <label>
+                        <input type="checkbox" name="printing" value="true">
+                      </label>
+                      <?php } ?>
+                    </td>
+                    <td class="text-left">Вид печати</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">
+
+                      <?php if ($materials) { ?>
+                      <label>
+                        <input type="checkbox" name="materials" value="true" checked="checked" />
+                      </label>
+                      <?php } else { ?>
+                      <label>
+                        <input type="checkbox" name="materials" value="true">
+                      </label>
+                      <?php } ?>
+
+                    </td>
+                    <td class="text-left">Материал для печати</td>
+                  </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
 
 
 
