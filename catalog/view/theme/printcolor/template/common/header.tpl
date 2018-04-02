@@ -325,7 +325,7 @@
                 width: 55%;
             }
             .sk_galery_not_main_category_wraper>ul>li>a {
-                font-size: 16px;
+                font-size: 14px;
             }
             #sk_galery_container_holder img {
                 width: 62% !important;
