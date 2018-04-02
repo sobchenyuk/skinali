@@ -262,25 +262,6 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                      <td class="text-left">
-
-                        <div class="form-group">
-                          <label class="col-sm-2 control-label" for="input-top">
-                            Главное меню:
-                          </label>
-                          <div class="col-sm-10">
-                            <div class="checkbox">
-                              <label>
-                                <input type="checkbox" name="top" value="1" checked="checked" id="input-top">
-                                &nbsp; </label>
-                            </div>
-                          </div>
-                        </div>
-
-                      </td>
-
-                    </tr>
 
                     <tr>
                       <td class="text-center">
