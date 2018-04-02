@@ -111,7 +111,7 @@
                                         <div class="active">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div></div></div>
                                 </div>
                             </div>
-                            <div class="rowEffects sk_order_change_holder">
+                            <div class="rowEffects">
                                 <hr>
 
                                 <div class="keyEffect mirror" onclick="Mirror()">
