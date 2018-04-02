@@ -113,9 +113,10 @@
                                 <div class="group">
                                     <div class="selectorCustom">
                                         <select name="" id="" class="selector">
-                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
-                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
-                                            <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
+                                            <?php for ( $i = 0; $i < count($dataMaterials); $i++ ) { ?>
+                                            <option value=""><?php echo $dataMaterials[$i]["name"]; ?> - <?php echo $dataMaterials[$i]["price"]; ?> грн. м2</option>
+                                            <?php
+                                            } ?>
                                         </select>
                                     </div>
                                 </div>
