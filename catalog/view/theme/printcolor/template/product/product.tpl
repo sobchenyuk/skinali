@@ -10,11 +10,23 @@
 			<span class="current"><?=$heading_title?></span>
 		</div>
 	</div>
+
+<div class="content">
+
+
+<div class="rowTitlePage">
+	<h1 class="title"><?=$product_info['name']?> № <?=$product_info['sku']?></h1>
+	<hr>
+</div>
+
+
+
 	<div class="sk_order_holder">
 		<?php echo $column_right; ?>	        				
 		<?php echo $column_left; ?>
 	    <div class="sk_order_form_holder">
 			<div class="sk_order_pict_holder">
+					<img id="sk_main_order_picture" src="<?="image/".$images?>" title="<?=$product_info['name']?>" alt="Скинали <?=$product_info['name']?>">
 					<div class="sk_order_shadow"></div>
 					<div class="sk_order_info">
 								<div class="sk_order_info_left">
@@ -81,7 +93,12 @@
 											<div class="sk_sepia_text" id="sk_sepia_text">Сепия</div>
 										</div>
 									</div>
+
+
+
 									<div class="sk_order_pict_number_text"><h1 class="sk_order_pict_number"><?=$product_info['name']?> № <?=$product_info['sku']?></h1></div>
+
+
 									<div class="sk_tags_holder">
 										<script type="text/javascript">(function(){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var d=document,s=d.createElement('script'),g='getElementsByTagName';s.type='text/javascript';s.charset='UTF-8';s.async=true;s.src=('https:'==window.location.protocol?'https':'http')+'://share.pluso.ru/pluso-like.js';var h=d[g]('body')[0];h.appendChild(s);}})();</script>
 										<div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=06" data-services="facebook,twitter,google">
@@ -105,7 +122,8 @@
 			</div>
 								</div>
 	</div>
- 
+
+</div>
 
 
 <?php echo $footer; ?>

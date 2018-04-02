@@ -818,6 +818,19 @@
             }
 
         }
+
+
+        .content .rowTitlePage {
+            font-size: 30px;
+            color: #00c7fd;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .content .rowTitlePage .title {
+            padding: 20px 0 15px;
+            font-size: 30px;
+        }
+
     </style>
 
 
