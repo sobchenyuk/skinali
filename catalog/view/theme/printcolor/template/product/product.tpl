@@ -187,3 +187,97 @@
 
 
 <?php echo $footer; ?>
+
+<script>
+
+    window.addEventListener('load', function (ev) {
+        //selector in product
+        function materialSelectorZ(){
+
+
+            if (!document.querySelectorAll('.selectorCustom').length) {
+                return;
+            }
+
+
+            var selectors = document.querySelectorAll('.selectorCustom');
+
+            for (var k = selectors.length - 1; k >= 0; k--) {
+                selector = selectors[k];
+                // console.log(selector)
+                function createActiveOption(){
+                    var option = selector.querySelectorAll('option');
+                    var active = document.createElement('div');
+                    active.className = 'active';
+                    for (var i = option.length - 1; i >= 0; i--) {
+                        if(option[i].selected){
+                            active.innerHTML = option[i].innerHTML;
+                            selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                        }
+                    }
+                    selector.appendChild(active);
+                }
+                createActiveOption();
+                function createListOptions(){
+                    var option = selector.querySelectorAll('option');
+                    var listOption = document.createElement('div');
+                    listOption.className = 'listOption';
+                    for (var i = option.length - 1; i >= 0; i--) {
+                        var optionElem = document.createElement('div');
+                        optionElem.className = 'li';
+                        optionElem.setAttribute('data-index',i);
+                        optionElem.innerHTML = option[i].innerHTML;
+                        optionElem.setAttribute('data-bg',selector.querySelectorAll('option')[i].getAttribute('data-bg'))
+                        optionElem.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                        listOption.appendChild(optionElem);
+                    }
+                    selector.appendChild(listOption)
+                }
+                createListOptions();
+
+
+                function createActiveOptionAll(){
+                    for (var z = selectors.length - 1; z >= 0; z--) {
+                        var selector = selectors[z];
+                        selector.removeChild(selector.querySelector('.active'));
+                        var option = selector.querySelectorAll('option');
+                        var active = document.createElement('div');
+                        active.className = 'active';
+                        for (var i = option.length - 1; i >= 0; i--) {
+                            if(option[i].selected){
+                                active.innerHTML = option[i].innerHTML;
+                                selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                            }
+                        }
+                        selector.appendChild(active);
+                    }
+                }
+                function workSelector(){
+                    selector.onclick = function(){
+                        if (!this.hasAttribute('data-open')) {
+                            this.setAttribute('data-open','true');
+                        }
+                        else{
+                            this.removeAttribute('data-open');
+                        }
+                    }
+                    var option = selector.querySelectorAll('.li');
+                    for (var i = option.length - 1; i >= 0; i--) {
+                        option[i].onclick = function(){
+                            var index = this.getAttribute('data-index');
+                            this.parentNode.parentNode.querySelectorAll('option')[index].selected = true;
+                            // this.parentNode.parentNode.removeChild(this.parentNode.parentNode.querySelector('.active'));
+                            createActiveOptionAll();
+
+                        }
+                    }
+                }
+
+
+                workSelector();
+            }
+        }
+        materialSelectorZ();
+    });
+
+</script>
