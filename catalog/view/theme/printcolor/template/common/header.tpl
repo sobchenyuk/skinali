@@ -831,6 +831,16 @@
             font-size: 30px;
         }
 
+        .content .rowTitlePage hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
+
+
     </style>
 
 
