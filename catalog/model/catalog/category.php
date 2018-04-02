@@ -6,10 +6,10 @@ class ModelCatalogCategory extends Model {
 		return $query->row;
 	}
 
-    public function getAttr(){
-        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` ORDER BY `" . DB_PREFIX . "attribute`.`attribute_group_id` ASC");
+    public function getAttr($attr){
+        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` WHERE `attribute_group_id`='" . (int)$attr . "'");
 
-        return $query->rows;
+        return $query->row;
     }
 
 	public function getCategories($parent_id = 0) {
