@@ -271,9 +271,13 @@
                   <tr>
                     <td class="text-center">
                       <?php if ($printing) { ?>
-                      <input type="checkbox" name="printing" value="8" checked="checked" />
+                      <label>
+                        <input type="checkbox" name="printing" checked="checked" />
+                      </label>
                       <?php } else { ?>
-                      <input type="checkbox" name="printing" value="8">
+                      <label>
+                        <input type="checkbox" name="printing">
+                      </label>
                       <?php } ?>
                     </td>
                     <td class="text-left">Вид печати</td>
@@ -283,9 +287,13 @@
                     <td class="text-center">
 
                       <?php if ($materials) { ?>
-                      <input type="checkbox" name="materials" value="9" checked="checked" />
+                      <label>
+                        <input type="checkbox" name="materials" checked="checked" />
+                      </label>
                       <?php } else { ?>
-                      <input type="checkbox" name="materials" value="9">
+                      <label>
+                        <input type="checkbox" name="materials">
+                      </label>
                       <?php } ?>
 
                     </td>
