@@ -15,7 +15,6 @@
 		<?php echo $column_left; ?>
 	    <div class="sk_order_form_holder">
 			<div class="sk_order_pict_holder">
-					<img id="sk_main_order_picture" src="<?="image/".$images?>" title="<?=$product_info['name']?>" alt="Скинали <?=$product_info['name']?>">
 					<div class="sk_order_shadow"></div>
 					<div class="sk_order_info">
 								<div class="sk_order_info_left">
