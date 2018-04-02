@@ -2,6 +2,14 @@
 class ControllerProductProduct extends Controller {
 	private $error = array();
 
+
+    public function getAttr(){
+        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` WHERE 1");
+
+        return $query->row;
+    }
+
+
 	public function index() {
 		
 		if (isset($_POST['order_button'])) {
@@ -246,7 +254,7 @@ class ControllerProductProduct extends Controller {
 
 
 
-        $attribute_id = $this->model_catalog_product->getAttr();
+        $attribute_id = $this->getAttr();
 
 //        foreach ($arrAttr as $item) {
 //
