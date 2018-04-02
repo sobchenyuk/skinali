@@ -272,11 +272,11 @@
                     <td class="text-center">
                       <?php if ($printing) { ?>
                       <label>
-                        <input type="checkbox" name="printing" value="true" checked="checked" />
+                        <input type="checkbox" name="printing" value="8" checked="checked" />
                       </label>
                       <?php } else { ?>
                       <label>
-                        <input type="checkbox" name="printing" value="true">
+                        <input type="checkbox" name="printing" value="8">
                       </label>
                       <?php } ?>
                     </td>
@@ -288,11 +288,11 @@
 
                       <?php if ($materials) { ?>
                       <label>
-                        <input type="checkbox" name="materials" value="true" checked="checked" />
+                        <input type="checkbox" name="materials" value="9" checked="checked" />
                       </label>
                       <?php } else { ?>
                       <label>
-                        <input type="checkbox" name="materials" value="true">
+                        <input type="checkbox" name="materials" value="9">
                       </label>
                       <?php } ?>
 
