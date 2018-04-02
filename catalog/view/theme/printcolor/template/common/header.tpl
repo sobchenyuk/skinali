@@ -1151,6 +1151,19 @@
             background-color: #00c7fd;
             color: #fff;
         }
+        .sk_order_pict_holder {
+            margin: 0 auto;
+            padding-top: 0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .sk_order_shadow {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
         @media (max-width: 1615px) {
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
                 font-size: 18px;
