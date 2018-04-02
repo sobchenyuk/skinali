@@ -34,7 +34,7 @@ class ModelCatalogAttribute extends Model {
 	}
 
 	public function getAttr(){
-        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "attribute WHERE 1");
+        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` WHERE 1");
 
         return $query->row;
     }
