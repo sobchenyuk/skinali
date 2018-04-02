@@ -6,7 +6,7 @@ class ControllerProductProduct extends Controller {
     public function getAttr(){
         $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` WHERE 1");
 
-        return $query->row;
+        return $query;
     }
 
 
