@@ -922,6 +922,8 @@
             -ms-flex-align: end;
             align-items: flex-end;
             float: left;
+            margin-bottom: 0;
+            margin-top: 0;
         }
 
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
@@ -932,6 +934,8 @@
             width: 30%;
             float: left;
             color: #727070;
+            margin-bottom: 0;
+            margin-top: 0;
         }
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
             text-align: left;
@@ -947,6 +951,8 @@
             width: 70%;
             -webkit-box-shadow: inset 0 2px 8px #000;
             box-shadow: inset 0 2px 8px #000;
+            margin-top: 0;
+            margin-bottom: 0;
         }
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label b {
             color: #00c7fd;
