@@ -243,7 +243,8 @@
                             </form>
                         </div>
                         <div class="sk_order_info_right">
-                            <div class="sk_order_change_holder">
+
+                           <!-- <div class="sk_order_change_holder">
                                 <div onclick="Mirror()">
                                     <div class="sk_mirror" id="sk_mirror"></div>
                                     <div class="sk_mirror_text" id="sk_mirror_text">Отзеркалить</div>
@@ -256,7 +257,7 @@
                                     <div class="sk_sepia" id="sk_sepia"></div>
                                     <div class="sk_sepia_text" id="sk_sepia_text">Сепия</div>
                                 </div>
-                            </div>
+                            </div> -->
 
 
                             <div class="sk_order_pict_number_text"><h1
