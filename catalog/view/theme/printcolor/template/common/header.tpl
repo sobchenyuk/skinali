@@ -934,7 +934,7 @@
             width: 30%;
             float: left;
             color: #727070;
-            margin-bottom: 0;
+            margin-bottom: -6px;
             margin-top: 0;
         }
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
@@ -951,8 +951,7 @@
             width: 70%;
             -webkit-box-shadow: inset 0 2px 8px #000;
             box-shadow: inset 0 2px 8px #000;
-            margin-top: 0;
-            margin-bottom: 0;
+            margin: 0;
         }
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label b {
             color: #00c7fd;
