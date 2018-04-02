@@ -1073,7 +1073,7 @@
             box-shadow: 0 2px 3px #000;
         }
         .fieldGroup input:focus, .fieldGroup textarea:focus {
-            border: 1px solid #87ceeb;
+            border: 1px solid #87ceeb !important;
         }
 
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
