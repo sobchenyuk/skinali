@@ -34,7 +34,7 @@
                     </div>
 
                     <pre>
-                        <?php var_dump($lastCategory); ?>
+                        <?php var_dump($lastCategory["category_id"]); ?>
                     </pre>
 
                     <p class="text">
