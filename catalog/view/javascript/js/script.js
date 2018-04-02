@@ -17,7 +17,7 @@ function getViewportHeight() {
 
 function Mirror(){
 	if (Mirror_var == 0){
-		document.getElementById('sk_mirror').style.backgroundPosition = 'center -95px';
+		document.getElementById('sk_mirror').style.backgroundPosition = 'center -58px';
 		document.getElementById('sk_mirror_text').style.color = '#3592ab';
 		document.getElementById('sk_main_order_picture').style.transform = 'scale(-1, 1)';
 		document.getElementById('sk_mirror_checkbox').checked = true;
@@ -40,7 +40,7 @@ function BlackWhite(){
 			document.getElementById('sk_sepia_checkbox').checked = false;
 			Sepia_var = 0;
 		}
-		document.getElementById('sk_black_white').style.backgroundPosition = 'center -95px';
+		document.getElementById('sk_black_white').style.backgroundPosition = 'center -58px';
 		document.getElementById('sk_black_white_text').style.color = '#3592ab';
 		document.getElementById('sk_main_order_picture').className = 'greyscale';
 		document.getElementById('sk_bw_checkbox').checked = true;
@@ -63,7 +63,7 @@ function Sepia(){
 			document.getElementById('sk_bw_checkbox').checked = false;
 			BlackWhite_var = 0;
 		}
-		document.getElementById('sk_sepia').style.backgroundPosition = 'center -95px';
+		document.getElementById('sk_sepia').style.backgroundPosition = 'center -58px';
 		document.getElementById('sk_sepia_text').style.color = '#3592ab';
 		document.getElementById('sk_main_order_picture').className = 'sepia';
 		document.getElementById('sk_sepia_checkbox').checked = true;
