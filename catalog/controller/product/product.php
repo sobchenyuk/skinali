@@ -4,7 +4,7 @@ class ControllerProductProduct extends Controller {
 
 
     public function getAttr(){
-        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` ORDER BY `" . DB_PREFIX . "_attribute`.`attribute_group_id` ASC");
+        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` ORDER BY `" . DB_PREFIX . "attribute`.`attribute_group_id` ASC");
 
         return $query->rows;
     }
