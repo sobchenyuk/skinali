@@ -280,6 +280,14 @@ class ControllerProductProduct extends Controller {
 
         };
 
+//        foreach ($dataPrinting as $item){
+//
+//            foreach ($item as $value){
+//
+//
+//            }
+//        }
+
 		$data['product_info'] = $product_info;
 		if ($product_info) {
 			$url = '';

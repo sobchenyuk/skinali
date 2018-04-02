@@ -98,9 +98,9 @@
                                 <div class="group">
                                     <div class="selectorCustom">
                                         <select name="" id="" class="selector">
-                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
-                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
-                                            <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
+                                            <?php foreach ($dataPrinting as $item){ foreach ($item as $value){ ?>
+                                            <option value=""><?php echo $value["name"]; ?> - <?php echo $value["price"]; ?> грн. м2</option>
+                                            <?php }} ?>
                                         </select>
                                     </div>
                                 </div>
