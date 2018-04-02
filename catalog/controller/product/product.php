@@ -251,12 +251,19 @@ class ControllerProductProduct extends Controller {
         if($category_attr["printing"] !== 0 || $category_attr["materials"] !== 0){
 
             $printing = $this->model_catalog_category->getAttr($category_attr["printing"]);
+            $dataPrinting = array();
 
             for ( $i = 0; $i < count($printing); $i++ ) {
-                //$data[$i]
-                echo $i;
+
+                for ( $a = 0; $a < count($printing[$i]); $a++ ) {
+                    $dataPrinting[$i] = array(
+                        "name"=>$printing[$i]["name"],
+                        "price"=>$printing[$i]["price_type_of_printing"]
+                    );
+                }
             }
 
+           var_dump($dataPrinting);
 
         };
 
