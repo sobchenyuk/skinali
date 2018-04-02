@@ -98,7 +98,7 @@
                                 <div class="group">
                                     <div class="selectorCustom">
                                         <select name="" id="" class="selector">
-                                            <?php for ( $i = 0; $i < count($dataPrinting); $i++ ) {
+                                            <?php for ( $i = 0; $i < count($dataPrinting); $i++ ) { ?>
                                                     <option value=""><?php echo $dataPrinting[$i]["name"]; ?> - <?php echo $dataPrinting[$i]["price"]; ?> грн. м2</option>
                                                 <?php
                                             } ?>
