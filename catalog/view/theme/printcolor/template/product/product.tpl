@@ -33,11 +33,9 @@
                         <div class="sk_order_shadow"></div>
                     </div>
 
-
                     <pre>
-                        <?php var_dump($product_attributes); ?>
+                        <?php var_dump($categories); ?>
                     </pre>
-
 
                     <p class="text">
 

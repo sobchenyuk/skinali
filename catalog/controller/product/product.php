@@ -236,6 +236,10 @@ class ControllerProductProduct extends Controller {
 		$data['product_url'] = $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id']);
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
+
+        $data['categories']  = $this->model_catalog_product->getCategories($product_id);
+
+
 		$data['product_info'] = $product_info;
 		if ($product_info) {
 			$url = '';
