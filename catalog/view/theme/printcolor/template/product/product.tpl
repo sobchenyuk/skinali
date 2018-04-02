@@ -96,6 +96,7 @@
                                             <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
                                             <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
                                         </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="selectGroup">
@@ -109,6 +110,7 @@
                                             <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
                                             <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
                                         </select>
+                                    </div>
                                 </div>
                             </div>
                             <div class="rowEffects">
