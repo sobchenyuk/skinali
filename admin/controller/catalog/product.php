@@ -13,7 +13,7 @@ class ControllerCatalogProduct extends Controller {
 
         var_dump($this->request->get['product_id']);
 
-        var_dump($data['categories']);
+
 
 		$this->getList();
 
