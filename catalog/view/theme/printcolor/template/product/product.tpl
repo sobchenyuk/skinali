@@ -34,7 +34,11 @@
                     </div>
 
                     <p class="text">
+
+                        <?php var_dump($product_options); ?>
+
                         <?php echo $product_info["description"]; ?>
+
                     </p>
 
 
