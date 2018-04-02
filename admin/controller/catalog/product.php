@@ -9,14 +9,7 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->load->model('catalog/product');
 
-        $categories = $this->model_catalog_category->getCategories(0);
-
-        var_dump($categories);
-
-
-
 		$this->getList();
-
 	}
 
 	public function add() {
@@ -248,6 +241,10 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getList() {
+
+
+	    echo 'true';
+
 		if (isset($this->request->get['filter_name'])) {
 			$filter_name = $this->request->get['filter_name'];
 		} else {
