@@ -52,10 +52,6 @@
 
     <style>
 
-        body {
-            background: none;
-        }
-
         * {
             padding: 0;
             outline: 0;
