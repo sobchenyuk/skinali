@@ -239,7 +239,9 @@ class ControllerProductProduct extends Controller {
 
 		$lastCategory = array_pop($product_categories)["category_id"];
 
-		var_dump($lastCategory);
+		$category_attr = $this->model_catalog_category->getCategory($lastCategory);
+
+		var_dump($category_attr);
 
 		$data['product_info'] = $product_info;
 		if ($product_info) {
