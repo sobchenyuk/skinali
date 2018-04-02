@@ -40,26 +40,29 @@
                         <div class="col-left">
                             <div class="formGroupSkinali">
                                 <div class="col">
+                                    <form class="sk_order_form" name="order" action="" method="post"
+                                          onsubmit="ga('send', 'event', 'zakaz', 'submit')">
                                     <div class="fieldGroup">
-                                        <label for="">Коментарий</label>
-                                        <textarea name="" id="" class="placeWrite bigPlaceWrite"></textarea>
+                                        <label for="sk_order_comment_holder_textarea">Коментарий</label>
+                                        <textarea name="info" id="sk_order_comment_holder_textarea" class="placeWrite bigPlaceWrite"></textarea>
                                     </div>
                                     <div class="fieldGroup">
-                                        <label for="">Имя: <b>*</b></label>
-                                        <input type="text" class="placeWrite">
+                                        <label for="sk_order_info_input_username">Имя: <b>*</b></label>
+                                        <input id="sk_order_info_input_username" type="text" class="placeWrite" name="username" required="" />
                                     </div>
                                     <div class="fieldGroup">
-                                        <label for="">Город: <b>*</b></label>
-                                        <input type="text" class="placeWrite">
+                                        <label for="sk_order_info_input_city">Город: <b>*</b></label>
+                                        <input id="sk_order_info_input_city" type="text" class="placeWrite" name="city" required="" />
                                     </div>
                                     <div class="fieldGroup">
-                                        <label for="">Телефон: <b>*</b></label>
-                                        <input type="text" class="placeWrite phone">
+                                        <label for="sk_order_info_input_phone">Телефон: <b>*</b></label>
+                                        <input id="sk_order_info_input_phone" type="text" class="placeWrite phone" name="phone" required="" />
                                     </div>
                                     <div class="fieldGroup">
-                                        <label for="">E-mail: <b>*</b></label>
-                                        <input type="text" class="placeWrite">
+                                        <label for="sk_order_info_input_email">E-mail: <b>*</b></label>
+                                        <input id="sk_order_info_input_email" type="text" class="placeWrite" name="email" required="" />
                                     </div>
+                                    </form>
                                 </div>
                                 <div class="rowButtons">
                                     <button type="submit" class="btn">Отправить заказ</button>
