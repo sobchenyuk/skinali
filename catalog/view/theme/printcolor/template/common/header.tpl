@@ -1015,7 +1015,7 @@
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
             padding-left: 15px;
-            background-image: url(../img/selectArrow.png);
+            background-image: url(../image/order/selectArrow.png);
             background-repeat: no-repeat;
             background-position: right 10px center;
             box-sizing: border-box;
