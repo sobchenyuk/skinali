@@ -89,8 +89,7 @@
                         </div>
                         <div class="col-right">
 
-
-                            <?php var_dump($dataPrinting); ?>
+                            <?php if(count($dataPrinting) > 0 || count($dataMaterials) > 0){ ?>
 
                             <div class="selectGroup">
                                 <div class="titleGrouop">
@@ -120,6 +119,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php }; ?>
 
 
 
@@ -152,9 +152,16 @@
                             </div>
 
                             <div class="rowSocialProducts">
+                                <?php if(count($dataPrinting) == 0 || count($dataMaterials) == 0){ ?>
                                 <div class="resultsPrice">
                                     Цена: <?=round($product_info['price'], 0);?> грн. м2
                                 </div>
+                                <?php } else { ?>
+                                <div class="resultsPrice">
+                                    Цена: <span id="resultPrice"></span> грн. м2
+                                </div>
+                                <?php }; ?>
+
                                 <div class="socialsZ">
                                     <div class="sk_tags_holder">
                                         <script type="text/javascript">(function (){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var d=document,s=d.createElement('script'),g='getElementsByTagName';s.type='text/javascript';s.charset='UTF-8';s.async=true;s.src=('https:'==window.location.protocol?'https':'http')+'://share.pluso.ru/pluso-like.js';var h=d[g]('body')[0];h.appendChild(s);}})();</script>
