@@ -265,6 +265,13 @@
 
                     <tr>
                       <td class="text-center">
+                        <input type="checkbox" name="selected[]" value="8">
+                      </td>
+                      <td class="text-left">Вид печати</td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-center">
                         <input type="checkbox" name="selected[]" value="9">
                       </td>
                       <td class="text-left">Материал для печати</td>
