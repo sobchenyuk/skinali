@@ -249,34 +249,50 @@
             <div class="tab-pane" id="tab-paraphernalia">
 
               <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <td class="text-left">Группа атрибута</td>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td class="text-left">
+                <form action="" method="post" enctype="multipart/form-data">
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <td style="width: 1px;" class="text-center">
+                        <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);">
+                      </td>
+                      <td class="text-left">
+                        Добавить в категорию
+                      </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td class="text-left">
 
-                      <div class="form-group">
-                        <label class="col-sm-2 control-label" for="input-top">
-                          Главное меню:
-                        </label>
-                        <div class="col-sm-10">
-                          <div class="checkbox">
-                            <label>
-                              <input type="checkbox" name="top" value="1" checked="checked" id="input-top">
-                              &nbsp; </label>
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label" for="input-top">
+                            Главное меню:
+                          </label>
+                          <div class="col-sm-10">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="top" value="1" checked="checked" id="input-top">
+                                &nbsp; </label>
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                    </td>
+                      </td>
 
-                  </tr>
-                  </tbody>
-                </table>
+                    </tr>
+
+                    <tr>
+                      <td class="text-center">
+                        <input type="checkbox" name="selected[]" value="9">
+                      </td>
+                      <td class="text-left">Материал для печати</td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </form>
+
               </div>
             </div>
 
@@ -355,9 +371,3 @@ $('#language a:first').tab('show');
 //--></script></div>
 <?php echo $footer; ?>
 
-<style>
-  #tab-paraphernalia .form-group {
-    margin-left: 0;
-    margin-right: 0;
-  }
-</style>
