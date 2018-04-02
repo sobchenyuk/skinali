@@ -1,4 +1,5 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -29,6 +30,7 @@
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+            <li><a href="#tab-paraphernalia" data-toggle="tab">Атрибуты</a></li>
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -144,12 +146,19 @@
                 </div>
               </div>
               <div class="form-group">
+
+
                 <label class="col-sm-2 control-label" for="input-keyword"><span data-toggle="tooltip" title="<?php echo $help_keyword; ?>"><?php echo $entry_keyword; ?></span></label>
                 <div class="col-sm-10">
-                  <input type="text" name="keyword" value="<?php echo $keyword; ?>" placeholder="<?php echo $entry_keyword; ?>" id="input-keyword" class="form-control" />
+
+                  <!-- ошибка по коду ------------------------------------------>
+                  <input type="text" name="keyword" value="<?php echo $keyword[1]; ?>" placeholder="<?php echo $entry_keyword; ?>" id="input-keyword" class="form-control" />
+
+
                   <?php if ($error_keyword) { ?>
                   <div class="text-danger"><?php echo $error_keyword; ?></div>
                   <?php } ?>
+
                 </div>
               </div>
               <div class="form-group">
@@ -241,6 +250,48 @@
                 </table>
               </div>
             </div>
+
+
+
+            <div class="tab-pane" id="tab-paraphernalia">
+
+              <div class="table-responsive">
+
+                <table class="table table-bordered table-hover">
+                  <thead>
+                  <tr>
+                    <td style="width: 1px;" class="text-center">
+                      <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);">
+                    </td>
+                    <td class="text-left">
+                      Добавить в категорию
+                    </td>
+                  </tr>
+                  </thead>
+                  <tbody>
+
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" name="selected[]" value="8">
+                    </td>
+                    <td class="text-left">Вид печати</td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">
+                      <input type="checkbox" name="selected[]" value="9">
+                    </td>
+                    <td class="text-left">Материал для печати</td>
+                  </tr>
+
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+
+
           </div>
         </form>
       </div>
@@ -313,3 +364,9 @@
       $('#language a:first').tab('show');
       //--></script></div>
 <?php echo $footer; ?>
+
+<style>
+  .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 15px;
+  }
+</style>
