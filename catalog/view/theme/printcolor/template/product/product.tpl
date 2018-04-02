@@ -36,7 +36,7 @@
 
                     <p class="text">
 
-                        <?php var_dump($option_values); ?>
+                        <?php var_dump($customer_groups); ?>
 
                         <?php echo $product_info["description"]; ?>
 
