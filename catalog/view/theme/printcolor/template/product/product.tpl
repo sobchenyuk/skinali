@@ -106,32 +106,26 @@
                                         <div class="active">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div></div></div>
                                 </div>
                             </div>
-                            <div class="rowEffects">
+                            <div class="rowEffects sk_order_change_holder">
                                 <hr>
 
                                 <div class="keyEffect mirror" onclick="Mirror()">
-									<span class="wrapIcon sk_mirror">
-
-									</span>
-                                    <span class="textor">
+									<span id="sk_mirror" class="wrapIcon sk_mirror"></span>
+                                    <span id="sk_mirror_text" class="textor sk_mirror_text">
 										Отзеркалить
 									</span>
                                 </div>
 
                                 <div class="keyEffect whiteBlack" onclick="BlackWhite()">
-									<span class="wrapIcon sk_black_white">
-
-									</span>
-                                    <span class="textor">
+									<span id="sk_black_white" class="wrapIcon sk_black_white"></span>
+                                    <span id="sk_black_white_text" class="textor sk_black_white_text">
 										Черно-белое
 									</span>
                                 </div>
 
                                 <div class="keyEffect" onclick="Sepia()">
-									<span class="wrapIcon sk_sepia">
-
-									</span>
-                                    <span class="textor">
+									<span id="sk_sepia" class="wrapIcon sk_sepia"></span>
+                                    <span id="sk_sepia_text" class="textor sk_sepia_text">
 										Сепия
 									</span>
                                 </div>
