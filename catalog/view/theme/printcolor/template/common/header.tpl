@@ -934,6 +934,7 @@
             color: #727070;
         }
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+            text-align: left;
             background-color: #141414;
             border: 0;
             color: #fff;
