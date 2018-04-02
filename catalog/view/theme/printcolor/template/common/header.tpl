@@ -1072,6 +1072,11 @@
             -webkit-box-shadow: 0 2px 3px #000;
             box-shadow: 0 2px 3px #000;
         }
+
+        .fieldGroup input, .fieldGroup textarea {
+            border: 1px solid #14141400 !important;
+        }
+
         .fieldGroup input:focus, .fieldGroup textarea:focus {
             border: 1px solid #87ceeb !important;
         }
