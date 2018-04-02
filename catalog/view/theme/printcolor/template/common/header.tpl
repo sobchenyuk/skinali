@@ -1172,6 +1172,11 @@
             bottom: 0;
             left: 0;
         }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom[data-open] .listOption {
+            border-top: 1px solid #3f3f3f;
+            max-height: 1000px;
+            z-index: 30;
+        }
         @media (max-width: 1615px) {
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
                 font-size: 18px;
