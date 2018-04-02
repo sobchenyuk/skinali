@@ -360,3 +360,8 @@ $('#language a:first').tab('show');
 //--></script></div>
 <?php echo $footer; ?>
 
+<style>
+  .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 15px;
+  }
+</style>
