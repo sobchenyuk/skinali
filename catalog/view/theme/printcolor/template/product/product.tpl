@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 
-	<div class="sk_breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+	<div class="sk_breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#" style="margin-bottom: 0;">
 		<div id="sk_order" class="sk_breadcrumbs_holder">
 		<?php foreach ($breadcrumbs as $breadcrumb) { ?>
 			<span typeof="v:Breadcrumb"><a href="<?php echo $breadcrumb['href']; ?>" rel="v:url" property="v:title">
