@@ -243,8 +243,6 @@ class ControllerCatalogProduct extends Controller {
 	protected function getList() {
 
 
-	    echo 'true';
-
 		if (isset($this->request->get['filter_name'])) {
 			$filter_name = $this->request->get['filter_name'];
 		} else {
@@ -594,6 +592,9 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getForm() {
+
+	    echo 'true';
+
     //CKEditor
     if ($this->config->get('config_editor_default')) {
         $this->document->addScript('view/javascript/ckeditor/ckeditor.js');
