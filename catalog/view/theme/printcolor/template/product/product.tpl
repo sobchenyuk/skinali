@@ -98,7 +98,7 @@
                             <div class="rowEffects">
                                 <hr>
                                 <div class="keyEffect mirror">
-									<span class="wrapIcon">
+									<span class="wrapIcon sk_mirror">
 
 									</span>
                                     <span class="textor">
@@ -106,7 +106,7 @@
 									</span>
                                 </div>
                                 <div class="keyEffect whiteBlack">
-									<span class="wrapIcon">
+									<span class="wrapIcon sk_black_white">
 
 									</span>
                                     <span class="textor">
@@ -114,7 +114,7 @@
 									</span>
                                 </div>
                                 <div class="keyEffect sepia">
-									<span class="wrapIcon">
+									<span class="wrapIcon sk_sepia">
 
 									</span>
                                     <span class="textor">
