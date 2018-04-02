@@ -275,16 +275,10 @@ class ControllerProductProduct extends Controller {
                 }
             }
 
-           var_dump($dataMaterials);
+            $data['dataPrinting']= $dataPrinting;
+            $data['dataMaterials']= $dataMaterials;
 
         };
-
-
-//        foreach ($arrAttr as $item) {
-//
-//            echo $attribute_id;
-//        }
-
 
 		$data['product_info'] = $product_info;
 		if ($product_info) {
