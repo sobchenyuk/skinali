@@ -390,7 +390,9 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['categories'] = $this->model_catalog_category->getCategories($filter_data);
 
-        $data['categories_id']  = $this->model_catalog_product->getCategories($this->request->get['product_id']);
+        $data['categories_id']  = $this->model_catalog_product->getProductCategories($this->request->get['product_id']);
+
+
 
 		foreach ($results as $result) {
 
