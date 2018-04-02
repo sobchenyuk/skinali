@@ -190,45 +190,6 @@
 
 
 
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-top-printing">Вид печати</label>
-                <div class="col-sm-10">
-                  <div class="checkbox">
-                    <label>
-                      <?php if ($printing) { ?>
-                      <label>
-                        <input type="checkbox" name="printing" value="true" checked="checked" id="input-top-printing"/>
-                      </label>
-                      <?php } else { ?>
-                      <label>
-                        <input type="checkbox" name="printing" value="true">
-                      </label>
-                      <?php } ?>
-                      &nbsp; </label>
-                  </div>
-                </div>
-              </div>
-
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-top-materials">Материал для печати</label>
-                <div class="col-sm-10">
-                  <div class="checkbox">
-                    <label>
-                      <?php if ($materials) { ?>
-                      <label>
-                        <input type="checkbox" name="materials" value="true" checked="checked" id="input-top-materials"/>
-                      </label>
-                      <?php } else { ?>
-                      <label>
-                        <input type="checkbox" name="materials" value="true">
-                      </label>
-                      <?php } ?>
-                      &nbsp; </label>
-                  </div>
-                </div>
-              </div>
-
 
 
 
