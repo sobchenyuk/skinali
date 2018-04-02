@@ -16,6 +16,7 @@ class ControllerCatalogProduct extends Controller {
         var_dump($data['categories']);
 
 		$this->getList();
+
 	}
 
 	public function add() {
