@@ -151,9 +151,11 @@
 
                   <input type="text" name="keyword" value="<?php echo $keyword[1]; ?>" placeholder="<?php echo $entry_keyword; ?>" id="input-keyword" class="form-control" />
 
+
                   <?php if ($error_keyword) { ?>
                   <div class="text-danger"><?php echo $error_keyword; ?></div>
                   <?php } ?>
+
                 </div>
               </div>
               <div class="form-group">
