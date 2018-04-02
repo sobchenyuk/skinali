@@ -9,9 +9,9 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->load->model('catalog/product');
 
-        $data['categories']  = $this->model_catalog_product->getProductCategories($this->request->get['product_id']);
+        $categories = $this->model_catalog_category->getCategories(0);
 
-        var_dump($this->request->get['product_id']);
+        var_dump($categories);
 
 
 
