@@ -34,7 +34,7 @@
                     </div>
 
                     <pre>
-                        <?php var_dump(array_pop($product_categories)); ?>
+                        <?php var_dump($lastCategory); ?>
                     </pre>
 
                     <p class="text">
