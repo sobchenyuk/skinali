@@ -90,13 +90,12 @@
                                     Выберите вид печати
                                 </div>
                                 <div class="group">
-                                    <div class="selectorCustom" style="background-image: url(&quot;null&quot;);">
+                                    <div class="selectorCustom">
                                         <select name="" id="" class="selector">
                                             <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
                                             <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
                                             <option value="">Ультрафиолетовая печать - 888 грн. м2</option>
                                         </select>
-                                        <div class="active">Ультрафиолетовая печать - 888 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Ультрафиолетовая печать - 888 грн. м2</div></div></div>
                                 </div>
                             </div>
                             <div class="selectGroup">
@@ -104,13 +103,12 @@
                                     Выберите материал для печати
                                 </div>
                                 <div class="group">
-                                    <div class="selectorCustom" style="background-image: url(&quot;null&quot;);">
+                                    <div class="selectorCustom">
                                         <select name="" id="" class="selector">
                                             <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
                                             <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
                                             <option value="">Стекло б/ц 5 мм каленое - 1650 грн. м2</option>
                                         </select>
-                                        <div class="active">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="listOption"><div class="li" data-index="2" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="1" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div><div class="li" data-index="0" data-bg="null" style="background-image: url(&quot;null&quot;);">Стекло б/ц 5 мм каленое - 1650 грн. м2</div></div></div>
                                 </div>
                             </div>
                             <div class="rowEffects">
