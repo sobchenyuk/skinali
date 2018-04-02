@@ -113,7 +113,7 @@
 										Черно-белое
 									</span>
                                 </div>
-                                <div class="keyEffect sepia">
+                                <div class="keyEffect">
 									<span class="wrapIcon sk_sepia">
 
 									</span>
