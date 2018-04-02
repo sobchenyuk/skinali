@@ -1,10 +1,3 @@
-<style>
-  div#tab-paraphernalia .form-group {
-    margin-left: 0;
-    margin-right: 0;
-  }
-</style>
-
 <?php echo $header; ?><?php echo $column_left; ?>
 
 <div id="content">
@@ -254,6 +247,7 @@
 
 
             <div class="tab-pane" id="tab-paraphernalia">
+
               <div class="table-responsive">
                 <table class="table table-bordered table-hover">
                   <thead>
@@ -360,3 +354,10 @@ $('#category-filter').delegate('.fa-minus-circle', 'click', function() {
 $('#language a:first').tab('show');
 //--></script></div>
 <?php echo $footer; ?>
+
+<style>
+  #tab-paraphernalia .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+</style>
