@@ -2,14 +2,6 @@
 class ControllerProductProduct extends Controller {
 	private $error = array();
 
-
-    public function getAttr(){
-        $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` ORDER BY `" . DB_PREFIX . "attribute`.`attribute_group_id` ASC");
-
-        return $query->rows;
-    }
-
-
 	public function index() {
 		
 		if (isset($_POST['order_button'])) {
@@ -254,7 +246,7 @@ class ControllerProductProduct extends Controller {
 
 
 
-        $attribute_id = $this->getAttr();
+        $attribute_id = $this->model_catalog_category->getAttr();
 
 //        foreach ($arrAttr as $item) {
 //
