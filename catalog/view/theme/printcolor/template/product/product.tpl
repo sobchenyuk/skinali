@@ -36,7 +36,7 @@
 
                     <p class="text">
 
-                        <?php var_dump($products); ?>
+                        <?php var_dump($categories_id); ?>
 
                         <?php echo $product_info["description"]; ?>
 
