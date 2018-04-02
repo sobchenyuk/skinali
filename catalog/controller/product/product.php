@@ -22,7 +22,13 @@ class ControllerProductProduct extends Controller {
 			else $bw = 'bw_no';
 			if (isset($_POST['sepia'])) $sepia = $_POST['sepia'];
 			else $sepia = 'sepia_no';
-			
+
+
+			if(isset($_POST['type-of-printing'])) $type_printing = $_POST['type-of-printing'];
+
+			if(isset($_POST['print-materials'])) $print_materials = $_POST['print-materials'];
+
+
 			$msg = "Новый заказ скинали\n";
 			$msg .= "\n";
 			$msg .= "Имя: " . $username . "\n";
@@ -42,6 +48,10 @@ class ControllerProductProduct extends Controller {
 			if ($mirror == 'mirror_yes') $msg .= " - Отзеркалить\n";
 			if ($bw == 'bw_yes') $msg .= " - Черно-белое\n";
 			if ($sepia == 'sepia_yes') $msg .= " - Сепия\n";
+
+			if (isset($type_printing)) $msg .= " - Вид печати:\n" . $type_printing ."\n";
+            if (isset($print_materials)) $msg .= " - Материал для печати:\n" . $print_materials ."\n";
+
 			$msg .= "\n";
 			if ($comment != '')	$msg .= "Комментарий заказчика: " . $comment . "\n";
 			
