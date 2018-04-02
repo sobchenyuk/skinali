@@ -249,10 +249,12 @@ class ControllerProductProduct extends Controller {
 
             $attribute_id = $this->model_catalog_category->getAttr($attr);
 
-            for ( $i = 0; $i < count($attribute_id); $i++ ) {
-                //$data[$i]
-                echo $i;
-            }
+            echo count($attribute_id);
+
+//            for ( $i = 0; $i < count($attribute_id); $i++ ) {
+//                //$data[$i]
+//                echo $i;
+//            }
 
 //            foreach ($attribute_id as $item) {
 //
