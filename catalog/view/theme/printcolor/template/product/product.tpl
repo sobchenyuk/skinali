@@ -88,6 +88,10 @@
                             </div>
                         </div>
                         <div class="col-right">
+
+
+                            <?php var_dump($dataPrinting); ?>
+
                             <div class="selectGroup">
                                 <div class="titleGrouop">
                                     Выберите вид печати
@@ -116,6 +120,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+
                             <div class="rowEffects">
                                 <hr>
 
