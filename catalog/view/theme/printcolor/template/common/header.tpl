@@ -1178,6 +1178,9 @@
             z-index: 30;
         }
         @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom[data-open] .listOption {
+                font-size: 14px;
+            }
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
                 font-size: 18px;
                 width: 100%;
