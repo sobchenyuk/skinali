@@ -839,7 +839,31 @@
             -webkit-box-shadow: 0 2px 3px #000;
             box-shadow: 0 2px 3px #000;
         }
+        @media (max-width: 1615px) {
+            .content .middle-sector {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
 
+            .content .middle-sector {
+                padding: 0 15px;
+            }
+        }
+
+        .content .middle-sector .rowInfoNode {
+            width: 100%;
+            background-color: #1f1f1f;
+            -webkit-box-shadow: 0 2px 10px #000;
+            box-shadow: 0 2px 10px #000;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 30px;
+            float: left;
+        }
+
+        .content .middle-sector .rowInfoNode .nodeImg {
+            width: 100%;
+        }
 
     </style>
 
