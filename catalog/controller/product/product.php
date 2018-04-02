@@ -244,33 +244,20 @@ class ControllerProductProduct extends Controller {
 
 
 
-        function getSelect($attr){
-            $data = array();
 
-            $attribute_id = $this->model_catalog_category->getAttr($attr);
 
-            echo count($attribute_id);
-
-//            for ( $i = 0; $i < count($attribute_id); $i++ ) {
-//                //$data[$i]
-//                echo $i;
-//            }
-
-//            foreach ($attribute_id as $item) {
-//
-//                foreach ($item as $value) {
-//
-//                    $data[$item] =
-//
-//                }
-//
-//            }
-
-        }
 
 
         if($category_attr["printing"] !== 0 || $category_attr["materials"] !== 0){
-            getSelect($category_attr["printing"]);
+
+            $printing = $this->model_catalog_category->getAttr($category_attr["printing"]);
+
+            for ( $i = 0; $i < count($printing); $i++ ) {
+                //$data[$i]
+                echo $i;
+            }
+
+
         };
 
 
