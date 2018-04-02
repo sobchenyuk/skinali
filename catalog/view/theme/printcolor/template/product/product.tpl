@@ -98,9 +98,11 @@
                                 <div class="group">
                                     <div class="selectorCustom">
                                         <select name="" id="" class="selector">
-                                            <?php foreach ($dataPrinting as $item){ foreach ($item as $value){ ?>
-                                            <option value=""><?php echo $value["name"]; ?> - <?php echo $value["price"]; ?> грн. м2</option>
-                                            <?php }} ?>
+                                            <?php for ( $i = 0; $i < count($dataPrinting); $i++ ) {
+                                                for ( $a = 0; $a < count($dataPrinting[$i]); $a++ ) { ?>
+                                                    <option value=""><?php echo $dataPrinting[$i]["name"]; ?> - <?php echo $dataPrinting[$i]["price"]; ?> грн. м2</option>
+                                                <?php }
+                                            } ?>
                                         </select>
                                     </div>
                                 </div>
