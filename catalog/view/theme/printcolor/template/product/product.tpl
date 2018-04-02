@@ -65,7 +65,7 @@
                                     </form>
                                 </div>
                                 <div class="rowButtons">
-                                    <button type="submit" class="btn">Отправить заказ</button>
+                                    <input type="submit" value="Отправить заказ" name="order_button" class="btn">
                                 </div>
                             </div>
                         </div>

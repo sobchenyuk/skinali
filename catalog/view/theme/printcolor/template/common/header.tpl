@@ -1206,6 +1206,9 @@
             .right_menu_holder li>a {
                 font-size: 14px;
             }
+            .tags_cloud {
+                display: none;
+            }
         }
 
     </style>
