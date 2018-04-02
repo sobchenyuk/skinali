@@ -237,8 +237,6 @@ class ControllerProductProduct extends Controller {
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
 
-        $data['categories']  = $this->model_catalog_product->getCategories($product_id);
-
 
 		$data['product_info'] = $product_info;
 		if ($product_info) {
