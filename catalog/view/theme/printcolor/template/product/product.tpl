@@ -36,8 +36,6 @@
 
                     <p class="text">
 
-                        <?php var_dump($results); ?>
-
                         <?php echo $product_info["description"]; ?>
 
                     </p>

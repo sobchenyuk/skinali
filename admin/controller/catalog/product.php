@@ -9,6 +9,10 @@ class ControllerCatalogProduct extends Controller {
 
 		$this->load->model('catalog/product');
 
+        $data['categories']  = $this->model_catalog_product->getCategories($this->request->get['product_id']);
+
+        var_dump($data['categories']);
+
 		$this->getList();
 	}
 
@@ -390,18 +394,10 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['categories'] = $this->model_catalog_category->getCategories($filter_data);
 
-        $data['categories_id']  = $this->model_catalog_product->getProductCategories($this->request->get['product_id']);
-
-
-
-        var_dump($results);
-
-
-
 
 		foreach ($results as $result) {
 
-      $category =  $this->model_catalog_product->getProductCategories($result['product_id']);
+        $category =  $this->model_catalog_product->getProductCategories($result['product_id']);
 
 
 			if (is_file(DIR_IMAGE . $result['image'])) {
