@@ -1,11 +1,12 @@
-<?php echo $header; ?><?php echo $column_left; ?>
-
 <style>
   div#tab-paraphernalia .form-group {
     margin-left: 0;
     margin-right: 0;
   }
 </style>
+
+<?php echo $header; ?><?php echo $column_left; ?>
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
