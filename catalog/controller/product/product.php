@@ -241,7 +241,9 @@ class ControllerProductProduct extends Controller {
 
 		$category_attr = $this->model_catalog_category->getCategory($lastCategory);
 
-		var_dump($category_attr);
+        $arrAttr = array("printing" => $category_attr["printing"], "materials" => $category_attr["materials"]);
+
+		var_dump($arrAttr);
 
 		$data['product_info'] = $product_info;
 		if ($product_info) {
