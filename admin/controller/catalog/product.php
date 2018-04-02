@@ -1182,9 +1182,6 @@ class ControllerCatalogProduct extends Controller {
 		// Attributes
 		$this->load->model('catalog/attribute');
 
-        $data['categories_id']  = $this->model_catalog_product->getCategories($this->request->get['product_id']);
-
-
 		if (isset($this->request->post['product_attribute'])) {
 			$product_attributes = $this->request->post['product_attribute'];
 		} elseif (isset($this->request->get['product_id'])) {
@@ -1315,6 +1312,7 @@ class ControllerCatalogProduct extends Controller {
 			$data['image'] = '';
 		}
 
+
 		$this->load->model('tool/image');
 
 		if (isset($this->request->post['image']) && is_file(DIR_IMAGE . $this->request->post['image'])) {
@@ -1422,6 +1420,8 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['product_layout'] = array();
 		}
+
+        var_dump($product_info);
 
 		$this->load->model('design/layout');
 
