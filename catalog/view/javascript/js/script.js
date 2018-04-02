@@ -411,3 +411,198 @@ $( document ).ready(function() {
 	//added by Dmitry (end)
 
 });
+
+
+window.addEventListener('load', function (ev) {
+	//modal callback
+    var popuper = function(){
+
+        var formContent = $('.formContent');
+        var messageContent = $('.messageContent');
+
+        var key = document.querySelectorAll('.modal-key');
+        for (var i = key.length - 1; i >= 0; i--) {
+            key[i].onclick = function(){
+                var el = document.querySelector(this.getAttribute('data-href'));
+                // console.log(el)
+                if (el.getAttribute('data-status') == 'hidden') {
+                    el.setAttribute('data-status','visab');
+                }
+                else{
+                    el.setAttribute('data-status','hidden');
+                }
+            }
+        }
+        var popuper = document.querySelectorAll('.popuper');
+        for (var i = popuper.length - 1; i >= 0; i--) {
+            popuper[i].onclick = function(e){
+                if (e.target.className == 'close' || e.target.className == 'btn close') {
+                    this.setAttribute('data-status','hidden');
+
+                    if(!messageContent.hasClass( "hidden" )){
+                        messageContent.addClass('hidden');
+                    }
+
+                    if(!messageContent.find('.message-success').hasClass( "hidden" )) {
+                        messageContent.find('.message-success').addClass('hidden');
+                    }
+
+                    if(!messageContent.find('.message-error').hasClass( "hidden" )) {
+                        messageContent.find('.message-error').addClass('hidden');
+                    }
+
+                    if(!messageContent.hasClass( "message-Content-success" )){
+                        messageContent.removeClass('message-Content-success');
+                    }
+                    if(!messageContent.hasClass( "message-Content-red" )){
+                        messageContent.removeClass('message-Content-red');
+                    }
+
+                    if(formContent.hasClass( "hidden" )){
+                        formContent.removeClass('hidden');
+                    }
+
+                    if(!formContent.find('.message-failure').hasClass( "hidden" )){
+                        formContent.find('.message-failure').addClass('hidden');
+                    }
+
+
+                }
+                if (e.target.className == 'popuper') {
+                    this.setAttribute('data-status','hidden');
+                }
+            }
+        }
+    }();
+
+    $('.phone').mask('+38 (099)999-99-99');
+
+    var callBack = $('#call_back');
+    callBack.val('')
+        .attr('required', '')
+        .attr('placeholder', '+38')
+        .mask('+38 (099)999-99-99');
+
+    // fixedMenu if scroll
+    function fixedMenu(){
+        window.onscroll = function(e){
+            if(window.pageYOffset > 500){
+                document.querySelector('.topPanel').setAttribute('data-fixed','true');
+                document.querySelector('.offTop').style.marginTop = ($('.topPanel').outerHeight())+40+"px";
+            }
+            else{
+                document.querySelector('.topPanel').removeAttribute('data-fixed');
+                document.querySelector('.offTop').style.marginTop = 0+"px";
+            }
+        }
+    }
+    fixedMenu();
+
+    $('#callBackForm').submit(function(e){
+        e.preventDefault();
+        var form = $(this);
+        var formContent = $('.formContent');
+        var messageContent = $('.messageContent');
+        $.ajax({
+            url: 'index.php?route=common/orderCall/orderCallCustom',
+            type: 'post',
+            data: form.serialize(),
+            responseText: 'text',
+            success: function(data) {
+                if(data === 'failure') {
+                    formContent.find('.message-failure').removeClass('hidden');
+                } else if(data === 'success') {
+                    messageContent.removeClass('hidden').addClass('message-Content-success');
+                    formContent.addClass('hidden');
+                    messageContent.find('.message-success').removeClass('hidden');
+                    form[0].reset();
+                }
+            },
+            error: function () {
+                messageContent.removeClass('hidden').addClass('message-Content-red');
+                formContent.addClass('hidden');
+                messageContent.find('.message-error').removeClass('hidden');
+            }
+        });
+
+    });
+
+    //selector in product
+    function materialSelectorZ(){
+        if (!document.querySelectorAll('.selectorCustom').length) {
+            return;
+        }
+        var selectors = document.querySelectorAll('.selectorCustom');
+        for (var k = selectors.length - 1; k >= 0; k--) {
+            selector = selectors[k];
+            // console.log(selector)
+            function createActiveOption(){
+                var option = selector.querySelectorAll('option');
+                var active = document.createElement('div');
+                active.className = 'active';
+                for (var i = option.length - 1; i >= 0; i--) {
+                    if(option[i].selected){
+                        active.innerHTML = option[i].innerHTML;
+                        selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                    }
+                }
+                selector.appendChild(active);
+            }
+            createActiveOption();
+            function createListOptions(){
+                var option = selector.querySelectorAll('option');
+                var listOption = document.createElement('div');
+                listOption.className = 'listOption';
+                for (var i = option.length - 1; i >= 0; i--) {
+                    var optionElem = document.createElement('div');
+                    optionElem.className = 'li';
+                    optionElem.setAttribute('data-index',i);
+                    optionElem.innerHTML = option[i].innerHTML;
+                    optionElem.setAttribute('data-bg',selector.querySelectorAll('option')[i].getAttribute('data-bg'))
+                    optionElem.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                    listOption.appendChild(optionElem);
+                }
+                selector.appendChild(listOption)
+            }
+            createListOptions();
+            function createActiveOptionAll(){
+                for (var z = selectors.length - 1; z >= 0; z--) {
+                    var selector = selectors[z];
+                    selector.removeChild(selector.querySelector('.active'));
+                    var option = selector.querySelectorAll('option');
+                    var active = document.createElement('div');
+                    active.className = 'active';
+                    for (var i = option.length - 1; i >= 0; i--) {
+                        if(option[i].selected){
+                            active.innerHTML = option[i].innerHTML;
+                            selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
+                        }
+                    }
+                    selector.appendChild(active);
+                }
+            }
+            function workSelector(){
+                selector.onclick = function(){
+                    if (!this.hasAttribute('data-open')) {
+                        this.setAttribute('data-open','true');
+                    }
+                    else{
+                        this.removeAttribute('data-open');
+                    }
+                }
+                var option = selector.querySelectorAll('.li');
+                for (var i = option.length - 1; i >= 0; i--) {
+                    option[i].onclick = function(){
+                        var index = this.getAttribute('data-index');
+                        this.parentNode.parentNode.querySelectorAll('option')[index].selected = true;
+                        // this.parentNode.parentNode.removeChild(this.parentNode.parentNode.querySelector('.active'));
+                        createActiveOptionAll();
+
+                    }
+                }
+            }
+            workSelector();
+        }
+    }
+    materialSelectorZ();
+});
