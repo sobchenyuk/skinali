@@ -9,7 +9,7 @@ class ModelCatalogCategory extends Model {
     public function getAttr($attr){
         $query = $this->db->query("SELECT * FROM `" . DB_PREFIX . "attribute` WHERE `attribute_group_id`='" . (int)$attr . "'");
 
-        return $query->row;
+        return $query->row->attribute_group_id;
     }
 
 	public function getCategories($parent_id = 0) {
