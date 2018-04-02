@@ -1,7 +1,7 @@
 <?php echo $header; ?><?php echo $column_left; ?>
 
 <style>
-  #tab-paraphernalia .form-horizontal .form-group {
+  div#tab-paraphernalia .form-group {
     margin-left: 0;
     margin-right: 0;
   }
