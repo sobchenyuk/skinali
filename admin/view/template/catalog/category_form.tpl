@@ -253,7 +253,42 @@
 
 
 
+            <div class="tab-pane" id="tab-paraphernalia">
 
+              <div class="table-responsive">
+
+                  <table class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                      <td style="width: 1px;" class="text-center">
+                        <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);">
+                      </td>
+                      <td class="text-left">
+                        Добавить в категорию
+                      </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                      <td class="text-center">
+                        <input type="checkbox" name="selected[]" value="8">
+                      </td>
+                      <td class="text-left">Вид печати</td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-center">
+                        <input type="checkbox" name="selected[]" value="9">
+                      </td>
+                      <td class="text-left">Материал для печати</td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+
+              </div>
+            </div>
 
 
 
