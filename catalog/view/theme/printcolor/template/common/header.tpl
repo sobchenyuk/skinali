@@ -1203,6 +1203,9 @@
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
                 padding-left: 20px;
             }
+            .right_menu_holder li>a {
+                font-size: 14px;
+            }
         }
 
     </style>
