@@ -239,6 +239,8 @@ class ControllerProductProduct extends Controller {
 
 		$lastCategory = array_pop($product_categories);
 
+		var_dump($lastCategory);
+
 		$data['product_info'] = $product_info;
 		if ($product_info) {
 			$url = '';
