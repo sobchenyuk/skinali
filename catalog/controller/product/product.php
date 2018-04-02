@@ -246,7 +246,7 @@ class ControllerProductProduct extends Controller {
 
 
 
-        $attribute_id = $this->model_catalog_category->getAttr(8);
+        $attribute_id = $this->model_catalog_category->getAttr(9);
 
 //        foreach ($arrAttr as $item) {
 //
