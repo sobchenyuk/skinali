@@ -260,9 +260,7 @@
                 <table class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <td style="width: 1px;" class="text-center">
-                      <input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);">
-                    </td>
+                    <td style="width: 1px;" class="text-center"></td>
                     <td class="text-left">
                       Добавить в категорию
                     </td>
@@ -272,14 +270,24 @@
 
                   <tr>
                     <td class="text-center">
-                      <input type="checkbox" name="selected[]" value="8">
+                      <?php if ($printing) { ?>
+                      <input type="checkbox" name="printing" value="8" checked="checked" />
+                      <?php } else { ?>
+                      <input type="checkbox" name="printing" value="8">
+                      <?php } ?>
                     </td>
                     <td class="text-left">Вид печати</td>
                   </tr>
 
                   <tr>
                     <td class="text-center">
-                      <input type="checkbox" name="selected[]" value="9">
+
+                      <?php if ($materials) { ?>
+                      <input type="checkbox" name="materials" value="9" checked="checked" />
+                      <?php } else { ?>
+                      <input type="checkbox" name="materials" value="9">
+                      <?php } ?>
+
                     </td>
                     <td class="text-left">Материал для печати</td>
                   </tr>

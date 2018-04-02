@@ -512,6 +512,24 @@ class ControllerCatalogCategory extends Controller {
             $data['top'] = 0;
         }
 
+
+        if (isset($this->request->post['printing'])) {
+            $data['printing'] = $this->request->post['printing'];
+        } elseif (!empty($category_info)) {
+            $data['printing'] = $category_info['printing'];
+        } else {
+            $data['printing'] = 0;
+        }
+
+
+        if (isset($this->request->post['materials'])) {
+            $data['materials'] = $this->request->post['materials'];
+        } elseif (!empty($category_info)) {
+            $data['materials'] = $category_info['materials'];
+        } else {
+            $data['materials'] = 0;
+        }
+
         if (isset($this->request->post['column'])) {
             $data['column'] = $this->request->post['column'];
         } elseif (!empty($category_info)) {
