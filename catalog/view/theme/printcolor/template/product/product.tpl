@@ -185,6 +185,7 @@
 
 </div>
 
+<?php var_dump($product_description); ?>
 
 <?php echo $footer; ?>
 
