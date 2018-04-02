@@ -324,8 +324,11 @@
             .address_main_holder .map_holder {
                 width: 55%;
             }
+            .sk_galery_not_main_category_wraper>ul>li {
+                width: 23%;
+            }
             .sk_galery_not_main_category_wraper>ul>li>a {
-                font-size: 14px;
+                font-size: 15px;
             }
             #sk_galery_container_holder img {
                 width: 62% !important;
