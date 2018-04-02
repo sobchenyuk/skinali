@@ -593,8 +593,6 @@ class ControllerCatalogProduct extends Controller {
 
 	protected function getForm() {
 
-	    echo 'true';
-
     //CKEditor
     if ($this->config->get('config_editor_default')) {
         $this->document->addScript('view/javascript/ckeditor/ckeditor.js');
@@ -1183,6 +1181,9 @@ class ControllerCatalogProduct extends Controller {
 
 		// Attributes
 		$this->load->model('catalog/attribute');
+
+        $data['categories_id']  = $this->model_catalog_product->getCategories($this->request->get['product_id']);
+
 
 		if (isset($this->request->post['product_attribute'])) {
 			$product_attributes = $this->request->post['product_attribute'];
