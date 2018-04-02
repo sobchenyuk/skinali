@@ -160,7 +160,7 @@
                                 </div>
                                 <?php } else { ?>
                                 <div class="resultsPrice">
-                                    Цена: <span id="resultPrice"><?php echo $dataPrinting[0]["price"] + $dataMaterials[0]["price"]; ?></span> грн. м2
+                                    Цена: <span id="resultPrice"><?php echo ((int)$dataPrinting[0]["price"] + (int)$dataMaterials[0]["price"]); ?></span> грн. м2
                                 </div>
                                 <?php }; ?>
 
