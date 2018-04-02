@@ -1072,6 +1072,9 @@
             -webkit-box-shadow: 0 2px 3px #000;
             box-shadow: 0 2px 3px #000;
         }
+        .fieldGroup input:focus, .fieldGroup textarea:focus {
+            border: 1px solid #87ceeb;
+        }
 
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
             display: -webkit-box;
