@@ -35,7 +35,7 @@
 
 
                     <pre>
-                        <?php var_dump($categories_id); ?>
+                        <?php var_dump($product_attributes); ?>
                     </pre>
 
 
