@@ -241,13 +241,6 @@ class ControllerProductProduct extends Controller {
 
 		$category_attr = $this->model_catalog_category->getCategory($lastCategory);
 
-
-
-
-
-
-
-
         if($category_attr["printing"] !== 0 || $category_attr["materials"] !== 0){
 
             $printing = $this->model_catalog_category->getAttr($category_attr["printing"]);
@@ -279,14 +272,6 @@ class ControllerProductProduct extends Controller {
             $data['dataMaterials']= $dataMaterials;
 
         };
-
-//        foreach ($dataPrinting as $item){
-//
-//            foreach ($item as $value){
-//
-//
-//            }
-//        }
 
 		$data['product_info'] = $product_info;
 		if ($product_info) {

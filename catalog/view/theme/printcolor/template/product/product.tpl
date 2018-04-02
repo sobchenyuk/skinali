@@ -97,9 +97,9 @@
                                 </div>
                                 <div class="group">
                                     <div class="selectorCustom">
-                                        <select name="" id="" class="selector">
+                                        <select name="type-of-printing" id="type-of-printing" class="selector">
                                             <?php for ( $i = 0; $i < count($dataPrinting); $i++ ) { ?>
-                                                    <option value=""><?php echo $dataPrinting[$i]["name"]; ?> - <?php echo $dataPrinting[$i]["price"]; ?> грн. м2</option>
+                                                    <option value="" data-price='<?php echo $dataPrinting[$i]["price"]; ?>'><?php echo $dataPrinting[$i]["name"]; ?> - <?php echo $dataPrinting[$i]["price"]; ?> грн. м2</option>
                                                 <?php
                                             } ?>
                                         </select>
@@ -112,9 +112,9 @@
                                 </div>
                                 <div class="group">
                                     <div class="selectorCustom">
-                                        <select name="" id="" class="selector">
+                                        <select name="print-materials" id="print-materials" class="selector">
                                             <?php for ( $i = 0; $i < count($dataMaterials); $i++ ) { ?>
-                                            <option value=""><?php echo $dataMaterials[$i]["name"]; ?> - <?php echo $dataMaterials[$i]["price"]; ?> грн. м2</option>
+                                            <option value="" data-price='<?php echo $dataPrinting[$i]["price"]; ?>'><?php echo $dataMaterials[$i]["name"]; ?> - <?php echo $dataMaterials[$i]["price"]; ?> грн. м2</option>
                                             <?php
                                             } ?>
                                         </select>
