@@ -34,7 +34,7 @@
                     </div>
 
                     <pre>
-                        <?php var_dump($categories); ?>
+                        <?php var_dump($product_categories); ?>
                     </pre>
 
                     <p class="text">
