@@ -947,26 +947,237 @@
         .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label b {
             color: #00c7fd;
         }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons {
+            width: 100%;
+            text-align: right;
+            float: left;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons .btn {
+            border: 0;
+            margin-right: 10px;
+            background-color: #3693ac;
+            width: 220px;
+            line-height: 44px;
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 0 0 2px #000;
+            cursor: pointer;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+            margin-top: 20px;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons .btn:hover {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .titleGrouop {
+            font-size: 22px;
+            color: #d2d2d2;
+            padding-bottom: 8px;
+            font-weight: 400;
+            width: 100%;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom {
+            min-width: 80px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom select {
+            display: none;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .active {
+            background-color: #191919;
+            width: 100%;
+            -webkit-box-shadow: inset 0 0 2px #000;
+            box-shadow: inset 0 0 2px #000;
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 30px;
+            border-top: 1px solid #3f3f3f;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 15px;
+            background-image: url(../img/selectArrow.png);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            box-sizing: border-box;
+            padding-right: 40px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .listOption {
+            max-height: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 30px;
+            z-index: 18;
+            background-color: #191919;
+            width: 100%;
+            border-top: 1px solid transparent;
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 30px;
+            -webkit-box-shadow: 0 1px 2px #000;
+            box-shadow: 0 1px 2px #000;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .listOption .li {
+            padding-left: 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 15px 0 10px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects hr {
+            height: 1px;
+            width: 100%;
+            margin: 10px 0 20px;
+            display: block;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            cursor: pointer;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .wrapIcon {
+            width: 50px;
+            display: block;
+            -webkit-box-shadow: 0 0 2px #000;
+            box-shadow: 0 0 2px #000;
+            border-top: 1px solid #454545;
+            height: 50px;
+            background-repeat: no-repeat;
+            -webkit-background-size: 80% auto;
+            background-size: 80% auto;
+            background-position: center 4px;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .textor {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #7c7f82;
+            margin-top: 7px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+            font-weight: 400;
+            font-size: 30px;
+            color: #00c7fd;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector {
+            width: 100%;
+            margin-top: 25px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector .btn {
+            font-weight: 400;
+            font-size: 22px;
+            color: #00c7fd;
+            background-color: transparent;
+            border: 1px solid #00c7fd;
+            width: 250px;
+            text-align: center;
+            line-height: 44px;
+            cursor: pointer;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector .btn:hover {
+            background-color: #00c7fd;
+            color: #fff;
+        }
         @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .textor {
+                font-size: 14px;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
+                width: 30%;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .active {
+                font-size: 14px;
+            }
+
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
                 width: 100%;
             }
-        }
-        @media (max-width: 1615px) {
+
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
                 width: 100%;
             }
-        }
 
-        @media (max-width: 1615px) {
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
                 -webkit-flex-wrap: wrap;
                 -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
             }
-        }
 
-        @media (max-width: 1615px) {
             .content .middle-sector {
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
@@ -975,15 +1186,11 @@
             .content .middle-sector {
                 padding: 0 15px;
             }
-        }
 
-        @media (max-width: 1615px) {
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
                 padding-right: 0;
             }
-        }
 
-        @media (max-width: 1615px) {
             .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
                 padding-left: 20px;
             }
