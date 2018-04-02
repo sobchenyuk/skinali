@@ -125,7 +125,7 @@
                             </div>
                             <div class="rowSocialProducts">
                                 <div class="resultsPrice">
-                                    <?=round($product_info['price'], 0);?> грн. м/пог.
+                                    Цена: <?=round($product_info['price'], 0);?> грн. м/пог.
                                 </div>
                                 <div class="socialsZ">
                                     <div class="sk_tags_holder">

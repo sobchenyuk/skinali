@@ -839,16 +839,6 @@
             -webkit-box-shadow: 0 2px 3px #000;
             box-shadow: 0 2px 3px #000;
         }
-        @media (max-width: 1615px) {
-            .content .middle-sector {
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-            }
-
-            .content .middle-sector {
-                padding: 0 15px;
-            }
-        }
 
         .content .middle-sector .rowInfoNode {
             width: 100%;
@@ -871,6 +861,132 @@
             line-height: 26px;
             font-weight: 400;
             margin: 15px 0 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct {
+            float: left;
+            width: 100%;
+        }
+
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-right: 50px;
+            float: left;
+        }
+
+
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
+            float: left;
+            display: block;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 50px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 6px;
+            margin: 6px 0;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            float: left;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+            font-size: 20px;
+            display: block;
+            margin: 6px 0;
+            font-weight: 400;
+            width: 30%;
+            float: left;
+            color: #727070;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+            background-color: #141414;
+            border: 0;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 5px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 38px;
+            width: 70%;
+            -webkit-box-shadow: inset 0 2px 8px #000;
+            box-shadow: inset 0 2px 8px #000;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label b {
+            color: #00c7fd;
+        }
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+                width: 100%;
+            }
+        }
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 1615px) {
+            .content .middle-sector {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .content .middle-sector {
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
+                padding-right: 0;
+            }
+        }
+
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
+                padding-left: 20px;
+            }
         }
 
     </style>
