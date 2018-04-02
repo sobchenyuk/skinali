@@ -108,7 +108,8 @@
                             </div>
                             <div class="rowEffects">
                                 <hr>
-                                <div class="keyEffect mirror">
+
+                                <div class="keyEffect mirror" onclick="Mirror()">
 									<span class="wrapIcon sk_mirror">
 
 									</span>
@@ -116,7 +117,8 @@
 										Отзеркалить
 									</span>
                                 </div>
-                                <div class="keyEffect whiteBlack">
+
+                                <div class="keyEffect whiteBlack" onclick="BlackWhite()">
 									<span class="wrapIcon sk_black_white">
 
 									</span>
@@ -124,7 +126,8 @@
 										Черно-белое
 									</span>
                                 </div>
-                                <div class="keyEffect">
+
+                                <div class="keyEffect" onclick="Sepia()">
 									<span class="wrapIcon sk_sepia">
 
 									</span>
@@ -132,8 +135,11 @@
 										Сепия
 									</span>
                                 </div>
+
                                 <hr>
+
                             </div>
+
                             <div class="rowSocialProducts">
                                 <div class="resultsPrice">
                                     Цена: <?=round($product_info['price'], 0);?> грн. м/пог.
