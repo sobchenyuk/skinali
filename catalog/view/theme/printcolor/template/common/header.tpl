@@ -160,17 +160,9 @@
         header .sk_first_line.container .sk_first_line_container .contacts .phoneList a:hover {
             color: #00c7fd;
         }
-        header>.sk_main_menu ul {
-            width: auto;
-            height: 100%;
-            margin: 0 auto;
-            padding-left: 11px;
-            padding-right: 11px;
-        }
 
         header>.sk_main_menu {
             width: auto;
-            display: table;
             margin: 0 auto;
             z-index: 1;
         }
