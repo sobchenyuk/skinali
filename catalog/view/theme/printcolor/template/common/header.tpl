@@ -85,6 +85,10 @@
             box-shadow: 0 0 10px #000;
         }
 
+        .sk_order_shadow, .sk_order_pict_holder>img {
+            height: auto;
+        }
+
         @media (max-width: 1615px) {
             header .sk_first_line.container nav.sk_main_menu.gradient {
                 width: 50%;
@@ -156,17 +160,9 @@
         header .sk_first_line.container .sk_first_line_container .contacts .phoneList a:hover {
             color: #00c7fd;
         }
-        header>.sk_main_menu ul {
-            width: auto;
-            height: 100%;
-            margin: 0 auto;
-            padding-left: 11px;
-            padding-right: 11px;
-        }
 
         header>.sk_main_menu {
             width: auto;
-            display: table;
             margin: 0 auto;
             z-index: 1;
         }
@@ -324,8 +320,11 @@
             .address_main_holder .map_holder {
                 width: 55%;
             }
+            .sk_galery_not_main_category_wraper>ul>li {
+                width: 23%;
+            }
             .sk_galery_not_main_category_wraper>ul>li>a {
-                font-size: 16px;
+                font-size: 15px;
             }
             #sk_galery_container_holder img {
                 width: 62% !important;
@@ -818,6 +817,425 @@
             }
 
         }
+
+
+        .content .rowTitlePage {
+            font-size: 30px;
+            color: #00c7fd;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .content .rowTitlePage .title {
+            padding: 20px 0 15px;
+            font-size: 30px;
+        }
+
+        .content .rowTitlePage hr {
+            height: 1px;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
+
+        .content .middle-sector .rowInfoNode {
+            width: 100%;
+            background-color: #1f1f1f;
+            -webkit-box-shadow: 0 2px 10px #000;
+            box-shadow: 0 2px 10px #000;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 30px;
+            float: left;
+        }
+
+        .content .middle-sector .rowInfoNode .nodeImg {
+            width: 100%;
+        }
+
+        .content .middle-sector .rowInfoNode .text {
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 26px;
+            font-weight: 400;
+            margin: 15px 0 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct {
+            float: left;
+            width: 100%;
+        }
+
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-right: 50px;
+            float: left;
+        }
+
+
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
+            float: left;
+            display: block;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 50px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-pack: start;
+            justify-content: flex-start;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 6px;
+            margin: 6px 0;
+            -webkit-box-align: end;
+            -webkit-align-items: flex-end;
+            -ms-flex-align: end;
+            align-items: flex-end;
+            float: left;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+            font-size: 20px;
+            display: block;
+            margin: 6px 0;
+            font-weight: 400;
+            width: 30%;
+            float: left;
+            color: #727070;
+            margin-bottom: -6px;
+            margin-top: 0;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+            text-align: left;
+            background-color: #141414;
+            border: 0;
+            color: #fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 5px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 38px;
+            width: 70%;
+            -webkit-box-shadow: inset 0 2px 8px #000;
+            box-shadow: inset 0 2px 8px #000;
+            margin: 0;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label b {
+            color: #00c7fd;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons {
+            width: 100%;
+            text-align: right;
+            float: left;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons .btn {
+            border: 0;
+            margin-right: 10px;
+            background-color: #3693ac;
+            width: 220px;
+            line-height: 44px;
+            font-size: 20px;
+            color: #fff;
+            text-shadow: 0 0 2px #000;
+            cursor: pointer;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+            margin-top: 20px;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .rowButtons .btn:hover {
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .titleGrouop {
+            font-size: 22px;
+            color: #d2d2d2;
+            padding-bottom: 8px;
+            font-weight: 400;
+            width: 100%;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom {
+            min-width: 80px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            cursor: pointer;
+            position: relative;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom select {
+            display: none;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .active {
+            background-color: #191919;
+            width: 100%;
+            -webkit-box-shadow: inset 0 0 2px #000;
+            box-shadow: inset 0 0 2px #000;
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 30px;
+            border-top: 1px solid #3f3f3f;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding-left: 15px;
+            background-image: url(catalog/view/theme/printcolor/image/order/selectArrow.png);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            box-sizing: border-box;
+            padding-right: 40px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .listOption {
+            max-height: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 30px;
+            z-index: 18;
+            background-color: #191919;
+            width: 100%;
+            border-top: 1px solid transparent;
+            font-size: 18px;
+            color: #7c7f82;
+            line-height: 30px;
+            -webkit-box-shadow: 0 1px 2px #000;
+            box-shadow: 0 1px 2px #000;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition-duration: 1s;
+            -o-transition-duration: 1s;
+            transition-duration: 1s;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .listOption .li {
+            padding-left: 15px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 15px 0 10px;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects hr {
+            height: 1px;
+            width: 100%;
+            margin: 10px 0 20px;
+            display: block;
+            background-color: #000;
+            border: 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0 2px 3px #000;
+            box-shadow: 0 2px 3px #000;
+        }
+
+        .fieldGroup input, .fieldGroup textarea {
+            border: 1px solid #14141400 !important;
+        }
+
+        .fieldGroup input:focus, .fieldGroup textarea:focus {
+            border: 1px solid #87ceeb !important;
+        }
+
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            cursor: pointer;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .wrapIcon {
+            width: 50px;
+            display: block;
+            -webkit-box-shadow: 0 0 2px #000;
+            box-shadow: 0 0 2px #000;
+            border-top: 1px solid #454545;
+            height: 50px;
+            background-repeat: no-repeat;
+            -webkit-background-size: 80% auto;
+            background-size: 80% auto;
+            background-position: center 4px;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .textor {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: #7c7f82;
+            margin-top: 7px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+            font-weight: 400;
+            font-size: 30px;
+            color: #00c7fd;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector {
+            width: 100%;
+            margin-top: 25px;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector .btn {
+            font-weight: 400;
+            font-size: 22px;
+            color: #00c7fd;
+            background-color: transparent;
+            border: 1px solid #00c7fd;
+            width: 250px;
+            text-align: center;
+            line-height: 44px;
+            cursor: pointer;
+            -webkit-transition-duration: .25s;
+            -o-transition-duration: .25s;
+            transition-duration: .25s;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowBtnSector .btn:hover {
+            background-color: #00c7fd;
+            color: #fff;
+        }
+        .sk_order_pict_holder {
+            margin: 0 auto;
+            padding-top: 0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+        .sk_order_shadow {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom[data-open] .listOption {
+            border-top: 1px solid #3f3f3f;
+            max-height: 1000px;
+            z-index: 30;
+        }
+        @media (max-width: 1615px) {
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom[data-open] .listOption {
+                font-size: 14px;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect .textor {
+                font-size: 14px;
+            }
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowEffects .keyEffect {
+                width: 30%;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .selectGroup .selectorCustom .active {
+                font-size: 14px;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+                width: 100%;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+                width: 100%;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+
+            .content .middle-sector {
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            .content .middle-sector {
+                padding: 0 15px;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
+                padding-right: 0;
+            }
+
+            .content .middle-sector .rowInfoNode .rowIntoProduct .col-right {
+                padding-left: 20px;
+            }
+            .right_menu_holder li>a {
+                font-size: 14px;
+            }
+            .tags_cloud {
+                display: none;
+            }
+        }
+
     </style>
 
 

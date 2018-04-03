@@ -11,7 +11,8 @@ class ControllerProductProduct extends Controller {
 			$phone = htmlspecialchars($_POST['phone']);
 			$city = htmlspecialchars($_POST['city']);
 			$email = $_POST['email'];
-			
+			$allPrice = $_POST['allPrice'];
+
 			$img_id = $_POST['img_id'];
 			$img_title = $_POST['img_title'];
 			$sk_link = $_POST['sk_link'];
@@ -22,7 +23,13 @@ class ControllerProductProduct extends Controller {
 			else $bw = 'bw_no';
 			if (isset($_POST['sepia'])) $sepia = $_POST['sepia'];
 			else $sepia = 'sepia_no';
-			
+
+
+			if(isset($_POST['type-of-printing'])) $type_printing = $_POST['type-of-printing'];
+
+			if(isset($_POST['print-materials'])) $print_materials = $_POST['print-materials'];
+
+
 			$msg = "Новый заказ скинали\n";
 			$msg .= "\n";
 			$msg .= "Имя: " . $username . "\n";
@@ -42,6 +49,12 @@ class ControllerProductProduct extends Controller {
 			if ($mirror == 'mirror_yes') $msg .= " - Отзеркалить\n";
 			if ($bw == 'bw_yes') $msg .= " - Черно-белое\n";
 			if ($sepia == 'sepia_yes') $msg .= " - Сепия\n";
+
+			if (isset($type_printing)) $msg .= " - Вид печати:\n" . $type_printing ."\n";
+            if (isset($print_materials)) $msg .= " - Материал для печати:\n" . $print_materials ."\n";
+
+			$msg .= "Цена товара:\n";
+			$msg .= $allPrice . "\n";
 			$msg .= "\n";
 			if ($comment != '')	$msg .= "Комментарий заказчика: " . $comment . "\n";
 			
@@ -236,6 +249,43 @@ class ControllerProductProduct extends Controller {
 		$data['product_url'] = $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id']);
 		
 		$product_info = $this->model_catalog_product->getProduct($product_id);
+
+		$lastCategory = array_pop($product_categories)["category_id"];
+
+		$category_attr = $this->model_catalog_category->getCategory($lastCategory);
+
+        if($category_attr["printing"] !== 0 || $category_attr["materials"] !== 0){
+
+            $printing = $this->model_catalog_category->getAttr($category_attr["printing"]);
+            $materials = $this->model_catalog_category->getAttr($category_attr["materials"]);
+            $dataPrinting = array();
+            $dataMaterials = array();
+
+            for ( $i = 0; $i < count($printing); $i++ ) {
+
+                for ( $a = 0; $a < count($printing[$i]); $a++ ) {
+                    $dataPrinting[$i] = array(
+                        "name"=>$printing[$i]["name"],
+                        "price"=>$printing[$i]["price_type_of_printing"]
+                    );
+                }
+            }
+
+            for ( $i = 0; $i < count($materials); $i++ ) {
+
+                for ( $a = 0; $a < count($materials[$i]); $a++ ) {
+                    $dataMaterials[$i] = array(
+                        "name"=>$materials[$i]["name"],
+                        "price"=>$materials[$i]["price_print_materials"]
+                    );
+                }
+            }
+
+            $data['dataPrinting']= $dataPrinting;
+            $data['dataMaterials']= $dataMaterials;
+
+        };
+
 		$data['product_info'] = $product_info;
 		if ($product_info) {
 			$url = '';
