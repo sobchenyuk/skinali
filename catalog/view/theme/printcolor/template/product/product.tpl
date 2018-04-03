@@ -296,6 +296,16 @@
             }
         }
         materialSelectorZ();
+
+
+        function calculate() {
+
+            var select = document.querySelectorAll('.selectGroup select');
+
+            console.log(select);
+
+        }
+        calculate();
     });
 
 </script>
