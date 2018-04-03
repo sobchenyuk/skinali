@@ -1,5 +1,5 @@
 <?php
-
+class ControllerInformationInformation extends Controller {
 	public function index() {
 		$this->load->language('information/information');
 
@@ -28,6 +28,8 @@
 		$information_info = $this->model_catalog_information->getInformation($information_id);
 
 		$data['information_id'] = $information_id;
+
+		var_dump($information_id);
 
 		
 		if ($information_id == 9) {
