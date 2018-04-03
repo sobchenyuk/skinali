@@ -301,14 +301,24 @@
         function calculate() {
 
             var select = document.querySelectorAll('.selectGroup select');
+            var listOption = document.querySelectorAll('.selectGroup listOption');
+
             var result = document.querySelector('#resultPrice');
             
             function changeSelect(e){
                 console.log(this.value);
             }
-            
+
+            function changelistOption(e){
+                console.log(e);
+            }
+
             select.forEach(function (value, i) {
                 value.addEventListener('change', changeSelect);
+            });
+
+            listOption.forEach(function (value, i) {
+                value.addEventListener('click', changelistOption);
             });
 
         }
