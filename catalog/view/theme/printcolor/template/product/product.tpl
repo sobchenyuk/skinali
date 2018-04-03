@@ -52,6 +52,9 @@
                                            name="img_title"/>
                                     <input type="hidden" value="<?=$product_url?>" id="sk_link" name="sk_link"/>
 
+
+                                    <input type="hidden" name="allPrice" id="allPrice">
+
                                     <div class="col">
 
                                         <div class="fieldGroup">
@@ -89,7 +92,7 @@
                         </div>
                         <div class="col-right">
 
-                            <?php if(count($dataPrinting) > 0 || count($dataMaterials) > 0){ ?>
+                            <?php if(count($dataPrinting) > 0){ ?>
 
                             <div class="selectGroup">
                                 <div class="titleGrouop">
@@ -106,6 +109,11 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <?php }; ?>
+
+                            <?php if(count($dataMaterials) > 0){ ?>
+
                             <div class="selectGroup">
                                 <div class="titleGrouop">
                                     Выберите материал для печати
@@ -121,6 +129,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <?php }; ?>
 
 
@@ -156,7 +165,7 @@
                             <div class="rowSocialProducts">
                                 <?php if(count($dataPrinting) == 0 || count($dataMaterials) == 0){ ?>
                                 <div class="resultsPrice">
-                                    Цена: <?=round($product_info['price'], 0);?> грн. м2
+                                    Цена: <span id="resultPrice"><?=round($product_info['price'], 0);?></span> грн. м2
                                 </div>
                                 <?php } else { ?>
                                 <div class="resultsPrice">
@@ -309,6 +318,10 @@
 
             var result = document.querySelector('#resultPrice');
 
+            var allPrice = document.querySelector('#allPrice');
+
+            allPrice.value = result.innerHTML;
+
             for ( var i = 0; i < listOption.length; i++ ) {
                 listOption[i].setAttribute('data-select', i)
             }
@@ -330,6 +343,8 @@
                 result.innerHTML = resultPrice.reduce(function (sum, current) {
                     return sum + current;
                 }, 0);
+
+                allPrice.value = result.innerHTML;
 
             }
 

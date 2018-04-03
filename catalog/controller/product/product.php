@@ -11,7 +11,8 @@ class ControllerProductProduct extends Controller {
 			$phone = htmlspecialchars($_POST['phone']);
 			$city = htmlspecialchars($_POST['city']);
 			$email = $_POST['email'];
-			
+			$allPrice = $_POST['allPrice'];
+
 			$img_id = $_POST['img_id'];
 			$img_title = $_POST['img_title'];
 			$sk_link = $_POST['sk_link'];
@@ -52,6 +53,8 @@ class ControllerProductProduct extends Controller {
 			if (isset($type_printing)) $msg .= " - Вид печати:\n" . $type_printing ."\n";
             if (isset($print_materials)) $msg .= " - Материал для печати:\n" . $print_materials ."\n";
 
+			$msg .= "Цена товара:\n";
+			$msg .= $allPrice . "\n";
 			$msg .= "\n";
 			if ($comment != '')	$msg .= "Комментарий заказчика: " . $comment . "\n";
 			
