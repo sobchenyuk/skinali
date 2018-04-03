@@ -306,9 +306,6 @@
 
             var listOption = document.querySelectorAll('.selectGroup .listOption');
 
-            var active = document.querySelectorAll('.selectGroup .active');
-
-            var resultPrice = [];
 
             var result = document.querySelector('#resultPrice');
 
@@ -319,6 +316,10 @@
 
 
             function changelistOption(e){
+
+                var active = document.querySelectorAll('.selectGroup .active');
+                var resultPrice = [];
+
                 var target = e.target;
                 var index = target.getAttribute('data-index');
                 var selectIndex = target.parentNode.getAttribute('data-select');
