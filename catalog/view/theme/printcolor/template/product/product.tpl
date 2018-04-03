@@ -326,7 +326,7 @@
 
             listOption.forEach(function (value, i) {
 
-                listOption.setAttribute('data-select', i);
+                listOption.setAttribute('data-select', '');
 
                 value.addEventListener('click', changelistOption);
 
