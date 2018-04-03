@@ -306,33 +306,37 @@
 
             var listOption = document.querySelectorAll('.selectGroup .listOption');
 
+            var active = document.querySelectorAll('.selectGroup .active');
+
+            var resultPrice;
+
+            var result = document.querySelector('#resultPrice');
+
             for ( var i = 0; i < listOption.length; i++ ) {
                 listOption[i].setAttribute('data-select', i)
             }
 
-            var result = document.querySelector('#resultPrice');
-            
-            function changeSelect(e){
-                console.log(this.value);
-            }
+
 
             function changelistOption(e){
                 var target = e.target;
                 var index = target.getAttribute('data-index');
                 var selectIndex = target.parentNode.getAttribute('data-select');
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
+
+                resultPrice = active.reduce(function(sum, current) {
+                    return sum + current;
+                }, 0);
+
+                console.log(resultPrice);
             }
 
-            select.forEach(function (value, i) {
-
-                value.addEventListener('change', changeSelect);
-
-            });
 
 
             listOption.forEach(function (value, i) {
 
                 value.addEventListener('click', changelistOption);
+
 
             });
 
