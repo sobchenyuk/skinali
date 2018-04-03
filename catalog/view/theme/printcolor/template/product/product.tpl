@@ -36,10 +36,7 @@
 
                     <div class="text">
 
-
                         <?php echo $content_top; ?>
-
-                        <?php echo $product_info["description"]; ?>
 
                     </div>
 
