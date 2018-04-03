@@ -85,6 +85,10 @@
             box-shadow: 0 0 10px #000;
         }
 
+        .sk_order_shadow, .sk_order_pict_holder>img {
+            height: auto;
+        }
+
         @media (max-width: 1615px) {
             header .sk_first_line.container nav.sk_main_menu.gradient {
                 width: 50%;

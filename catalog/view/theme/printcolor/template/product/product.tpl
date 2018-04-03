@@ -313,8 +313,6 @@
                 listOption[i].setAttribute('data-select', i)
             }
 
-
-
             function changelistOption(e){
 
                 var active = document.querySelectorAll('.selectGroup .active');
@@ -334,8 +332,6 @@
                 }, 0);
 
             }
-
-
 
             listOption.forEach(function (value, i) {
 
