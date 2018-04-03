@@ -301,7 +301,7 @@
         function calculate() {
 
             var select = document.querySelectorAll('.selectGroup select');
-            var listOption = document.querySelectorAll('.selectGroup listOption');
+            var listOption = document.querySelectorAll('.selectGroup .listOption');
 
             var result = document.querySelector('#resultPrice');
             
