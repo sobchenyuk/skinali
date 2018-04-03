@@ -329,12 +329,9 @@
                     resultPrice[i] = parseInt(value.getAttribute('data-price'));
                 });
 
-                var result = resultPrice.reduce(function(sum, current) {
+                result.innerHTML = resultPrice.reduce(function (sum, current) {
                     return sum + current;
                 }, 0);
-
-
-                console.log(result);
 
             }
 
