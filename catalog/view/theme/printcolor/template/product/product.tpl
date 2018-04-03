@@ -310,7 +310,7 @@
             }
 
             function changelistOption(e){
-                console.log(e);
+                console.log(e.target);
             }
 
             select.forEach(function (value, i) {
