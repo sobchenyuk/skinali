@@ -308,7 +308,7 @@
 
             var active = document.querySelectorAll('.selectGroup .active');
 
-            var resultPrice;
+            var resultPrice = [];
 
             var result = document.querySelector('#resultPrice');
 
@@ -324,11 +324,15 @@
                 var selectIndex = target.parentNode.getAttribute('data-select');
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
 
-                resultPrice = active.reduce(function(sum, current) {
-                    return sum.getAttribute('data-price') + current;
-                }, 0);
+                active.forEach(function (value, i) {
+
+                    resultPrice[i] = value.getAttribute('data-price');
+
+
+                });
 
                 console.log(resultPrice);
+
             }
 
 
