@@ -229,6 +229,7 @@
                     active.className = 'active';
                     for (var i = option.length - 1; i >= 0; i--) {
                         if(option[i].selected){
+                            console.log(option[i]);
                             active.innerHTML = option[i].innerHTML;
                             selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
                         }
@@ -315,16 +316,10 @@
             }
 
             function changelistOption(e){
-
                 var target = e.target;
                 var index = target.getAttribute('data-index');
                 var selectIndex = target.parentNode.getAttribute('data-select');
-                var price = select[selectIndex].querySelectorAll('option')[index].getAttribute('data-price');
-
-                console.log(price);
-
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
-
             }
 
             select.forEach(function (value, i) {
