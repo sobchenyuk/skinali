@@ -318,6 +318,7 @@
             });
 
             listOption.forEach(function (value, i) {
+                console.log(value);
                 value.addEventListener('click', changelistOption);
             });
 
