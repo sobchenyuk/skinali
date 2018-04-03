@@ -301,7 +301,12 @@
         function calculate() {
 
             var select = document.querySelectorAll('.selectGroup select');
+
             var listOption = document.querySelectorAll('.selectGroup .listOption');
+
+            for ( var i = 0; i < listOption.length; i++ ) {
+                listOption[i].setAttribute('data-select', i)
+            }
 
             var result = document.querySelector('#resultPrice');
             
@@ -313,8 +318,12 @@
 
                 var target = e.target;
                 var index = target.getAttribute('data-index');
+                var selectIndex = target.parentNode.getAttribute('data-select');
+                var price = select[selectIndex].querySelector('option')[index].getAttribute('data-price');
 
-                console.log(target.parentNode);
+                console.log(price);
+
+                select[selectIndex].querySelector('option')[index].selected = true;
 
             }
 
@@ -324,9 +333,6 @@
 
             });
 
-            for ( var i = 0; i < listOption.length; i++ ) {
-                listOption[i].setAttribute('data-select', i)
-            }
 
             listOption.forEach(function (value, i) {
 
