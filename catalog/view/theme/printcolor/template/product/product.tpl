@@ -301,8 +301,12 @@
         function calculate() {
 
             var select = document.querySelectorAll('.selectGroup select');
+            var result = document.querySelector('#resultPrice');
 
-            console.log(select);
+
+            select.forEach(function (value, i) {
+                console.log(value);
+            });
 
         }
         calculate();
