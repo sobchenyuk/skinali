@@ -325,13 +325,15 @@
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
 
                 active.forEach(function (value, i) {
-
                     resultPrice[i] = value.getAttribute('data-price');
-
-
                 });
 
-                console.log(resultPrice);
+                var result = resultPrice.reduce(function(sum, current) {
+                    return sum + current;
+                }, 0);
+
+
+                console.log(result);
 
             }
 
