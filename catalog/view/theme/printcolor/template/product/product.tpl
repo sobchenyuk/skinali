@@ -114,7 +114,7 @@
                                     <div class="selectorCustom">
                                         <select name="print-materials" id="print-materials" class="selector">
                                             <?php for ( $i = 0; $i < count($dataMaterials); $i++ ) { ?>
-                                            <option value="" data-price='<?php echo $dataPrinting[$i]["price"]; ?>'><?php echo $dataMaterials[$i]["name"]; ?> - <?php echo $dataMaterials[$i]["price"]; ?> грн. м2</option>
+                                            <option value="" data-price='<?php echo $dataMaterials[$i]["price"]; ?>'><?php echo $dataMaterials[$i]["name"]; ?> - <?php echo $dataMaterials[$i]["price"]; ?> грн. м2</option>
                                             <?php
                                             } ?>
                                         </select>
@@ -229,7 +229,7 @@
                     active.className = 'active';
                     for (var i = option.length - 1; i >= 0; i--) {
                         if(option[i].selected){
-                            console.log(option[i]);
+                            active.setAttribute('data-price', option[i].getAttribute('data-price'));
                             active.innerHTML = option[i].innerHTML;
                             selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
                         }
