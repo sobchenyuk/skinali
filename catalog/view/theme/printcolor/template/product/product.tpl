@@ -324,7 +324,9 @@
 
             });
 
-            console.log(listOption);
+            for ( var i = 0; i < listOption.length; i++ ) {
+                listOption[i].setAttribute('data-select', i)
+            }
 
             listOption.forEach(function (value, i) {
 
