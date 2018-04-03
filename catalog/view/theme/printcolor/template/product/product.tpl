@@ -264,6 +264,7 @@
                         active.className = 'active';
                         for (var i = option.length - 1; i >= 0; i--) {
                             if(option[i].selected){
+                                active.setAttribute('data-price', option[i].getAttribute('data-price'));
                                 active.innerHTML = option[i].innerHTML;
                                 selector.style.backgroundImage ='url('+selector.querySelectorAll('option')[i].getAttribute('data-bg')+')';
                             }
