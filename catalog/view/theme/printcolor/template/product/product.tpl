@@ -319,11 +319,11 @@
                 var target = e.target;
                 var index = target.getAttribute('data-index');
                 var selectIndex = target.parentNode.getAttribute('data-select');
-                var price = select[selectIndex].querySelector('option')[index].getAttribute('data-price');
+                var price = select[selectIndex].querySelectorAll('option')[index].getAttribute('data-price');
 
                 console.log(price);
 
-                select[selectIndex].querySelector('option')[index].selected = true;
+                select[selectIndex].querySelectorAll('option')[index].selected = true;
 
             }
 
