@@ -3,6 +3,10 @@ class ControllerInformationWork extends Controller {
 
     public function index() {
 
+
+        die();
+
+
             $data['button_continue'] = $this->language->get('button_continue');
 
 
