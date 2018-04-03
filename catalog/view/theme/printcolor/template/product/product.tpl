@@ -325,7 +325,7 @@
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
 
                 resultPrice = active.reduce(function(sum, current) {
-                    return sum + current;
+                    return sum.getAttribute('data-price') + current;
                 }, 0);
 
                 console.log(resultPrice);
