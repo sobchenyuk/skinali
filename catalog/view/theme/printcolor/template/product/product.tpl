@@ -325,7 +325,7 @@
                 select[selectIndex].querySelectorAll('option')[index].selected = true;
 
                 active.forEach(function (value, i) {
-                    resultPrice[i] = value.getAttribute('data-price');
+                    resultPrice[i] = parseInt(value.getAttribute('data-price'));
                 });
 
                 var result = resultPrice.reduce(function(sum, current) {
