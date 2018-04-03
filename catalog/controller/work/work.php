@@ -1,5 +1,5 @@
 <?php
-class ControllerInformationWork extends Controller {
+class ControllerWorkWork extends Controller {
 
     public function index() {
         $this->load->language('information/information');
@@ -301,7 +301,7 @@ class ControllerInformationWork extends Controller {
             $data['footer'] = $this->load->controller('common/footer');
             $data['header'] = $this->load->controller('common/header');
 
-            $this->response->setOutput($this->load->view('information/information', $data));
+            $this->response->setOutput($this->load->view('information/work', $data));
         } else {
             /*$data['breadcrumbs'][] = array(
                 'text' => $this->language->get('text_error'),
