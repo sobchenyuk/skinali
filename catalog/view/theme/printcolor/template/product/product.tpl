@@ -35,9 +35,7 @@
 
 
                     <div class="text">
-
                         <?php echo $content_top; ?>
-
                     </div>
 
 
