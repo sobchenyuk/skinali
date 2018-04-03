@@ -302,10 +302,13 @@
 
             var select = document.querySelectorAll('.selectGroup select');
             var result = document.querySelector('#resultPrice');
-
-
+            
+            function changeSelect(e){
+                console.log(this.value);
+            }
+            
             select.forEach(function (value, i) {
-                console.log(value);
+                value.addEventListener('change', changeSelect);
             });
 
         }
