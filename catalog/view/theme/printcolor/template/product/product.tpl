@@ -34,14 +34,14 @@
                     </div>
 
 
-                    <p class="text">
+                    <div class="text">
 
 
                         <?php echo $content_top; ?>
 
                         <?php echo $product_info["description"]; ?>
 
-                    </p>
+                    </div>
 
 
                     <div class="rowIntoProduct">
