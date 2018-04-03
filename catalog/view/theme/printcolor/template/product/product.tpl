@@ -310,16 +310,26 @@
             }
 
             function changelistOption(e){
-                console.log(e.target);
+
+                var target = e.target;
+                var index = target.getAttribute('data-index');
+
+                console.log(target.parentNode);
+
             }
 
             select.forEach(function (value, i) {
+
                 value.addEventListener('change', changeSelect);
+
             });
 
             listOption.forEach(function (value, i) {
-                console.log(value);
+
+                listOption.setAttribute('data-select', i);
+
                 value.addEventListener('click', changelistOption);
+
             });
 
         }
