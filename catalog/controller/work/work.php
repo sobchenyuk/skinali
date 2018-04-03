@@ -1,5 +1,5 @@
 <?php
-
+class ControllerWorkWork extends Controller {
 
     public function index() {
         $this->load->language('information/information');
