@@ -1,5 +1,5 @@
 <?php
-class ControllerInformationWork extends Controller {
+class ControllerWork extends Controller {
 
     public function index() {
 
