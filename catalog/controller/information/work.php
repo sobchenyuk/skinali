@@ -2,7 +2,6 @@
 class ControllerInformationWork extends Controller {
 
     public function index() {
-        $data['continue'] = $this->url->link('common/home');
 
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['column_right'] = $this->load->controller('common/column_right');
@@ -10,6 +9,8 @@ class ControllerInformationWork extends Controller {
         $data['content_bottom'] = $this->load->controller('common/content_bottom');
         $data['footer'] = $this->load->controller('common/footer');
         $data['header'] = $this->load->controller('common/header');
+
+        $data['action'] = $this->url->link('information/work', '', true);
 
         $this->response->setOutput($this->load->view('information/work', $data));
     }
