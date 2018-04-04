@@ -30,10 +30,10 @@
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
 				<?php echo $column_right; ?>
-
+				<?php echo $column_left; ?>
 
                  <?php echo $content_bottom; ?>
-	
+
 	<?php elseif ($information_id == 9): ?>
 		<div class="sk_gallery_holder">
 			<div class="sk_main_header_holder">
