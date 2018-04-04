@@ -27,7 +27,7 @@
 		print '</pre>';*/
 	?>
 
-	<?php if($layout_id !== 15){ ?>
+	<?php echo $layout_id; if($layout_id !== 15){ ?>
 
 	<?php if ($information_id == 25): ?>
 				<?php echo $column_right; ?>
