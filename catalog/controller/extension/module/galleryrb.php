@@ -119,16 +119,10 @@ class ControllerExtensionModuleGalleryrb extends Controller {
             array_push($showed_images, $work_images[$i]);
         }
 
-
         $data['showed_title'] = $showed_title;
         $data['showed_thumb'] = $showed_thumb;
         $data['showed_images'] = $showed_images;
 
-        var_dump($showed_title);
-
-//        for ($i = 0; $i < count($showed_title); $i++) {
-//
-//        }
 
         require_once "mypagination.php";
         //$pagination = new Pagination();

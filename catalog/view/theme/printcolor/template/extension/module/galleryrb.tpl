@@ -2,21 +2,28 @@
   <?php if(isset($galleries)) { ?>
   <?php if($title) { ?><h2><?php echo $title; ?></h2><?php } ?>
   <div class="rb-gallery-list row">
-    <?php foreach ($galleries as $gallery) { ?>
+    <?php for ($i = 0; $i < count($showed_images); $i++) { ?>
     <div class="rb-gallery-item  col-lg-<?php echo $colspan; ?> col-md-4 col-sm-6 col-xs-12">
+
       <div class="rb-gallery-inner">
-        <img src="<?php echo $gallery['thumb']; ?>" alt="" class="rb-gallery-img <?php if (isset($borderimage)) echo 'foto'; ?>" />
-        <a href="<?php echo $gallery['image']; ?>" data-effect="<?php echo $animation; ?>" class="rb-gallery-link style-over"></a>
-        <?php if ($gallery['title'] && !$text) {  ?>
+
+        <img src="<?php echo showed_thumb[$i]; ?>" alt="" class="rb-gallery-img <?php if (isset($borderimage)) echo 'foto'; ?>" />
+        <a href="<?php echo $showed_images[$i]; ?>" data-effect="<?php echo $animation; ?>" class="rb-gallery-link style-over"></a>
+
+
+        <?php if ($showed_title[$i] && !$text) {  ?>
           <div class="text-gallery" style="color: #fff;text-align: center;">
-            <?php echo $gallery['title']; ?>
+            <?php echo $showed_title[$i]; ?>
           </div>
-        <?php } else if ($gallery['title'] && $text) { ?>
+        <?php } else if ($showed_title[$i] && $text) { ?>
           <div class="text-gallery style-over">
-            <?php echo $gallery['title']; ?>
+            <?php echo $showed_title[$i]; ?>
           </div> 
-        <?php } ?>       
+        <?php } ?>
+
+
       </div>
+
     </div>
     <?php } ?>
   </div>
