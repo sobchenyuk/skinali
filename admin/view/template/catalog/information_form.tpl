@@ -105,12 +105,11 @@
                 <div class="col-sm-10">
                   <select name="gallery" id="input-gallery" class="form-control">
 
-                    <?php foreach ($getGallery as $value) {
-                          foreach ($value as $item) { ?>
+                    <?php foreach ($getGallery as $value) { ?>
 
-                    <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+                    <option value="<?php echo $value['module_id']; ?>"><?php echo $value['name']; ?></option>
 
-                    <?php }
+                    <?php
                     } ?>
 
                   </select>
