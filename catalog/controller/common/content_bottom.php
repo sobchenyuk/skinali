@@ -52,7 +52,7 @@ class ControllerCommonContentBottom extends Controller {
             $information_id = 0;
         }
 
-        if($information_id > 25){
+        if($information_id > 0){
 
             $getGallery = $this->model_catalog_information->getGallery($information_id);
 
