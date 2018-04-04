@@ -43,7 +43,7 @@ class ModelCatalogInformation extends Model {
 	public function getGallery(){
         $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE `code`='galleryrb'");
 
-        return $query;
+        return $query->rows;
     }
 
 	public function editInformation($information_id, $data) {
