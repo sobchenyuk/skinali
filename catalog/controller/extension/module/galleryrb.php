@@ -53,7 +53,8 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-
+        $work_images = array();
+    $a = 0;
 
     foreach ($results as $result) {
       if (is_file(DIR_IMAGE . $result['image'])) {
@@ -77,14 +78,17 @@ class ControllerExtensionModuleGalleryrb extends Controller {
           'thumb' => $thumb,
           'image' => $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height)
         );
+
+          $work_images[$a] = $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height);
+              $a++;
       }
     }
 
         echo '<pre>';
-    var_dump($data);
+    var_dump($work_images);
         echo '</pre>';
 
-        $work_images = array();
+
 
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
