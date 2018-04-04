@@ -116,6 +116,7 @@ class ControllerInformationInformation extends Controller {
 
 			$work_images = array();
 
+
 			for ($i = 1; $i <= count($detail_dir_list); $i++) {
 				if ($i < count($detail_dir_list)) {
 					if (substr($detail_dir_list[$i], 0, 2) != substr($detail_dir_list[$i + 1], 0, 2)) {
@@ -139,6 +140,8 @@ class ControllerInformationInformation extends Controller {
 			}
 
 			$data['showed_images'] = $showed_images;
+
+            var_dump($work_images);
 
 			require_once "mypagination.php";
 			//$pagination = new Pagination();
