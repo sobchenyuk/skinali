@@ -107,6 +107,10 @@ class ControllerExtensionModuleGalleryrb extends Controller {
             array_push($showed_images, $work_images[$i]);
         }
 
+
+        echo $first_image . '<br />';
+        echo $last_image;
+
         $data['showed_images'] = $showed_images;
 
 
