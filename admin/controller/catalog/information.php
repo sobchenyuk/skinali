@@ -445,6 +445,10 @@ class ControllerCatalogInformation extends Controller {
         $getGallery = array();
         $galleryCunter = 1;
 
+        $getGallery[0] = array(
+            "module_id" => 0,
+            "name" => ""
+        );
         foreach ($galleryAll as $item => $value) {
 
             $getGallery[$galleryCunter] = array(
@@ -453,10 +457,6 @@ class ControllerCatalogInformation extends Controller {
             );
             $galleryCunter++;
         }
-        $getGallery[0] = array(
-            "module_id" => 0,
-            "name" => ""
-        );
 
         $data['getGallery'] = $getGallery;
 
