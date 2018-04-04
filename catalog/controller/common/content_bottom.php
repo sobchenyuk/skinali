@@ -59,9 +59,8 @@ class ControllerCommonContentBottom extends Controller {
 			}
 
 			if (isset($part[1])) {
-				$setting_info = $this->model_extension_module->getModule($part[1]);
+				$setting_info = $this->model_extension_module->getModule(48);
 
-				var_dump($setting_info);
 
 				if ($setting_info && $setting_info['status']) {
 					$output = $this->load->controller('extension/module/' . $part[0], $setting_info);
