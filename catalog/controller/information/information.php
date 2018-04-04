@@ -54,59 +54,61 @@ class ControllerInformationInformation extends Controller {
 				}
 			}
 		}
-		
-		if ($information_id == 25) {
-			$dir = "image/catalog/ourworks";
-			$res = array();
-			$dir_list = scandir($dir);
-			$dir_count = 0;
-			$detail_dir_list = array();
-			foreach ($dir_list as $d) {
-				if ($d!='.' AND $d!='..') {
-					if (!is_dir($dir."/".$d)) {
-						$dir_count++;
-						$detail_dir_list[$dir_count] = $d;
-					}
-				}
-			}
-			
-			$work_images = array();
-			
-			for ($i = 1; $i <= count($detail_dir_list); $i++) {
-				if ($i < count($detail_dir_list)) {
-					if (substr($detail_dir_list[$i], 0, 2) != substr($detail_dir_list[$i + 1], 0, 2)) {
-						array_push($work_images, $detail_dir_list[$i]);
-					}
-				}
-			}
-			array_push($work_images, end($detail_dir_list));
-			
-			$data['work_dir'] = $dir;
-			
-			$limit = 9;
-			
-			$first_image = (($page - 1) * $limit);
-			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-			
-			$showed_images = array();
-			
-			for ($i = $first_image; $i < $last_image; $i++) {
-				array_push($showed_images, $work_images[$i]);
-			}
-			
-			$data['showed_images'] = $showed_images;
-			
-			require_once "mypagination.php";
-			//$pagination = new Pagination();
-			$pagination = new MyPagination();
-			$pagination->total = count($work_images);
-			$pagination->page = $page;
-			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
-			
-			$data['pagination'] = $pagination->render();
-		
-		}
+
+
+
+//		if ($information_id == 25) {
+//			$dir = "image/catalog/ourworks";
+//			$res = array();
+//			$dir_list = scandir($dir);
+//			$dir_count = 0;
+//			$detail_dir_list = array();
+//			foreach ($dir_list as $d) {
+//				if ($d!='.' AND $d!='..') {
+//					if (!is_dir($dir."/".$d)) {
+//						$dir_count++;
+//						$detail_dir_list[$dir_count] = $d;
+//					}
+//				}
+//			}
+//
+//			$work_images = array();
+//
+//			for ($i = 1; $i <= count($detail_dir_list); $i++) {
+//				if ($i < count($detail_dir_list)) {
+//					if (substr($detail_dir_list[$i], 0, 2) != substr($detail_dir_list[$i + 1], 0, 2)) {
+//						array_push($work_images, $detail_dir_list[$i]);
+//					}
+//				}
+//			}
+//			array_push($work_images, end($detail_dir_list));
+//
+//			$data['work_dir'] = $dir;
+//
+//			$limit = 9;
+//
+//			$first_image = (($page - 1) * $limit);
+//			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+//
+//			$showed_images = array();
+//
+//			for ($i = $first_image; $i < $last_image; $i++) {
+//				array_push($showed_images, $work_images[$i]);
+//			}
+//
+//			$data['showed_images'] = $showed_images;
+//
+//			require_once "mypagination.php";
+//			//$pagination = new Pagination();
+//			$pagination = new MyPagination();
+//			$pagination->total = count($work_images);
+//			$pagination->page = $page;
+//			$pagination->limit = $limit;
+//			$pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
+//
+//			$data['pagination'] = $pagination->render();
+//
+//		}
 		
 		if ($information_id == 88) {
 			$this->load->model('catalog/review');
