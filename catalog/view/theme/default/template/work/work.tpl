@@ -2,5 +2,4 @@
 
 Ntcnjdsq
 
-
 <?php echo $footer; ?>
