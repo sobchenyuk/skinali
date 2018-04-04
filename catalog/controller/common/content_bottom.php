@@ -51,7 +51,9 @@ class ControllerCommonContentBottom extends Controller {
             $information_id = 0;
         }
 
-        echo $information_id;
+//        if($information_id == 25){
+//
+//        }
 
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
