@@ -148,11 +148,17 @@ class ControllerInformationInformation extends Controller {
 			$pagination->total = count($work_images);
 			$pagination->page = $page;
 			$pagination->limit = $limit;
+
 			$pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
+
 
 			$data['pagination'] = $pagination->render();
 
 		}
+
+
+        var_dump($this->url->link('information/information', '&information_id=25&page={page}'));
+
 		
 		if ($information_id == 88) {
 			$this->load->model('catalog/review');
