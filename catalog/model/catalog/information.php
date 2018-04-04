@@ -26,6 +26,6 @@ class ModelCatalogInformation extends Model {
     public function getGallery($id){
         $query = $this->db->query("SELECT `gallery` FROM " . DB_PREFIX . "information WHERE `information_id`='" . (int)$id . "'");
 
-        return $query;
+        return $query->row;
     }
 }
