@@ -63,6 +63,10 @@
             font-weight: 700;
         }
 
+        .sk_page_galery_container table {
+            margin: 0 -5%;
+        }
+
         .hidden {
             display: none;
         }
