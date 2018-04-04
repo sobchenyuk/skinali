@@ -447,6 +447,7 @@ class ControllerCatalogInformation extends Controller {
 			$data['information_layout'] = array();
 		}
 
+
 		$this->load->model('design/layout');
 
 		$data['layouts'] = $this->model_design_layout->getLayouts();

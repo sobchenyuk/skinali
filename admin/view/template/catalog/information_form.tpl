@@ -99,7 +99,7 @@
 
             <div class="tab-pane" id="tab-data">
 
-
+<?php var_dump($gallery); ?>
 
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-gallery">Название галереи</label>
