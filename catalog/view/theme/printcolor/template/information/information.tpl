@@ -30,7 +30,7 @@
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
 				<?php echo $column_right; ?>
-				<?php echo $column_left; ?>
+
 
                  <?php echo $content_bottom; ?>
 	
