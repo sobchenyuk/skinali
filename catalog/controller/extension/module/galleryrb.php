@@ -113,18 +113,18 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 
         $data['showed_images'] = $showed_images;
 
-
-        require_once "mypagination.php";
-        //$pagination = new Pagination();
-        $pagination = new MyPagination();
-        $pagination->total = count($work_images);
-        $pagination->page = $page;
-        $pagination->limit = $limit;
-
-        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
-
-
-        $data['pagination'] = $pagination->render();
+//
+//        require_once "mypagination.php";
+//        //$pagination = new Pagination();
+//        $pagination = new MyPagination();
+//        $pagination->total = count($work_images);
+//        $pagination->page = $page;
+//        $pagination->limit = $limit;
+//
+//        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
+//
+//
+//        $data['pagination'] = $pagination->render();
 
 
     $data['module'] = $module++;
