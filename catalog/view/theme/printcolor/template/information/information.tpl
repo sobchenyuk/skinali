@@ -29,6 +29,8 @@
 	<?php if ($information_id == 25): ?>
 				<?php echo $column_right; ?>
 				<?php echo $column_left; ?>
+
+тест
                  <?php echo $content_bottom; ?>
 	
 	<?php elseif ($information_id == 9): ?>
@@ -153,6 +155,7 @@
 				</div>
 			</div>
 		</div>
+
 	<?php elseif ($information_id == 89): ?>
 	<script type="text/javascript" src="catalog/view/javascript/js/cat_menu_fix.js"></script>
 	<div class = "sk_order_holder">
@@ -391,6 +394,8 @@
 
 	</div>
 	<?php else: ?>
+
+
 	<div class="sk_gallery_holder">
 		<div class="sk_main_header_holder">
 			<h1><a href="#"><?=$heading_title?></a></h1>
