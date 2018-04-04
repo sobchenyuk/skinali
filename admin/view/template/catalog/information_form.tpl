@@ -99,15 +99,19 @@
 
             <div class="tab-pane" id="tab-data">
 
-<?php var_dump($gallery); ?>
 
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-gallery">Название галереи</label>
                 <div class="col-sm-10">
                   <select name="gallery" id="input-gallery" class="form-control">
 
-                    <option value="0"></option>
-                    <option value="1">Имя</option>
+                    <?php foreach ($getGallery as $value) {
+                          foreach ($value as $item) { ?>
+
+                    <option value="<?php echo $item['module_id']; ?>"><?php echo $item['name']; ?></option>
+
+                    <?php }
+                    } ?>
 
                   </select>
                 </div>

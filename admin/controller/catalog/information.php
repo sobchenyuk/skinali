@@ -448,15 +448,23 @@ class ControllerCatalogInformation extends Controller {
         foreach ($galleryAll as $item => $value) {
 
             $getGallery[$galleryCunter] = array(
-                "module_id"=>$value["module_id"],
-                "name"=>$value["name"]
+                "module_id" => $value["module_id"],
+                "name" => $value["name"]
             );
             $galleryCunter++;
         }
+        $getGallery[0] = array(
+            "module_id" => 0,
+            "name" => ""
+        );
 
-        echo '<pre>';
-        var_dump($getGallery);
-        echo '</pre>';
+        $data['getGallery'] = $getGallery;
+
+        foreach ($getGallery as $value) {
+            foreach ($value as $item) {
+
+            }
+        }
 
 
 		if (isset($this->request->post['information_layout'])) {
