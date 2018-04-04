@@ -46,7 +46,7 @@ class ControllerCommonContentBottom extends Controller {
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
 
-echo $layout_id;
+
 
 
         if($layout_id == 15){
@@ -58,13 +58,14 @@ echo $layout_id;
                 $information_id = 0;
             }
 
-            echo $information_id;
 
             if($information_id > 0){
 
                 $getGallery = $this->model_catalog_information->getGallery($information_id);
                 $idGallery = $getGallery["gallery"];
             }
+
+            echo $idGallery;
 
         }
 
