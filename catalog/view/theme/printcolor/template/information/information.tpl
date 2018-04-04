@@ -27,9 +27,8 @@
 		print '</pre>';*/
 	?>
 
-	<?php echo $layout_id; if($layout_id !== 15){ ?>
+	<?php if($layout_id == 15){ ?>
 
-	<?php if ($information_id == 25): ?>
 				<?php echo $column_right; ?>
 				<?php echo $column_left; ?>
 
@@ -501,13 +500,5 @@
 	</div>
 	<?php endif; ?>
 
-			<?php } else { ?>
-
-			<?php echo $column_right; ?>
-			<?php echo $column_left; ?>
-
-			<?php echo $content_bottom; ?>
-
-			<?php } ?>
 	
 <?php echo $footer; ?>
