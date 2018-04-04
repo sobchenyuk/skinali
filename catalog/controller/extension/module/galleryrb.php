@@ -104,15 +104,15 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         $first_image = (($page - 1) * $limit);
         $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
         $showed_images = array();
-//        for ($i = $first_image; $i < $last_image; $i++) {
-//            array_push($showed_images, $work_images[$i]);
-//        }
+        for ($i = $first_image; $i < $last_image; $i++) {
+            array_push($showed_images, $work_images[$i]);
+        }
 //
 
 //        echo $first_image . '<br />';
 //        echo $last_image;
 
-//        $data['showed_images'] = $showed_images;
+        $data['showed_images'] = $showed_images;
 
 
         require_once "mypagination.php";
