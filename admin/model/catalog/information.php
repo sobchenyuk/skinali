@@ -40,6 +40,12 @@ class ModelCatalogInformation extends Model {
 		return $information_id;
 	}
 
+	public function getGallery(){
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE `code`='galleryrb'");
+
+        return $query;
+    }
+
 	public function editInformation($information_id, $data) {
 		$this->db->query("UPDATE " . DB_PREFIX . "information SET sort_order = '" . (int)$data['sort_order'] . "', bottom = '" . (isset($data['bottom']) ? (int)$data['bottom'] : 0) . "', status = '" . (int)$data['status'] . "', gallery = '" . (int)$data['gallery'] . "' WHERE information_id = '" . (int)$information_id . "'");
 
