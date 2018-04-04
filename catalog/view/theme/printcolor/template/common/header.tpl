@@ -569,8 +569,10 @@
             top: -19px;
         }
 
-
         @media (max-width: 1615px) {
+            .left-gallery .sk_galery_main_category, .right-gallery #right_sidebar {
+                width: 20%;
+            }
             #sk_html_block .container {
                 width: 1200px;
                 padding: 0 15px;
