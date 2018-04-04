@@ -45,6 +45,8 @@ class ControllerCommonContentBottom extends Controller {
 
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
+		var_dump($modules);
+
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 

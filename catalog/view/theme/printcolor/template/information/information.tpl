@@ -30,7 +30,6 @@
 				<?php echo $column_right; ?>
 				<?php echo $column_left; ?>
 
-тест
                  <?php echo $content_bottom; ?>
 	
 	<?php elseif ($information_id == 9): ?>
