@@ -119,7 +119,6 @@ class ControllerExtensionModuleGalleryrb extends Controller {
             array_push($showed_images, $work_images[$i]);
         }
 
-        var_dump($showed_thumb);
 
         $data['showed_title'] = $showed_title;
         $data['showed_thumb'] = $showed_thumb;
