@@ -439,12 +439,11 @@ class ControllerCatalogInformation extends Controller {
             $data['gallery'] = '0';
         }
 
+        echo $data['gallery'];
 
         $galleryAll = $this->model_catalog_information->getGallery();
-
         $getGallery = array();
         $galleryCunter = 1;
-
         $getGallery[0] = array(
             "module_id" => 0,
             "name" => ""
@@ -457,14 +456,9 @@ class ControllerCatalogInformation extends Controller {
             );
             $galleryCunter++;
         }
-
         $data['getGallery'] = $getGallery;
 
-        foreach ($getGallery as $value) {
-            foreach ($value as $item) {
 
-            }
-        }
 
 
 		if (isset($this->request->post['information_layout'])) {
