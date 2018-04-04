@@ -84,47 +84,48 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-//        if (isset($this->request->get['information_id'])) {
-//            $information_id = (int)$this->request->get['information_id'];
-//        } else {
-//            $information_id = 0;
-//        }
+
+        if (isset($this->request->get['information_id'])) {
+            $information_id = (int)$this->request->get['information_id'];
+        } else {
+            $information_id = 0;
+        }
+
+
+        if (isset($this->request->get['page'])) {
+            $page = $this->request->get['page'];
+        } else {
+            $page = 1;
+        }
+
+
+        $limit = 9;
 //
-//
-//        if (isset($this->request->get['page'])) {
-//            $page = $this->request->get['page'];
-//        } else {
-//            $page = 1;
-//        }
-//
-//
-//        $limit = 9;
-//
-//        $first_image = (($page - 1) * $limit);
-//        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-//        $showed_images = array();
+        $first_image = (($page - 1) * $limit);
+        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+        $showed_images = array();
 //        for ($i = $first_image; $i < $last_image; $i++) {
 //            array_push($showed_images, $work_images[$i]);
 //        }
 //
-//
-//        echo $first_image . '<br />';
-//        echo $last_image;
-//
-//        $data['showed_images'] = $showed_images;
 
-//
-//        require_once "mypagination.php";
-//        //$pagination = new Pagination();
-//        $pagination = new MyPagination();
-//        $pagination->total = count($work_images);
-//        $pagination->page = $page;
-//        $pagination->limit = $limit;
-//
-//        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
-//
-//
-//        $data['pagination'] = $pagination->render();
+        echo $first_image . '<br />';
+        echo $last_image;
+
+        $data['showed_images'] = $showed_images;
+
+
+        require_once "mypagination.php";
+        //$pagination = new Pagination();
+        $pagination = new MyPagination();
+        $pagination->total = count($work_images);
+        $pagination->page = $page;
+        $pagination->limit = $limit;
+
+        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
+
+
+        $data['pagination'] = $pagination->render();
 
 
     $data['module'] = $module++;
