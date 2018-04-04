@@ -48,6 +48,7 @@ class ControllerCommonContentBottom extends Controller {
 
 echo $layout_id;
 
+
         if($layout_id == 15){
 
             if (isset($this->request->get['information_id'])) {
