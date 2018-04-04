@@ -93,15 +93,6 @@
             height: auto;
         }
 
-        @media (max-width: 1615px) {
-            header .sk_first_line.container nav.sk_main_menu.gradient {
-                width: 50%;
-            }
-            header .sk_first_line.container .sk_main_menu ul {
-                width: 650px;
-            }
-
-        }
         @media (min-width: 1615px) {
 
             header .sk_first_line.container .sk_main_menu ul {
