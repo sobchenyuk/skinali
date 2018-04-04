@@ -108,7 +108,10 @@
 
                     <?php foreach ($getGallery as $value) { ?>
 
-                    <option value="<?php echo $value['module_id']; ?>"><?php echo $value['name']; ?></option>
+                    <option value="<?php echo $value['module_id']; ?>"
+                    <?php echo ($gallery == $value['module_id']) ? 'selected="selected"': ''; ?>>
+                    <?php echo $value['name']; ?>
+                    </option>
 
                     <?php
                     } ?>

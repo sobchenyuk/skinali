@@ -439,7 +439,6 @@ class ControllerCatalogInformation extends Controller {
             $data['gallery'] = '0';
         }
 
-        echo $data['gallery'];
 
         $galleryAll = $this->model_catalog_information->getGallery();
         $getGallery = array();
