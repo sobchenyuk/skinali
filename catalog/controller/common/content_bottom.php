@@ -46,25 +46,27 @@ class ControllerCommonContentBottom extends Controller {
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
 
-        if (isset($this->request->get['information_id'])) {
-            $information_id = (int)$this->request->get['information_id'];
-        } else {
-            $information_id = 0;
+
+
+        if($layout_id == 15){
+
+            if (isset($this->request->get['information_id'])) {
+                $information_id = (int)$this->request->get['information_id'];
+            } else {
+                $information_id = 0;
+            }
+
+            if($information_id > 0){
+
+                $getGallery = $this->model_catalog_information->getGallery($information_id);
+                $idGallery = $getGallery["gallery"];
+            }
+
         }
 
-        var_dump($layout_id);
-
-        if($information_id > 0){
-
-            $getGallery = $this->model_catalog_information->getGallery($information_id);
-            $idGallery = $getGallery["gallery"];
-
-//            var_dump($getGallery["gallery"]);
-        }
 
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
-
 
 			if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
 				$module_data = $this->load->controller('extension/module/' . $part[0]);
@@ -76,8 +78,11 @@ class ControllerCommonContentBottom extends Controller {
 
 			if (isset($part[1])) {
 
-			    //Место для модуля
-				$setting_info = $this->model_extension_module->getModule($part[1]);
+                if (isset($idGallery)){
+                    $setting_info = $this->model_extension_module->getModule($idGallery);
+                } else {
+                    $setting_info = $this->model_extension_module->getModule($part[1]);
+                }
 
 
 				if ($setting_info && $setting_info['status']) {
