@@ -95,31 +95,7 @@
 
 
 
-
-
             <div class="tab-pane" id="tab-data">
-
-
-              <div class="form-group">
-                <label class="col-sm-2 control-label" for="input-gallery">Название галереи</label>
-                <div class="col-sm-10">
-                  <select name="gallery" id="input-gallery" class="form-control">
-
-
-                    <?php foreach ($getGallery as $value) { ?>
-
-                    <option value="<?php echo $value['module_id']; ?>"
-                    <?php echo ($gallery == $value['module_id']) ? 'selected="selected"': ''; ?>>
-                    <?php echo $value['name']; ?>
-                    </option>
-
-                    <?php
-                    } ?>
-
-                  </select>
-                </div>
-              </div>
-
 
               <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
@@ -239,6 +215,22 @@
                         </select></td>
                     </tr>
                     <?php } ?>
+
+                    <tr>
+                      <td class="text-left">Название галереи</td>
+                      <td class="text-left">
+                        <select name="gallery" class="form-control">
+                          <?php foreach ($getGallery as $value) { ?>
+                          <option value="<?php echo $value['module_id']; ?>"
+                          <?php echo ($gallery == $value['module_id']) ? 'selected="selected"': ''; ?>>
+                          <?php echo $value['name']; ?>
+                          </option>
+                          <?php
+                    } ?>
+                        </select>
+                      </td>
+                    </tr>
+
                   </tbody>
                 </table>
               </div>
