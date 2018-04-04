@@ -141,6 +141,7 @@ class ControllerInformationInformation extends Controller {
 
 			$data['showed_images'] = $showed_images;
 
+			var_dump($showed_images);
 
 			require_once "mypagination.php";
 			//$pagination = new Pagination();

@@ -99,7 +99,6 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 
         $data['showed_images'] = $showed_images;
 
-        var_dump($showed_images);
 
 
 
