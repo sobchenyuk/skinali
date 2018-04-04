@@ -26,7 +26,7 @@
   <?php
   /* Входные параметры */
 
-  echo $_SERVER['QUERY_STRING'];
+  echo $_SERVER['PHP_SELF'];
 
   $count_pages = 50;
   $active = 15;
