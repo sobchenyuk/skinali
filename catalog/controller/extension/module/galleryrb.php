@@ -80,6 +80,9 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
+
+        $work_images = array();
+
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
         } else {
