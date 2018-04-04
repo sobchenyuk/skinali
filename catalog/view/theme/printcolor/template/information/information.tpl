@@ -26,6 +26,9 @@
 		print_r ($work_images);
 		print '</pre>';*/
 	?>
+
+
+
 	<?php if ($information_id == 25): ?>
 				<?php echo $column_right; ?>
 				<?php echo $column_left; ?>
