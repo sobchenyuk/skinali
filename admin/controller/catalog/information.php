@@ -46,8 +46,6 @@ class ControllerCatalogInformation extends Controller {
 
 	public function edit() {
 
-	    echo 'true';
-
 		$this->load->language('catalog/information');
 
 		$this->document->setTitle($this->language->get('heading_title'));
