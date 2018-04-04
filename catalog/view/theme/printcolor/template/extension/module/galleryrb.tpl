@@ -26,7 +26,7 @@
   <?php
   /* Входные параметры */
 
-  echo $_SERVER['PHP_SELF'];
+  echo $_SERVER['REQUEST_URI'];
 
   $count_pages = 50;
   $active = 15;
