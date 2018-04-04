@@ -52,11 +52,14 @@ class ControllerCommonContentBottom extends Controller {
             $information_id = 0;
         }
 
+        var_dump($layout_id);
+
         if($information_id > 0){
 
             $getGallery = $this->model_catalog_information->getGallery($information_id);
+            $idGallery = $getGallery["gallery"];
 
-            var_dump($getGallery["gallery"]);
+//            var_dump($getGallery["gallery"]);
         }
 
 		foreach ($modules as $module) {
