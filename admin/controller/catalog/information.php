@@ -431,6 +431,14 @@ class ControllerCatalogInformation extends Controller {
 			$data['sort_order'] = '';
 		}
 
+        if (isset($this->request->post['gallery'])) {
+            $data['gallery'] = $this->request->post['gallery'];
+        } elseif (!empty($information_info)) {
+            $data['gallery'] = $information_info['gallery'];
+        } else {
+            $data['gallery'] = '0';
+        }
+
 		if (isset($this->request->post['information_layout'])) {
 			$data['information_layout'] = $this->request->post['information_layout'];
 		} elseif (isset($this->request->get['information_id'])) {

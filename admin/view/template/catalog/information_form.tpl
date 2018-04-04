@@ -106,8 +106,8 @@
                 <div class="col-sm-10">
                   <select name="gallery" id="input-gallery" class="form-control">
 
-                    <option value=""></option>
-                    <option value="Зачение">Имя</option>
+                    <option value="0"></option>
+                    <option value="1">Имя</option>
 
                   </select>
                 </div>
