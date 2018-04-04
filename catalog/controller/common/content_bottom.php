@@ -83,7 +83,6 @@ class ControllerCommonContentBottom extends Controller {
 
                 if (isset($idGallery)){
                     $setting_info = $this->model_extension_module->getModule($idGallery);
-                    echo $idGallery;
                 } else {
                     $setting_info = $this->model_extension_module->getModule($part[1]);
                 }
