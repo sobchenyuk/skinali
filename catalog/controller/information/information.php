@@ -69,6 +69,8 @@ class ControllerInformationInformation extends Controller {
         }
 
         $data['layout_id'] = $layout_id;
+        $getGallery = $this->model_catalog_information->getGallery($information_id);
+        $data['idGallery'] = $getGallery["gallery"];
 		
 		if ($information_id == 9) {
 			if (isset($_POST['dealer_submit'])) {
