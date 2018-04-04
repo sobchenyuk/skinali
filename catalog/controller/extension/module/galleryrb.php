@@ -84,6 +84,13 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
+        if (isset($this->request->get['information_id'])) {
+            $information_id = (int)$this->request->get['information_id'];
+        } else {
+            $information_id = 0;
+        }
+
+        var_dump($information_id);
 
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
