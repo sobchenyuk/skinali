@@ -68,8 +68,7 @@ class ControllerInformationInformation extends Controller {
             $layout_id = $this->config->get('config_layout_id');
         }
 
-		echo $layout_id;
-
+        $data['layout_id'] = $layout_id;
 		
 		if ($information_id == 9) {
 			if (isset($_POST['dealer_submit'])) {
