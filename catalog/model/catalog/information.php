@@ -22,4 +22,10 @@ class ModelCatalogInformation extends Model {
 			return 0;
 		}
 	}
+
+    public function getGallery(){
+        $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "module WHERE `code`='galleryrb'");
+
+        return $query->rows;
+    }
 }
