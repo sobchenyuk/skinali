@@ -80,6 +80,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
+    var_dump($data);
 
         $work_images = array();
 
