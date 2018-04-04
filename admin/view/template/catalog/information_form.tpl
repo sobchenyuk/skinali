@@ -108,7 +108,7 @@
                     <?php foreach ($getGallery as $value) {
                           foreach ($value as $item) { ?>
 
-                    <option value="<?php echo $item['module_id']; ?>"><?php echo $item['name']; ?></option>
+                    <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
 
                     <?php }
                     } ?>
