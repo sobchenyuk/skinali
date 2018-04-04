@@ -26,13 +26,11 @@
   <?php
   /* Входные параметры */
 
-  echo $_SERVER['REQUEST_URI'];
-
   $count_pages = 50;
   $active = 15;
   $count_show_pages = 10;
-  $url = "/index.php";
-  $url_page = "/index.php?page=";
+  $url = $_SERVER['REQUEST_URI'];
+  $url_page = $_SERVER['REQUEST_URI'] . "?page=";
   if ($count_pages > 1) { // Всё это только если количество страниц больше 1
   /* Дальше идёт вычисление первой выводимой страницы и последней (чтобы текущая страница была где-то посредине, если это возможно, и чтобы общая сумма выводимых страниц была равна count_show_pages, либо меньше, если количество страниц недостаточно) */
   $left = $active - 1;
