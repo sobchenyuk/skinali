@@ -569,6 +569,11 @@
             top: -19px;
         }
 
+
+        .left-gallery .sk_galery_main_category .sk_cat_holder {
+            width: auto;
+        }
+
         @media (max-width: 1615px) {
             .left-gallery .sk_galery_main_category, .right-gallery #right_sidebar {
                 width: 20%;
