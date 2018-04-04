@@ -80,27 +80,30 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
+        if (isset($this->request->get['page'])) {
+            $page = $this->request->get['page'];
+        } else {
+            $page = 1;
+        }
+        $limit = 9;
 
+        $first_image = (($page - 1) * $limit);
+        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+        $showed_images = array();
+        for ($i = $first_image; $i < $last_image; $i++) {
+            array_push($showed_images, $work_images[$i]);
+        }
 
+        $data['showed_images'] = $showed_images;
+
+        var_dump($showed_images);
 
 
 
     $data['module'] = $module++;
     return $this->load->view('extension/module/galleryrb', $data);
-$limit = 9;
-			
-			$first_image = (($page - 1) * $limit);
-			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-			
-			$showed_images = array();
-			
-			for ($i = $first_image; $i < $last_image; $i++) {
-				array_push($showed_images, $work_images[$i]);
-			}
-			
-			$data['showed_images'] = $showed_images;
 
-        var_dump($showed_images);
+
 		
     }
 }
