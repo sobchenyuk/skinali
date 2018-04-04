@@ -84,17 +84,14 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-        echo '<pre>';
-    var_dump($work_images);
-        echo '</pre>';
-
-
 
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
         } else {
             $page = 1;
         }
+
+
         $limit = 9;
 
         $first_image = (($page - 1) * $limit);
@@ -107,6 +104,17 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         $data['showed_images'] = $showed_images;
 
 
+        require_once "mypagination.php";
+        //$pagination = new Pagination();
+        $pagination = new MyPagination();
+        $pagination->total = count($work_images);
+        $pagination->page = $page;
+        $pagination->limit = $limit;
+
+        $pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
+
+
+        $data['pagination'] = $pagination->render();
 
 
     $data['module'] = $module++;
