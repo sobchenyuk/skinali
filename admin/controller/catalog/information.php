@@ -439,7 +439,9 @@ class ControllerCatalogInformation extends Controller {
             $data['gallery'] = '0';
         }
 
+        echo '<pre>';
         var_dump($this->model_catalog_information->getGallery());
+        echo '</pre>';
 
 		if (isset($this->request->post['information_layout'])) {
 			$data['information_layout'] = $this->request->post['information_layout'];
