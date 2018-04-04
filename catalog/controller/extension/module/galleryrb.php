@@ -80,7 +80,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-        var_dump($thumb);
+
 
 
 
@@ -99,6 +99,8 @@ $limit = 9;
 			}
 			
 			$data['showed_images'] = $showed_images;
+
+        var_dump($showed_images);
 		
     }
 }
