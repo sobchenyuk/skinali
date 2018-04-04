@@ -112,7 +112,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         echo $first_image . '<br />';
         echo $last_image;
 
-        $data['showed_images'] = $showed_images;
+//        $data['showed_images'] = $showed_images;
 
 
         require_once "mypagination.php";
