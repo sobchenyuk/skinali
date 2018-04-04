@@ -8,6 +8,7 @@
       <div class="rb-gallery-inner">
 
         <img src="<?php echo showed_thumb[$i]; ?>" alt="" class="rb-gallery-img <?php if (isset($borderimage)) echo 'foto'; ?>" />
+
         <a href="<?php echo $showed_images[$i]; ?>" data-effect="<?php echo $animation; ?>" class="rb-gallery-link style-over"></a>
 
 
