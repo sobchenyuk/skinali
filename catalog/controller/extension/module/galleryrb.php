@@ -31,7 +31,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       default: $data['colspan'] = 4;
     }
 
-        var_dump($this->url->link('information/information', '&information_id=25&page={page}'));
+
     
     // Sort Order for gallery
     if(isset($setting['gallery_image'][$this->config->get('config_language_id')])){
@@ -52,6 +52,9 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         $results = array();
       }
     }
+
+
+
     foreach ($results as $result) {
       if (is_file(DIR_IMAGE . $result['image'])) {
         $file_image = getimagesize(DIR_IMAGE . $result['image']);       
@@ -76,6 +79,9 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         );
       }
     }
+
+        var_dump($file_image);
+
     $data['module'] = $module++;
     return $this->load->view('extension/module/galleryrb', $data);
 $limit = 9;
