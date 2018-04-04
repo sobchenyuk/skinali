@@ -30,7 +30,25 @@
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
 				<?php echo $column_right; ?>
-				<?php echo $column_left; ?>
+
+<div class="sk_galery_main_category">
+	<ul class="sk_galery_main_category_holder">
+		<div class="sk_cat_holder">
+			<div class="menu-menyu-levogo-saydbara-container">
+				<ul id="menu-menyu-levogo-saydbara" class="menu">
+
+					<li class="menu-item menu-item-type-taxonomy menu-item-object-category "><a href="#">Тест</a></li>
+
+					<?php // foreach ($categories as $category) { ?>
+				<!--	<li class="menu-item menu-item-type-taxonomy menu-item-object-category <?php // echo (isset($cur_cat) && $cur_cat[0] == $category['category_id'] ? 'current-menu-item' : '');?>"><a href="<?php // echo $category['href']; ?>"><?php // echo $category['name']; ?></a></li> -->
+					<?php // } ?>
+
+				</ul>
+			</div>
+		</div>
+	</ul>
+</div>
+
 
                  <?php echo $content_bottom; ?>
 
