@@ -54,6 +54,9 @@ class ControllerExtensionModuleGalleryrb extends Controller {
     }
 
         $work_images = array();
+        $work_thumb = array();
+        $work_title = array();
+
     $a = 0;
 
     foreach ($results as $result) {
@@ -78,7 +81,8 @@ class ControllerExtensionModuleGalleryrb extends Controller {
           'thumb' => $thumb,
           'image' => $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height)
         );
-
+          $work_title[$a] = htmlspecialchars_decode($result['gallery_image_description'],ENT_QUOTES);
+          $work_thumb[$a] = $thumb;
           $work_images[$a] = $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height);
               $a++;
       }
@@ -100,21 +104,31 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 
 
         $limit = 9;
-//
+
         $first_image = (($page - 1) * $limit);
         $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+
+        $showed_title = array();
+        $showed_thumb = array();
         $showed_images = array();
+
         for ($i = $first_image; $i < $last_image; $i++) {
+
+            array_push($showed_title, $work_title[$i]);
+            array_push($showed_thumb, $work_thumb[$i]);
             array_push($showed_images, $work_images[$i]);
         }
-//
 
-        echo $first_image . '<br />';
-        echo $last_image;
 
+        $data['showed_title'] = $showed_title;
+        $data['showed_thumb'] = $showed_thumb;
         $data['showed_images'] = $showed_images;
 
-        var_dump($showed_images);
+        var_dump($showed_title);
+
+//        for ($i = 0; $i < count($showed_title); $i++) {
+//
+//        }
 
         require_once "mypagination.php";
         //$pagination = new Pagination();
