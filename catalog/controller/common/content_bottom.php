@@ -51,7 +51,7 @@ class ControllerCommonContentBottom extends Controller {
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 
-			echo $part;
+            var_dump($part);
 
 			if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
 				$module_data = $this->load->controller('extension/module/' . $part[0]);
