@@ -90,7 +90,6 @@ class ControllerExtensionModuleGalleryrb extends Controller {
             $information_id = 0;
         }
 
-        var_dump($information_id);
 
         if (isset($this->request->get['page'])) {
             $page = $this->request->get['page'];
@@ -118,7 +117,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         $pagination->page = $page;
         $pagination->limit = $limit;
 
-        $pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
+        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
 
 
         $data['pagination'] = $pagination->render();
