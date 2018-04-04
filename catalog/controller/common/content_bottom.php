@@ -56,7 +56,7 @@ class ControllerCommonContentBottom extends Controller {
 
             $getGallery = $this->model_catalog_information->getGallery($information_id);
 
-            var_dump($getGallery);
+            var_dump($getGallery["gallery"]);
         }
 
 		foreach ($modules as $module) {
