@@ -3,7 +3,6 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 	public function index($setting) {
 		static $module = 0;
 
-		var_dump($this);
 
 		$this->load->model('tool/image');
     $this->load->model('tool/galleryimage');
