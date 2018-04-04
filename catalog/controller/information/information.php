@@ -156,9 +156,6 @@ class ControllerInformationInformation extends Controller {
 
 		}
 
-
-        var_dump($this->url->link('information/information', '&information_id=25&page={page}'));
-
 		
 		if ($information_id == 88) {
 			$this->load->model('catalog/review');

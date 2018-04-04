@@ -30,7 +30,8 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       case 12: $data['colspan'] = 1; break;
       default: $data['colspan'] = 4;
     }
-    
+
+        var_dump($this->url->link('information/information', '&information_id=25&page={page}'));
     
     // Sort Order for gallery
     if(isset($setting['gallery_image'][$this->config->get('config_language_id')])){
