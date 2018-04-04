@@ -45,13 +45,10 @@ class ControllerCommonContentBottom extends Controller {
 
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
-//		var_dump($modules[0]);
-//        $modules[0]
 
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 
-            var_dump($part);
 
 			if (isset($part[0]) && $this->config->get($part[0] . '_status')) {
 				$module_data = $this->load->controller('extension/module/' . $part[0]);
@@ -63,6 +60,8 @@ class ControllerCommonContentBottom extends Controller {
 
 			if (isset($part[1])) {
 				$setting_info = $this->model_extension_module->getModule($part[1]);
+
+				echo $setting_info;
 
 				if ($setting_info && $setting_info['status']) {
 					$output = $this->load->controller('extension/module/' . $part[0], $setting_info);
