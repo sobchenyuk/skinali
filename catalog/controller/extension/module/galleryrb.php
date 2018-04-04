@@ -80,7 +80,10 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-        var_dump($file_image);
+        var_dump($thumb);
+
+
+
 
     $data['module'] = $module++;
     return $this->load->view('extension/module/galleryrb', $data);
