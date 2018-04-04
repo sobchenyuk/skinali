@@ -84,34 +84,34 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       }
     }
 
-        if (isset($this->request->get['information_id'])) {
-            $information_id = (int)$this->request->get['information_id'];
-        } else {
-            $information_id = 0;
-        }
-
-
-        if (isset($this->request->get['page'])) {
-            $page = $this->request->get['page'];
-        } else {
-            $page = 1;
-        }
-
-
-        $limit = 9;
-
-        $first_image = (($page - 1) * $limit);
-        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-        $showed_images = array();
-        for ($i = $first_image; $i < $last_image; $i++) {
-            array_push($showed_images, $work_images[$i]);
-        }
-
-
-        echo $first_image . '<br />';
-        echo $last_image;
-
-        $data['showed_images'] = $showed_images;
+//        if (isset($this->request->get['information_id'])) {
+//            $information_id = (int)$this->request->get['information_id'];
+//        } else {
+//            $information_id = 0;
+//        }
+//
+//
+//        if (isset($this->request->get['page'])) {
+//            $page = $this->request->get['page'];
+//        } else {
+//            $page = 1;
+//        }
+//
+//
+//        $limit = 9;
+//
+//        $first_image = (($page - 1) * $limit);
+//        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+//        $showed_images = array();
+//        for ($i = $first_image; $i < $last_image; $i++) {
+//            array_push($showed_images, $work_images[$i]);
+//        }
+//
+//
+//        echo $first_image . '<br />';
+//        echo $last_image;
+//
+//        $data['showed_images'] = $showed_images;
 
 //
 //        require_once "mypagination.php";
