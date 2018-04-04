@@ -109,8 +109,8 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 //        }
 //
 
-        echo $first_image . '<br />';
-        echo $last_image;
+//        echo $first_image . '<br />';
+//        echo $last_image;
 
 //        $data['showed_images'] = $showed_images;
 

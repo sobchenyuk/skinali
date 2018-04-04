@@ -25,7 +25,7 @@
 
 
   <div class="sk_galery_pagination_holder">
-    <?php // echo $pagination; ?>
+    <?php echo $pagination; ?>
   </div>
 
 
