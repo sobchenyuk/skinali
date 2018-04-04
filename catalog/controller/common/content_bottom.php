@@ -51,11 +51,14 @@ echo $layout_id;
 
         if($layout_id == 15){
 
+
             if (isset($this->request->get['information_id'])) {
                 $information_id = (int)$this->request->get['information_id'];
             } else {
                 $information_id = 0;
             }
+
+            echo $information_id;
 
             if($information_id > 0){
 
