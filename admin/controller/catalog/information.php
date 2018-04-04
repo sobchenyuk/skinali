@@ -443,7 +443,7 @@ class ControllerCatalogInformation extends Controller {
         $galleryAll = $this->model_catalog_information->getGallery();
 
         $getGallery = array();
-        $galleryCunter = 0;
+        $galleryCunter = 1;
 
         foreach ($galleryAll as $item => $value) {
 
