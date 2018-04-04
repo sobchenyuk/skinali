@@ -46,7 +46,7 @@ class ControllerCommonContentBottom extends Controller {
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
 
-
+echo $layout_id;
 
         if($layout_id == 15){
 
