@@ -54,14 +54,14 @@
 						<h2>Примеры <br> наших работ</h2>
 						<a target="_blank" class="link_gallery" href="http://skinali-printcolor.com/nashi-rabotyi">Перейти в галерею</a>
 						<div class="popup_box p_images">
-							<a target="_blank" href="http://skinali-printcolor.com/nashi-rabotyi"></a>
+							<a target="_blank" href="https://skinali-printcolor.com/nashi-rabotyi"></a>
 						</div>
 					</div>
 					<div class="box_video">
 						<h2>Скинали <br> видеоматериалы</h2>
 						<a target="_blank" class="link_gallery" href="http://skinali-printcolor.com/video-galereya">Я хочу это увидеть</a>
 						<div class="popup_box p_video">
-							<a target="_blank" href="http://skinali-printcolor.com/video-galereya"></a>
+							<a target="_blank" href="https://skinali-printcolor.com/video-galereya"></a>
 						</div>
 					</div>
 				</div>
