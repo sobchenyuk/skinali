@@ -52,9 +52,9 @@
 
     <style>
 
-        /*body {*/
-            /*background: none;*/
-        /*}*/
+        body {
+            background: none;
+        }
 
         * {
             padding: 0;
