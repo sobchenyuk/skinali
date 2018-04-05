@@ -200,7 +200,7 @@ class ControllerCommonHeader extends Controller {
 //        echo (preg_match("/' . $str . '/",  $smenu['href'])) ? 'current-menu-item' : '';
 
 
-//        if (preg_match("/". $_SERVER['REQUEST_URI'] ."/i", "PHP is the web scripting language of choice.")) {
+//        if (preg_match("/". preg_replace('/\//i', '', $_SERVER['REQUEST_URI']) ."/i", "PHP is the web scripting language of choice.")) {
 //            echo "Вхождение найдено.";
 //        } else {
 //            echo "Вхождение не найдено.";
