@@ -4,6 +4,8 @@
 
  $str = (string)$_SERVER['REQUEST_URI'];
 
+ echo (preg_match("/". $_SERVER['REQUEST_URI'] ."/i",  $smenu['href'])) ? 'current-menu-item' : '';
+
 
 
 ?>
