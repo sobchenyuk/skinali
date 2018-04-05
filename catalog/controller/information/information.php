@@ -439,6 +439,8 @@ class ControllerInformationInformation extends Controller {
 
 			echo $_SERVER['REQUEST_URI'];
 
+			var_dump($_GET);
+
             $data['smenu_galleryrb'] = $this->getMenu(4);
 
 			$this->response->setOutput($this->load->view('information/information', $data));
