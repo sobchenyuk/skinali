@@ -1,5 +1,6 @@
 <?php
 class ControllerExtensionModuleGalleryrb extends Controller {
+
 	public function index($setting) {
 		static $module = 0;
 
@@ -136,7 +137,6 @@ class ControllerExtensionModuleGalleryrb extends Controller {
 
 
         $data['pagination'] = $pagination->render();
-
 
     $data['module'] = $module++;
     return $this->load->view('extension/module/galleryrb', $data);

@@ -34,6 +34,7 @@
 </div>
 
 
+<?php if ($smenu_galleryrb) { ?>
 <div class="left-gallery">
 	<div class="sk_galery_main_category">
 		<ul class="sk_galery_main_category_holder">
@@ -41,11 +42,7 @@
 				<div class="menu-menyu-levogo-saydbara-container">
 					<ul id="menu-menyu-levogo-saydbara" class="menu">
 
-						<li class="menu-item menu-item-type-taxonomy menu-item-object-category "><a href="#">Тест</a></li>
-
-						<?php // foreach ($categories as $category) { ?>
-						<!--	<li class="menu-item menu-item-type-taxonomy menu-item-object-category <?php // echo (isset($cur_cat) && $cur_cat[0] == $category['category_id'] ? 'current-menu-item' : '');?>"><a href="<?php // echo $category['href']; ?>"><?php // echo $category['name']; ?></a></li> -->
-						<?php // } ?>
+						<?php echo html_entity_decode($smenu_galleryrb); ?>
 
 					</ul>
 				</div>
@@ -53,6 +50,9 @@
 		</ul>
 	</div>
 </div>
+<?php } ?>
+
+
 
 
 
