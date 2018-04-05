@@ -193,6 +193,13 @@ class ControllerCommonHeader extends Controller {
 
         $data['smenu_slider'] = $this->getMenu(3);
 
+//        $smenu = [];
+//
+//        $str = (string)$_SERVER['REQUEST_URI'];
+//
+//        echo (preg_match("/' . $str . '/",  $smenu['href'])) ? 'current-menu-item' : '';
+
+
         // Menu
 		$this->load->model('catalog/category');
 
