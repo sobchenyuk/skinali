@@ -14,7 +14,6 @@
 					</form>
 					<?php //echo $search; ?>
 				</div>
-			<!--	http://localhost/skinali/search/?search=%D0%94%D0%B5%D0%B2%D1%83%D1%88%D0%BA%D0%B0	-->
 			</li>
 			<?php 
 				if ($current_category != '') $cur_cat = explode('_', $current_category);
