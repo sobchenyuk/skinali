@@ -437,6 +437,7 @@ class ControllerInformationInformation extends Controller {
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
+			echo $_SERVER['REQUEST_URI'];
 
             $data['smenu_galleryrb'] = $this->getMenu(4);
 
