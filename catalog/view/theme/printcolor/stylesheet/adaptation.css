@@ -1,0 +1,31 @@
+@media (max-width: 1300px) {
+    .headerCarousel .owl-nav {
+        width: 100%;
+        left: 0;
+    }
+    .headerCarousel .owl-nav .owl-prev {
+        left: 5%;
+        position: absolute;
+    }
+    .headerCarousel .owl-nav .owl-next {
+        right: 5%;
+        position: absolute;
+    }
+    .headerCarousel .card .textNode .text {
+        width: 99%;
+    }
+}
+@media (max-width: 1200px) {
+    header .sk_first_line.container .sk_first_line_container .contacts {
+        justify-content: flex-start;
+    }
+    .topPanel[data-fixed] #logo a {
+        width: 5%;
+    }
+    .topPanel[data-fixed] .sk_logo_holder {
+        width: 5%;
+    }
+    .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
+        font-size: 12px;
+    }
+}
