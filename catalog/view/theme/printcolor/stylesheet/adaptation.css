@@ -39,9 +39,15 @@
     .headerCarousel .card .textNode {
         padding: 1em;
     }
+    .topPanel[data-fixed] {
+         display: table;
+    }
 }
 
 @media (max-width: 1050px) {
+    #sk_html_block .topPanel[data-fixed] .sk_first_line.container {
+         width: 100%;
+    }
     body .sk_galery_not_main_category,
     body .sk_page_galery_container {
         width: 80%;
