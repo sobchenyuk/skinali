@@ -1,7 +1,10 @@
 <?php
 class ControllerExtensionModuleGalleryrb extends Controller {
+
 	public function index($setting) {
 		static $module = 0;
+
+
 		$this->load->model('tool/image');
     $this->load->model('tool/galleryimage');
 
@@ -28,7 +31,8 @@ class ControllerExtensionModuleGalleryrb extends Controller {
       case 12: $data['colspan'] = 1; break;
       default: $data['colspan'] = 4;
     }
-    
+
+
     
     // Sort Order for gallery
     if(isset($setting['gallery_image'][$this->config->get('config_language_id')])){
@@ -49,6 +53,13 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         $results = array();
       }
     }
+
+        $work_images = array();
+        $work_thumb = array();
+        $work_title = array();
+
+    $a = 0;
+
     foreach ($results as $result) {
       if (is_file(DIR_IMAGE . $result['image'])) {
         $file_image = getimagesize(DIR_IMAGE . $result['image']);       
@@ -71,22 +82,66 @@ class ControllerExtensionModuleGalleryrb extends Controller {
           'thumb' => $thumb,
           'image' => $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height)
         );
+          $work_title[$a] = htmlspecialchars_decode($result['gallery_image_description'],ENT_QUOTES);
+          $work_thumb[$a] = $thumb;
+          $work_images[$a] = $this->model_tool_image->resize($result['image'], $setting['popup_width'], $new_popup_height);
+              $a++;
       }
     }
+
+
+        if (isset($this->request->get['information_id'])) {
+            $information_id = (int)$this->request->get['information_id'];
+        } else {
+            $information_id = 0;
+        }
+
+
+        if (isset($this->request->get['page'])) {
+            $page = $this->request->get['page'];
+        } else {
+            $page = 1;
+        }
+
+
+        $limit = 9;
+
+        $first_image = (($page - 1) * $limit);
+        $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+
+        $showed_title = array();
+        $showed_thumb = array();
+        $showed_images = array();
+
+        for ($i = $first_image; $i < $last_image; $i++) {
+
+            array_push($showed_title, $work_title[$i]);
+            array_push($showed_thumb, $work_thumb[$i]);
+            array_push($showed_images, $work_images[$i]);
+        }
+
+
+        $data['showed_title'] = $showed_title;
+        $data['showed_thumb'] = $showed_thumb;
+        $data['showed_images'] = $showed_images;
+
+
+        require_once "mypagination.php";
+        //$pagination = new Pagination();
+        $pagination = new MyPagination();
+        $pagination->total = count($work_images);
+        $pagination->page = $page;
+        $pagination->limit = $limit;
+
+        $pagination->url = $this->url->link('information/information', '&information_id=' . $information_id . '&page={page}');
+
+
+        $data['pagination'] = $pagination->render();
+
     $data['module'] = $module++;
     return $this->load->view('extension/module/galleryrb', $data);
-$limit = 9;
-			
-			$first_image = (($page - 1) * $limit);
-			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-			
-			$showed_images = array();
-			
-			for ($i = $first_image; $i < $last_image; $i++) {
-				array_push($showed_images, $work_images[$i]);
-			}
-			
-			$data['showed_images'] = $showed_images;
+
+
 		
     }
 }

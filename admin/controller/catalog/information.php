@@ -45,6 +45,7 @@ class ControllerCatalogInformation extends Controller {
 	}
 
 	public function edit() {
+
 		$this->load->language('catalog/information');
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -430,6 +431,35 @@ class ControllerCatalogInformation extends Controller {
 			$data['sort_order'] = '';
 		}
 
+        if (isset($this->request->post['gallery'])) {
+            $data['gallery'] = $this->request->post['gallery'];
+        } elseif (!empty($information_info)) {
+            $data['gallery'] = $information_info['gallery'];
+        } else {
+            $data['gallery'] = '0';
+        }
+
+
+        $galleryAll = $this->model_catalog_information->getGallery();
+        $getGallery = array();
+        $galleryCunter = 1;
+        $getGallery[0] = array(
+            "module_id" => 0,
+            "name" => ""
+        );
+        foreach ($galleryAll as $item => $value) {
+
+            $getGallery[$galleryCunter] = array(
+                "module_id" => $value["module_id"],
+                "name" => $value["name"]
+            );
+            $galleryCunter++;
+        }
+        $data['getGallery'] = $getGallery;
+
+
+
+
 		if (isset($this->request->post['information_layout'])) {
 			$data['information_layout'] = $this->request->post['information_layout'];
 		} elseif (isset($this->request->get['information_id'])) {
@@ -437,6 +467,7 @@ class ControllerCatalogInformation extends Controller {
 		} else {
 			$data['information_layout'] = array();
 		}
+
 
 		$this->load->model('design/layout');
 

@@ -26,11 +26,38 @@
 		print_r ($work_images);
 		print '</pre>';*/
 	?>
-	<?php if ($information_id == 25): ?>
-				<?php echo $column_right; ?>
-				<?php echo $column_left; ?>
+
+	<?php if($layout_id == 15 && $idGallery > 0): ?>
+
+<div class="right-gallery">
+	<?php echo $column_right; ?>
+</div>
+
+
+<?php if ($smenu_galleryrb) { ?>
+<div class="left-gallery">
+	<div class="sk_galery_main_category">
+		<ul class="sk_galery_main_category_holder">
+			<div class="sk_cat_holder">
+				<div class="menu-menyu-levogo-saydbara-container">
+					<ul id="menu-menyu-levogo-saydbara" class="menu">
+
+						<?php echo html_entity_decode($smenu_galleryrb); ?>
+
+					</ul>
+				</div>
+			</div>
+		</ul>
+	</div>
+</div>
+<?php } ?>
+
+
+
+
+
                  <?php echo $content_bottom; ?>
-	
+
 	<?php elseif ($information_id == 9): ?>
 		<div class="sk_gallery_holder">
 			<div class="sk_main_header_holder">
@@ -153,6 +180,7 @@
 				</div>
 			</div>
 		</div>
+
 	<?php elseif ($information_id == 89): ?>
 	<script type="text/javascript" src="catalog/view/javascript/js/cat_menu_fix.js"></script>
 	<div class = "sk_order_holder">
@@ -391,6 +419,8 @@
 
 	</div>
 	<?php else: ?>
+
+
 	<div class="sk_gallery_holder">
 		<div class="sk_main_header_holder">
 			<h1><a href="#"><?=$heading_title?></a></h1>
@@ -493,5 +523,6 @@
 		</div>
 	</div>
 	<?php endif; ?>
+
 	
 <?php echo $footer; ?>

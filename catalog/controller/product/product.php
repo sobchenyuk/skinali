@@ -70,7 +70,6 @@ class ControllerProductProduct extends Controller {
 				exit;
 			}*/
 			
-			
 		}	
 		
 		$this->load->language('product/product');

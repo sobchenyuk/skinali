@@ -52,11 +52,19 @@
 
     <style>
 
+        /*body {*/
+            /*background: none;*/
+        /*}*/
+
         * {
             padding: 0;
             outline: 0;
             margin: 0;
             font-weight: 700;
+        }
+
+        .sk_page_galery_container table {
+            margin: 0 -5%;
         }
 
         .hidden {
@@ -89,15 +97,6 @@
             height: auto;
         }
 
-        @media (max-width: 1615px) {
-            header .sk_first_line.container nav.sk_main_menu.gradient {
-                width: 50%;
-            }
-            header .sk_first_line.container .sk_main_menu ul {
-                width: 650px;
-            }
-
-        }
         @media (min-width: 1615px) {
 
             header .sk_first_line.container .sk_main_menu ul {
@@ -575,7 +574,14 @@
         }
 
 
+        .left-gallery .sk_galery_main_category .sk_cat_holder {
+            width: auto;
+        }
+
         @media (max-width: 1615px) {
+            .left-gallery .sk_galery_main_category, .right-gallery #right_sidebar {
+                width: 20%;
+            }
             #sk_html_block .container {
                 width: 1200px;
                 padding: 0 15px;

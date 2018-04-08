@@ -1,5 +1,89 @@
 <?php
 class ControllerInformationInformation extends Controller {
+
+
+    public function getMenu($setting){
+
+        $this->load->language('module/smenu');
+
+        $this->load->model('catalog/smenu');
+
+
+
+
+        $data['smenus'] = array();
+
+        $root_items = $this->model_catalog_smenu->getSmenu($setting);
+
+        $routs=array(0 =>"/",1=>"information/contact", 2=>"account/return/add", 3=>"information/sitemap", 4=>"product/manufacturer", 5=>"account/voucher", 6=>"affiliate/account", 7=>"product/special", 8=>"account/account", 9=>"account/order", 10=>"account/wishlist", 11=>"account/newsletter", 12=>"account/newsletter");
+        $path=array(1=>'information/information', 2=>'product/category', 3 =>'catalog/product', 4=>'information/sigallery',0=>'');
+        $path_url=array(1=>'information_id', 2=>'path', 3=>'path', 4=>'path_gallery',0=>'');
+
+
+        foreach ($root_items as $items) {
+            $children_data=false;
+            $childs = $this->model_catalog_smenu->getSmenu($items['smenu_id'], $items['smenu_item_id']);
+            $active = 0;
+
+
+            if ($items['type']==5) {
+                $url=$items['type_name'];
+            }
+            elseif (($items['type']==6) AND ($items['type_id']!=0)) {
+                $url=$this->url->link($routs[(int)$items['type_id']],"", true);
+                if (isset($this->request->get['route']))
+                {
+                    $active = ($this->request->get['route'] == $routs[(int)$items['type_id']])?'active':'';
+                }
+            }
+            elseif (($items['type']==6) AND ($items['type_id']==0)) {
+                $url="/";
+                $active = (!$this->request->get)?1:0;
+            }
+            else {
+                $url=$this->url->link($path[(int)$items['type']], "&".$path_url[(int)$items['type']]."=".$items['type_id'], true);
+                if ((isset($this->request->get['route']))AND($this->request->get['route']==$path[(int)$items['type']]) AND (isset($this->request->get[$path_url[(int)$items['type']]])) AND ($this->request->get[$path_url[(int)$items['type']]]==(int)$items['type_id']))
+                    $active = 1;
+            }
+
+            if ($setting == 1) {
+
+                foreach ($childs as $child) {
+
+
+                    if ($child['type'] == 5) {
+                        $href = $child['type_name'];
+
+                    }
+                    if ($child['type']==6) {
+                        $url=$this->url->link($routs[(int)$child['type']],"", true);
+                    }
+
+                    $children_data[] = array(
+                        'item_id'  => $child['smenu_item_id'],
+                        'href'     => $href,
+                        'name'     => $child['smenu_text'],
+                        'title'    => $child['smenu_title']
+                    );
+                }
+            }
+
+            $data['items'][] = array(
+                'item_id'        => $items['smenu_item_id'],
+                'name'           => $items['smenu_text'],
+                'title'          => $items['smenu_title'],
+                'href'           => $url,
+                'active'         => $active,
+                'children'       => $children_data
+            );
+        }
+
+
+        return $this->load->view('extension/module/smenu_galleryrb', $data);
+
+    }
+
+
 	public function index() {
 		$this->load->language('information/information');
 
@@ -29,6 +113,48 @@ class ControllerInformationInformation extends Controller {
 
 		$data['information_id'] = $information_id;
 
+
+        $this->load->model('design/layout');
+
+        if (isset($this->request->get['route'])) {
+            $route = (string)$this->request->get['route'];
+        } else {
+            $route = 'common/home';
+        }
+
+        $layout_id = 0;
+
+        if ($route == 'product/category' && isset($this->request->get['path'])) {
+            $this->load->model('catalog/category');
+
+            $path = explode('_', (string)$this->request->get['path']);
+
+            $layout_id = $this->model_catalog_category->getCategoryLayoutId(end($path));
+        }
+
+        if ($route == 'product/product' && isset($this->request->get['product_id'])) {
+            $this->load->model('catalog/product');
+
+            $layout_id = $this->model_catalog_product->getProductLayoutId($this->request->get['product_id']);
+        }
+
+        if ($route == 'information/information' && isset($this->request->get['information_id'])) {
+            $this->load->model('catalog/information');
+
+            $layout_id = $this->model_catalog_information->getInformationLayoutId($this->request->get['information_id']);
+        }
+
+        if (!$layout_id) {
+            $layout_id = $this->model_design_layout->getLayout($route);
+        }
+
+        if (!$layout_id) {
+            $layout_id = $this->config->get('config_layout_id');
+        }
+
+        $data['layout_id'] = $layout_id;
+        $getGallery = $this->model_catalog_information->getGallery($information_id);
+        $data['idGallery'] = $getGallery["gallery"];
 		
 		if ($information_id == 9) {
 			if (isset($_POST['dealer_submit'])) {
@@ -54,59 +180,66 @@ class ControllerInformationInformation extends Controller {
 				}
 			}
 		}
-		
-		if ($information_id == 25) {
-			$dir = "image/catalog/ourworks";
-			$res = array();
-			$dir_list = scandir($dir);
-			$dir_count = 0;
-			$detail_dir_list = array();
-			foreach ($dir_list as $d) {
-				if ($d!='.' AND $d!='..') {
-					if (!is_dir($dir."/".$d)) {
-						$dir_count++;
-						$detail_dir_list[$dir_count] = $d;
-					}
-				}
-			}
-			
-			$work_images = array();
-			
-			for ($i = 1; $i <= count($detail_dir_list); $i++) {
-				if ($i < count($detail_dir_list)) {
-					if (substr($detail_dir_list[$i], 0, 2) != substr($detail_dir_list[$i + 1], 0, 2)) {
-						array_push($work_images, $detail_dir_list[$i]);
-					}
-				}
-			}
-			array_push($work_images, end($detail_dir_list));
-			
-			$data['work_dir'] = $dir;
-			
-			$limit = 9;
-			
-			$first_image = (($page - 1) * $limit);
-			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
-			
-			$showed_images = array();
-			
-			for ($i = $first_image; $i < $last_image; $i++) {
-				array_push($showed_images, $work_images[$i]);
-			}
-			
-			$data['showed_images'] = $showed_images;
-			
-			require_once "mypagination.php";
-			//$pagination = new Pagination();
-			$pagination = new MyPagination();
-			$pagination->total = count($work_images);
-			$pagination->page = $page;
-			$pagination->limit = $limit;
-			$pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
-			
-			$data['pagination'] = $pagination->render();
-		
-		}
+
+
+
+//		if ($information_id == 25) {
+//			$dir = "image/catalog/ourworks";
+//			$res = array();
+//			$dir_list = scandir($dir);
+//			$dir_count = 0;
+//			$detail_dir_list = array();
+//			foreach ($dir_list as $d) {
+//				if ($d!='.' AND $d!='..') {
+//					if (!is_dir($dir."/".$d)) {
+//						$dir_count++;
+//						$detail_dir_list[$dir_count] = $d;
+//					}
+//				}
+//			}
+//
+//			$work_images = array();
+//
+//
+//			for ($i = 1; $i <= count($detail_dir_list); $i++) {
+//				if ($i < count($detail_dir_list)) {
+//					if (substr($detail_dir_list[$i], 0, 2) != substr($detail_dir_list[$i + 1], 0, 2)) {
+//						array_push($work_images, $detail_dir_list[$i]);
+//					}
+//				}
+//			}
+//			array_push($work_images, end($detail_dir_list));
+//
+//			$data['work_dir'] = $dir;
+//
+//			$limit = 9;
+//
+//			$first_image = (($page - 1) * $limit);
+//			$last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));
+//
+//			$showed_images = array();
+//
+//			for ($i = $first_image; $i < $last_image; $i++) {
+//				array_push($showed_images, $work_images[$i]);
+//			}
+//
+//			$data['showed_images'] = $showed_images;
+//
+//
+//			require_once "mypagination.php";
+//			//$pagination = new Pagination();
+//			$pagination = new MyPagination();
+//			$pagination->total = count($work_images);
+//			$pagination->page = $page;
+//			$pagination->limit = $limit;
+//
+//			$pagination->url = $this->url->link('information/information', '&information_id=25&page={page}');
+//
+//
+//			$data['pagination'] = $pagination->render();
+//
+//		}
+
 		
 		if ($information_id == 88) {
 			$this->load->model('catalog/review');
@@ -296,9 +429,15 @@ class ControllerInformationInformation extends Controller {
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
+
+
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
+
+
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
+
+            $data['smenu_galleryrb'] = $this->getMenu(4);
 
 			$this->response->setOutput($this->load->view('information/information', $data));
 		} else {

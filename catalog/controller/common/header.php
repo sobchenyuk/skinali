@@ -193,8 +193,6 @@ class ControllerCommonHeader extends Controller {
 
         $data['smenu_slider'] = $this->getMenu(3);
 
-
-
         // Menu
 		$this->load->model('catalog/category');
 
