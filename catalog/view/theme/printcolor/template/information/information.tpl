@@ -29,6 +29,8 @@
 
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
+<div class="sk_gallery_wraper">
+
 <div class="right-gallery">
 	<?php echo $column_right; ?>
 </div>
@@ -57,6 +59,8 @@
 
 
                  <?php echo $content_bottom; ?>
+
+</div>
 
 	<?php elseif ($information_id == 9): ?>
 		<div class="sk_gallery_holder">
