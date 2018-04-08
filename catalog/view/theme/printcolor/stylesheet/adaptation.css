@@ -52,6 +52,7 @@
     body #right_sidebar {
         width: 100%;
         order: 3;
+        margin-top: 10px;
     }
     .call_back {
         background-position: 30% 5px;
@@ -65,7 +66,7 @@
     }
     .sk_gallery_wraper {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
     }
 }
