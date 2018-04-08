@@ -104,7 +104,7 @@ class ControllerExtensionModuleGalleryrb extends Controller {
         }
 
 
-        $limit = 9;
+        $limit = 12;
 
         $first_image = (($page - 1) * $limit);
         $last_image = ($page * $limit <= count($work_images) ? $page * $limit : count($work_images));

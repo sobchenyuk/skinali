@@ -69,4 +69,16 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    .right-gallery {
+        width: 80%;
+        order: 3;
+    }
+    .left-gallery {
+        width: 20%;
+        float: left;
+    }
+    .rb-gallery-0.rb-gallery {
+        width: 80% !important;
+    }
 }
