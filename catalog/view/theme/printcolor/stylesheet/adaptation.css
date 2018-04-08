@@ -90,5 +90,8 @@
     body .rb-gallery-0.rb-gallery {
         width: 80% !important;
     }
+    .sk_galery_not_main_category, .sk_page_galery_container, .sk_galery_container, .sk_archive_holder, .sk_order_holder>.sk_order_form_holder {
+        width: 80%;
+    }
 
 }
