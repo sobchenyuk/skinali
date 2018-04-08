@@ -42,7 +42,8 @@
 }
 
 @media (max-width: 1050px) {
-    body .sk_galery_not_main_category {
+    body .sk_galery_not_main_category,
+    body .sk_page_galery_container {
         width: 80%;
     }
     body .sk_galery_main_category {
@@ -50,6 +51,7 @@
     }
     body #right_sidebar {
         width: 100%;
+        order: 3;
     }
     .call_back {
         background-position: 30% 5px;
