@@ -98,4 +98,8 @@
         width: 80%;
     }
 
+    body #sk_galery_container_holder img {
+        width: auto !important;
+    }
+
 }
