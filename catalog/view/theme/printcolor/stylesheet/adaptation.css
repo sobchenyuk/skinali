@@ -101,5 +101,8 @@
     body #sk_galery_container_holder img {
         width: auto !important;
     }
-
+    .sk_order_holder>.sk_order_form_holder {
+        background: none;
+        box-shadow: 0 0 0 ;
+    }
 }
