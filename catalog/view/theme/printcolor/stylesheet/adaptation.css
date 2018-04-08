@@ -135,4 +135,7 @@
     body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
         width: 30%;
     }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
+        margin: 4px 0;
+    }
 }
