@@ -42,13 +42,23 @@
 }
 
 @media (max-width: 1050px) {
-    .sk_galery_not_main_category {
+    body .sk_galery_not_main_category {
         width: 80%;
     }
-    .sk_galery_main_category {
+    body .sk_galery_main_category {
         width: 20%;
     }
-    aside#right_sidebar {
+    body #right_sidebar {
         width: 100%;
+    }
+    .call_back {
+        background-position: 30% 5px;
+    }
+    .call_back input[type="submit"] {
+        width: 30%;
+    }
+    .call_back input[type="text"] {
+        width: 69%;
+        padding-left: 6px;
     }
 }
