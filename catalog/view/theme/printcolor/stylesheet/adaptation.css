@@ -81,10 +81,14 @@
         width: 20%;
         float: left;
     }
+    .left-gallery .sk_galery_main_category .sk_cat_holder {
+        width: 100%;
+    }
     body .left-gallery .sk_galery_main_category {
-        width: inherit;
+        width: 100%;
     }
     body .rb-gallery-0.rb-gallery {
         width: 80% !important;
     }
+
 }
