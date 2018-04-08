@@ -140,8 +140,22 @@
     }
     body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
         font-size: 26px;
+        width: auto;
+        margin: 0;
     }
     body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
-        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    body #right_sidebar {
+        margin-top: 20px;
+    }
+    .last_comments {
+        float: none;
+        margin-top: 65px;
+        margin-bottom: 18px;
+    }
+    .all_comments {
+        left: 39%;
     }
 }
