@@ -180,4 +180,18 @@
     .comment_reed_this {
         display: block;
     }
+    #sk_galery_container_holder {
+        width: 100%;
+    }
+    .address_main_holder {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .address_main_holder .address_holder {
+        width: 100%;
+        order: 1;
+    }
+    .address_main_holder .map_holder {
+        width: 100%;
+    }
 }
