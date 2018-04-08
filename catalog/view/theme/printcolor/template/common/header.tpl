@@ -47,6 +47,7 @@
 <link href="catalog/view/theme/printcolor/stylesheet/style_Chrome.css" rel="stylesheet">
 <link href="catalog/view/theme/printcolor/stylesheet/new.css" rel="stylesheet">
 
+    <link href="catalog/view/theme/printcolor/stylesheet/adaptation.css" rel="stylesheet">
 
 <script src="catalog/view/javascript/js/script.js" type="text/javascript"></script>
 
