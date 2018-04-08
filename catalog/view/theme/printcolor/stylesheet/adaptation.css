@@ -70,15 +70,15 @@
         flex-wrap: wrap;
     }
 
-    .right-gallery {
+    body .right-gallery {
         width: 80%;
         order: 3;
     }
-    .left-gallery {
+    body .left-gallery {
         width: 20%;
         float: left;
     }
-    .rb-gallery-0.rb-gallery {
+    body .rb-gallery-0.rb-gallery {
         width: 80% !important;
     }
 }
