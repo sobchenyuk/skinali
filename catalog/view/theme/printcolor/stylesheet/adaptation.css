@@ -71,12 +71,18 @@
     }
 
     body .right-gallery {
-        width: 80%;
+        width: 100%;
         order: 3;
+    }
+    body .right-gallery aside#right_sidebar {
+        width: inherit;
     }
     body .left-gallery {
         width: 20%;
         float: left;
+    }
+    body .left-gallery .sk_galery_main_category {
+        width: inherit;
     }
     body .rb-gallery-0.rb-gallery {
         width: 80% !important;
