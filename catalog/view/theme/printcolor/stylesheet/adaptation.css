@@ -2,6 +2,7 @@
     .headerCarousel .owl-nav {
         width: 100%;
         left: 0;
+        margin-left: 0;
     }
     .headerCarousel .owl-nav .owl-prev {
         left: 5%;
@@ -27,5 +28,15 @@
     }
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
         font-size: 12px;
+    }
+    header .sk_first_line.container .sk_first_line_container .right-col {
+        display: none;
+    }
+    header .sk_first_line.container .sk_first_line_container {
+        align-items: center;
+        justify-content: space-around;
+    }
+    .headerCarousel .card .textNode {
+        padding: 1em;
     }
 }
