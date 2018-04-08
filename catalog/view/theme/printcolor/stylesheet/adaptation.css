@@ -61,4 +61,9 @@
         width: 69%;
         padding-left: 6px;
     }
+    .sk_gallery_wraper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
