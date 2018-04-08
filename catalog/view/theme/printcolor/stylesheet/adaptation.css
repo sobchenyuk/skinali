@@ -129,4 +129,10 @@
         width: 100%;
         margin-top: 25px;
     }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+        width: 70%;
+    }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+        width: 30%;
+    }
 }
