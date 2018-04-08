@@ -158,4 +158,26 @@
     .all_comments {
         left: 39%;
     }
+    .comment_demo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .comment_demo li {
+        width: 100%;
+        float: none;
+        background: rgba(0, 0, 0, 0.4);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #e0e0e0;
+        min-height: auto;
+        border-radius: 12px;
+        margin: 1%;
+        padding: 10px 7px 24px;
+        line-height: 1.2;
+    }
+    .comment_reed_this {
+        display: block;
+    }
 }
