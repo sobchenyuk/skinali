@@ -138,4 +138,10 @@
     body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup {
         margin: 4px 0;
     }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+        font-size: 26px;
+    }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts {
+        flex-direction: column;
+    }
 }
