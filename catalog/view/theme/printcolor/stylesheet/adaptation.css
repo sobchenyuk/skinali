@@ -1561,6 +1561,9 @@ footer .socialRow .socialCard:hover .icon {
         float: none;
         overflow: visible;
     }
+    #menu-top .sk_first_line.container .sk_first_line_container .contacts {
+        justify-content: center;
+    }
 
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
