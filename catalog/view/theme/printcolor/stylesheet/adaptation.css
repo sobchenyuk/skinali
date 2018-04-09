@@ -1619,6 +1619,9 @@ footer .socialRow .socialCard:hover .icon {
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li ul {
         display: none;
     }
+    .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li:hover > a {
+        border-bottom: 0;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
