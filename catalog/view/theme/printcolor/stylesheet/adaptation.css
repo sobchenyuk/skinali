@@ -1547,7 +1547,8 @@ footer .socialRow .socialCard:hover .icon {
         width: 100%;
     }
     .topPanel[data-fixed] .sk_logo_holder {
-        position: static;
+        position: relative;
         margin-right: auto;
+        top: 20px;
     }
 }
