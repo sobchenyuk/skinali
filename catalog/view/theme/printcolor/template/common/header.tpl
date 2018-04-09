@@ -261,7 +261,7 @@
         <?php endif; ?>
 
 
-            <header class="container">
+            <header id="home-menu" class="container">
                 <nav class = "sk_main_menu gradient">
                     <div class="menu-glavnoe-menyu-container">
 
