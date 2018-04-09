@@ -1786,6 +1786,7 @@ footer .socialRow .socialCard:hover .icon {
     body .rb-gallery-0.rb-gallery {
         width: 100% !important;
     }
+
 }
 
 @media only screen and (max-width: 500px){
@@ -1824,5 +1825,11 @@ footer .socialRow .socialCard:hover .icon {
         margin: 0 7px;
         border-radius: 8px;
         overflow: hidden;
+    }
+    .sk_first_line_container .free_vizual, .sk_galery_main_category_holder > li:first-child, .sk_galery_main_category_holder > .sk_galery_main_category_color, .sk_color_holder {
+        display: block !important;
+    }
+    .sk_galery_main_category_holder .search_item {
+        display: block !important;
     }
 }
