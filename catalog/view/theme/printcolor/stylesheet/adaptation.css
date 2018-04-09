@@ -1784,3 +1784,10 @@ footer .socialRow .socialCard:hover .icon {
         padding-bottom: 20px;
     }
 }
+
+@media only screen and (max-width: 500px){
+    .whatWeMake .rowCards .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
