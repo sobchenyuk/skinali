@@ -52,6 +52,20 @@ $(document).ready(function () {
     //     })
 
 
+    if(document.querySelectorAll('.burgerCategory').length){
+        document.querySelector('.burgerCategory').onclick = function(){
+            if (this.parentNode.getAttribute('data-status') == 'visab') {
+                this.parentNode.setAttribute('data-status','hidden')
+                this.innerHTML = "Открыть каталог";
+            }
+            else{
+                this.parentNode.setAttribute('data-status','visab')
+                this.innerHTML = "Закрыть каталог";
+            }
+        }
+    }
+
+
     $('.sk_our_sites_holder').append('<a id="arrow_up"></a>'); //кнопка наверх
     $('#arrow_up').attr('href', '#menu_right_trigger')
 
