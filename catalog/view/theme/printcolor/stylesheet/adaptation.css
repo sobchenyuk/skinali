@@ -1555,6 +1555,13 @@ footer .socialRow .socialCard:hover .icon {
         font-size: 14px;
     }
 
+    #menu-top .menu-glavnoe-menyu-container {
+        display: block;
+        position: static;
+        float: none;
+        overflow: visible;
+    }
+
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
