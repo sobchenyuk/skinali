@@ -1479,7 +1479,7 @@ footer .socialRow .socialCard:hover .icon {
     .rb-gallery .col-lg-4 {
         width: 50%;
     }
-    .rb-gallery-list.row {
+    body .rb-gallery-list.row {
         display: flex;
         flex-wrap: wrap;
     }
