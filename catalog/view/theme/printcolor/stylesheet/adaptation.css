@@ -1622,6 +1622,9 @@ footer .socialRow .socialCard:hover .icon {
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li:hover > a {
         border-bottom: 0;
     }
+    header .topPanel[data-fixed] .sk_first_line.container .sk_first_line_container .right-col {
+        display: block !important;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
