@@ -1684,4 +1684,23 @@ footer .socialRow .socialCard:hover .icon {
         padding-bottom: 47%;
         background: url(/catalog/view/theme/printcolor/image/background.png) repeat;
     }
+    body .sk_gallery_wraper>.sk_galery_not_main_category {
+        width: 100%;
+    }
+    .sk_galery_not_main_category_wraper>ul {
+        width: 100%;
+    }
+    body .sk_galery_not_main_category_wraper > ul > li {
+        width: 49%;
+    }
+    .sk_galery_pict_wraper {
+        width: 100%;
+    }
+    .sk_galery_image_wraper {
+        width: 100%;
+    }
+    .sk_galery_image_wraper>a {
+         width: 98%;
+     }
+
 }
