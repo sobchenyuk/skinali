@@ -1826,6 +1826,9 @@ footer .socialRow .socialCard:hover .icon {
     .textSection .text {
         font-size: 16px;
     }
+    .address_main_holder {
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 500px){
