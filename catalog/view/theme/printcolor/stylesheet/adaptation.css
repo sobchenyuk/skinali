@@ -1546,6 +1546,7 @@ footer .socialRow .socialCard:hover .icon {
     }
     #home-menu .sk_main_menu {
         height: 100%;
+        width: 100%;
     }
     #home-menu > nav.sk_main_menu.gradient #menu-glavnoe-menyu li {
         margin: 5px 10px;
@@ -1564,7 +1565,26 @@ footer .socialRow .socialCard:hover .icon {
     #menu-top .sk_first_line.container .sk_first_line_container .contacts {
         justify-content: center;
     }
-
+    .sk_logo_holder {
+        position: static;
+    }
+    #menu-top .menu-glavnoe-menyu-container {
+        margin-top: 0;
+        width: 100%;
+    }
+    #menu-top .right-col {
+        position: relative;
+    }
+    #menu-top .right-col>div {
+        width: 152px;
+        height: 32px;
+        text-align: center;
+        margin: auto;
+    }
+    #menu-top .right-col .orderCallBack {
+        line-height: 30px;
+        padding: 0;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
