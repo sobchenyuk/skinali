@@ -1439,8 +1439,6 @@ footer .socialRow .socialCard:hover .icon {
     }
     .topPanel[data-fixed] header .sk_first_line.container nav.sk_main_menu.gradient {
         width: 90%;
-        position: static;
-        margin-left: 0;
     }
 }
 
