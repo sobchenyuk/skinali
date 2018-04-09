@@ -1514,6 +1514,9 @@ footer .socialRow .socialCard:hover .icon {
     }
 }
 @media (max-width: 769px) {
+    header .sk_first_line.container .sk_first_line_container .contacts .phoneList a {
+        font-size: 14px;
+    }
     .sk_breadcrumbs_holder>a, .sk_breadcrumbs_holder span {
         font-size: 16px !important;
     }
