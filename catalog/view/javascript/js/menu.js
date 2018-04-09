@@ -19,21 +19,21 @@ $(document).ready(function () {
 
 // -------------отзыв конец---------------
 
-    $('.sk_main_menu').append('<div id="menu_right_trigger"></div>'); //Добавляем див. верхнее меню
-    $('#menu_right_trigger').click(function () {
-    $('.sk_category_menu_holder').toggle(
-        function () {$('.sk_category_menu_holder').hide;},
-        function () {$('.sk_category_menu_holder').show;}
-        );
-    });
-
-    $('.sk_main_menu').append('<div id="menu_left_trigger"></div>'); //Добавляем див. верхнее меню
-    $('#menu_left_trigger').click(function () {
-    $('.menu-glavnoe-menyu-container').toggle(
-        function () {$('.menu-glavnoe-menyu-container').hide;},
-        function () {$('.menu-glavnoe-menyu-container').show;}
-        );
-    });
+    // $('.sk_main_menu').append('<div id="menu_right_trigger"></div>'); //Добавляем див. верхнее меню
+    // $('#menu_right_trigger').click(function () {
+    // $('.sk_category_menu_holder').toggle(
+    //     function () {$('.sk_category_menu_holder').hide;},
+    //     function () {$('.sk_category_menu_holder').show;}
+    //     );
+    // });
+    //
+    // $('.sk_main_menu').append('<div id="menu_left_trigger"></div>'); //Добавляем див. верхнее меню
+    // $('#menu_left_trigger').click(function () {
+    // $('.menu-glavnoe-menyu-container').toggle(
+    //     function () {$('.menu-glavnoe-menyu-container').hide;},
+    //     function () {$('.menu-glavnoe-menyu-container').show;}
+    //     );
+    // });
 
     $('.sk_galery_main_category').append('<div id="menu_button"></div>'); //Левый сайдбар
     $('#menu_button').addClass('arrow_right');
