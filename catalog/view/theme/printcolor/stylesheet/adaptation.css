@@ -966,7 +966,7 @@ footer .socialRow .socialCard:hover .icon {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding-left: 15px;
-    background-image: url(catalog/view/theme/printcolor/image/order/selectArrow.png);
+    background-image: url(/catalog/view/theme/printcolor/image/selectArrow.png);
     background-repeat: no-repeat;
     background-position: right 10px center;
     box-sizing: border-box;
