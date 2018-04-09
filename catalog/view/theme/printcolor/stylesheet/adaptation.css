@@ -1802,6 +1802,12 @@ footer .socialRow .socialCard:hover .icon {
     .headerCarousel .card {
         height: 300px;
     }
+    .headerCarousel .owl-nav {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        margin-top: -68px;
+    }
 }
 
 @media only screen and (max-width: 500px){
