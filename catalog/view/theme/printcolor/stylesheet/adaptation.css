@@ -1818,4 +1818,11 @@ footer .socialRow .socialCard:hover .icon {
         position: static;
         margin: 0;
     }
+    footer .socialRow .socialCard {
+        width: 40px;
+        height: 40px;
+        margin: 0 7px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
 }
