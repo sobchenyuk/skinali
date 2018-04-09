@@ -1601,6 +1601,13 @@ footer .socialRow .socialCard:hover .icon {
         margin-top: 25px;
         z-index: 1000;
     }
+    .topPanel[data-fixed] .naver {
+        position: relative;
+        top: 0;
+    }
+    .topPanel[data-fixed] .sk_first_line.container nav.sk_main_menu.gradient {
+        width: 100%;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
