@@ -1523,6 +1523,17 @@ footer .socialRow .socialCard:hover .icon {
     .sk_breadcrumbs {
         margin-bottom: 0;
     }
+    header > nav.sk_main_menu.gradient .menu-glavnoe-menyu-container {
+        display: block;
+        position: static;
+    }
+    header > .sk_main_menu li {
+        border: 0;
+        background: none;
+        box-shadow: 0 0 0 0;
+    }
+
+
 
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
