@@ -1469,6 +1469,20 @@ footer .socialRow .socialCard:hover .icon {
         width: 100%;
         font-size: 12px;
     }
+    body .left-gallery {
+        width: 30%;
+        float: left;
+    }
+    body .rb-gallery-0.rb-gallery {
+        width: 70% !important;
+    }
+    .rb-gallery .col-lg-4 {
+        width: 50%;
+    }
+    .rb-gallery-list.row {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 @media (max-width: 776px) {
 
