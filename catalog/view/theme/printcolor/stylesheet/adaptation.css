@@ -1743,4 +1743,32 @@ footer .socialRow .socialCard:hover .icon {
     .sk_order_form {
         padding-bottom: 20px;
     }
+    .burgerCategory {
+        display: block;
+        position: fixed;
+        color: #05c7fd;
+        border: 1px solid #fff;
+        font-size: 22px;
+        padding: 0 10px;
+        line-height: 22px;
+        margin-top: 100px;
+        line-height: 38px;
+        top: 50%;
+        margin-left: 11px;
+        left: 0;
+        z-index: 30;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: rotateZ(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotateZ(-90deg);
+        font-weight: 400;
+        letter-spacing: 2px;
+        background-color: #000003;
+        -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+        border: 0;
+    }
 }
