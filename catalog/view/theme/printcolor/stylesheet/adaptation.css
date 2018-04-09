@@ -1723,4 +1723,10 @@ footer .socialRow .socialCard:hover .icon {
         order: 1;
         margin-top: 25px;
     }
+    .content .middle-sector {
+        padding: 0;
+    }
+    .content .middle-sector .rowInfoNode {
+        padding: 0 10px;
+    }
 }
