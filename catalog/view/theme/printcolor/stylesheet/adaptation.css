@@ -1444,6 +1444,12 @@ footer .socialRow .socialCard:hover .icon {
         margin-top: 0;
         width: 100%;
     }
+    .call_back .form_holder {
+        display: flex;
+    }
+    .container {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 776px) {
