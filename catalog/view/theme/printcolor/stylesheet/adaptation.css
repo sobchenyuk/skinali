@@ -1498,6 +1498,9 @@ footer .socialRow .socialCard:hover .icon {
     header>.sk_main_menu .menu-glavnoe-menyu-container {
         margin-top: 0;
     }
+    body .sk_galery_not_main_category_wraper > ul > li {
+        width: 47%;
+    }
 }
 @media (max-width: 776px) {
 
