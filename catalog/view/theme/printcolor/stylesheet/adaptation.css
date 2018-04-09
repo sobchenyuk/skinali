@@ -1573,4 +1573,7 @@ footer .socialRow .socialCard:hover .icon {
     #sk_html_block .sk_first_line.container {
         margin-bottom: 5px;
     }
+    .topPanel[data-fixed] .naver {
+        margin-bottom: -13px;
+    }
 }
