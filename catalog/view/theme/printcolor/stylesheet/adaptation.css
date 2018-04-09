@@ -1501,6 +1501,10 @@ footer .socialRow .socialCard:hover .icon {
     body .sk_galery_not_main_category_wraper > ul > li {
         width: 47%;
     }
+    .sk_galery_search_holder input[type="text"] {
+        margin-left: 3px;
+        width: 70%;
+    }
 }
 @media (max-width: 776px) {
 
