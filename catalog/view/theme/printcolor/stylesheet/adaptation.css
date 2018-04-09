@@ -1495,6 +1495,9 @@ footer .socialRow .socialCard:hover .icon {
         top: 0;
         z-index: 100;
     }
+    header>.sk_main_menu .menu-glavnoe-menyu-container {
+        margin-top: 0;
+    }
 }
 @media (max-width: 776px) {
 
