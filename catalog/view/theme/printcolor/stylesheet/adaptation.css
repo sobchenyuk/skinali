@@ -1483,6 +1483,9 @@ footer .socialRow .socialCard:hover .icon {
         display: flex;
         flex-wrap: wrap;
     }
+    header>.sk_main_menu ul {
+        justify-content: space-around;
+    }
 }
 @media (max-width: 776px) {
 
