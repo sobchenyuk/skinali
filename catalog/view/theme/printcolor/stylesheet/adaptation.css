@@ -1783,6 +1783,9 @@ footer .socialRow .socialCard:hover .icon {
         padding-top: 0;
         padding-bottom: 20px;
     }
+    body .rb-gallery-0.rb-gallery {
+        width: 100% !important;
+    }
 }
 
 @media only screen and (max-width: 500px){
