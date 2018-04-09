@@ -1772,11 +1772,11 @@ footer .socialRow .socialCard:hover .icon {
         transition-duration: .5s;
         border: 0;
     }
-    #sk_galery[data-status="visab"] .burgerCategory {
+    [data-status="visab"] .burgerCategory, .left-gallery {
         left: 258px;
         white-space: nowrap;
     }
-    #sk_galery[data-status="visab"] .sk_galery_main_category {
+    [data-status="visab"] .sk_galery_main_category {
         -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
         border-right: 0;
@@ -1789,5 +1789,8 @@ footer .socialRow .socialCard:hover .icon {
     .whatWeMake .rowCards .card {
         width: 100%;
         max-width: 400px;
+    }
+    body .rb-gallery .col-lg-4 {
+        width: 100%;
     }
 }
