@@ -142,7 +142,7 @@
             </div>
             
 
-<header>
+<header id="menu-top">
 	<?php $curr_url = $_SERVER['REQUEST_URI'];?>
 	<?php //echo $curr_url; ?>
 	<?php //echo $_SERVER['HTTP_USER_AGENT']; ?>
