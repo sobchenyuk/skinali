@@ -1729,7 +1729,7 @@ footer .socialRow .socialCard:hover .icon {
     .content .middle-sector .rowInfoNode {
         padding: 0 10px;
     }
-    .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
         font-size: 21px;
     }
 }
