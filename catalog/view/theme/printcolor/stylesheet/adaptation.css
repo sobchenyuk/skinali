@@ -1514,6 +1514,16 @@ footer .socialRow .socialCard:hover .icon {
     }
 }
 @media (max-width: 769px) {
+
+    .sk_main_header_holder a {
+        padding: 0;
+        font-size: 21px;
+        margin: 10px;
+    }
+    .sk_breadcrumbs {
+        margin-bottom: 0;
+    }
+
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
@@ -1588,14 +1598,7 @@ footer .socialRow .socialCard:hover .icon {
     /*.topPanel[data-fixed] .naver {*/
         /*margin-bottom: -13px;*/
     /*}*/
-    .sk_main_header_holder a {
-        padding: 0;
-        font-size: 21px;
-        margin: 10px;
-    }
-    /*.sk_breadcrumbs {*/
-        /*margin-bottom: 0;*/
-    /*}*/
+
     /*.topPanel[data-fixed] .menu-glavnoe-menyu-container {*/
         /*max-width: 769px;*/
         /*overflow-x: scroll;*/
