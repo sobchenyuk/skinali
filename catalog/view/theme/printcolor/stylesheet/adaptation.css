@@ -1518,8 +1518,10 @@ footer .socialRow .socialCard:hover .icon {
         display: block;
         position: static;
     }
-    .topPanel[data-fixed] .menu-glavnoe-menyu-container {
-        position: absolute;
+    .topPanel[data-fixed] .naver {
+        flex-wrap: initial;
+        overflow-y: scroll;
+        padding-left: 20px;
     }
     header .sk_first_line.container .sk_first_line_container .contacts {
         justify-content: center;
