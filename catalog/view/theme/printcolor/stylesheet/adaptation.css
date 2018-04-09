@@ -1786,7 +1786,13 @@ footer .socialRow .socialCard:hover .icon {
     body .rb-gallery-0.rb-gallery {
         width: 100% !important;
     }
-
+    .headerCarousel .card .textNode .title {
+        font-size: 20px;
+    }
+    .headerCarousel .card .textNode .text {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
 
 @media only screen and (max-width: 500px){
@@ -1854,5 +1860,9 @@ footer .socialRow .socialCard:hover .icon {
     }
     .sk_gallery_holder .sk_galery_container #sk_galery_container_holder>h3 {
         font-size: 16px;
+    }
+    #home-menu > nav.sk_main_menu.gradient #menu-glavnoe-menyu li {
+        margin: 5px 10px;
+        padding: 0;
     }
 }
