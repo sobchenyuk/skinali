@@ -1505,6 +1505,13 @@ footer .socialRow .socialCard:hover .icon {
         margin-left: 3px;
         width: 70%;
     }
+    #callBack .popuperContent .bodyPop {
+        width: 90%;
+    }
+    body #callBack .popuperContent {
+        width: 85%;
+        margin: auto;
+    }
 }
 @media (max-width: 776px) {
 
