@@ -1514,7 +1514,7 @@ footer .socialRow .socialCard:hover .icon {
     }
 }
 @media (max-width: 769px) {
-    body .topPanel[data-fixed] .menu-glavnoe-menyu-container {
+    body .menu-glavnoe-menyu-container {
         display: block;
         position: static;
     }
