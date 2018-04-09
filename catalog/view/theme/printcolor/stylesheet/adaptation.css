@@ -1562,4 +1562,9 @@ footer .socialRow .socialCard:hover .icon {
     .headerCarousel .card .textNode > div {
         width: 80%;
     }
+    header > .sk_main_menu li {
+        border-right: 0;
+        background: none;
+        box-shadow: 0 0 0 0;
+    }
 }
