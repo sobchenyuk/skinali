@@ -1793,6 +1793,12 @@ footer .socialRow .socialCard:hover .icon {
         font-size: 14px;
         line-height: 18px;
     }
+    .headerCarousel .card .textNode .link {
+        font-size: 14px;
+        line-height: 30px;
+        width: auto;
+        padding: 0 20px;
+    }
 }
 
 @media only screen and (max-width: 500px){
