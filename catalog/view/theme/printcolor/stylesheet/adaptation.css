@@ -1585,6 +1585,9 @@ footer .socialRow .socialCard:hover .icon {
         line-height: 30px;
         padding: 0;
     }
+    #menu-top .sk_first_line_container ul {
+        padding-top: 0;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
