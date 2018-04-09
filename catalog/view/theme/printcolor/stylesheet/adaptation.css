@@ -1599,6 +1599,7 @@ footer .socialRow .socialCard:hover .icon {
     .sk_logo_holder {
         width: 45px;
         margin-top: 25px;
+        z-index: 1000;
     }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
