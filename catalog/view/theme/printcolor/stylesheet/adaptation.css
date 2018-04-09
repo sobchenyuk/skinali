@@ -1612,6 +1612,13 @@ footer .socialRow .socialCard:hover .icon {
         width: 5%;
         margin-right: auto;
     }
+    .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li ul {
+        display: none;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
