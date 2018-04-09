@@ -1424,6 +1424,17 @@ footer .socialRow .socialCard:hover .icon {
     header .sk_first_line.container .sk_main_menu li {
         margin: 0;
     }
+
+    .right-col {
+         position: absolute;
+         right: 0;
+    }
+
+    .popuperContent.formContent {
+        width: 85%;
+        margin: auto;
+    }
+
 }
 
 @media (max-width: 776px) {
