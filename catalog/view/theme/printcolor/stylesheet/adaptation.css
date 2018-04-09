@@ -1845,4 +1845,7 @@ footer .socialRow .socialCard:hover .icon {
         align-items: center;
         flex-direction: column;
     }
+    .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+        font-size: 14px;
+    }
 }
