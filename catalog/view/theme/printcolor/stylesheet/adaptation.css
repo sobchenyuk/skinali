@@ -1852,4 +1852,7 @@ footer .socialRow .socialCard:hover .icon {
         width: 100%;
         padding-left: 0;
     }
+    .sk_gallery_holder .sk_galery_container #sk_galery_container_holder>h3 {
+        font-size: 16px;
+    }
 }
