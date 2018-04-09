@@ -1551,4 +1551,12 @@ footer .socialRow .socialCard:hover .icon {
         margin-right: auto;
         top: 20px;
     }
+    .topPanel[data-fixed] .right-col {
+        position: absolute;
+        top: 22px;
+        display: block !important;
+    }
+    .topPanel[data-fixed] .orderCallBack {
+        display: block !important;
+    }
 }
