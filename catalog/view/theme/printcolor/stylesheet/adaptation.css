@@ -1537,4 +1537,10 @@ footer .socialRow .socialCard:hover .icon {
         line-height: 30px;
         padding: 0;
     }
+    .sk_logo_holder {
+        position: absolute;
+        top: 30px;
+        z-index: 100;
+        width: 45px;
+    }
 }
