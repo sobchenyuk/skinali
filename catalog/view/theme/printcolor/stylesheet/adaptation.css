@@ -1732,4 +1732,8 @@ footer .socialRow .socialCard:hover .icon {
     body .content .middle-sector .rowInfoNode .rowIntoProduct .col-right .rowSocialProducts .resultsPrice {
         font-size: 21px;
     }
+    .sk_order_form_holder {
+        -webkit-box-shadow: 0 0 2px #000;
+        box-shadow: 0 0 2px #000;
+    }
 }
