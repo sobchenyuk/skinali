@@ -1638,6 +1638,10 @@ footer .socialRow .socialCard:hover .icon {
     .popuper#callBack .popuperContent .bodyPop .titleField {
         font-size: 14px;
     }
+    #callBack .popuperContent .headerPop .close {
+        width: 25px;
+        height: 25px;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
