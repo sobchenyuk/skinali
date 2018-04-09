@@ -1567,4 +1567,10 @@ footer .socialRow .socialCard:hover .icon {
         background: none;
         box-shadow: 0 0 0 0;
     }
+    header > .sk_main_menu li a {
+        font-size: 14px;
+    }
+    #sk_html_block .sk_first_line.container {
+        margin-bottom: 5px;
+    }
 }
