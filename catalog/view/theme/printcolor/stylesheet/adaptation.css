@@ -1545,11 +1545,13 @@ footer .socialRow .socialCard:hover .icon {
     }
     .topPanel[data-fixed] .sk_first_line.container nav.sk_main_menu.gradient {
         width: 100%;
+        z-index: 100;
     }
     .topPanel[data-fixed] .sk_logo_holder {
         position: relative;
         margin-right: auto;
         top: 20px;
+        z-index: 1000;
     }
     .topPanel[data-fixed] .right-col {
         position: absolute;
