@@ -1614,7 +1614,8 @@ footer .socialRow .socialCard:hover .icon {
     }
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
         padding-bottom: 0;
-        margin-bottom: 0;
+        white-space: nowrap;
+        margin: 0 10px;
     }
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li ul {
         display: none;
@@ -1641,6 +1642,21 @@ footer .socialRow .socialCard:hover .icon {
     #callBack .popuperContent .headerPop .close {
         width: 25px;
         height: 25px;
+    }
+    #menu-top .topPanel[data-fixed] .naver {
+        max-width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: initial;
+        -ms-flex-wrap: initial;
+        flex-wrap: initial;
+        overflow-x: scroll;
+        padding-left: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: #191919;
     }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
