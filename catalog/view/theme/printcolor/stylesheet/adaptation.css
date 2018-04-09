@@ -1594,4 +1594,8 @@ footer .socialRow .socialCard:hover .icon {
     .sk_breadcrumbs {
         margin-bottom: 0;
     }
+    .topPanel[data-fixed] .menu-glavnoe-menyu-container {
+        max-width: 769px;
+        overflow-y: scroll;
+    }
 }
