@@ -1832,4 +1832,7 @@ footer .socialRow .socialCard:hover .icon {
     .sk_galery_main_category_holder .search_item {
         display: block !important;
     }
+    .all_comments {
+        left: 13%;
+    }
 }
