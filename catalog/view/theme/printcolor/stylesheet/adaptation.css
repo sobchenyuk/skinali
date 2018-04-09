@@ -1796,4 +1796,26 @@ footer .socialRow .socialCard:hover .icon {
     body .rb-gallery .col-lg-4 {
         width: 100%;
     }
+    footer > div {
+        width: 100%;
+    }
+    footer address {
+        padding-left: 0;
+        margin-top: 25px;
+        line-height: 1.2;
+    }
+    footer .socialRow {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 25px;
+        justify-content: center;
+    }
+    footer .socialRow .socialCard .icon {
+        height: 100%;
+        width: 100%;
+        position: static;
+        margin: 0;
+    }
 }
