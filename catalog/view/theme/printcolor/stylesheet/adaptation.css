@@ -1609,7 +1609,7 @@ footer .socialRow .socialCard:hover .icon {
         width: 100%;
     }
     .topPanel[data-fixed] .sk_logo_holder {
-        width: 5%;
+        width: 40px;
         margin-right: auto;
     }
     .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
