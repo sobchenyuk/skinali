@@ -1612,7 +1612,7 @@ footer .socialRow .socialCard:hover .icon {
         width: 40px;
         margin-right: auto;
     }
-    .topPanel[data-fixed] .menu-glavnoe-menyu-container .naver li a {
+    #menu-top .menu-glavnoe-menyu-container .naver li a {
         padding-bottom: 0;
         white-space: nowrap;
         margin: 0 10px;
@@ -1643,7 +1643,7 @@ footer .socialRow .socialCard:hover .icon {
         width: 25px;
         height: 25px;
     }
-    #menu-top .topPanel[data-fixed] .naver {
+    #menu-top .naver {
         max-width: 100%;
         display: -webkit-box;
         display: -webkit-flex;
