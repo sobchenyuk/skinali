@@ -1678,8 +1678,8 @@ footer .socialRow .socialCard:hover .icon {
         -webkit-transition-duration: .5s;
         -o-transition-duration: .5s;
         transition-duration: .5s;
-        /* -webkit-transform: rotateY(-90deg); */
-        /* transform: rotateY(-90deg); */
+         -webkit-transform: rotateY(-90deg);
+         transform: rotateY(-90deg);
         max-width: 270px;
         padding-bottom: 47%;
         background: url(/catalog/view/theme/printcolor/image/background.png) repeat;
