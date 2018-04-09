@@ -35,20 +35,21 @@ $(document).ready(function () {
     //     );
     // });
 
-    $('.sk_galery_main_category').append('<div id="menu_button"></div>'); //Левый сайдбар
-    $('#menu_button').addClass('arrow_right');
-    $('#menu_button').click(function () {
-            if ($('#menu_button').hasClass('arrow_right')) {
-                $('.sk_galery_main_category').css('left', '0')
-                $('#menu_button').removeClass('arrow_right') && $('#menu_button').addClass('arrow_left');
-            }
-            else { 
-                if ($('#menu_button').hasClass('arrow_left')) {
-                    $('.sk_galery_main_category').css('left', '-51%')
-                    $('#menu_button').removeClass('arrow_left') && $('#menu_button').addClass('arrow_right');
-                };
-            }
-        })
+    // $('.sk_galery_main_category').append('<div id="menu_button"></div>'); //Левый сайдбар
+    $('.sk_galery_main_category').before("<div class=\"burgerCategory\">Открыть каталог</div>");
+    // $('#menu_button').addClass('arrow_right');
+    // $('#menu_button').click(function () {
+    //         if ($('#menu_button').hasClass('arrow_right')) {
+    //             $('.sk_galery_main_category').css('left', '0')
+    //             $('#menu_button').removeClass('arrow_right') && $('#menu_button').addClass('arrow_left');
+    //         }
+    //         else {
+    //             if ($('#menu_button').hasClass('arrow_left')) {
+    //                 $('.sk_galery_main_category').css('left', '-51%')
+    //                 $('#menu_button').removeClass('arrow_left') && $('#menu_button').addClass('arrow_right');
+    //             };
+    //         }
+    //     })
 
 
     $('.sk_our_sites_holder').append('<a id="arrow_up"></a>'); //кнопка наверх
