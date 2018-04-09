@@ -1487,6 +1487,9 @@ footer .socialRow .socialCard:hover .icon {
         display: flex;
         justify-content: space-around;
     }
+    #sk_html_block body.information-information-89 .container.container_center .sk_breadcrumbs {
+        width: 100%;
+    }
 }
 @media (max-width: 776px) {
 
