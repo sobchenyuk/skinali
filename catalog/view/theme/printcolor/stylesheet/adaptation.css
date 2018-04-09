@@ -1430,7 +1430,7 @@ footer .socialRow .socialCard:hover .icon {
          right: 0;
     }
 
-    .popuperContent.formContent {
+    body .popuperContent.formContent {
         width: 85%;
         margin: auto;
     }
