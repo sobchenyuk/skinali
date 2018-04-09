@@ -1661,84 +1661,27 @@ footer .socialRow .socialCard:hover .icon {
         box-sizing: border-box;
         background-color: #191919;
     }
-    /*body .menu-glavnoe-menyu-container {*/
-        /*display: block;*/
-        /*position: static;*/
-    /*}*/
-    /*.topPanel[data-fixed] .naver {*/
-        /*flex-wrap: initial;*/
-        /*overflow-x: scroll;*/
-        /*padding-left: 20px;*/
-        /*min-width: 800px;*/
-        /*position: absolute;*/
-    /*}*/
-    /*header .sk_first_line.container .sk_first_line_container .contacts {*/
-        /*justify-content: center;*/
-    /*}*/
-    /*.right-col {*/
-        /*position: absolute;*/
-        /*top: 35px;*/
-        /*margin: auto;*/
-        /*width: 100%;*/
-    /*}*/
-    /*.right-col>div {*/
-         /*width: 152px;*/
-         /*height: 32px;*/
-         /*text-align: center;*/
-         /*margin: auto;*/
-     /*}*/
-    /*.right-col .orderCallBack {*/
-        /*line-height: 30px;*/
-        /*padding: 0;*/
-    /*}*/
-    /*.sk_logo_holder {*/
-        /*position: absolute;*/
-        /*top: 30px;*/
-        /*z-index: 1000;*/
-        /*width: 45px;*/
-    /*}*/
-    /*.topPanel[data-fixed] .sk_first_line.container nav.sk_main_menu.gradient {*/
-        /*width: 100%;*/
-        /*z-index: 1000;*/
-        /*padding-top: 12px;*/
-    /*}*/
-    /*.topPanel[data-fixed] .sk_logo_holder {*/
-        /*position: relative;*/
-        /*margin-right: auto;*/
-        /*top: 20px;*/
-        /*z-index: 10000;*/
-    /*}*/
-    /*.topPanel[data-fixed] .right-col {*/
-        /*position: absolute;*/
-        /*top: 22px;*/
-        /*display: block !important;*/
-        /*z-index: 1000;*/
-        /*cursor: default;*/
-    /*}*/
-    /*.topPanel[data-fixed] .orderCallBack {*/
-        /*display: block !important;*/
-    /*}*/
-    /*.headerCarousel .card .textNode > div {*/
-        /*width: 80%;*/
-    /*}*/
-    /*header > .sk_main_menu li {*/
-        /*border: 0;*/
-        /*background: none;*/
-        /*box-shadow: 0 0 0 0;*/
-    /*}*/
-    /*header > .sk_main_menu li a {*/
-        /*font-size: 14px;*/
-    /*}*/
-    /*#sk_html_block .sk_first_line.container {*/
-        /*margin-bottom: 5px;*/
-    /*}*/
-    /*.topPanel[data-fixed] .naver {*/
-        /*margin-bottom: -13px;*/
-    /*}*/
 
-    /*.topPanel[data-fixed] .menu-glavnoe-menyu-container {*/
-        /*max-width: 769px;*/
-        /*overflow-x: scroll;*/
-        /*height: 50px;*/
-    /*}*/
+    .sk_galery_main_category {
+        position: fixed;
+        left: 0;
+        height: 100%;
+        padding: 0 10px;
+        z-index: 1000;
+        top: 0;
+        padding-top: 85px;
+        border-right: 2px solid #fff;
+        overflow-y: scroll;
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transition-duration: .5s;
+        -o-transition-duration: .5s;
+        transition-duration: .5s;
+        /* -webkit-transform: rotateY(-90deg); */
+        /* transform: rotateY(-90deg); */
+        max-width: 270px;
+        padding-bottom: 47%;
+        background: url(/catalog/view/theme/printcolor/image/background.png) repeat;
+    }
 }
