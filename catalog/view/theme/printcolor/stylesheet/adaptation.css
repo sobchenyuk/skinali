@@ -1522,6 +1522,8 @@ footer .socialRow .socialCard:hover .icon {
         flex-wrap: initial;
         overflow-x: scroll;
         padding-left: 20px;
+        min-width: 800px;
+        position: absolute;
     }
     header .sk_first_line.container .sk_first_line_container .contacts {
         justify-content: center;
