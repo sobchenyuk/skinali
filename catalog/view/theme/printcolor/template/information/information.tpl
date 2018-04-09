@@ -29,6 +29,10 @@
 
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
+<div class="sk_main_header_holder">
+	<h1><a href="#"><?=$heading_title?></a></h1>
+</div>
+
 <div class="sk_gallery_wraper">
 
 <div class="right-gallery">
