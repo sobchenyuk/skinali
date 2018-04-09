@@ -1476,7 +1476,7 @@ footer .socialRow .socialCard:hover .icon {
     body .rb-gallery-0.rb-gallery {
         width: 70% !important;
     }
-    .rb-gallery .col-lg-4 {
+    body .rb-gallery .col-lg-4 {
         width: 50%;
     }
     body .rb-gallery-list.row {
