@@ -359,21 +359,21 @@ header>.sk_main_menu {
     z-index: 10000;
 }
 
-.popuper#callBack[data-status="visab"] {
+#callBack[data-status="visab"] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
 }
 
-.popuper#callBack .popuperContent {
+#callBack .popuperContent {
     background-color: #191919;
     width: 840px;
     -webkit-box-shadow: 0 0 4px #000;
     box-shadow: 0 0 4px #000;
 }
 
-.popuper#callBack .popuperContent .headerPop {
+#callBack .popuperContent .headerPop {
     font-size: 18px;
     color: #00c7fd;
     text-align: center;
@@ -382,7 +382,7 @@ header>.sk_main_menu {
     position: relative;
 }
 
-.popuper#callBack .popuperContent .headerPop .close {
+#callBack .popuperContent .headerPop .close {
     border: 1px solid #000;
     border-top: 1px solid #383838;
     width: 38px;
@@ -415,12 +415,12 @@ header>.sk_main_menu {
 }
 
 
-.popuper#callBack .popuperContent .headerPop .close:hover {
+#callBack .popuperContent .headerPop .close:hover {
     border-color: #00c7fd;
     background-image: url("/catalog/view/theme/printcolor/img/close.png");
 }
 
-.popuper#callBack .popuperContent .bodyPop {
+#callBack .popuperContent .bodyPop {
     width: 680px;
     margin: 0 auto;
     border: 1px solid #232323;
@@ -428,29 +428,29 @@ header>.sk_main_menu {
     padding: 15px 0 25px;
 }
 
-.popuper#callBack .popuperContent .bodyPop .titleField {
+#callBack .popuperContent .bodyPop .titleField {
     font-size: 22px;
     color: #d2d2d2;
     margin-bottom: 22px;
 }
 
-.popuper#callBack .popuperContent .bodyPop .placeWrite {
+#callBack .popuperContent .bodyPop .placeWrite {
     font-size: 22px;
     color: #d2d2d2;
     border: 0;
     background-color: transparent;
 }
 
-.popuper#callBack .popuperContent .row {
+#callBack .popuperContent .row {
     width: 100%;
 }
 
-.popuper#callBack .popuperContent .rowButton {
+#callBack .popuperContent .rowButton {
     width: 100%;
     text-align: center;
 }
 
-.popuper#callBack .popuperContent .rowButton .btn {
+#callBack .popuperContent .rowButton .btn {
     font-size: 24px;
     color: #00c7fd;
     border: 1px solid #00c7fd;
@@ -466,7 +466,7 @@ header>.sk_main_menu {
     transition-duration: .25s;
 }
 
-.popuper#callBack .popuperContent .rowButton .btn:hover {
+#callBack .popuperContent .rowButton .btn:hover {
     background-color: #00c7fd;
     color: #191919;
 }
