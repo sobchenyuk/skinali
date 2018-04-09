@@ -73,7 +73,7 @@ header .sk_first_line.container .sk_first_line_container .contacts {
     padding-left: 0;
     margin-left: 0;
     position: absolute;
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     top: -40px;
