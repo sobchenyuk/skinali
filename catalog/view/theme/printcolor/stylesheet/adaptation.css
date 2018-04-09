@@ -1459,6 +1459,10 @@ footer .socialRow .socialCard:hover .icon {
         width: 48%;
         max-width: 400px;
     }
+    .sk_page_galery_container table {
+        margin: auto;
+        width: 100%;
+    }
 }
 @media (max-width: 776px) {
 
