@@ -1599,5 +1599,6 @@ footer .socialRow .socialCard:hover .icon {
     .topPanel[data-fixed] .menu-glavnoe-menyu-container {
         max-width: 769px;
         overflow-x: scroll;
+        height: 50px;
     }
 }
