@@ -1799,6 +1799,9 @@ footer .socialRow .socialCard:hover .icon {
         width: auto;
         padding: 0 20px;
     }
+    .headerCarousel .card {
+        height: 300px;
+    }
 }
 
 @media only screen and (max-width: 500px){
