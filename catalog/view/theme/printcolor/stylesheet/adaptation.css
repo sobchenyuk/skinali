@@ -1608,6 +1608,10 @@ footer .socialRow .socialCard:hover .icon {
     .topPanel[data-fixed] .sk_first_line.container nav.sk_main_menu.gradient {
         width: 100%;
     }
+    .topPanel[data-fixed] .sk_logo_holder {
+        width: 5%;
+        margin-right: auto;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
