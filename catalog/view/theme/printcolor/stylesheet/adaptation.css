@@ -1625,6 +1625,9 @@ footer .socialRow .socialCard:hover .icon {
     header .topPanel[data-fixed] .sk_first_line.container .sk_first_line_container .right-col {
         display: table;
     }
+    .topPanel[data-fixed] .orderCallBack {
+        display: block !important;
+    }
     /*body .menu-glavnoe-menyu-container {*/
         /*display: block;*/
         /*position: static;*/
