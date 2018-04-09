@@ -9,6 +9,9 @@
     font-weight: 700;
 }
 
+.burgerCategory {
+    display: none;
+}
 .sk_page_galery_container table {
     margin: 0 -5%;
 }
