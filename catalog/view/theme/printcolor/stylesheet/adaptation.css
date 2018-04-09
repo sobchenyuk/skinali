@@ -1484,6 +1484,7 @@ footer .socialRow .socialCard:hover .icon {
         flex-wrap: wrap;
     }
     header>.sk_main_menu ul {
+        display: flex;
         justify-content: space-around;
     }
 }
