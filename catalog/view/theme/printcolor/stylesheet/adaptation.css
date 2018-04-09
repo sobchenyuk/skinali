@@ -1527,12 +1527,12 @@ footer .socialRow .socialCard:hover .icon {
         display: block;
         position: static;
     }
-    header > nav.sk_main_menu.gradient .menu-glavnoe-menyu-container .sk_main_menu li {
+    header > nav.sk_main_menu.gradient .sk_main_menu .menu-glavnoe-menyu-container li {
         border: 0;
         background: none;
         box-shadow: 0 0 0 0;
     }
-    header > nav.sk_main_menu.gradient .menu-glavnoe-menyu-container .sk_main_menu ul {
+    header > nav.sk_main_menu.gradient .sk_main_menu .menu-glavnoe-menyu-container ul {
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
