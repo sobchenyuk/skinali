@@ -1771,4 +1771,15 @@ footer .socialRow .socialCard:hover .icon {
         transition-duration: .5s;
         border: 0;
     }
+    #sk_galery[data-status="visab"] .burgerCategory {
+        left: 258px;
+        white-space: nowrap;
+    }
+    #sk_galery[data-status="visab"] .sk_galery_main_category {
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-right: 0;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
 }
