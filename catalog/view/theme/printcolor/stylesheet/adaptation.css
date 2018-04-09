@@ -1816,7 +1816,16 @@ footer .socialRow .socialCard:hover .icon {
         padding: 0;
         margin-bottom: 10px;
     }
-
+    .whatWeMake .rowCards .card .name {
+        font-size: 22px;
+        color: #00c7fd;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+    .textSection .text {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 500px){
