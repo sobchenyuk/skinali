@@ -1848,4 +1848,8 @@ footer .socialRow .socialCard:hover .icon {
     .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
         font-size: 14px;
     }
+    header .sk_first_line.container .sk_first_line_container .contacts {
+        width: 100%;
+        padding-left: 0;
+    }
 }
