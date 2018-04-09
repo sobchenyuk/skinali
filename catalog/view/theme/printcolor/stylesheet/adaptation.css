@@ -1703,4 +1703,24 @@ footer .socialRow .socialCard:hover .icon {
          width: 98%;
      }
 
+    body .sk_galery_not_main_category, body .sk_page_galery_container, body .sk_galery_container, body .sk_archive_holder, body .sk_order_holder > .sk_order_form_holder {
+        width: 100%;
+    }
+    .content .rowTitlePage .title {
+        font-size: 21px;
+    }
+    .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup label {
+        font-size: 16px;
+    }
+    .content .middle-sector .rowInfoNode .rowIntoProduct {
+        float: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    body .content .middle-sector .rowInfoNode .rowIntoProduct .col-left {
+        width: 100%;
+        order: 1;
+        margin-top: 25px;
+    }
 }
