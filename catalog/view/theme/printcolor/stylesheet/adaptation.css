@@ -1550,18 +1550,21 @@ footer .socialRow .socialCard:hover .icon {
     }
     .topPanel[data-fixed] .sk_first_line.container nav.sk_main_menu.gradient {
         width: 100%;
-        z-index: 100;
+        z-index: 1000;
+        padding-top: 12px;
     }
     .topPanel[data-fixed] .sk_logo_holder {
         position: relative;
         margin-right: auto;
         top: 20px;
-        z-index: 1000;
+        z-index: 10000;
     }
     .topPanel[data-fixed] .right-col {
         position: absolute;
         top: 22px;
         display: block !important;
+        z-index: 1000;
+        cursor: default;
     }
     .topPanel[data-fixed] .orderCallBack {
         display: block !important;
