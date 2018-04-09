@@ -1588,11 +1588,11 @@ footer .socialRow .socialCard:hover .icon {
     /*.topPanel[data-fixed] .naver {*/
         /*margin-bottom: -13px;*/
     /*}*/
-    /*.sk_main_header_holder a {*/
-        /*padding: 0;*/
-        /*font-size: 21px;*/
-        /*margin: 10px;*/
-    /*}*/
+    .sk_main_header_holder a {
+        padding: 0;
+        font-size: 21px;
+        margin: 10px;
+    }
     /*.sk_breadcrumbs {*/
         /*margin-bottom: 0;*/
     /*}*/
