@@ -1523,6 +1523,7 @@ footer .socialRow .socialCard:hover .icon {
     }
     .right-col {
         position: absolute;
+        top: 35px;
         margin: auto;
         width: 100%;
     }
@@ -1532,5 +1533,8 @@ footer .socialRow .socialCard:hover .icon {
          text-align: center;
          margin: auto;
      }
-
+    .right-col .orderCallBack {
+        line-height: 30px;
+        padding: 0;
+    }
 }
