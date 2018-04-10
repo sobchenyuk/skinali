@@ -116,7 +116,7 @@ class ControllerCommonColumnRight extends Controller {
 						$rating = $total_rating['vote-rating'];
 						$new_total = $total + 1;
 
-						$new_rating = ($total + $num) * 4.5;
+						$new_rating = ($total + $num) * 4.5 + 1;
 
 
 						$set_rating_data = $this->model_tool_rating->setRating($new_total, $new_rating);
