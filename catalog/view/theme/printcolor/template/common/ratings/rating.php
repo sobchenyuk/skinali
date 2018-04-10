@@ -60,7 +60,7 @@ function rating($total, $rating) {
  ';
 
   $richSnp = '<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="'.($abs).'"><meta itemprop="worstRating" content="1"/><meta itemprop="bestRating" content="5"><meta itemprop="ratingCount" content="'.$total.'"></div>';
-    echo $abs;
+    echo $rating;
   echo '<div class="vote-block'.$disable_class.'" data-id="5031" data-total="'. $total_rec .'" data-rating="'. $rating .'">'.$richSnp.''.$ratingHTML.'</div>';
 }
 
