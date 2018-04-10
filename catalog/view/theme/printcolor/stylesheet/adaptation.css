@@ -1841,6 +1841,9 @@ footer .socialRow .socialCard:hover .icon {
     .headerCarousel .card .textNode {
         padding: 5px;
     }
+    body .sk_order_holder .sk_galery_main_category {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 500px){
