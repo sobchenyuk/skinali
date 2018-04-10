@@ -47,6 +47,7 @@ function rating($total, $rating) {
   $rating = //wp__get_data('vote-rating',4131);*/
   
   $total_text = sklonen($total, 'голос', 'голоса', 'голосов', true);
+
   $total_rec = $total;
   if($total==0) {$total = 1;}
   
@@ -60,7 +61,7 @@ function rating($total, $rating) {
  ';
 
   $richSnp = '<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="'.($abs).'"><meta itemprop="worstRating" content="1"/><meta itemprop="bestRating" content="5"><meta itemprop="ratingCount" content="'.$total.'"></div>';
-    echo $total;
+
   echo '<div class="vote-block'.$disable_class.'" data-id="4131" data-total="'. $total_rec .'" data-rating="'. $rating .'">'.$richSnp.''.$ratingHTML.'</div>';
 }
 
