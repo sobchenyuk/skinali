@@ -191,6 +191,8 @@
 
 	<?php elseif ($information_id == 89): ?>
 	<script type="text/javascript" src="catalog/view/javascript/js/cat_menu_fix.js"></script>
+
+<div class="content">
 	<div class = "sk_order_holder">
 		<?php echo $column_right; ?>
 		<div class = "sk_order_form_holder">
@@ -429,6 +431,7 @@
 		</div>
 
 	</div>
+</div>
 	<?php else: ?>
 
 

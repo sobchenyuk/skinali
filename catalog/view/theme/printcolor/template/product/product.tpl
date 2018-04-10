@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div class="content">
+<div class="content container">
 
 
     <div class="rowTitlePage">
