@@ -15,6 +15,10 @@
     font-size: 21px;
     margin-bottom: 5px;
 }
+.rb-gallery-list.row {
+    width: 100%;
+    display: table;
+}
 .burgerCategory {
     display: none;
 }
