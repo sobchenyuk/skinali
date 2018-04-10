@@ -85,6 +85,8 @@ class ControllerCommonColumnRight extends Controller {
 		
 		$this->load->model('tool/rating');
 		$total_rating = $this->model_tool_rating->getRating();
+
+
 		$data['total'] = $total_rating['vote-total'];
 		$data['rating'] = $total_rating['vote-rating'];
 

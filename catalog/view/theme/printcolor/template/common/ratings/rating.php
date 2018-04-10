@@ -39,7 +39,7 @@ function rating($total, $rating) {
 	if (isset($_COOKIE["vote-post-4131"])) echo "isset";
 	else echo "not isset";*/
   //if($voted) {
-    $disable_class = isset($_COOKIE["vote-post-5031"]) ? ' disabled' : '';
+    $disable_class = isset($_COOKIE["vote-post-4131"]) ? ' disabled' : '';
   //} else {
    // $disable_class = ' disabled';
   //}
@@ -61,7 +61,7 @@ function rating($total, $rating) {
 
   $richSnp = '<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating"><meta itemprop="ratingValue" content="'.($abs).'"><meta itemprop="worstRating" content="1"/><meta itemprop="bestRating" content="5"><meta itemprop="ratingCount" content="'.$total.'"></div>';
     echo $total;
-  echo '<div class="vote-block'.$disable_class.'" data-id="5031" data-total="'. $total_rec .'" data-rating="'. $rating .'">'.$richSnp.''.$ratingHTML.'</div>';
+  echo '<div class="vote-block'.$disable_class.'" data-id="4131" data-total="'. $total_rec .'" data-rating="'. $rating .'">'.$richSnp.''.$ratingHTML.'</div>';
 }
 
 function sklonen($n,$s1,$s2,$s3, $b = false){
