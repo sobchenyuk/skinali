@@ -1835,6 +1835,9 @@ footer .socialRow .socialCard:hover .icon {
     [data-status="visab"] .sk_galery_main_category #right_sidebar {
         display: block;
     }
+    [data-status="visab"] .sk_galery_main_category .call_back {
+        background-position: 5px 8px;
+    }
 }
 
 @media only screen and (max-width: 500px){
