@@ -1,17 +1,18 @@
 (function($) {
 
-	console.log('star');
-
 	$(document).on('mouseover', '.vote-block li', function() {
 
-		console.log('true');
 
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
+
+		console.log(star);
+
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
 		$('.rating-info').show().html(star + ' ' + decOfNum(star, ['голос', 'голоса', 'голосов']));
+
 
 
 	}).on('mouseleave', '.vote-block li', function() {
