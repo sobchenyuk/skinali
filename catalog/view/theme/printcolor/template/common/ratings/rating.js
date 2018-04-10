@@ -25,8 +25,8 @@
 	$(document).on('click', '.vote-block li', function() {
 		var $el = $(this);
 		var id = $el.parent().parent().attr('data-id');
-		var total = $el.parent().parent().attr('data-total');
-		var rating = $el.parent().parent().attr('data-rating');
+		var total = parseInt($el.parent().parent().attr('data-total'));
+		var rating = parseInt($el.parent().parent().attr('data-rating'));
 		var num = parseInt($el.text(), 10);
 
 		if ($el.parent().parent().hasClass('disabled')) {
