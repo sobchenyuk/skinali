@@ -96,17 +96,29 @@ class ControllerCommonColumnRight extends Controller {
 	public function ajaxSetRating() {
 		if (isset($this->request->get['do']) && $this->request->get['do'] == 'ajax') {
 			if(isset($this->request->get['num'])) {
+
+
 				if ((isset($this->request->get['id']) && is_numeric($this->request->get['id']))) {
+
+
 					$this->load->model('tool/rating');
 					$id = $this->request->get['id'];
 					$num = $this->request->get['num'];
 
+
+
 					if (!isset($_COOKIE["vote-post-".$id])) {
+
+
 						$total_rating = $this->model_tool_rating->getRating();
 						$total = $total_rating['vote-total'];
+
 						$rating = $total_rating['vote-rating'];
 						$new_total = $total + 1;
-						$new_rating = $rating + $num;
+
+						$new_rating = ($total + $num) * 4.5;
+
+
 						$set_rating_data = $this->model_tool_rating->setRating($new_total, $new_rating);
 
 						$updated_total_rating = $this->model_tool_rating->getRating();
@@ -117,6 +129,7 @@ class ControllerCommonColumnRight extends Controller {
 
 						//echo ($updated_rating / ($updated_total * 5)) * 100;
 						$json['pr'] = ($updated_rating / ($updated_total * 5)) * 100;
+
 						$this->response->setOutput(json_encode($json));
 					}
 					else {
