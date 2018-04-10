@@ -1,5 +1,6 @@
 (function($) {
 
+	console.log('star');
 
 	$(document).on('mouseover', '.vote-block li', function() {
 
