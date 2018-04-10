@@ -68,10 +68,6 @@ $(document).ready(function () {
 
 if(document.documentElement.clientWidth < 768){
     $('.sk_galery_main_category').append( $('body #right_sidebar') );
-} else {
-      if($('.sk_galery_main_category > #right_sidebar')){
-          console.log('true')
-      }
 }
 
 
