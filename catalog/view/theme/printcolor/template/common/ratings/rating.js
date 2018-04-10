@@ -16,7 +16,10 @@
         console.log(total);
         console.log(rating);
 
-		if ($el.parent().parent().hasClass('disabled')) {
+        $el.parent().parent().find('span.rating-text').html('(' + total + ' ' + decOfNum(total, ['голос', 'голоса', 'голосов']) + ', в среднем: ' + abs + ' из 5)');
+
+
+        if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
 
