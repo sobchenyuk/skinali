@@ -332,7 +332,8 @@
 								<button type="button">Заказать</button>
 							</div>
 					</div>
-					<div class = "sk_order_info">
+
+				<div class = "sk_order_info">
 						<div class = "sk_order_info_left">
 							<form class = "sk_order_form" name = "lego_order" action = "" method = "post">
 								<div class = "sk_order_comment_holder">
@@ -422,6 +423,8 @@
 
 						</div>
 					</div>
+
+
 			</div>
 		</div>
 
