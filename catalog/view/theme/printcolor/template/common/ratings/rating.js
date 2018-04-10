@@ -17,7 +17,7 @@
         console.log(rating);
 
         total++;
-        var abs = ((rating + num) / total);
+        var abs = ((rating + star) / total);
         abs = (abs ^ 0) === abs ? abs : abs.toFixed(1);
         $el.parent().parent().find('span.rating-text').html('(' + total + ' ' + decOfNum(total, ['голос', 'голоса', 'голосов']) + ', в среднем: ' + abs + ' из 5)');
 
