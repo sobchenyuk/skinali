@@ -6,24 +6,6 @@
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
 
-		console.log(star);
-
-        var id = $el.parent().parent().attr('data-id');
-        var total = $el.parent().parent().attr('data-total');
-        var rating = $el.parent().parent().attr('data-rating');
-
-        var str = id.replace('/41/i', 'апельсины');
-
-        console.log(id);
-        console.log(total);
-        console.log(rating);
-
-        total++;
-        var abs = ((rating + star) / total);
-        abs = (abs ^ 0) === abs ? abs : abs.toFixed(1);
-        $el.parent().parent().find('span.rating-text').html('(' + total + ' ' + decOfNum(total, ['голос', 'голоса', 'голосов']) + ', в среднем: ' + abs + ' из 5)');
-
-
         if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
