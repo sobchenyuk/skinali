@@ -47,7 +47,9 @@ header .sk_first_line.container .sk_main_menu ul {
     -webkit-box-shadow: 0 0 10px #000;
     box-shadow: 0 0 10px #000;
 }
-
+.lego_bottom-right>button {
+    display: none;
+}
 .sk_order_shadow, .sk_order_pict_holder>img {
     height: auto;
 }
@@ -1891,6 +1893,11 @@ footer .socialRow .socialCard:hover .icon {
     .lego_relative {
         width: 100%;
     }
+    body.information-information-89 .content .middle-sector .rowInfoNode .rowIntoProduct .col-left .formGroupSkinali .fieldGroup .placeWrite {
+        width: 60%;
+        margin-left: 20px;
+    }
+
 }
 
 @media only screen and (max-width: 500px){
