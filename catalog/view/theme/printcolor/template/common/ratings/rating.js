@@ -6,11 +6,13 @@
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
 
-		console.log($el.html());
+		console.log(star);
 
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
+
+
 		$('.rating-info').show().html(star + ' ' + decOfNum(star, ['голос', 'голоса', 'голосов']));
 
 
