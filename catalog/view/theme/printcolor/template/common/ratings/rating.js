@@ -8,6 +8,14 @@
 
 		console.log(star);
 
+        var id = $el.parent().parent().attr('data-id');
+        var total = $el.parent().parent().attr('data-total');
+        var rating = $el.parent().parent().attr('data-rating');
+
+        console.log(id);
+        console.log(total);
+        console.log(rating);
+
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
@@ -30,6 +38,7 @@
 		var total = $el.parent().parent().attr('data-total');
 		var rating = $el.parent().parent().attr('data-rating');
 		var num = parseInt($el.text(), 10);
+
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
