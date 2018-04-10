@@ -51,6 +51,7 @@ function rating($total, $rating) {
   if($total==0) {$total = 1;}
   
   $pr = ($rating/($total*5))*100;
+
   $abs = round($rating/$total, 1);
 
   $ratingHTML = '<ol class="rating show-current"><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li class="current"><span style="width:'.$pr.'%"></span></li></ol> <div class="rating-info"></div><span class="rating-text">('.$total_text.', в среднем: '.($abs).' из 5)</span>
