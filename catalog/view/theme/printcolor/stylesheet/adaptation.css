@@ -1832,6 +1832,9 @@ footer .socialRow .socialCard:hover .icon {
     .address_main_holder {
         height: auto;
     }
+    [data-status="visab"] .sk_galery_main_category #right_sidebar {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 500px){
