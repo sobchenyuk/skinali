@@ -6,7 +6,7 @@
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
 
-		console.log($el);
+		console.log($el.html());
 
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
