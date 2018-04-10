@@ -12,6 +12,8 @@
         var total = $el.parent().parent().attr('data-total');
         var rating = $el.parent().parent().attr('data-rating');
 
+        var str = id.replace('/41/i', 'апельсины');
+
         console.log(id);
         console.log(total);
         console.log(rating);
