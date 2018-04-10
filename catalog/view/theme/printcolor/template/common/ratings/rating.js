@@ -1,14 +1,25 @@
 (function($) {
+
+
 	$(document).on('mouseover', '.vote-block li', function() {
+
+		console.log('true');
+
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
 		$('.rating-info').show().html(star + ' ' + decOfNum(star, ['голос', 'голоса', 'голосов']));
+
+
 	}).on('mouseleave', '.vote-block li', function() {
+
 		$('.rating-info').hide();
+
 	});
+
+
 	$(document).on('click', '.vote-block li', function() {
 		var $el = $(this);
 		var id = $el.parent().parent().attr('data-id');
@@ -49,6 +60,8 @@
 		return false;
 	});
 })(jQuery);
+
+
 
 function decOfNum(number, titles) {
 	cases = [2, 0, 1, 1, 1, 2];

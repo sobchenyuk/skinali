@@ -1850,6 +1850,43 @@ footer .socialRow .socialCard:hover .icon {
         display: block;
     }
 }
+@media only screen and (max-width: 600px){
+    .top_btn {
+        width: 100%;
+        position: relative;
+        display: block;
+        float: left;
+        margin-right: .6%;
+        border: 1px solid;
+    }
+    .lego_bottom-right {
+        width: 100%;
+    }
+    .lego_bottom-left {
+        width: 100%;
+    }
+    .card_search {
+        padding: 4px;
+        font-size: 20px;
+        width: 50%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .card_search_btn {
+        padding: 3px;
+        font-size: 20px;
+    }
+    .lego_card_bottom span {
+        font-size: 20px;
+    }
+    .lego_list {
+        width: 100%;
+    }
+    .lego_relative {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 500px){
     body .sk_galery_not_main_category_wraper > ul > li {
         width: 99%;
@@ -1926,4 +1963,5 @@ footer .socialRow .socialCard:hover .icon {
         margin: 5px 10px;
         padding: 0;
     }
+
 }
