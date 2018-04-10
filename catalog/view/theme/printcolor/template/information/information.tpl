@@ -44,6 +44,14 @@
 <div class="left-gallery">
 	<div class="sk_galery_main_category">
 		<ul class="sk_galery_main_category_holder">
+			<li class="search_item">
+				<div class="sk_galery_search_holder">
+					<form role="search" method="get" id="searchform" action="search/">
+						<input placeholder="Поиск..." value="" name="search" id="s" type="text">
+						<input value="" id="searchsubmit" type="submit">
+					</form>
+				</div>
+			</li>
 			<div class="sk_cat_holder">
 				<div class="menu-menyu-levogo-saydbara-container">
 					<ul id="menu-menyu-levogo-saydbara" class="menu">

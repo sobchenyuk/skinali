@@ -8,7 +8,13 @@
     margin: 0;
     font-weight: 700;
 }
-
+.left-gallery li.search_item {
+    width: 99%;
+    border: 1px solid #000;
+    box-shadow: 0 -1px 0 #454545;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
 .burgerCategory {
     display: none;
 }
