@@ -1845,6 +1845,11 @@ footer .socialRow .socialCard:hover .icon {
         display: block;
     }
 }
+@media only screen and (max-width: 500px){
+    body .sk_galery_not_main_category_wraper > ul > li {
+        width: 99%;
+    }
+}
 
 @media only screen and (max-width: 500px){
     .whatWeMake .rowCards .card {
