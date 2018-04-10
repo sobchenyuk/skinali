@@ -65,6 +65,8 @@ $(document).ready(function () {
         }
     }
 
+    $('body #right_sidebar').append( $('.sk_galery_main_category') );
+
 
     $('.sk_our_sites_holder').append('<a id="arrow_up"></a>'); //кнопка наверх
     $('#arrow_up').attr('href', '#menu_right_trigger')
