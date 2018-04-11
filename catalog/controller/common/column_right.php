@@ -144,3 +144,4 @@ class ControllerCommonColumnRight extends Controller {
 	}
 	
 }
+
