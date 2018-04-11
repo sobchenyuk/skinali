@@ -1,20 +1,34 @@
 (function($) {
+
 	$(document).on('mouseover', '.vote-block li', function() {
+
+
 		var $el = $(this);
 		var star = parseInt($el.text(), 10);
-		if ($el.parent().parent().hasClass('disabled')) {
+
+        if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
+
+
 		$('.rating-info').show().html(star + ' ' + decOfNum(star, ['голос', 'голоса', 'голосов']));
+
+
+
 	}).on('mouseleave', '.vote-block li', function() {
+
 		$('.rating-info').hide();
+
 	});
+
+
 	$(document).on('click', '.vote-block li', function() {
 		var $el = $(this);
 		var id = $el.parent().parent().attr('data-id');
-		var total = $el.parent().parent().attr('data-total');
-		var rating = $el.parent().parent().attr('data-rating');
+		var total = parseInt($el.parent().parent().attr('data-total'));
+		var rating = parseInt($el.parent().parent().attr('data-rating'));
 		var num = parseInt($el.text(), 10);
+
 		if ($el.parent().parent().hasClass('disabled')) {
 			return false;
 		}
@@ -41,6 +55,7 @@
 					$el.parent().find('.current span').css('width', pr + '%');
 					total++;
 					var abs = ((rating + num) / total);
+
 					abs = (abs ^ 0) === abs ? abs : abs.toFixed(1);
 					$el.parent().parent().find('span.rating-text').html('(' + total + ' ' + decOfNum(total, ['голос', 'голоса', 'голосов']) + ', в среднем: ' + abs + ' из 5)');
 				}
@@ -49,6 +64,8 @@
 		return false;
 	});
 })(jQuery);
+
+
 
 function decOfNum(number, titles) {
 	cases = [2, 0, 1, 1, 1, 2];

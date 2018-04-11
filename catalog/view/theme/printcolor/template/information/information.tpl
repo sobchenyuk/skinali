@@ -29,6 +29,12 @@
 
 	<?php if($layout_id == 15 && $idGallery > 0): ?>
 
+<div class="sk_main_header_holder">
+	<h1><a href="#"><?=$heading_title?></a></h1>
+</div>
+
+<div class="sk_gallery_wraper">
+
 <div class="right-gallery">
 	<?php echo $column_right; ?>
 </div>
@@ -38,6 +44,14 @@
 <div class="left-gallery">
 	<div class="sk_galery_main_category">
 		<ul class="sk_galery_main_category_holder">
+			<li class="search_item">
+				<div class="sk_galery_search_holder">
+					<form role="search" method="get" id="searchform" action="search/">
+						<input placeholder="Поиск..." value="" name="search" id="s" type="text">
+						<input value="" id="searchsubmit" type="submit">
+					</form>
+				</div>
+			</li>
 			<div class="sk_cat_holder">
 				<div class="menu-menyu-levogo-saydbara-container">
 					<ul id="menu-menyu-levogo-saydbara" class="menu">
@@ -57,6 +71,8 @@
 
 
                  <?php echo $content_bottom; ?>
+
+</div>
 
 	<?php elseif ($information_id == 9): ?>
 		<div class="sk_gallery_holder">
@@ -183,10 +199,27 @@
 
 	<?php elseif ($information_id == 89): ?>
 	<script type="text/javascript" src="catalog/view/javascript/js/cat_menu_fix.js"></script>
+
+
+
+
+
+<div class="content container" style="margin-top: -15px;">
+
+	<?php $first_post = $first_cat_first_product; ?>
+
+	<div class="rowTitlePage">
+		<h1 class="title"><?=$first_post['name']?> № <?=$first_post['sku'];?></h1>
+		<hr>
+	</div>
+
+
 	<div class = "sk_order_holder">
 		<?php echo $column_right; ?>
 		<div class = "sk_order_form_holder">
 			<div class = "sk_order_pict_holder">
+				<div class="middle-sector">
+					<div class="rowInfoNode">
 					  <?php
 						$dir = "catalog/view/theme/printcolor/image/details";
 						$res = array();
@@ -253,9 +286,7 @@
 							</div>
 						</div>
 						<div class="lego_container">
-							<?php
-								$first_post = $first_cat_first_product;
-							?>
+
 							<div class="lego_relative">
 								<img src="catalog/view/theme/printcolor/image/details/05_beige-structure/beige-structure-top.png" alt="top" class="lego_top lego_part">
 								<?php echo'<img class="lego_bg" id = "sk_main_order_picture" src = "' . 'image/' . $first_cat_first_product['image'] . '" title = "' . $first_cat_first_product['name'] . '" alt = "Скинали '. $first_cat_first_product['name'] .'"/>' ?> 
@@ -324,100 +355,134 @@
 								<button type="button">Заказать</button>
 							</div>
 					</div>
-					<div class = "sk_order_info">
-						<div class = "sk_order_info_left">
-							<form class = "sk_order_form" name = "lego_order" action = "" method = "post">
-								<div class = "sk_order_comment_holder">
-									<table>
-										<tbody>
-											<tr>
-												<td id="price_text">Цена:</td>
-												<td id="price">880 грн. м/пог.</td>
-											</tr>
-											<tr>
-												<td id = "sk_order_comment_holder_text">Комментарии:</td>
-												<td id = "sk_order_comment_holder_textarea"><textarea name = "info" placeholder="Введите комментарий"></textarea></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<table>
-									<tbody>
-										<tr>
-											<td class = "sk_order_info_text">Имя:<span class = "sk_field">*</span></td>
-											<td class = "sk_order_info_input"><input type = "text" placeholder="Введите свое имя*" name = "username" required></td>
-										</tr>
-										<tr>
-											<td class = "sk_order_info_text">Телефон:<span class = "sk_field">*</span></td>
-											<td class = "sk_order_info_input"><input type = "tel" placeholder="Введите свой телефон*" name = "phone" required></td>
-										</tr>
-										<tr>
-											<td class="sk_order_info_text">Город:<span class = "sk_field">*</span></td>
-											<td class = "sk_order_info_input"><input type = "text" placeholder="Введите свой город*" name = "city" required></td>
-										</tr>
-										<tr>
-											<td class = "sk_order_info_text">E-mail:</td>
-											<td class = "sk_order_info_input"><input type = "email" placeholder="Введите свою почту*" name = "email"></td>
-										</tr>
-											<input type="hidden" value="<?=$first_post['sku']?>" id="img_id"  name="img_id"/>
-											<input type="hidden" value="<?=$first_post['name']?>" id="img_title"  name="img_title"/>
-											<input type="hidden" value="<?=$first_post['href']?>" id="sk_link"  name="sk_link"/>
-									</tbody>
-								</table>
-								<div class = "sk_checker_holder">
-									<input id = "sk_mirror_checkbox" type = "checkbox" name = "mirror" value = "mirror_yes">
-									<input id = "sk_bw_checkbox" type = "checkbox" name = "bw" value = "bw_yes">
-									<input id = "sk_sepia_checkbox" type = "checkbox" name = "sepia" value = "sepia_yes">
-								</div>
-								<div class = "sk_submit_holder">
-									<input type = "submit" value = "Отправить заказ" name = "lego_order_btn">
-								</div>
-							</form>
-						</div>
-						<div class = "sk_order_info_right">
-							<div class = "sk_order_change_holder">
-								<div onClick = "Mirror()">
-									<div class = "sk_mirror" id = "sk_mirror"></div>
-									<div class = "sk_mirror_text" id = "sk_mirror_text">Отзеркалить</div>
-								</div>
-								<div onClick = "BlackWhite()">
-									<div class = "sk_black_white" id = "sk_black_white"></div>
-									<div class = "sk_black_white_text" id = "sk_black_white_text">Черно-белое</div>
-								</div>
-								<div onClick = "Sepia()">
-									<div class = "sk_sepia" id = "sk_sepia"></div>
-									<div class = "sk_sepia_text" id = "sk_sepia_text">Сепия</div>
+
+						<div class="rowIntoProduct">
+							<div class="col-left">
+								<div class="formGroupSkinali">
+									<form class="sk_order_form" name="lego_order" action="" method="post">
+
+										<input type="hidden" value="<?=$first_post['sku']?>" id="img_id"  name="img_id"/>
+										<input type="hidden" value="<?=$first_post['name']?>" id="img_title"  name="img_title"/>
+										<input type="hidden" value="<?=$first_post['href']?>" id="sk_link"  name="sk_link"/>
+
+
+										<input type="hidden" name="allPrice" id="allPrice" value="880">
+
+										<div class="col">
+
+											<div class="fieldGroup">
+												<label for="sk_order_comment_holder_textarea">Коментарий</label>
+												<textarea name="info" id="sk_order_comment_holder_textarea" class="placeWrite bigPlaceWrite"></textarea>
+											</div>
+											<div class="fieldGroup">
+												<label for="sk_order_info_input_username">Имя: <b>*</b></label>
+												<input id="sk_order_info_input_username" type="text" class="placeWrite" name="username" required="">
+											</div>
+											<div class="fieldGroup">
+												<label for="sk_order_info_input_city">Город: <b>*</b></label>
+												<input id="sk_order_info_input_city" type="text" class="placeWrite" name="city" required="">
+											</div>
+											<div class="fieldGroup">
+												<label for="sk_order_info_input_phone">Телефон: <b>*</b></label>
+												<input id="sk_order_info_input_phone" type="text" class="placeWrite phone" name="phone" required="">
+											</div>
+											<div class="fieldGroup">
+												<label for="sk_order_info_input_email">E-mail: <b>*</b></label>
+												<input id="sk_order_info_input_email" type="text" class="placeWrite" name="email" required="">
+											</div>
+											<div class="sk_checker_holder">
+												<input id="sk_mirror_checkbox" type="checkbox" name="mirror" value="mirror_yes">
+												<input id="sk_bw_checkbox" type="checkbox" name="bw" value="bw_yes">
+												<input id="sk_sepia_checkbox" type="checkbox" name="sepia" value="sepia_yes">
+											</div>
+										</div>
+										<div class="rowButtons">
+											<button type="submit" name="lego_order_btn" class="btn">Отправить заказ</button>
+										</div>
+
+									</form>
 								</div>
 							</div>
-							<div class = "sk_order_pict_number_text">
-								<h1 class = "sk_order_pict_number">
-									<span class="sk_title"><?=$first_post['name']?></span><br> <span class="sk_num">&#8470; <?=$first_post['sku'];?></span>
-								</h1>
-							</div>
-							<div class="sk_tags_holder">
-								<script type="text/javascript">(function(){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var d=document,s=d.createElement('script'),g='getElementsByTagName';s.type='text/javascript';s.charset='UTF-8';s.async=true;s.src=('https:'==window.location.protocol?'https':'http')+'://share.pluso.ru/pluso-like.js';var h=d[g]('body')[0];h.appendChild(s);}})();</script>
-								<div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=06" data-services="facebook,twitter,google">
-									<div class="pluso-010010011010-06">
+							<div class="col-right">
+
+
+
+
+
+								<div class="rowEffects">
+									<hr>
+
+									<div class="keyEffect mirror" onclick="Mirror()">
+										<span id="sk_mirror" class="wrapIcon sk_mirror"></span>
+										<span id="sk_mirror_text" class="textor sk_mirror_text">
+										Отзеркалить
+									</span>
+									</div>
+
+									<div class="keyEffect whiteBlack" onclick="BlackWhite()">
+										<span id="sk_black_white" class="wrapIcon sk_black_white"></span>
+										<span id="sk_black_white_text" class="textor sk_black_white_text">
+										Черно-белое
+									</span>
+									</div>
+
+									<div class="keyEffect" onclick="Sepia()">
+										<span id="sk_sepia" class="wrapIcon sk_sepia"></span>
+										<span id="sk_sepia_text" class="textor sk_sepia_text">
+										Сепия
+									</span>
+									</div>
+
+									<hr>
+
+								</div>
+
+								<div class="rowSocialProducts">
+									<div class="resultsPrice">
+										Цена: <span id="resultPrice">880</span> грн. м2
+									</div>
+
+									<div class="socialsZ">
+										<div class="sk_tags_holder">
+											<script type="text/javascript">(function(){if(window.pluso)if(typeof window.pluso.start=="function")return;if(window.ifpluso==undefined){window.ifpluso=1;var d=document,s=d.createElement('script'),g='getElementsByTagName';s.type='text/javascript';s.charset='UTF-8';s.async=true;s.src=('https:'==window.location.protocol?'https':'http')+'://share.pluso.ru/pluso-like.js';var h=d[g]('body')[0];h.appendChild(s);}})();</script>
+											<div class="pluso" data-background="transparent" data-options="medium,round,line,horizontal,counter,theme=06" data-services="facebook,twitter,google">
+												<div class="pluso-010010011010-06">
 										<span class="pluso-wrap" style="background:transparent">
 											<a href="<?=$first_post['href']?>" title="Facebook" class="pluso-facebook"></a>
 											<a href="<?=$first_post['href']?>" title="Twitter" class="pluso-twitter"></a>
 											<a href="<?=$first_post['href']?>" title="Google+" class="pluso-google"></a>
 											<a href="<?=$first_post['href']?>" class="pluso-more"></a>
 										</span>
-										<span class="pluso-counter">
+													<span class="pluso-counter">
 											<b title="0">0</b>
 										</span>
+												</div>
+											</div>
+											<div></div>
+										</div>
 									</div>
 								</div>
-								<div></div>
+								<!--<div class="rowBtnSector">
+                                    <button class="btn">
+                                        Рассчитать заказ
+                                    </button>
+                                </div>-->
 							</div>
-
 						</div>
 					</div>
+				</div>
+
+
 			</div>
 		</div>
 
 	</div>
+
+
+</div>
+
+
+
 	<?php else: ?>
 
 

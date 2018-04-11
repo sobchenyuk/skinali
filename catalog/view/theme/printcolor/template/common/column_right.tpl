@@ -12,10 +12,12 @@
 		</form>
 	</div>
 	<span class="rait_sp">Оцените нашу работу:</span>
+
 	<?php
 		require_once "ratings/rating.php";
 		rating($total, $rating);
 	?>
+
 	<script type="text/javascript" src="catalog/view/theme/printcolor/template/common/ratings/rating.js"></script>
 	<?php $home_url = '';?>
 	<?php $curr_url = $_SERVER['REQUEST_URI'];?>
