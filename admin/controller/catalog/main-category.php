@@ -5,21 +5,21 @@ class ControllerCatalogMainCategory extends Controller {
     private $path = array();
 
     public function index() {
-        $this->load->language('catalog/category');
+        $this->load->language('catalog/main-category');
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('catalog/category');
+        $this->load->model('catalog/main-category');
 
         $this->getList();
     }
 
     public function add() {
-        $this->load->language('catalog/category');
+        $this->load->language('catalog/main-category');
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('catalog/category');
+        $this->load->model('catalog/main-category');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
             $this->model_catalog_category->addCategory($this->request->post);
@@ -40,18 +40,18 @@ class ControllerCatalogMainCategory extends Controller {
                 $url .= '&page=' . $this->request->get['page'];
             }
 
-            $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+            $this->response->redirect($this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true));
         }
 
         $this->getForm();
     }
 
     public function edit() {
-        $this->load->language('catalog/category');
+        $this->load->language('catalog/main-category');
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('catalog/category');
+        $this->load->model('catalog/main-category');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validateForm()) {
             $this->model_catalog_category->editCategory($this->request->get['category_id'], $this->request->post);
@@ -72,18 +72,18 @@ class ControllerCatalogMainCategory extends Controller {
                 $url .= '&page=' . $this->request->get['page'];
             }
 
-            $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+            $this->response->redirect($this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true));
         }
 
         $this->getForm();
     }
 
     public function delete() {
-        $this->load->language('catalog/category');
+        $this->load->language('catalog/main-category');
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('catalog/category');
+        $this->load->model('catalog/main-category');
 
         if (isset($this->request->post['selected']) && $this->validateDelete()) {
             foreach ($this->request->post['selected'] as $category_id) {
@@ -106,18 +106,18 @@ class ControllerCatalogMainCategory extends Controller {
                 $url .= '&page=' . $this->request->get['page'];
             }
 
-            $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+            $this->response->redirect($this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true));
         }
 
         $this->getList();
     }
 
     public function repair() {
-        $this->load->language('catalog/category');
+        $this->load->language('catalog/main-category');
 
         $this->document->setTitle($this->language->get('heading_title'));
 
-        $this->load->model('catalog/category');
+        $this->load->model('catalog/main-category');
 
         if ($this->validateRepair()) {
             $this->model_catalog_category->repairCategories();
@@ -138,7 +138,7 @@ class ControllerCatalogMainCategory extends Controller {
                 $url .= '&page=' . $this->request->get['page'];
             }
 
-            $this->response->redirect($this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true));
+            $this->response->redirect($this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true));
         }
 
         $this->getList();
@@ -186,12 +186,12 @@ class ControllerCatalogMainCategory extends Controller {
 
         $data['breadcrumbs'][] = array(
             'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
+            'href' => $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true)
         );
 
-        $data['add'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'] . $url, true);
-        $data['delete'] = $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . $url, true);
-        $data['repair'] = $this->url->link('catalog/category/repair', 'token=' . $this->session->data['token'] . $url, true);
+        $data['add'] = $this->url->link('catalog/main-category/add', 'token=' . $this->session->data['token'] . $url, true);
+        $data['delete'] = $this->url->link('catalog/main-category/delete', 'token=' . $this->session->data['token'] . $url, true);
+        $data['repair'] = $this->url->link('catalog/main-category/repair', 'token=' . $this->session->data['token'] . $url, true);
 
         $data['categories'] = array();
 
@@ -259,8 +259,8 @@ class ControllerCatalogMainCategory extends Controller {
             $url .= '&page=' . $this->request->get['page'];
         }
 
-        $data['sort_name'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
-        $data['sort_sort_order'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
+        $data['sort_name'] = $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
+        $data['sort_sort_order'] = $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
 
         $url = '';
 
@@ -280,7 +280,7 @@ class ControllerCatalogMainCategory extends Controller {
         $pagination->total = $category_total;
         $pagination->page = $page;
         $pagination->limit = $this->config->get('config_limit_admin');
-        $pagination->url = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+        $pagination->url = $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
 
         $data['pagination'] = $pagination->render();
 
@@ -293,7 +293,7 @@ class ControllerCatalogMainCategory extends Controller {
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
 
-        $this->response->setOutput($this->load->view('catalog/category_list', $data));
+        $this->response->setOutput($this->load->view('catalog/main-category_list', $data));
     }
 
     protected function getForm() {
@@ -392,16 +392,16 @@ class ControllerCatalogMainCategory extends Controller {
 
         $data['breadcrumbs'][] = array(
             'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
+            'href' => $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true)
         );
 
         if (!isset($this->request->get['category_id'])) {
-            $data['action'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'] . $url, true);
+            $data['action'] = $this->url->link('catalog/main-category/add', 'token=' . $this->session->data['token'] . $url, true);
         } else {
-            $data['action'] = $this->url->link('catalog/category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
+            $data['action'] = $this->url->link('catalog/main-category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $this->request->get['category_id'] . $url, true);
         }
 
-        $data['cancel'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true);
+        $data['cancel'] = $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . $url, true);
 
         if (isset($this->request->get['category_id']) && ($this->request->server['REQUEST_METHOD'] != 'POST')) {
             $category_info = $this->model_catalog_category->getCategory($this->request->get['category_id']);
@@ -570,11 +570,11 @@ class ControllerCatalogMainCategory extends Controller {
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');
 
-        $this->response->setOutput($this->load->view('catalog/category_form', $data));
+        $this->response->setOutput($this->load->view('catalog/main-category_form', $data));
     }
 
     protected function validateForm() {
-        if (!$this->user->hasPermission('modify', 'catalog/category')) {
+        if (!$this->user->hasPermission('modify', 'catalog/main-category')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
@@ -618,7 +618,7 @@ class ControllerCatalogMainCategory extends Controller {
     }
 
     protected function validateDelete() {
-        if (!$this->user->hasPermission('modify', 'catalog/category')) {
+        if (!$this->user->hasPermission('modify', 'catalog/main-category')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
@@ -626,7 +626,7 @@ class ControllerCatalogMainCategory extends Controller {
     }
 
     protected function validateRepair() {
-        if (!$this->user->hasPermission('modify', 'catalog/category')) {
+        if (!$this->user->hasPermission('modify', 'catalog/main-category')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
@@ -642,8 +642,8 @@ class ControllerCatalogMainCategory extends Controller {
         static $href_action = null;
 
         if ($href_category === null) {
-            $href_category = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&path=', 'SSL');
-            $href_action = $this->url->link('catalog/category/update', 'token=' . $this->session->data['token'] . '&category_id=', 'SSL');
+            $href_category = $this->url->link('catalog/main-category', 'token=' . $this->session->data['token'] . '&path=', 'SSL');
+            $href_action = $this->url->link('catalog/main-category/update', 'token=' . $this->session->data['token'] . '&category_id=', 'SSL');
         }
 
         $url = '';
@@ -696,8 +696,8 @@ class ControllerCatalogMainCategory extends Controller {
                 'sort_order'  => $result['sort_order'],
                 'selected'    => $selected,
                 'action'      => $action,
-                'edit'        => $this->url->link('catalog/category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
-                'delete'      => $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
+                'edit'        => $this->url->link('catalog/main-category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
+                'delete'      => $this->url->link('catalog/main-category/delete', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
                 'href'        => $href,
                 'indent'      => $indent
             );
@@ -742,7 +742,7 @@ class ControllerCatalogMainCategory extends Controller {
         $json = array();
 
         if (isset($this->request->get['filter_name'])) {
-            $this->load->model('catalog/category');
+            $this->load->model('catalog/main-category');
 
             $filter_data = array(
                 'filter_name' => $this->request->get['filter_name'],
