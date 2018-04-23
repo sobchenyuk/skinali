@@ -5,7 +5,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
 
-
 // Version
 define('VERSION', '2.3.0.2');
 
