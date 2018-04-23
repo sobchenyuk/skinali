@@ -51,6 +51,9 @@
                                     <input type="hidden" value="<?=$product_url?>" id="sk_link" name="sk_link"/>
 
 
+                                    <input type="hidden" id="id_printing" name="type-of-printing"/>
+                                    <input type="hidden" id="id_materials" name="print-materials"/>
+
                                     <input type="hidden" name="allPrice" id="allPrice">
 
                                     <div class="col">
@@ -226,6 +229,11 @@
 
 
             var selectors = document.querySelectorAll('.selectorCustom');
+            var inpOne = document.querySelector('#id_printing');
+            var inpTwo = document.querySelector('#id_materials');
+
+
+
 
             for (var k = selectors.length - 1; k >= 0; k--) {
                 selector = selectors[k];
@@ -293,6 +301,12 @@
                         option[i].onclick = function(){
                             var index = this.getAttribute('data-index');
                             this.parentNode.parentNode.querySelectorAll('option')[index].selected = true;
+
+                            if(this.parentNode.parentNode.children[0].name === 'type-of-printing'){
+                                inpOne.value = this.parentNode.parentNode.querySelectorAll('option')[index].innerHTML
+                            } else if(this.parentNode.parentNode.children[0].name === 'print-materials'){
+                                inpTwo.value = this.parentNode.parentNode.querySelectorAll('option')[index].innerHTML
+                            }
                             // this.parentNode.parentNode.removeChild(this.parentNode.parentNode.querySelector('.active'));
                             createActiveOptionAll();
 
@@ -303,6 +317,10 @@
 
                 workSelector();
             }
+
+            inpOne.value = document.querySelectorAll('.selectorCustom .active')[0].innerHTML;
+            inpTwo.value = document.querySelectorAll('.selectorCustom .active')[1].innerHTML;
+
         }
         materialSelectorZ();
 

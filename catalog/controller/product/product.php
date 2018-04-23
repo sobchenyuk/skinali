@@ -57,9 +57,9 @@ class ControllerProductProduct extends Controller {
 			$msg .= $allPrice . "\n";
 			$msg .= "\n";
 			if ($comment != '')	$msg .= "Комментарий заказчика: " . $comment . "\n";
-			
+
 			mail("nva1985@mail.ru", "Новый заказ скинали", $msg);
-			
+
 			if (mail("printcolor45@gmail.com", "Новый заказ скинали", $msg)) {
 				$redirect_to = 'https://skinali-printcolor.com/spasibo-za-vash-zakaz';
 				header ("Location: ".$redirect_to);

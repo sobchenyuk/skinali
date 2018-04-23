@@ -25,7 +25,9 @@
 .sk_page_galery_container table {
     margin: 0 -5%;
 }
-
+.topPanel[data-fixed] .sk_logo_holder {
+    width: 5%;
+}
 .hidden {
     display: none;
 }

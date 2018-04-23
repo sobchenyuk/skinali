@@ -2,8 +2,12 @@
 class ControllerCommonColumnRight extends Controller {
 	public function index() {
 		if (isset($_POST['call_back'])) {
+
+
 			$phone = $_POST['phone'];
-			$msg = "Запрос звонка\n";
+			$msg = "Запрос звонка c сайта: \n";
+			$msg .= "\n";
+            $msg .= "https://skinali-printcolor.com/\n";
 			$msg .= "\n";
 			$msg .= "Телефон: " . $phone . "\n";
 			
