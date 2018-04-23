@@ -27,10 +27,15 @@
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-category" class="form-horizontal">
           <ul class="nav nav-tabs">
+
             <li class="active"><a href="#tab-general" data-toggle="tab"><?php echo $tab_general; ?></a></li>
+
             <li><a href="#tab-data" data-toggle="tab"><?php echo $tab_data; ?></a></li>
+
             <li><a href="#tab-design" data-toggle="tab"><?php echo $tab_design; ?></a></li>
+
             <li><a href="#tab-paraphernalia" data-toggle="tab">Атрибуты</a></li>
+
           </ul>
           <div class="tab-content">
             <div class="tab-pane active" id="tab-general">
@@ -85,7 +90,26 @@
                 <?php } ?>
               </div>
             </div>
+
+
             <div class="tab-pane" id="tab-data">
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-parent">Основная категория</label>
+                <div class="col-sm-10">
+                  <select name="main_category" class="form-control">
+                    <option value="0" selected="selected"><?php echo $text_none; ?></option>
+                    <?php foreach ($categories as $category) { ?>
+                    <?php if ($category['category_id'] == $parent_id) { ?>
+                    <option value="<?php echo $category['category_id']; ?>" selected="selected"><?php echo $category['name']; ?></option>
+                    <?php } else { ?>
+                    <option value="<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></option>
+                    <?php } ?>
+                    <?php } ?>
+                  </select>
+                </div>
+              </div>
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-parent"><?php echo $entry_parent; ?></label>
                 <div class="col-sm-10">
@@ -208,6 +232,9 @@
                 </div>
               </div>
             </div>
+
+
+
             <div class="tab-pane" id="tab-design">
               <div class="table-responsive">
                 <table class="table table-bordered table-hover">
