@@ -1,4 +1,8 @@
 <?php echo $header; ?><?php echo $column_left; ?>
+
+<?php $groupTrue = false; ?>
+
+
 <div id="content">
   <div class="page-header">
     <div class="container-fluid">
@@ -25,26 +29,44 @@
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-attribute" class="form-horizontal">
+
           <div class="form-group required">
             <label class="col-sm-2 control-label"><?php echo $entry_name; ?></label>
             <div class="col-sm-10">
               <?php foreach ($languages as $language) { ?>
+
               <div class="input-group"><span class="input-group-addon"><img src="language/<?php echo $language['code']; ?>/<?php echo $language['code']; ?>.png" title="<?php echo $language['name']; ?>" /></span>
                 <input type="text" name="attribute_description[<?php echo $language['language_id']; ?>][name]" value="<?php echo isset($attribute_description[$language['language_id']]) ? $attribute_description[$language['language_id']]['name'] : ''; ?>" placeholder="<?php echo $entry_name; ?>" class="form-control" />
               </div>
+
+              <script>
+                var language = "<?php echo $language['language_id']; ?>"
+              </script>
               <?php if (isset($error_name[$language['language_id']])) { ?>
               <div class="text-danger"><?php echo $error_name[$language['language_id']]; ?></div>
               <?php } ?>
               <?php } ?>
             </div>
           </div>
-          <div class="form-group">
+
+          <div id="group" class="form-group">
             <label class="col-sm-2 control-label" for="input-attribute-group"><?php echo $entry_attribute_group; ?></label>
             <div class="col-sm-10">
               <select name="attribute_group_id" id="input-attribute-group" class="form-control">
                 <option value="0"></option>
                 <?php foreach ($attribute_groups as $attribute_group) { ?>
                 <?php if ($attribute_group['attribute_group_id'] == $attribute_group_id) { ?>
+
+                <?php
+                switch ($attribute_group['attribute_group_id']) {
+                    case 8:
+                        $groupTrue = 8;
+                        break;
+                    case 9:
+                        $groupTrue = 9;
+                        break;
+                }?>
+
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>" selected="selected"><?php echo $attribute_group['name']; ?></option>
                 <?php } else { ?>
                 <option value="<?php echo $attribute_group['attribute_group_id']; ?>"><?php echo $attribute_group['name']; ?></option>
@@ -56,15 +78,49 @@
               <?php } ?>
             </div>
           </div>
+
+          <?php if($groupTrue){ ?>
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-type-of-printing">Стоимость Грн. за м2</label>
+            <div class="col-sm-10">
+                <?php if($groupTrue == 8): ?>
+
+              <?php foreach ($languages as $language) { ?>
+                <input type="text"
+                       name="attribute_description[<?php echo $language['language_id']; ?>][price_type_of_printing]"
+                       value="<?php echo isset($attribute_description[$language['language_id']]) ? $attribute_description[$language['language_id']]['price_type_of_printing'] : ''; ?>"
+                       placeholder="Введите цену печати"
+                       id="input-type-of-printing" class="form-control" />
+              <?php } ?>
+
+                <?php elseif($groupTrue == 9): ?>
+
+              <?php foreach ($languages as $language) { ?>
+                <input type="text"
+                       name="attribute_description[<?php echo $language['language_id']; ?>][price_print_materials]"
+                       value="<?php echo isset($attribute_description[$language['language_id']]) ? $attribute_description[$language['language_id']]['price_print_materials'] : ''; ?>"
+                       placeholder="Введите цену материала"
+                       id="input-type-of-printing" class="form-control" />
+              <?php } ?>
+
+                <?php endif; ?>
+            </div>
+          </div>
+          <?php }; ?>
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
             <div class="col-sm-10">
               <input type="text" name="sort_order" value="<?php echo $sort_order; ?>" placeholder="<?php echo $entry_sort_order; ?>" id="input-sort-order" class="form-control" />
             </div>
           </div>
+
+
         </form>
       </div>
     </div>
   </div>
 </div>
+
+
 <?php echo $footer; ?>

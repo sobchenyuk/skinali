@@ -19,36 +19,57 @@ $(document).ready(function () {
 
 // -------------отзыв конец---------------
 
-    $('.sk_main_menu').append('<div id="menu_right_trigger"></div>'); //Добавляем див. верхнее меню
-    $('#menu_right_trigger').click(function () {
-    $('.sk_category_menu_holder').toggle(
-        function () {$('.sk_category_menu_holder').hide;},
-        function () {$('.sk_category_menu_holder').show;}
-        );
-    });
+    // $('.sk_main_menu').append('<div id="menu_right_trigger"></div>'); //Добавляем див. верхнее меню
+    // $('#menu_right_trigger').click(function () {
+    // $('.sk_category_menu_holder').toggle(
+    //     function () {$('.sk_category_menu_holder').hide;},
+    //     function () {$('.sk_category_menu_holder').show;}
+    //     );
+    // });
+    //
+    // $('.sk_main_menu').append('<div id="menu_left_trigger"></div>'); //Добавляем див. верхнее меню
+    // $('#menu_left_trigger').click(function () {
+    // $('.menu-glavnoe-menyu-container').toggle(
+    //     function () {$('.menu-glavnoe-menyu-container').hide;},
+    //     function () {$('.menu-glavnoe-menyu-container').show;}
+    //     );
+    // });
 
-    $('.sk_main_menu').append('<div id="menu_left_trigger"></div>'); //Добавляем див. верхнее меню
-    $('#menu_left_trigger').click(function () {
-    $('.menu-glavnoe-menyu-container').toggle(
-        function () {$('.menu-glavnoe-menyu-container').hide;},
-        function () {$('.menu-glavnoe-menyu-container').show;}
-        );
-    });
+    // $('.sk_galery_main_category').append('<div id="menu_button"></div>'); //Левый сайдбар
+    $('.sk_galery_main_category').before("<div class=\"burgerCategory\">Открыть каталог</div>");
+    // $('#menu_button').addClass('arrow_right');
+    // $('#menu_button').click(function () {
+    //         if ($('#menu_button').hasClass('arrow_right')) {
+    //             $('.sk_galery_main_category').css('left', '0')
+    //             $('#menu_button').removeClass('arrow_right') && $('#menu_button').addClass('arrow_left');
+    //         }
+    //         else {
+    //             if ($('#menu_button').hasClass('arrow_left')) {
+    //                 $('.sk_galery_main_category').css('left', '-51%')
+    //                 $('#menu_button').removeClass('arrow_left') && $('#menu_button').addClass('arrow_right');
+    //             };
+    //         }
+    //     })
 
-    $('.sk_galery_main_category').append('<div id="menu_button"></div>'); //Левый сайдбар
-    $('#menu_button').addClass('arrow_right');
-    $('#menu_button').click(function () {
-            if ($('#menu_button').hasClass('arrow_right')) {
-                $('.sk_galery_main_category').css('left', '0')
-                $('#menu_button').removeClass('arrow_right') && $('#menu_button').addClass('arrow_left');
+
+    if(document.querySelectorAll('.burgerCategory').length){
+        document.querySelector('.burgerCategory').onclick = function(){
+            if (this.parentNode.getAttribute('data-status') == 'visab') {
+                this.parentNode.setAttribute('data-status','hidden')
+                this.innerHTML = "Открыть каталог";
             }
-            else { 
-                if ($('#menu_button').hasClass('arrow_left')) {
-                    $('.sk_galery_main_category').css('left', '-51%')
-                    $('#menu_button').removeClass('arrow_left') && $('#menu_button').addClass('arrow_right');
-                };
+            else{
+                this.parentNode.setAttribute('data-status','visab')
+                this.innerHTML = "Закрыть каталог";
             }
-        })
+        }
+    }
+
+
+if(document.documentElement.clientWidth < 768){
+    $('.sk_galery_main_category').append( $('body #right_sidebar') );
+}
+
 
 
     $('.sk_our_sites_holder').append('<a id="arrow_up"></a>'); //кнопка наверх

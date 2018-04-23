@@ -174,7 +174,9 @@ class ControllerCatalogAttribute extends Controller {
 		foreach ($results as $result) {
 			$data['attributes'][] = array(
 				'attribute_id'    => $result['attribute_id'],
-				'name'            => $result['name'],
+                'name'            => $result['name'],
+                'price_type_of_printing' => $result['price_type_of_printing'],
+                'price_print_materials' => $result['price_print_materials'],
 				'attribute_group' => $result['attribute_group'],
 				'sort_order'      => $result['sort_order'],
 				'edit'            => $this->url->link('catalog/attribute/edit', 'token=' . $this->session->data['token'] . '&attribute_id=' . $result['attribute_id'] . $url, true)
@@ -342,6 +344,9 @@ class ControllerCatalogAttribute extends Controller {
 			$data['attribute_description'] = array();
 		}
 
+
+
+
 		if (isset($this->request->post['attribute_group_id'])) {
 			$data['attribute_group_id'] = $this->request->post['attribute_group_id'];
 		} elseif (!empty($attribute_info)) {
@@ -361,6 +366,9 @@ class ControllerCatalogAttribute extends Controller {
 		} else {
 			$data['sort_order'] = '';
 		}
+
+
+
 
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');

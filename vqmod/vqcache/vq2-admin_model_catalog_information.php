@@ -6,7 +6,20 @@ class ModelCatalogInformation extends Model {
 		$information_id = $this->db->getLastId();
 
 		foreach ($data['information_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_h1 = '" . $this->db->escape($value['meta_h1']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "'
+				, description = '" . $this->db->escape($value['description']) . "'" . ( 
+					$this->config->get( 'smp_is_install' ) ? ", 
+						meta_keyword_ag = '" . ( ! isset( $value['meta_keyword-src'] ) || $value['meta_keyword'] != $value['meta_keyword-src'] ? '0' : $value['meta_keyword-ag'] ) . "',
+						meta_description_ag = '" . ( ! isset( $value['meta_description-src'] ) || $value['meta_description'] != $value['meta_description-src'] ? '0' : $value['meta_description-ag'] ) . "',
+						meta_title_ag = '" . ( ! isset( $value['meta_title-src'] ) || $value['meta_title'] != $value['meta_title-src'] ? '0' : $value['meta_title-ag'] ) . "',
+						smp_h1_title_ag = '" . ( ! isset( $value['smp_h1_title-src'] ) || $value['smp_h1_title'] != $value['smp_h1_title-src'] ? '0' : $value['smp_h1_title-ag'] ) . "',
+						tag_ag = '" . ( ! isset( $value['tag-src'] ) || $value['tag'] != $value['tag-src'] ? '0' : $value['tag-ag'] ) . "',								
+						smp_h1_title = '" . $this->db->escape($value['smp_h1_title']) . "',
+						tag = '" . $this->db->escape($value['tag']) . "',
+						url_alias_exists = '" . ( ! empty( $data['keyword'][$language_id] ) ? $language_id : 0 ) . "'
+					" : '' 
+				) . "
+			, meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_h1 = '" . $this->db->escape($value['meta_h1']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
 		if (isset($data['information_store'])) {
@@ -59,7 +72,20 @@ class ModelCatalogInformation extends Model {
 		$this->db->query("DELETE FROM " . DB_PREFIX . "information_description WHERE information_id = '" . (int)$information_id . "'");
 
 		foreach ($data['information_description'] as $language_id => $value) {
-			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "', description = '" . $this->db->escape($value['description']) . "', meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_h1 = '" . $this->db->escape($value['meta_h1']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
+			$this->db->query("INSERT INTO " . DB_PREFIX . "information_description SET information_id = '" . (int)$information_id . "', language_id = '" . (int)$language_id . "', title = '" . $this->db->escape($value['title']) . "'
+				, description = '" . $this->db->escape($value['description']) . "'" . ( 
+					$this->config->get( 'smp_is_install' ) ? ", 
+						meta_keyword_ag = '" . ( ! isset( $value['meta_keyword-src'] ) || $value['meta_keyword'] != $value['meta_keyword-src'] ? '0' : $value['meta_keyword-ag'] ) . "',
+						meta_description_ag = '" . ( ! isset( $value['meta_description-src'] ) || $value['meta_description'] != $value['meta_description-src'] ? '0' : $value['meta_description-ag'] ) . "',
+						meta_title_ag = '" . ( ! isset( $value['meta_title-src'] ) || $value['meta_title'] != $value['meta_title-src'] ? '0' : $value['meta_title-ag'] ) . "',
+						smp_h1_title_ag = '" . ( ! isset( $value['smp_h1_title-src'] ) || $value['smp_h1_title'] != $value['smp_h1_title-src'] ? '0' : $value['smp_h1_title-ag'] ) . "',
+						tag_ag = '" . ( ! isset( $value['tag-src'] ) || $value['tag'] != $value['tag-src'] ? '0' : $value['tag-ag'] ) . "',								
+						smp_h1_title = '" . $this->db->escape($value['smp_h1_title']) . "',
+						tag = '" . $this->db->escape($value['tag']) . "',
+						url_alias_exists = '" . ( ! empty( $data['keyword'][$language_id] ) ? $language_id : 0 ) . "'
+					" : '' 
+				) . "
+			, meta_title = '" . $this->db->escape($value['meta_title']) . "', meta_h1 = '" . $this->db->escape($value['meta_h1']) . "', meta_description = '" . $this->db->escape($value['meta_description']) . "', meta_keyword = '" . $this->db->escape($value['meta_keyword']) . "'");
 		}
 
 		$this->db->query("DELETE FROM " . DB_PREFIX . "information_to_store WHERE information_id = '" . (int)$information_id . "'");
@@ -198,6 +224,16 @@ class ModelCatalogInformation extends Model {
 		foreach ($query->rows as $result) {
 			$information_description_data[$result['language_id']] = array(
 				'title'            => $result['title'],
+
+				'smp_h1_title' => empty( $result['smp_h1_title'] ) ? '' : $result['smp_h1_title'],
+				'tag' => empty( $result['tag'] ) ? '' : $result['tag'],
+				
+				'meta_keyword_ag' => empty( $result['meta_keyword_ag'] ) ? '0' : '1',
+				'meta_description_ag' => empty( $result['meta_description_ag'] ) ? '0' : '1',
+				'meta_title_ag' => empty( $result['meta_title_ag'] ) ? '0' : '1',
+				'smp_h1_title_ag' => empty( $result['smp_h1_title_ag'] ) ? '0' : '1',
+				'tag_ag' => empty( $result['tag_ag'] ) ? '0' : '1',
+			
 				'description'      => $result['description'],
 				'meta_title'       => $result['meta_title'],
 				'meta_h1'          => $result['meta_h1'],

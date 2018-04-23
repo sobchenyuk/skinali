@@ -92,7 +92,11 @@
                 <?php } ?>
               </div>
             </div>
+
+
+
             <div class="tab-pane" id="tab-data">
+
               <div class="form-group">
                 <label class="col-sm-2 control-label"><?php echo $entry_store; ?></label>
                 <div class="col-sm-10">
@@ -147,6 +151,9 @@
                   </div>
                 </div>
               </div>
+
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-status"><?php echo $entry_status; ?></label>
                 <div class="col-sm-10">
@@ -161,6 +168,8 @@
                   </select>
                 </div>
               </div>
+
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-sort-order"><?php echo $entry_sort_order; ?></label>
                 <div class="col-sm-10">
@@ -206,6 +215,22 @@
                         </select></td>
                     </tr>
                     <?php } ?>
+
+                    <tr>
+                      <td class="text-left">Название галереи</td>
+                      <td class="text-left">
+                        <select name="gallery" class="form-control">
+                          <?php foreach ($getGallery as $value) { ?>
+                          <option value="<?php echo $value['module_id']; ?>"
+                          <?php echo ($gallery == $value['module_id']) ? 'selected="selected"': ''; ?>>
+                          <?php echo $value['name']; ?>
+                          </option>
+                          <?php
+                    } ?>
+                        </select>
+                      </td>
+                    </tr>
+
                   </tbody>
                 </table>
               </div>

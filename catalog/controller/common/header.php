@@ -1,5 +1,100 @@
 <?php
 class ControllerCommonHeader extends Controller {
+
+
+    public function getImg(){
+
+        return $query = $this->db->query("SELECT * FROM `po_opencart_gallery_image` WHERE 1 ORDER BY `po_opencart_gallery_image`.`sort_order` ASC");
+
+    }
+
+
+    public function getMenu($setting){
+
+        $this->load->language('module/smenu');
+
+        $this->load->model('catalog/smenu');
+
+
+
+
+        $data['smenus'] = array();
+
+        $root_items = $this->model_catalog_smenu->getSmenu($setting);
+
+        $routs=array(0 =>"/",1=>"information/contact", 2=>"account/return/add", 3=>"information/sitemap", 4=>"product/manufacturer", 5=>"account/voucher", 6=>"affiliate/account", 7=>"product/special", 8=>"account/account", 9=>"account/order", 10=>"account/wishlist", 11=>"account/newsletter", 12=>"account/newsletter");
+        $path=array(1=>'information/information', 2=>'product/category', 3 =>'catalog/product', 4=>'information/sigallery',0=>'');
+        $path_url=array(1=>'information_id', 2=>'path', 3=>'path', 4=>'path_gallery',0=>'');
+
+
+        foreach ($root_items as $items) {
+            $children_data=false;
+            $childs = $this->model_catalog_smenu->getSmenu($items['smenu_id'], $items['smenu_item_id']);
+            $active = 0;
+
+
+            if ($items['type']==5) {
+                $url=$items['type_name'];
+            }
+            elseif (($items['type']==6) AND ($items['type_id']!=0)) {
+                $url=$this->url->link($routs[(int)$items['type_id']],"", true);
+                if (isset($this->request->get['route']))
+                {
+                    $active = ($this->request->get['route'] == $routs[(int)$items['type_id']])?'active':'';
+                }
+            }
+            elseif (($items['type']==6) AND ($items['type_id']==0)) {
+                $url="/";
+                $active = (!$this->request->get)?1:0;
+            }
+            else {
+                $url=$this->url->link($path[(int)$items['type']], "&".$path_url[(int)$items['type']]."=".$items['type_id'], true);
+                if ((isset($this->request->get['route']))AND($this->request->get['route']==$path[(int)$items['type']]) AND (isset($this->request->get[$path_url[(int)$items['type']]])) AND ($this->request->get[$path_url[(int)$items['type']]]==(int)$items['type_id']))
+                    $active = 1;
+            }
+
+            if ($setting == 1) {
+
+                foreach ($childs as $child) {
+
+
+                    if ($child['type'] == 5) {
+                        $href = $child['type_name'];
+
+                    }
+                    if ($child['type']==6) {
+                       $url=$this->url->link($routs[(int)$child['type']],"", true);
+                    }
+
+                    $children_data[] = array(
+                        'item_id'  => $child['smenu_item_id'],
+                        'href'     => $href,
+                        'name'     => $child['smenu_text'],
+                        'title'    => $child['smenu_title']
+                    );
+                }
+            }
+
+            $data['items'][] = array(
+                'item_id'        => $items['smenu_item_id'],
+                'name'           => $items['smenu_text'],
+                'title'          => $items['smenu_title'],
+                'href'           => $url,
+                'active'         => $active,
+                'children'       => $children_data
+            );
+        }
+
+        if($setting !== 1){
+            return $this->load->view('extension/module/smenu', $data);
+        } else {
+            return $this->load->view('extension/module/smenu_nested', $data);
+        }
+
+
+    }
+
+
 	public function index() {
 		// Analytics
 		$this->load->model('extension/extension');
@@ -23,6 +118,8 @@ class ControllerCommonHeader extends Controller {
 		if (is_file(DIR_IMAGE . $this->config->get('config_icon'))) {
 			$this->document->addLink($server . 'image/' . $this->config->get('config_icon'), 'icon');
 		}
+
+        $data['picture_gallery'] = $this->getImg();
 
 		$data['title'] = $this->document->getTitle();
 
@@ -88,7 +185,15 @@ class ControllerCommonHeader extends Controller {
 		$data['contact'] = $this->url->link('information/contact');
 		$data['telephone'] = $this->config->get('config_telephone');
 
-		// Menu
+        $data['telephone1'] = $this->config->get('config_telephone1');
+        $data['telephone2'] = $this->config->get('config_telephone2');
+
+
+        $data['smenu_header'] = $this->getMenu(1);
+
+        $data['smenu_slider'] = $this->getMenu(3);
+
+        // Menu
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
@@ -130,6 +235,10 @@ class ControllerCommonHeader extends Controller {
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
 		$data['cart'] = $this->load->controller('common/cart');
+
+
+        $data['content_top'] = $this->load->controller('common/content_top');
+
 
 		// For page specific css
 		if (isset($this->request->get['route'])) {

@@ -45,6 +45,28 @@ class ControllerCommonContentBottom extends Controller {
 
 		$modules = $this->model_design_layout->getLayoutModules($layout_id, 'content_bottom');
 
+
+
+
+
+        if($layout_id == 15){
+
+
+            if (isset($this->request->get['information_id'])) {
+                $information_id = (int)$this->request->get['information_id'];
+            } else {
+                $information_id = 0;
+            }
+
+            if($information_id > 0){
+
+                $getGallery = $this->model_catalog_information->getGallery($information_id);
+                $idGallery = $getGallery["gallery"];
+            }
+
+        }
+
+
 		foreach ($modules as $module) {
 			$part = explode('.', $module['code']);
 
@@ -57,7 +79,13 @@ class ControllerCommonContentBottom extends Controller {
 			}
 
 			if (isset($part[1])) {
-				$setting_info = $this->model_extension_module->getModule($part[1]);
+
+                if (isset($idGallery)){
+                    $setting_info = $this->model_extension_module->getModule($idGallery);
+                } else {
+                    $setting_info = $this->model_extension_module->getModule($part[1]);
+                }
+
 
 				if ($setting_info && $setting_info['status']) {
 					$output = $this->load->controller('extension/module/' . $part[0], $setting_info);

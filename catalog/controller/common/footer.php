@@ -20,6 +20,22 @@ class ControllerCommonFooter extends Controller {
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
+
+        $data['telephone3'] = $this->config->get('config_telephone3');
+        $data['telephone4'] = $this->config->get('config_telephone4');
+
+        $data['location1'] = $this->config->get('config_location1');
+        $data['email1'] = $this->config->get('config_email1');
+
+        $data['copyright1'] = $this->config->get('config_copyright');
+
+
+
+        $data['smenu_footer'] = $this->load->controller('extension/module/smenu');
+
+
+        $data['iconlink'] = $this->load->controller('extension/module/iconlink');
+
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();

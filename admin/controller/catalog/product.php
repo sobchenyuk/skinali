@@ -241,6 +241,8 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getList() {
+
+
 		if (isset($this->request->get['filter_name'])) {
 			$filter_name = $this->request->get['filter_name'];
 		} else {
@@ -390,9 +392,11 @@ class ControllerCatalogProduct extends Controller {
 
 		$data['categories'] = $this->model_catalog_category->getCategories($filter_data);
 
+
 		foreach ($results as $result) {
 
-      $category =  $this->model_catalog_product->getProductCategories($result['product_id']);
+        $category =  $this->model_catalog_product->getProductCategories($result['product_id']);
+
 
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$image = $this->model_tool_image->resize($result['image'], 40, 40);
@@ -588,6 +592,7 @@ class ControllerCatalogProduct extends Controller {
 	}
 
 	protected function getForm() {
+
     //CKEditor
     if ($this->config->get('config_editor_default')) {
         $this->document->addScript('view/javascript/ckeditor/ckeditor.js');
@@ -600,7 +605,7 @@ class ControllerCatalogProduct extends Controller {
     }
 
 		$data['heading_title'] = $this->language->get('heading_title');
-        
+
                 				$data['entry_smp_seo_title'] = $this->language->get('entry_smp_seo_title');
 				$data['entry_smp_seo_h1_title'] = $this->language->get('entry_smp_seo_h1_title');
 				$data['entry_smp_alt_images'] = $this->language->get('entry_smp_alt_images');
@@ -1297,7 +1302,7 @@ class ControllerCatalogProduct extends Controller {
 				'date_end'          => ($product_special['date_end'] != '0000-00-00') ? $product_special['date_end'] :  ''
 			);
 		}
-		
+
 		// Image
 		if (isset($this->request->post['image'])) {
 			$data['image'] = $this->request->post['image'];
@@ -1306,6 +1311,7 @@ class ControllerCatalogProduct extends Controller {
 		} else {
 			$data['image'] = '';
 		}
+
 
 		$this->load->model('tool/image');
 
