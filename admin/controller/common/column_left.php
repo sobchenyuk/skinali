@@ -51,13 +51,13 @@ class ControllerCommonColumnLeft extends Controller {
                 );
             }
 
-			if ($this->user->hasPermission('access', 'catalog/category')) {
-				$catalog[] = array(
-					'name'	   => $this->language->get('text_category'),
-					'href'     => $this->url->link('catalog/category', 'token=' . $this->session->data['token'], true),
-					'children' => array()		
-				);
-			}
+//			if ($this->user->hasPermission('access', 'catalog/category')) {
+//				$catalog[] = array(
+//					'name'	   => $this->language->get('text_category'),
+//					'href'     => $this->url->link('catalog/category', 'token=' . $this->session->data['token'], true),
+//					'children' => array()
+//				);
+//			}
 			
 			if ($this->user->hasPermission('access', 'catalog/product')) {
 				$catalog[] = array(
