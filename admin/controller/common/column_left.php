@@ -39,7 +39,8 @@ class ControllerCommonColumnLeft extends Controller {
 				'href'     => $this->url->link('common/dashboard', 'token=' . $this->session->data['token'], true),
 				'children' => array()
 			);
-			
+
+
 			// Catalog
 			$catalog = array();
 
@@ -50,7 +51,17 @@ class ControllerCommonColumnLeft extends Controller {
 					'children' => array()
 				);
 			}
-			
+
+			// Главная категория
+            if ($this->user->hasPermission('access', 'extension/module/main_category')) {
+                $catalog[] = array(
+                    'name'	   => 'Основные категории',
+                    'href'     => $this->url->link('extension/module/main_category', 'token=' . $this->session->data['token'], true),
+                    'children' => array()
+                );
+            }
+
+
 			if ($this->user->hasPermission('access', 'catalog/product')) {
 				$catalog[] = array(
 					'name'	   => $this->language->get('text_product'),
