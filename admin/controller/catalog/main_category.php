@@ -1,6 +1,6 @@
 <?php
 
-class ControllerExtensionModuleMainCategory extends Controller {
+class ControllerCatalogMainCategory extends Controller {
 
     private $error = array();
 
