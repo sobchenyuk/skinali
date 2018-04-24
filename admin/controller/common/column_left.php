@@ -61,7 +61,6 @@ class ControllerCommonColumnLeft extends Controller {
                 );
             }
 
-
 			if ($this->user->hasPermission('access', 'catalog/product')) {
 				$catalog[] = array(
 					'name'	   => $this->language->get('text_product'),
