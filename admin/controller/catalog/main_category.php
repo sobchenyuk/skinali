@@ -26,8 +26,8 @@ class ControllerCatalogMainCategory extends Controller {
         static $href_action = null;
 
         if ($href_category === null) {
-            $href_category = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&path=', 'SSL');
-            $href_action = $this->url->link('catalog/category/update', 'token=' . $this->session->data['token'] . '&category_id=', 'SSL');
+            $href_category = $this->url->link('catalog/main_category', 'token=' . $this->session->data['token'] . '&path=', 'SSL');
+            $href_action = $this->url->link('catalog/main_category/update', 'token=' . $this->session->data['token'] . '&category_id=', 'SSL');
         }
 
         $url = '';
@@ -80,8 +80,8 @@ class ControllerCatalogMainCategory extends Controller {
                 'sort_order'  => $result['sort_order'],
                 'selected'    => $selected,
                 'action'      => $action,
-                'edit'        => $this->url->link('catalog/category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
-                'delete'      => $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
+                'edit'        => $this->url->link('catalog/main_category/edit', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
+                'delete'      => $this->url->link('catalog/main_category/delete', 'token=' . $this->session->data['token'] . '&category_id=' . $result['category_id'] . $url, 'SSL'),
                 'href'        => $href,
                 'indent'      => $indent
             );
@@ -135,13 +135,13 @@ class ControllerCatalogMainCategory extends Controller {
         );
 
         $data['breadcrumbs'][] = array(
-            'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, true)
+            'text' => $this->language->get('Основные категории'),
+            'href' => $this->url->link('catalog/main_category', 'token=' . $this->session->data['token'] . $url, true)
         );
 
-        $data['add'] = $this->url->link('catalog/category/add', 'token=' . $this->session->data['token'] . $url, true);
-        $data['delete'] = $this->url->link('catalog/category/delete', 'token=' . $this->session->data['token'] . $url, true);
-        $data['repair'] = $this->url->link('catalog/category/repair', 'token=' . $this->session->data['token'] . $url, true);
+        $data['add'] = $this->url->link('catalog/main_category/add', 'token=' . $this->session->data['token'] . $url, true);
+        $data['delete'] = $this->url->link('catalog/main_category/delete', 'token=' . $this->session->data['token'] . $url, true);
+        $data['repair'] = $this->url->link('catalog/main_category/repair', 'token=' . $this->session->data['token'] . $url, true);
 
         $data['categories'] = array();
 
@@ -209,8 +209,8 @@ class ControllerCatalogMainCategory extends Controller {
             $url .= '&page=' . $this->request->get['page'];
         }
 
-        $data['sort_name'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
-        $data['sort_sort_order'] = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
+        $data['sort_name'] = $this->url->link('catalog/cmain_category', 'token=' . $this->session->data['token'] . '&sort=name' . $url, true);
+        $data['sort_sort_order'] = $this->url->link('catalog/main_category', 'token=' . $this->session->data['token'] . '&sort=sort_order' . $url, true);
 
         $url = '';
 
@@ -230,7 +230,7 @@ class ControllerCatalogMainCategory extends Controller {
         $pagination->total = $category_total;
         $pagination->page = $page;
         $pagination->limit = $this->config->get('config_limit_admin');
-        $pagination->url = $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
+        $pagination->url = $this->url->link('catalog/main_category', 'token=' . $this->session->data['token'] . $url . '&page={page}', true);
 
         $data['pagination'] = $pagination->render();
 
