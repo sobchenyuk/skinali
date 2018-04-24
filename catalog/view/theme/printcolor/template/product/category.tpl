@@ -16,7 +16,10 @@
 			<h1><a href="#">Скинали: <?=$heading_title?></a></h1>
 		</div>
 	<div class = "sk_gallery_wraper" id = "sk_galery">
-	<?php echo $column_right; ?>	        				
+
+
+	<?php echo $column_right; ?>
+
 	<?php echo $column_left; ?>
 	
 	
