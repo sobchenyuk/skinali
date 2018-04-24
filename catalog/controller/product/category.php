@@ -439,7 +439,9 @@ class ControllerProductCategory extends Controller {
 
 			$this->response->setOutput($this->load->view('product/category', $data));
 
+			echo '<pre>';
 			var_dump($this);
+            echo '</pre>';
 
 		} else {
 			$url = '';
