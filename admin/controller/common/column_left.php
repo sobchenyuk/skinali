@@ -56,7 +56,7 @@ class ControllerCommonColumnLeft extends Controller {
             if ($this->user->hasPermission('access', 'extension/module/main_category')) {
                 $catalog[] = array(
                     'name'	   => 'Основные категории',
-                    'href'     => $this->url->link('extension/module/main_category', 'token=' . $this->session->data['token'], true),
+                    'href'     => $this->url->link('extension/module/main_category', 'token=' . $this->session->data['token']. '#/main-category', true),
                     'children' => array()
                 );
             }
