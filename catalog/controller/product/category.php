@@ -438,6 +438,9 @@ class ControllerProductCategory extends Controller {
 			$data['header'] = $this->load->controller('common/header');
 
 			$this->response->setOutput($this->load->view('product/category', $data));
+
+			var_dump($this);
+
 		} else {
 			$url = '';
 
