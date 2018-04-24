@@ -79,6 +79,12 @@
 	$home_url = '';
 
 ?>
+
+<style>
+    body {
+        background-color: #fff;
+    }
+</style>
 <body class="<?php echo $class; ?>" onload = "preloader()">
 <!-- google -->
 <script>
