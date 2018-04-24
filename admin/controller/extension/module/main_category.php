@@ -50,10 +50,10 @@ class ControllerExtensionModuleMainCategory extends Controller {
 
         $data['breadcrumbs'][] = array(
             'text' => $this->language->get('heading_title'),
-            'href' => $this->url->link('extension/module/category', 'token=' . $this->session->data['token'], true)
+            'href' => $this->url->link('extension/module/main_category', 'token=' . $this->session->data['token'], true)
         );
 
-        $data['action'] = $this->url->link('extension/module/category', 'token=' . $this->session->data['token'], true);
+        $data['action'] = $this->url->link('extension/module/main_category', 'token=' . $this->session->data['token'], true);
 
         $data['cancel'] = $this->url->link('extension/extension', 'token=' . $this->session->data['token'] . '&type=module', true);
 
@@ -71,7 +71,7 @@ class ControllerExtensionModuleMainCategory extends Controller {
     }
 
     protected function validate() {
-        if (!$this->user->hasPermission('modify', 'extension/module/category')) {
+        if (!$this->user->hasPermission('modify', 'extension/module/main_category')) {
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
