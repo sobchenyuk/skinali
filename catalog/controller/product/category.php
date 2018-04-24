@@ -90,7 +90,7 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
-		var_dump($category_id);
+//		var_dump($category_id);
 
 		$data['category_info'] = $category_info; 
 		if ($category_info) {
