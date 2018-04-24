@@ -572,7 +572,6 @@ class ControllerCatalogCategory extends Controller {
 
         $this->response->setOutput($this->load->view('catalog/category_form', $data));
 
-        var_dump($data['keyword']);
     }
 
     protected function validateForm() {
