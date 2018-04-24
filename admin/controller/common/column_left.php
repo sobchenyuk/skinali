@@ -53,13 +53,13 @@ class ControllerCommonColumnLeft extends Controller {
 			}
 
 			// Главная категория
-            if ($this->user->hasPermission('access', 'catalog/main_category')) {
+//            if ($this->user->hasPermission('access', 'catalog/main_category')) {
                 $catalog[] = array(
                     'name'	   => $this->language->get('Основные категории'),
                     'href'     => $this->url->link('catalog/main_category', 'token=' . $this->session->data['token']. '#/main-category', true),
                     'children' => array()
                 );
-            }
+//            }
 
 			if ($this->user->hasPermission('access', 'catalog/product')) {
 				$catalog[] = array(
