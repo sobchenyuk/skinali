@@ -176,6 +176,7 @@
                 <div class="col-sm-10">
 
                   <!-- ошибка по коду ------------------------------------------>
+                  <input type="text" name="keyword" value="<?php echo $keyword[1]; ?>" placeholder="<?php echo $entry_keyword; ?>" id="input-keyword" class="form-control" />
 
 
                   <?php if ($error_keyword) { ?>

@@ -571,6 +571,8 @@ class ControllerCatalogCategory extends Controller {
         $data['footer'] = $this->load->controller('common/footer');
 
         $this->response->setOutput($this->load->view('catalog/category_form', $data));
+
+        var_dump($data['keyword']);
     }
 
     protected function validateForm() {
