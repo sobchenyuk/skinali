@@ -83,6 +83,7 @@
 <style>
     body {
         background-color: #fff;
+        background: none;
     }
 </style>
 <body class="<?php echo $class; ?>" onload = "preloader()">
